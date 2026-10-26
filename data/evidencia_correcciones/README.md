@@ -1,8 +1,11 @@
 # Evidencia de las correcciones publicadas
 
-Este directorio conserva la evidencia mínima de las 34 correcciones
-publicadas el 26 de octubre de 2026. No contiene resultados anteriores ni
-respaldos completos.
+Este directorio conserva la evidencia mínima de las correcciones aprobadas.
+`catalogo.json` enumera los paquetes activos, sus capas y sus huellas SHA-256.
+Cada lote congela el catálogo y los archivos de asignaciones, sin consultar
+el WMS. No contiene resultados anteriores ni respaldos completos.
+
+Los archivos de este nivel documentan las 34 correcciones originales:
 
 - Los 43 GeoJSON son las entidades consultadas en la capa `codigo-postal`
   del [WMS de CartoCiudad](https://www.cartociudad.es/wms-inspire/direcciones-ccpp?service=WMS&request=GetCapabilities).
@@ -34,6 +37,12 @@ Rscript tests/ejecutar.R
 Se necesitan los paquetes **testthat**, **sf**, **readr**, **dplyr**,
 **digest** y **jsonlite**. Los resultados publicados y la base administrativa
 corregida permiten verificar la cobertura sin descargar las fuentes.
+
+El paquete [componentes_20261026](componentes_20261026/README.md) añade 191
+asignaciones de 189 recintos e incorpora los CP 04071 y 43548. Conserva las
+intersecciones aprobadas en las proyecciones provinciales, el respaldo
+recortado y las superficies disputadas. Las respuestas WMS completas y
+los respaldos de resultados siguen fuera de Git.
 
 Fuente de los GeoJSON: CartoCiudad, consultado el 26 de octubre de 2026.
 Obra derivada de CartoCiudad CC-BY 4.0, [SCNE](https://www.scne.es/).

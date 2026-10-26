@@ -1,0 +1,305 @@
+registro,cpro,LAU_CODE,nombre,componentes,area_km2,area_ine_coincidente_km2,area_solape_cp_km2,estados
+24,06,06033,Casas de Don Pedro,2,41.07406209668557,39.762353175690635,1.0610378921031952e-5,Respaldo con solape entre CP;Un CP con INE coincidente; candidato a revisión
+249,41,41039,Écija,1,36.91857385637557,36.175037219200654,0,Un CP con INE coincidente; candidato a revisión
+146,24,24051,Cea,2,28.45223766784519,27.3889577840649,0,Un CP con INE coincidente; candidato a revisión
+270,45,45071,La Guardia,1,25.776405068374515,24.67223110185284,0,Un CP con INE coincidente; candidato a revisión
+259,43,43136,La Ràpita,1,25.477127952725887,24.443336901957014,0,Un CP con INE coincidente; candidato a revisión
+302,50,50298,Zuera,1,24.24440436179429,23.589640868451667,0,Un CP con INE coincidente; candidato a revisión
+29,06,06087,Monterrubio de la Serena,1,22.702659678612946,22.31335240540258,6.373447552323341e-8,Un CP con INE coincidente; candidato a revisión
+283,47,47084,Mayorga,2,19.540020576282927,18.444355586399112,0,Un CP con INE coincidente; candidato a revisión
+272,45,45123,Ontígola,2,19.24329545981024,18.277076337109836,6.17272369720331e-6,Respaldo con solape entre CP;Un CP con INE coincidente; candidato a revisión
+141,23,23081,Segura de la Sierra,2,17.436780897922663,16.30301750689346,0,Un CP con INE coincidente; candidato a revisión
+7,02,02076,Vianos,1,15.452756193985223,14.861579009785473,0,Un CP con INE coincidente; candidato a revisión
+33,06,06160,Zalamea de la Serena,1,15.365283334889382,0,0,Solo respaldo de otro INE
+18,05,05257,Villafranca de la Sierra,1,14.630604458795398,14.261165398012945,0,Un CP con INE coincidente; candidato a revisión
+136,22,22190,El Pueyo de Araguás,1,14.541357803019165,13.959257087729693,0,Un CP con INE coincidente; candidato a revisión
+96,13,13047,Herencia,1,14.428496114294946,13.851224408966676,1.527459821412265e-7,Un CP con INE coincidente; candidato a revisión
+262,44,44009,Albarracín,13,14.412990039532975,10.968914463702259,0,Solo respaldo de otro INE;Un CP con INE coincidente; candidato a revisión
+107,16,16141,Olmeda del Rey,1,14.173506117288827,14.136189052819349,0,Un CP con INE coincidente; candidato a revisión
+260,43,43155,Tortosa,1,13.497744351981044,12.90338309994201,0,Un CP con INE coincidente; candidato a revisión
+297,50,50185,Murillo de Gállego,1,13.25365470109415,12.544279060285382,0,Un CP con INE coincidente; candidato a revisión
+26,06,06053,Fuente del Arco,1,13.182911084486127,12.035072182488896,0,Un CP con INE coincidente; candidato a revisión
+83,10,10010,Alcuéscar,1,12.93977523330018,12.483110591469575,2.6477700055863806e-8,Un CP con INE coincidente; candidato a revisión
+172,28,28135,Santa María de la Alameda,1,12.934258804039587,12.521732007737555,0,Un CP con INE coincidente; candidato a revisión
+104,16,16078,Cuenca,3,12.544624498059749,10.770428387851533,2.0914936438202857e-7,Un CP con INE coincidente; candidato a revisión
+192,31,31249,Valtierra,1,11.910939868876339,11.038658404447716,3.335386577516328e-5,Respaldo con solape entre CP
+214,35,35024,Teguise,2,11.845446303304186,0,0,Sin respaldo WMS recuperado
+37,07,07040,Palma,2,11.464703050801566,10.71526737101771,0,Un CP con INE coincidente; candidato a revisión
+16,05,05132,Mombeltrán,3,11.2768594701149,10.559605549755629,0,Un CP con INE coincidente; candidato a revisión
+25,06,06034,Casas de Reina,2,10.953697840433328,0,0,Solo respaldo de otro INE
+31,06,06134,Trasierra,1,10.709396772176504,0,0,Solo respaldo de otro INE
+279,46,46145,Xàtiva,2,10.471884427389673,10.038271490679389,0,Un CP con INE coincidente; candidato a revisión
+293,49,49134,Muelas de los Caballeros,1,10.432628322424263,10.029598001612946,0,Un CP con INE coincidente; candidato a revisión
+137,22,53049,NA,1,10.116848720781864,9.170556379449733,0,Un CP con INE coincidente; candidato a revisión
+52,09,09251,Pancorbo,1,10.021701527958543,9.187952361343745,0,Un CP con INE coincidente; candidato a revisión
+140,23,23025,Castellar,1,9.989676609283313,9.936204027341264,0,Un CP con INE coincidente; candidato a revisión
+230,37,37287,San Miguel de Valero,1,9.708201275805266,9.283465200030525,0,Un CP con INE coincidente; candidato a revisión
+254,42,42025,Arcos de Jalón,1,9.60706359414792,9.112329820143824,0,Un CP con INE coincidente; candidato a revisión
+162,26,26027,Berceo,2,9.036206275539234,8.676655877141023,0,Un CP con INE coincidente; candidato a revisión
+292,49,49113,Matilla de Arzón,1,8.80852336299474,8.407207260906562,2.7287241445854305e-5,Respaldo con solape entre CP
+157,25,25234,Tremp,1,8.588595455298602,7.934521989093472,0,Un CP con INE coincidente; candidato a revisión
+113,18,18032,Bubión,1,8.551833914153606,8.171626659725312,0,Un CP con INE coincidente; candidato a revisión
+53,09,09294,Quintanilla de la Mata,1,7.810181268347561,7.495490450552322,0,Un CP con INE coincidente; candidato a revisión
+95,13,13013,Almagro,2,7.571067478310481,6.589461569401875,1.0979903227826071e-7,Solo respaldo de otro INE;Un CP con INE coincidente; candidato a revisión
+47,09,09091,Castrojeriz,1,7.360032339632302,6.668258796222515,0,Un CP con INE coincidente; candidato a revisión
+189,31,31203,Petilla de Aragón,1,7.2918497137843605,7.008102240688513,0,Un CP con INE coincidente; candidato a revisión
+49,09,09155,Haza,2,7.276536478656562,6.605324857569009,0,Un CP con INE coincidente; candidato a revisión
+86,10,10057,Casas de Miravete,1,7.169073684141357,6.574949116084645,0,Un CP con INE coincidente; candidato a revisión
+142,23,23092,Úbeda,1,7.055009491441161,6.736572556449249,0,Un CP con INE coincidente; candidato a revisión
+118,19,19042,Arroyo de las Fraguas,1,7.004456487447023,6.551751668509172,0,Un CP con INE coincidente; candidato a revisión
+282,47,47056,Corrales de Duero,1,6.825436698400974,6.43223003258001,0,Un CP con INE coincidente; candidato a revisión
+265,44,44266,Visiedo,1,6.531379198439509,0,0,Solo respaldo de otro INE
+286,47,47169,Torre de Esgueva,1,6.2722675531131324,5.861229109019402,0,Un CP con INE coincidente; candidato a revisión
+210,34,34121,Palenzuela,2,6.219869548688769,5.219060006420347,0,Solo respaldo de otro INE;Un CP con INE coincidente; candidato a revisión
+117,19,19021,Almoguera,1,6.126579684310317,5.618096290252398,4.4408880367700474e-7,Un CP con INE coincidente; candidato a revisión
+243,40,40164,Rapariegos,1,5.91611432407566,5.661068700988592,0,Un CP con INE coincidente; candidato a revisión
+296,50,50045,Belchite,1,5.894653510264993,5.727876603046659,3.231996959624871e-5,Respaldo con solape entre CP
+135,22,22068,Borau,1,5.860444073995709,5.552201875370655,0,Un CP con INE coincidente; candidato a revisión
+28,06,06083,Mérida,2,5.773802498222112,5.286999925444423,0,Un CP con INE coincidente; candidato a revisión
+242,40,40143,Navares de Enmedio,1,5.764115654803306,5.447966268808051,0,Un CP con INE coincidente; candidato a revisión
+205,33,33022,Degaña,1,5.6798141814281236,5.071546862690197,0,Un CP con INE coincidente; candidato a revisión
+90,10,10177,Sierra de Fuentes,1,5.636267940830916,5.313684543455027,0,Un CP con INE coincidente; candidato a revisión
+154,25,25185,Ribera d'Urgellet,1,5.628698371850968,5.1359222844353765,0,Un CP con INE coincidente; candidato a revisión
+98,14,14057,La Rambla,1,5.564860539890111,5.3036099016154115,0,Un CP con INE coincidente; candidato a revisión
+298,50,50251,Tarazona,1,5.445563228566457,5.296495484407555,3.436070918723999e-9,Un CP con INE coincidente; candidato a revisión
+295,50,50026,Alpartir,1,5.381689715500951,0,0,Solo respaldo de otro INE
+139,23,23016,Benatae,1,5.3286747863245605,4.5688633088339135,4.9008085392415523e-8,Un CP con INE coincidente; candidato a revisión
+222,37,37040,Barbadillo,1,5.252521964517086,5.037917031045148,0,Un CP con INE coincidente; candidato a revisión
+5,02,02041,Jorquera,1,5.252521555811406,4.663733283302851,0,Un CP con INE coincidente; candidato a revisión
+288,47,47213,Villalbarba,1,5.221549929418124,4.7182396373063265,0,Un CP con INE coincidente; candidato a revisión
+187,31,31160,Luquin,1,4.771293028713882,4.322633727985324,3.190249614417553e-5,Respaldo con solape entre CP
+193,31,31255,Villamayor de Monjardín,1,4.723280022280008,3.996307934702529,4.738654412429605e-5,Respaldo con solape entre CP
+119,19,19044,Atienza,2,4.698972240240128,4.054272276444629,0,Solo respaldo de otro INE;Un CP con INE coincidente; candidato a revisión
+115,18,18074,Ferreira,1,4.661798435013056,4.5549595868416795,0,Un CP con INE coincidente; candidato a revisión
+278,46,46106,Chelva,1,4.566025677998796,4.382742478108534,0,Un CP con INE coincidente; candidato a revisión
+218,36,36057,Vigo,2,4.478947101335275,0,0,Sin respaldo WMS recuperado
+301,50,50297,Zaragoza,1,4.319004430874884,4.188443968780127,0,Un CP con INE coincidente; candidato a revisión
+271,45,45121,Ocaña,1,4.08999432007342,3.6539269051716827,7.396213793195784e-6,Respaldo con solape entre CP
+231,37,37307,Serradilla del Llano,1,4.051611624804854,3.0991295620400106,0,Un CP con INE coincidente; candidato a revisión
+145,24,24050,Castrotierra de Valmadrigal,1,3.96401267455402,3.8067096234013245,0,Un CP con INE coincidente; candidato a revisión
+263,44,44063,Cañizar del Olivar,1,3.897024495975554,0,0,Solo respaldo de otro INE
+84,10,10038,Cachorrilla,1,3.7319868328936994,3.342673691362429,0,Un CP con INE coincidente; candidato a revisión
+191,31,31241,Urraul Alto,1,3.7311662435960025,3.1546895722702146,2.5345392283052207e-6,Respaldo con solape entre CP
+163,26,26128,Sajazarra,1,3.5151673397412115,3.3488359238008036,0,Un CP con INE coincidente; candidato a revisión
+48,09,09114,Cubillo del Campo,1,3.510556817666069,3.4947106745760803,0,Un CP con INE coincidente; candidato a revisión
+41,08,08016,Bagà,1,3.434757896075934,2.942910309226493,9.802688573487103e-6,Respaldo con solape entre CP
+211,34,34139,Prádanos de Ojeda,1,3.431450564463943,3.1585080640776213,0,Un CP con INE coincidente; candidato a revisión
+300,50,50265,Trasmoz,2,3.3375360393198727,3.0090080810563595,0,Un CP con INE coincidente; candidato a revisión
+276,46,46002,Ador,1,3.330426663911462,2.788562635177426,0,Un CP con INE coincidente; candidato a revisión
+273,45,45145,Recas,1,3.3080629393882455,0,0,Solo respaldo de otro INE
+88,10,10143,Pescueza,1,3.2287239608178733,2.968124522837992,0,Un CP con INE coincidente; candidato a revisión
+269,45,45019,Bargas,1,3.1755690068174602,0.00699555836806352,0,Un CP con INE coincidente; candidato a revisión
+229,37,37267,Retortillo,1,3.107764489195436,2.9682299769983906,0,Un CP con INE coincidente; candidato a revisión
+20,06,06003,Ahillones,1,3.0649322893349527,3.0176783434152528,0,Un CP con INE coincidente; candidato a revisión
+251,41,41091,Sevilla,1,2.9672632551882265,2.6619628665210624,0,Un CP con INE coincidente; candidato a revisión
+268,45,45011,Almendral de la Cañada,1,2.9646478714331685,2.729915261389557,0,Un CP con INE coincidente; candidato a revisión
+227,37,37230,Parada de Arriba,1,2.682700394990504,2.3842369403180923,0,Un CP con INE coincidente; candidato a revisión
+185,31,31091,Ergoiena,1,2.5827228167758287,2.406748442723246,0,Un CP con INE coincidente; candidato a revisión
+4,02,02008,Alcaraz,1,2.571040381639302,0,0,Solo respaldo de otro INE
+171,28,28093,Navacerrada,1,2.55993025957476,2.274791037974502,0,Un CP con INE coincidente; candidato a revisión
+32,06,06151,Villagonzalo,1,2.514937807797998,2.471508408774063,0,Un CP con INE coincidente; candidato a revisión
+194,31,53060,NA,1,2.4195429541422278,2.2872720305929297,2.4657874879892915e-5,Respaldo con solape entre CP
+232,37,37321,Tenebrón,1,2.3317981002282053,2.3111730647414577,0,Un CP con INE coincidente; candidato a revisión
+60,09,53007,NA,1,2.327530667693153,0,0,Solo respaldo de otro INE
+56,09,09361,Sargentes de la Lora,1,2.3037550055331364,2.246270776172297,0,Un CP con INE coincidente; candidato a revisión
+132,20,53048,NA,5,2.289663345061971,3.306195139884949e-14,0,Solo respaldo de otro INE
+17,05,05246,Tórtoles,1,2.280042107689202,2.1516262529033274,0,Un CP con INE coincidente; candidato a revisión
+46,09,09056,Briviesca,1,2.263768061249554,2.061609976009898,0,Un CP con INE coincidente; candidato a revisión
+129,20,20069,Donostia/San Sebastián,1,2.245265945652807,1.9172185291839656,9.825056240917184e-5,Respaldo con solape entre CP
+186,31,31138,Lakuntza,1,2.20626572316134,2.0127703762784024,0,Un CP con INE coincidente; candidato a revisión
+183,31,31004,Abaurrepea/Abaurrea Baja,2,2.1125429252727628,2.0101766756944377,0,Un CP con INE coincidente; candidato a revisión
+244,40,40170,Riaza,1,2.0810636772923767,1.8332015054696946,0,Un CP con INE coincidente; candidato a revisión
+9,03,03014,Alacant/Alicante,1,2.056408465400815,1.9113130748801659,0,Un CP con INE coincidente; candidato a revisión
+285,47,47143,San Llorente,1,2.054470701034248,1.6584823641309627,0,Un CP con INE coincidente; candidato a revisión
+188,31,31164,Mélida,1,2.0239647547664195,1.9827781013404844,0,Un CP con INE coincidente; candidato a revisión
+239,40,40065,Chañe,1,1.9099230494414121,1.8707018091342151,0,Un CP con INE coincidente; candidato a revisión
+38,07,07048,Sant Josep de sa Talaia,3,1.9054900582277832,0,0,Sin respaldo WMS recuperado
+101,15,15073,Ribeira,1,1.896374953764244,1.7133636017329206,0,Un CP con INE coincidente; candidato a revisión
+30,06,06112,Retamal de Llerena,1,1.822393689710766,1.7353841921627242,0,Un CP con INE coincidente; candidato a revisión
+23,06,06031,Carmonita,1,1.7880388794474165,1.6407638590534181,2.76733044302091e-11,Un CP con INE coincidente; candidato a revisión
+45,09,09029,Atapuerca,1,1.7669884839513899,1.5602790121023515,0,Un CP con INE coincidente; candidato a revisión
+226,37,37223,Olmedo de Camaces,1,1.7593133480440228,1.7357138302623256,0,Un CP con INE coincidente; candidato a revisión
+224,37,37116,Doñinos de Ledesma,1,1.6136376384254842,1.6120208187621534,0,Un CP con INE coincidente; candidato a revisión
+87,10,10124,Mohedas de Granadilla,2,1.602479509690173,1.3460622473717463,0,Solo respaldo de otro INE;Un CP con INE coincidente; candidato a revisión
+131,20,20907,Gaztelu,1,1.513459982102722,1.2107355220663623,1.651952917332528e-5,Respaldo con solape entre CP
+1,01,01051,Agurain/Salvatierra,1,1.4993874030763508,1.3851742776689306,2.2296738109085707e-5,Respaldo con solape entre CP
+106,16,16124,Las Mesas,1,1.4786284952815174,0.7770592116285632,0,Un CP con INE coincidente; candidato a revisión
+36,07,07032,Maó,2,1.4619618824093212,0.8693778075023536,0,Sin respaldo WMS recuperado;Un CP con INE coincidente; candidato a revisión
+123,19,19285,Torrubia,1,1.4608027741318346,1.4139300757416933,0,Un CP con INE coincidente; candidato a revisión
+199,31,53066,NA,1,1.3795807787650078,1.31657628024846,0,Un CP con INE coincidente; candidato a revisión
+43,08,08283,Tona,1,1.2281384396107198,0.9557138857354875,0,Un CP con INE coincidente; candidato a revisión
+114,18,18051,Colomera,1,1.2203134908632711,1.2173913410025834,0,Un CP con INE coincidente; candidato a revisión
+122,19,19280,Torrejón del Rey,1,1.2058188777933716,0.9798300265916232,0,Un CP con INE coincidente; candidato a revisión
+12,04,04023,Beires,2,1.1915911000901982,0.3342617739243714,0,Solo respaldo de otro INE;Un CP con INE coincidente; candidato a revisión
+158,25,25247,Vilamòs,1,1.136308953684479,1.0143292882260084,0,Un CP con INE coincidente; candidato a revisión
+264,44,44109,Frías de Albarracín,1,1.1357443348463327,0.9200976674017105,0,Un CP con INE coincidente; candidato a revisión
+168,28,28018,Becerril de la Sierra,2,1.104097113150632,0.9456615931309085,0,Un CP con INE coincidente; candidato a revisión
+241,40,40111,Lastras del Pozo,1,1.0611512531820406,0.7824821516549587,0,Un CP con INE coincidente; candidato a revisión
+54,09,09321,Roa,2,1.0582327598129213,0.9505386621628721,5.7132071948217344e-8,Un CP con INE coincidente; candidato a revisión
+200,31,53067,NA,7,1.0548722977948046,3.504101186990738e-14,2.1383794103137917e-5,Solo respaldo de otro INE
+6,02,02067,Riópar,1,1.0017829795824587,1.0016578658606434,0,Un CP con INE coincidente; candidato a revisión
+27,06,06062,Helechosa de los Montes,1,0.9939480746749043,0.9939467301271919,0,Un CP con INE coincidente; candidato a revisión
+212,34,34222,Villameriel,1,0.9813283221983462,0.9680205093367807,0,Un CP con INE coincidente; candidato a revisión
+50,09,09219,Miranda de Ebro,1,0.9322945983727574,0.8098105008060187,0,Un CP con INE coincidente; candidato a revisión
+240,40,40078,Fresneda de Cuéllar,1,0.9221335366435051,0.8871574897785606,0,Un CP con INE coincidente; candidato a revisión
+238,40,40061,Corral de Ayllón,1,0.9158006706712842,0.8470151915636528,0,Un CP con INE coincidente; candidato a revisión
+173,28,28140,Serranillos del Valle,1,0.9010353815359772,0.6781023218836976,0,Un CP con INE coincidente; candidato a revisión
+130,20,20078,Zaldibia,2,0.8954612145969122,0.7520983502893839,0,Un CP con INE coincidente; candidato a revisión
+151,25,25057,Es Bòrdes,1,0.8936488346049786,0.8053975684291741,0,Un CP con INE coincidente; candidato a revisión
+290,48,48916,Usansolo,1,0.820761494787246,0,0,Solo respaldo de otro INE
+190,31,31210,Roncal/Erronkari,1,0.819626438857317,0.514698750212796,0,Un CP con INE coincidente; candidato a revisión
+42,08,08078,l'Espunyola,1,0.7992703335387558,0.7409493053248338,0,Un CP con INE coincidente; candidato a revisión
+124,19,53047,NA,11,0.7959347367718862,4.394678398966789e-14,0,Residuo geométrico menor de 1 m²;Solo respaldo de otro INE
+225,37,37119,La Encina,1,0.7953060875711591,0.7641216175794135,0,Un CP con INE coincidente; candidato a revisión
+155,25,25193,Sant Llorenç de Morunys,1,0.774835699071005,0.6315429531949759,0,Un CP con INE coincidente; candidato a revisión
+164,26,26129,San Asensio,1,0.75657050185588,0.638842865522053,0,Un CP con INE coincidente; candidato a revisión
+15,05,05126,Mesegar de Corneja,1,0.7548207543484717,0.7404773736412018,0,Un CP con INE coincidente; candidato a revisión
+35,07,07024,Formentera,1,0.7263188697860837,0,0,Sin respaldo WMS recuperado
+169,28,28023,El Boalo,1,0.7167798420854807,0.5954661697527655,0,Un CP con INE coincidente; candidato a revisión
+209,34,34114,Olmos de Ojeda,1,0.6795240160817355,0.6794967418833215,0,Un CP con INE coincidente; candidato a revisión
+120,19,19086,Cifuentes,1,0.6766405947537422,0.6260687570318961,0,Un CP con INE coincidente; candidato a revisión
+175,28,28163,Valdepiélagos,1,0.6506080330775679,0.6304232497391574,0,Un CP con INE coincidente; candidato a revisión
+61,09,53012,NA,1,0.6498610786277353,0,0,Solo respaldo de otro INE
+126,20,20015,Ataun,1,0.6432469721844196,0.5277339503457807,0,Un CP con INE coincidente; candidato a revisión
+75,09,53035,NA,1,0.6401263158478737,0.5656811462985878,0,Un CP con INE coincidente; candidato a revisión
+100,15,15043,Malpica de Bergantiños,1,0.6354753576468192,0.5808105595163088,0,Un CP con INE coincidente; candidato a revisión
+219,36,36060,Vilagarcía de Arousa,1,0.6164324761012662,0,0,Sin respaldo WMS recuperado
+170,28,28092,Móstoles,1,0.6148699816572666,0.4834253610507682,0,Un CP con INE coincidente; candidato a revisión
+80,09,53043,NA,1,0.6080283704618812,0.5857274819406204,0,Un CP con INE coincidente; candidato a revisión
+127,20,20054,Lizartza,1,0.588811232829757,0.43564874562923145,4.411374808871188e-6,Respaldo con solape entre CP
+177,28,53058,NA,1,0.5882264312040955,0.5364269150342564,0,Un CP con INE coincidente; candidato a revisión
+253,42,42010,Aldealices,1,0.5862717242670208,0.5394946460983194,0,Un CP con INE coincidente; candidato a revisión
+143,23,53050,NA,6,0.5642824932363799,0,0,Residuo geométrico menor de 1 m²;Solo respaldo de otro INE
+277,46,46075,Bufali,1,0.5504733306401223,0.5361396171419323,0,Un CP con INE coincidente; candidato a revisión
+153,25,25119,Juneda,1,0.5473518058655262,0.44950917786210776,0,Un CP con INE coincidente; candidato a revisión
+79,09,53041,NA,5,0.5249028572170138,8.640927262604237e-14,0,Solo respaldo de otro INE
+152,25,25061,Cabó,1,0.5170999968029857,0.41915721333433686,0,Un CP con INE coincidente; candidato a revisión
+70,09,53028,NA,1,0.5128242657255977,0,0,Solo respaldo de otro INE
+62,09,53013,NA,9,0.5033437486465627,7.183567846477537e-14,0,Residuo geométrico menor de 1 m²;Solo respaldo de otro INE
+181,30,30035,San Javier,1,0.4999206470413208,0.497909580630701,0,Un CP con INE coincidente; candidato a revisión
+165,26,53056,NA,15,0.48315682102998636,1.5787372831255196e-13,0,Solo respaldo de otro INE
+257,43,43043,El Catllar,1,0.4512430852766037,0.39351932554156704,0,Un CP con INE coincidente; candidato a revisión
+287,47,47186,Valladolid,1,0.44335940412676333,0.41082286507320265,0,Un CP con INE coincidente; candidato a revisión
+2,01,53001,NA,14,0.4432369629667164,9.615905582904816e-14,0,Solo respaldo de otro INE
+208,34,34102,Mazariegos,1,0.42604152546046675,0.4023182168065519,0,Un CP con INE coincidente; candidato a revisión
+57,09,09431,Villafranca Montes de Oca,1,0.40935021039915087,0,0,Solo respaldo de otro INE
+247,41,41014,Badolatosa,1,0.40622993781356515,0.39689023884503266,0,Un CP con INE coincidente; candidato a revisión
+266,44,53077,NA,1,0.39231280167215316,0.3513619066978255,0,Un CP con INE coincidente; candidato a revisión
+112,18,18018,Alquife,1,0.3902370050842762,0.31629211036606414,0,Un CP con INE coincidente; candidato a revisión
+121,19,19263,Taragudo,1,0.38122929791292176,0.3778842250471702,0,Un CP con INE coincidente; candidato a revisión
+284,47,47137,Roturas,1,0.3728966179772541,0.2778577342894226,0,Un CP con INE coincidente; candidato a revisión
+245,40,40203,Torrecaballeros,1,0.3628211292876005,0.2770242626531998,0,Un CP con INE coincidente; candidato a revisión
+207,34,34029,Becerril de Campos,1,0.356572021376133,0.34811749751140547,0,Un CP con INE coincidente; candidato a revisión
+156,25,25203,la Seu d'Urgell,1,0.35519059723448754,0.33529417431521696,0,Un CP con INE coincidente; candidato a revisión
+258,43,43095,El Morell,1,0.3540408185891211,0.2838110451853136,0,Un CP con INE coincidente; candidato a revisión
+174,28,28143,Somosierra,1,0.3453749467147663,0.27315900527660736,0,Un CP con INE coincidente; candidato a revisión
+109,17,17039,Camprodon,1,0.3448243753836155,0.3443136328570899,0,Un CP con INE coincidente; candidato a revisión
+202,31,53070,NA,1,0.3409458709921762,0,8.890071819315892e-9,Solo respaldo de otro INE
+223,37,37059,Buenamadre,1,0.3383117714367956,0.33242567809572166,0,Un CP con INE coincidente; candidato a revisión
+148,24,53053,NA,1,0.33190673561594636,0.28488075005257874,0,Un CP con INE coincidente; candidato a revisión
+39,07,07052,Sant Lluís,1,0.32894956467565895,0.19859878892060392,0,Un CP con INE coincidente; candidato a revisión
+299,50,50252,Tauste,1,0.32757437691903113,0.3253722686330462,0,Un CP con INE coincidente; candidato a revisión
+161,26,26024,Bañares,1,0.3275048686714023,0.30516860235515236,0,Un CP con INE coincidente; candidato a revisión
+274,45,45184,Las Ventas de San Julián,1,0.31642661161136626,0,0,Solo respaldo de otro INE
+184,31,31062,Cabanillas,1,0.3140166970234811,0.31363092797600944,0,Un CP con INE coincidente; candidato a revisión
+105,16,16113,Iniesta,1,0.3089987661962956,0,0,Solo respaldo de otro INE
+103,16,16035,Beteta,1,0.3021137599363625,0,0,Solo respaldo de otro INE
+14,05,05059,Cillán,1,0.29817928228513896,0.2959910412443094,0,Un CP con INE coincidente; candidato a revisión
+250,41,41040,Espartinas,1,0.2834656200599568,0.2781355091566811,0,Un CP con INE coincidente; candidato a revisión
+51,09,09247,Palacios de Riopisuerga,1,0.27272895472151043,0.2726506587330533,0,Un CP con INE coincidente; candidato a revisión
+85,10,10039,Cadalso,1,0.2704411325007081,0.2694535710854335,0,Un CP con INE coincidente; candidato a revisión
+21,06,06005,La Albuera,1,0.2362433026586622,0,0,Solo respaldo de otro INE
+255,42,42113,Medinaceli,1,0.23595674314701556,0.23441497305740416,0,Un CP con INE coincidente; candidato a revisión
+228,37,37255,Pizarral,1,0.20765348549944163,0.20742982614582456,0,Un CP con INE coincidente; candidato a revisión
+179,29,29015,Antequera,1,0.1962210149888471,0.18024749193431494,0,Un CP con INE coincidente; candidato a revisión
+235,38,38014,Fuencaliente de la Palma,1,0.1962119396904111,0.19286877755564452,0,Un CP con INE coincidente; candidato a revisión
+55,09,09330,Salas de los Infantes,1,0.19460543848890066,0.1924803220041096,0,Un CP con INE coincidente; candidato a revisión
+248,41,41016,Bollullos de la Mitación,1,0.18135786130741238,0.1655692372817942,0,Un CP con INE coincidente; candidato a revisión
+195,31,53061,NA,3,0.17630207564401906,4.1909515857696534e-15,0,Solo respaldo de otro INE
+89,10,10165,Santa Ana,1,0.1448531540583712,0.14422714853082214,0,Un CP con INE coincidente; candidato a revisión
+220,36,36901,A Illa de Arousa,1,0.14460980772234686,0,0,Sin respaldo WMS recuperado
+22,06,06021,Bodonal de la Sierra,1,0.13844183693043888,0.12170929296596983,0,Un CP con INE coincidente; candidato a revisión
+217,36,36026,Marín,1,0.13660849255855753,0,0,Sin respaldo WMS recuperado
+281,47,47051,Ciguñuela,1,0.12869452300350928,0,0,Solo respaldo de otro INE
+216,36,36004,Bueu,1,0.12481446139667696,0,0,Sin respaldo WMS recuperado
+110,17,17199,Torroella de Montgrí,1,0.12203828744709491,0,0,Sin respaldo WMS recuperado
+93,12,12040,Castelló de la Plana/Castellón de la Plana,2,0.11539853705827892,0,0,Sin respaldo WMS recuperado
+176,28,28173,Villamanrique de Tajo,1,0.11490963141839063,0.087317724414628,0,Un CP con INE coincidente; candidato a revisión
+73,09,53033,NA,8,0.09859866707743628,3.050081431865692e-14,0,Solo respaldo de otro INE
+76,09,53038,NA,7,0.09354001469088878,5.387701094150543e-13,0,Solo respaldo de otro INE
+196,31,53062,NA,4,0.09030170897342459,0,0,Solo respaldo de otro INE
+147,24,53051,NA,4,0.08112151737734129,8.731149137020111e-17,0,Solo respaldo de otro INE
+71,09,53031,NA,7,0.08055334637324185,5.096158684240667e-14,0,Residuo geométrico menor de 1 m²;Solo respaldo de otro INE
+11,04,04013,Almería,1,0.07654368409875036,0.05701123893548176,0,Un CP con INE coincidente; candidato a revisión
+128,20,20060,Orexa,1,0.07381363479526341,0,1.3615317610674538e-6,Solo respaldo de otro INE
+233,37,53071,NA,7,0.059878870361174986,3.885007397911977e-9,0,Residuo geométrico menor de 1 m²;Solo respaldo de otro INE
+63,09,53014,NA,8,0.054516974774767614,3.1024683266878126e-13,0,Solo respaldo de otro INE
+67,09,53019,NA,5,0.046031059059576655,0,0,Residuo geométrico menor de 1 m²;Solo respaldo de otro INE
+58,09,53005,NA,4,0.04231608100487804,1.4901161193847656e-14,0,Solo respaldo de otro INE
+81,09,53046,NA,4,0.030472750482840347,9.255018085241317e-15,0,Residuo geométrico menor de 1 m²;Solo respaldo de otro INE
+69,09,53023,NA,2,0.026131107375990364,5.2154064178466796e-14,0,Solo respaldo de otro INE
+197,31,53064,NA,2,0.02332481258913875,1.1175870895385742e-13,0,Residuo geométrico menor de 1 m²;Solo respaldo de otro INE
+59,09,53006,NA,3,0.014565817408688017,0,0,Solo respaldo de otro INE
+198,31,53065,NA,3,0.012071845892211188,3.4924596548080445e-16,0,Solo respaldo de otro INE
+78,09,53040,NA,3,0.008412241273894906,0,0,Sin respaldo WMS recuperado;Solo respaldo de otro INE
+303,50,PROV_GAP_50,NA,101,0.005915160578666902,0,6.122805643826723e-10,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+72,09,53032,NA,2,0.005180516191375908,4.8514437765034443e-14,0,Solo respaldo de otro INE
+116,18,PROV_GAP_18,NA,73,0.004858985014650341,0,7.370862992239768e-12,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+66,09,53018,NA,3,0.004072269564057701,0,0,Residuo geométrico menor de 1 m²;Solo respaldo de otro INE
+68,09,53022,NA,2,0.004033709577255416,0,0,Solo respaldo de otro INE
+82,09,PROV_GAP_09,NA,134,0.003780830789643249,0,3.921962091339992e-10,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+34,06,PROV_GAP_06,NA,102,0.003625563549395903,0,1.0321902013011197e-8,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+201,31,53069,NA,1,0.0036109631294757127,0,0,Solo respaldo de otro INE
+91,10,PROV_GAP_10,NA,74,0.0031828378600465305,0,1.277783459485704e-12,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+215,35,PROV_GAP_35,NA,110,0.002916344070504121,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+252,41,PROV_GAP_41,NA,62,0.0028635934774653075,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+74,09,53034,NA,3,0.0027173567566676064,7.450580596923828e-15,0,Solo respaldo de otro INE
+267,44,PROV_GAP_44,NA,109,0.002572705451522753,0,1.0486589453648776e-9,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+99,14,PROV_GAP_14,NA,76,0.002533139536196933,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+160,25,PROV_GAP_25,NA,98,0.0023976591557831753,0,4.4203332799952476e-10,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+294,49,PROV_GAP_49,NA,78,0.002123703624767286,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+108,16,PROV_GAP_16,NA,71,0.001980035058893408,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+289,47,PROV_GAP_47,NA,89,0.001798330458659181,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+150,24,PROV_GAP_24,NA,67,0.0017530526465412474,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+10,03,PROV_GAP_03,NA,52,0.001708581226680113,0,2.7799987146863712e-9,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+3,01,PROV_GAP_01,NA,84,0.0016803003633729483,0,5.589333522948436e-9,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+125,19,PROV_GAP_19,NA,82,0.0016687901515211815,0,1.867277613200713e-9,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+256,42,PROV_GAP_42,NA,82,0.0015959858070491361,0,8.414376281427014e-12,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+261,43,PROV_GAP_43,NA,78,0.0015024227122183364,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+275,45,PROV_GAP_45,NA,106,0.001356231015435031,0,3.398551231114766e-9,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+134,21,PROV_GAP_21,NA,50,0.0013090895284443825,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+180,29,PROV_GAP_29,NA,57,0.0012443013120952485,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+280,46,PROV_GAP_46,NA,87,0.001242287351378936,0,7.1383276491019385e-9,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+246,40,PROV_GAP_40,NA,49,0.0011923484464873592,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+13,04,PROV_GAP_04,NA,41,0.0011773413463004572,0,1.427688919193315e-9,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+167,27,PROV_GAP_27,NA,54,0.0011401330178717629,0,1.0981893476582627e-8,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+65,09,53017,NA,3,0.0010952804095312023,1.862645149230957e-15,0,Solo respaldo de otro INE
+178,28,PROV_GAP_28,NA,87,0.0010937505790026413,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+138,22,PROV_GAP_22,NA,65,0.0010695205923492977,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+19,05,PROV_GAP_05,NA,65,0.0010683355569636956,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+111,17,PROV_GAP_17,NA,88,0.0010467041905794234,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+149,24,53054,NA,1,0.0010390878303200006,0,0,Solo respaldo de otro INE
+182,30,PROV_GAP_30,NA,38,0.0010377173417647114,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+234,37,PROV_GAP_37,NA,70,0.001011366135927941,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+213,34,PROV_GAP_34,NA,71,9.856980449777107e-4,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+291,48,PROV_GAP_48,NA,41,9.510709371686143e-4,0,2.910808390879538e-9,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+44,08,PROV_GAP_08,NA,104,9.355716917784985e-4,0,1.1233297018407029e-9,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+166,26,PROV_GAP_26,NA,60,9.177903978659618e-4,0,2.186503564715281e-9,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+204,32,PROV_GAP_32,NA,53,8.580809313524782e-4,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+92,11,PROV_GAP_11,NA,59,8.317013565483298e-4,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+8,02,PROV_GAP_02,NA,60,7.276419528486154e-4,0,1.6915232440624094e-9,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+236,38,PROV_GAP_38,NA,88,7.065494500684268e-4,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+102,15,PROV_GAP_15,NA,98,6.742987593370945e-4,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+40,07,PROV_GAP_07,NA,98,6.721804645757384e-4,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+203,31,PROV_GAP_31,NA,118,6.586799246676627e-4,0,7.038118366665458e-9,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+144,23,PROV_GAP_23,NA,53,6.012338978573167e-4,0,6.67705658537443e-9,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+237,39,PROV_GAP_39,NA,60,4.940035734982086e-4,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+97,13,PROV_GAP_13,NA,57,4.511809779562477e-4,0,1.916291516579349e-11,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+206,33,PROV_GAP_33,NA,55,4.5109299240289494e-4,0,1.03927191563713e-12,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+94,12,PROV_GAP_12,NA,53,4.3632025581016593e-4,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+221,36,PROV_GAP_36,NA,50,3.765921156938147e-4,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+133,20,PROV_GAP_20,NA,22,2.87570960088779e-4,0,0,Diferencia de límites; requiere criterio territorial;Residuo geométrico menor de 1 m²
+77,09,53039,NA,1,1.953802785873413e-4,0,0,Solo respaldo de otro INE
+304,52,PROV_GAP_52,NA,1,6.5740418612957e-5,0,0,Diferencia de límites; requiere criterio territorial
+64,09,53015,NA,3,2.8376603562628588e-5,0,0,Residuo geométrico menor de 1 m²;Sin respaldo WMS recuperado
+159,25,53055,NA,1,6.379888083074547e-8,9.066298604011536e-9,0,Residuo geométrico menor de 1 m²

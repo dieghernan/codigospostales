@@ -138,9 +138,9 @@ manifiesto de fuentes con huellas SHA-256, las copias del método y de las capas
 administrativas, los registros y los resultados provisionales.
 
 Ese directorio y el archivo que lo señala son locales y están excluidos de
-Git. El script necesita que exista esa referencia; un clon del repositorio
-no incluye un lote preparado ni los ZIP originales. Los comandos siguientes
-describen las fases de un lote local ya configurado.
+Git. La fase `preparar` crea el lote y la referencia. Un clon del repositorio
+no incluye los ZIP originales. Para generar de nuevo las 52 provincias se
+necesitan esas fuentes; las correcciones incrementales no las necesitan.
 
 El inventario del script reconoce las 52 fuentes provinciales, incluidas Ceuta
 y Melilla. Una ejecución existente conserva su manifiesto y su copia congelada
@@ -164,22 +164,54 @@ necesita también el paquete **digest**.
 
 ```r
 # Desde una terminal en la raíz del proyecto:
+# Rscript scripts/reejecutar.R preparar
 # Rscript scripts/reejecutar.R piloto
 # Rscript scripts/reejecutar.R resto
+# Rscript scripts/reejecutar.R corregir
 # Rscript scripts/reejecutar.R publicar
 ```
 
 Cada fase puede reanudarse. Una provincia solo se omite si su resultado ya está
 validado y conserva su huella. La publicación requiere todas las provincias del
 manifiesto validadas y ejecuta las pruebas antes de sustituir los resultados
-actuales. El consolidado se genera una vez al finalizar el lote.
+actuales. `corregir` reaplica el catálogo local de evidencia aprobada, disuelve
+por CP y limpia ranuras numéricas. `publicar` ejecuta esa fase si falta y
+después consolida, actualiza informes, valida, copia y vuelve a validar.
+Un lote publicado queda cerrado y requiere preparar otro para actualizarlo.
 
 Antes de publicar se comprueban las geometrías, la unicidad de los códigos,
 la cobertura provincial y los solapamientos. Los informes distinguen los
 códigos de la fuente que no aparecen en el resultado e indican si sus puntos
 quedan dentro o fuera de la provincia. El progreso se puede consultar en
-`data/full_analisis/reejecucion_estado.csv` y las fuentes utilizadas en
-`data/full_analisis/reejecucion_manifest.csv`.
+`estado.csv` del lote activo y las fuentes utilizadas en su `manifiesto.csv`.
+Las copias de `data/full_analisis/reejecucion_estado.csv` y
+`data/full_analisis/reejecucion_manifest.csv` corresponden a la publicación.
+
+### Correcciones sin regenerar
+
+Para incorporar evidencia aprobada a los resultados existentes se utiliza
+`scripts/actualizar.R`. `preparar` copia la publicación a un lote provisional,
+congela el catálogo y el método y conserva respaldo. `corregir` modifica solo
+las provincias con superficie que transferir o ranuras numéricas que limpiar.
+`publicar` utiliza la misma consolidación y validación que el flujo completo.
+
+```sh
+Rscript scripts/actualizar.R preparar
+Rscript scripts/actualizar.R corregir
+Rscript scripts/actualizar.R publicar
+```
+
+Este flujo no recalcula Voronoi ni consulta el WMS. Su lote se indica en
+`data/cartociudad/actualizacion_actual.txt`. `CP_LOTE_DIR` permite elegir un
+directorio nuevo. Para repetir una sola provincia, puede generarse en
+`provs/` de ese lote, con su base y su carpeta `analisis/`, antes de ejecutar
+`corregir`. El catálogo congelado se reaplica sobre el resultado bruto.
+
+La investigación WMS se ejecuta únicamente a petición. Las intersecciones
+revisadas se incorporan al catálogo versionado
+`data/evidencia_correcciones/catalogo.json`; cada lote congela esa selección.
+Si una evidencia invade otro CP o deja de encajar en la base por al menos
+1 m², el flujo se detiene para revisar el caso.
 
 Los GeoPackage contienen dos capas: `codigos_postales`, con un registro por CP,
 y `pendientes`, con los recintos sin asignación y las diferencias entre el
@@ -197,6 +229,8 @@ un punto interior calculado con `st_point_on_surface()`.
 | `scripts/ggplot.R` | Unión de resultados, mapa de avance y exportación de superficies pendientes. |
 | `scripts/reejecutar.R` | Reejecución por lotes con respaldo, validación y publicación. |
 | `scripts/reaplicar_correcciones.R` | Reaplicación de la evidencia WMS local sobre los pendientes de un lote provisional. |
+| `scripts/actualizar.R` | Actualización incremental sin recalcular el Voronoi. |
+| `scripts/correcciones.R` y `scripts/flujo.R` | Motor compartido de corrección, disolución, informes, validación y publicación. |
 | `tests/regeneracion.R` | Comprobaciones de geometría, cobertura y consolidación. |
 | `scripts/revisar_margenes.R` | Revisión de los códigos próximos a los límites municipales de Cádiz. |
 | `data/cartociudad/` | Fuentes, lotes y respaldos locales, excluidos de Git. |
@@ -215,10 +249,11 @@ un punto interior calculado con `st_point_on_surface()`.
 
 La generación nacional, actualizada el 26 de octubre de 2026, incluye las 50
 provincias y las ciudades autónomas de Ceuta y Melilla. El consolidado contiene
-10.851 registros, uno por código postal. Están representados los 10.851 códigos
+10.853 registros, uno por código postal. Están representados los 10.851 códigos
 distintos presentes en las 52 fuentes de CartoCiudad utilizadas: no se ha
 perdido ninguno en el resultado nacional. Esta comprobación no sustituye una
-comparación con el catálogo oficial completo de Correos.
+comparación con el catálogo oficial completo de Correos. Se incluyen además
+los CP 04071 y 43548, respaldados por la revisión manual del WMS.
 
 La publicación inicial del 25 de octubre superó 797 comprobaciones de
 geometría, cobertura, unicidad de códigos, conservación del CP 41760 y reglas
@@ -231,12 +266,14 @@ comprobaciones, incluidas las del inventario completo y los EPSG. Estas
 cifras corresponden a validaciones históricas; la corrección posterior y sus
 pruebas se describen a continuación.
 
-Quedan 304 registros pendientes, con 4.108 polígonos separados y
-1.011,539168 km². De ellos, 253 registros corresponden a recintos con algún
+Quedan 304 registros pendientes, con 5.310 polígonos separados y
+155,887315 km². De ellos, 253 registros corresponden a recintos con algún
 componente sin direcciones seleccionadas con CP y 51 a diferencias entre los
 límites provinciales y los recintos. Antes del cálculo por componentes quedaban
-28,004800 km²: el aumento identifica superficies que antes heredaban el CP de
-otra parte desconectada del municipio, sin direcciones propias que lo apoyaran.
+28,004800 km². El cálculo por componentes elevó esa superficie a
+1.011,539168 km² al dejar de heredar el CP de otra parte desconectada del
+municipio. La corrección WMS posterior reduce el pendiente en 855,651854 km²,
+sin rellenar las zonas sin respaldo o con evidencia contradictoria.
 El [registro de pendientes](PENDIENTES.md) documenta los casos principales y
 las comprobaciones necesarias para resolverlos. También están disponibles el
 [resumen provincial](data/full_analisis/resumen_pendientes_provincia.csv) y el
@@ -273,22 +310,19 @@ Sys.setlocale("LC_CTYPE", "Spanish_Spain.utf8") # En Windows
 source("tests/regeneracion.R", encoding = "UTF-8")
 ```
 
-Una nueva generación mediante Voronoi no incorpora automáticamente estas
-correcciones posteriores. `scripts/reaplicar_correcciones.R` permite recuperar
-la evidencia validada sobre los pendientes de un lote provisional mediante
-`CP_REAPLICACION_DIR`. Requiere `GENERACION_VALIDADA.txt`, conserva los resultados
-brutos y detiene la operación ante conflictos de superficie de al menos 1 m².
-No admite modificar un lote marcado como publicado. Esta fase debe preceder
-a la consolidación y a la validación final del lote que se vaya a publicar.
+Los dos flujos por lotes reaplican la evidencia local aprobada antes de
+publicar. Para invocar esa fase por separado sigue disponible
+`scripts/reaplicar_correcciones.R`, con `CP_REAPLICACION_DIR` apuntando a un
+lote provisional completo. No admite modificar un lote marcado como publicado.
 
 La regeneración nacional publicada procesa por separado los componentes
 desconectados de las 52 provincias y ciudades autónomas. Corrige la influencia
 de puntos de una parte del municipio sobre otra, detectada en Alegría-Dulantzi.
 No modifica la resolución de los límites administrativos de partida. El
-[registro de publicación](data/full_analisis/regeneracion_componentes_publicada.json)
+[registro vigente](data/full_analisis/publicacion_actual.json)
 y la [comparación provincial](data/full_analisis/comparacion_componentes_provincia.csv)
-documentan el resultado y los cambios.
-La propuesta superó 1.096 comprobaciones completas antes de publicarse y
+documentan el estado actual y la comparación histórica de la regeneración,
+respectivamente. Aquella propuesta superó 1.096 comprobaciones antes de publicarse y
 otras 1.096 sobre los archivos publicados. Se comprobaron también las
 huellas SHA-256 de los 52 GeoPackage provinciales, el consolidado, el mapa y
 la base administrativa.
@@ -297,6 +331,18 @@ El contraste provincial con geometrías del WMS se realiza solo a petición,
 fuera del flujo automático y de las pruebas habituales. La revisión de Navarra
 detectó limitaciones en Petilla de Aragón y Piedramillera que se conservan en
 el [registro de pendientes](PENDIENTES.md), sin excepciones nuevas al método.
+La revisión manual de los pendientes con el WMS detectó también los códigos
+43548 y 04071, ausentes entonces del consolidado y de las fuentes de direcciones.
+La corrección aprobada incorpora ambos y 191 asignaciones de 189 recintos.
+La evidencia conserva las proyecciones provinciales y las zonas disputadas.
+La limpieza de ranuras microscópicas elimina líneas interiores como las del
+01194, conservando los huecos reales y los contornos exteriores.
+La publicación corregida superó 1.785 comprobaciones antes de copiar los
+archivos y otras 1.785 después. La
+[verificación final del flujo](data/full_analisis/verificacion_flujo.log)
+superó 2.243 comprobaciones. La reaplicación sobre la publicación no cambia
+ningún archivo provincial y una prueba con el bruto de Navarra recupera el
+resultado sin recalcular Voronoi ni consultar el WMS.
 
 Los textos de los resultados y los logs se corrigieron mediante reemplazos
 mecánicos, sin recalcular las geometrías. Se verificó que los códigos, las

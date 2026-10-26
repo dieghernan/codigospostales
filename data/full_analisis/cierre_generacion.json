@@ -2,13 +2,13 @@
   "fecha": "2026-10-26",
   "provincias_y_ciudades_autonomas": 52,
   "codigos_fuente": 10851,
-  "codigos_resultado": 10851,
+  "codigos_resultado": 10853,
+  "codigos_adicionales_wms": ["04071", "43548"],
   "codigos_ausentes": [],
   "registros_pendientes": 304,
-  "poligonos_pendientes": 4108,
-  "area_pendiente_km2": 1011.5391684971,
-  "consolidado_sha256": "7fba25378cf1af6efd4b6e495c6a4fcdfebf7f77083989526b9ee4c157a18ff7",
-  "metodo": "Voronoi por componente desconectado; evidencia WMS reaplicada sobre pendientes",
-  "comprobaciones_prepublicacion": 1096,
-  "comprobaciones_pospublicacion": 1096
+  "poligonos_pendientes": 5310,
+  "area_pendiente_km2": 155.887314802916,
+  "consolidado_sha256": "eadc4299c6131dc906fac853b11fa871ca743c96d37f7da6e38e1d85dc4a6927",
+  "evidencia_sha256": "385ff7c2bf1233603e78baf95571493df4f9b115e7905fd3d5f26f669dae8692",
+  "metodo": "Voronoi por componente; correcciones locales validadas; disolución por CP y limpieza de ranuras numéricas"
 }

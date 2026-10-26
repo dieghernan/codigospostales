@@ -1,4 +1,4 @@
-# Ejecutar: Rscript scripts/reejecutar.R piloto | resto | publicar
+# Ejecutar: Rscript scripts/reejecutar.R preparar | piloto | resto | corregir | publicar
 if (.Platform$OS.type == "windows") {
   if (!nzchar(Sys.setlocale("LC_CTYPE", "Spanish_Spain.utf8"))) {
     stop("No se ha podido activar el locale UTF-8.")
@@ -11,8 +11,25 @@ suppressPackageStartupMessages({
 local({
   fase <- commandArgs(trailingOnly = TRUE)
   fase <- if (length(fase)) fase[1] else "piloto"
-  if (!fase %in% c("piloto", "resto", "publicar")) {
+  if (!fase %in% c("preparar", "piloto", "resto", "corregir", "publicar")) {
     stop("Fase desconocida.")
+  }
+  if (fase == "preparar") {
+    nuevo <- Sys.getenv(
+      "CP_LOTE_DIR",
+      file.path(
+        "data/cartociudad",
+        format(Sys.time(), "generacion_%Y%m%d_%H%M%S")
+      )
+    )
+    if (dir.exists(nuevo)) {
+      stop("El directorio del lote ya existe.")
+    }
+    dir.create(nuevo, recursive = TRUE)
+    writeLines(
+      normalizePath(nuevo, winslash = "/"),
+      "data/cartociudad/reejecucion_actual.txt"
+    )
   }
   raiz <- normalizePath(
     trimws(readLines("data/cartociudad/reejecucion_actual.txt", warn = FALSE)[
@@ -20,6 +37,9 @@ local({
     ]),
     winslash = "/"
   )
+  if (file.exists(file.path(raiz, "PUBLICADO.txt"))) {
+    stop("El lote ya está publicado; prepara otro lote.")
+  }
   for (carpeta in c("scripts", "provs", "analisis", "logs", "consolidado")) {
     dir.create(file.path(raiz, carpeta), showWarnings = FALSE)
   }
@@ -27,9 +47,35 @@ local({
   if (!dir.create(bloqueo, showWarnings = FALSE)) {
     stop("Hay otra ejecución o un bloqueo pendiente de revisión.")
   }
-  on.exit(unlink(bloqueo, recursive = TRUE), add = TRUE)
+  on.exit(
+    {
+      if (
+        identical(normalizePath(dirname(bloqueo), winslash = "/"), raiz) &&
+          !length(list.files(bloqueo, all.files = TRUE, no.. = TRUE))
+      ) {
+        unlink(bloqueo, recursive = TRUE)
+      }
+    },
+    add = TRUE
+  )
   manifiesto_path <- file.path(raiz, "manifiesto.csv")
   if (!file.exists(manifiesto_path)) {
+    source("scripts/correcciones.R", local = TRUE, encoding = "UTF-8")
+    source("scripts/flujo.R", local = TRUE, encoding = "UTF-8")
+    congelar_evidencia(raiz)
+    dir.create(
+      file.path(raiz, "respaldo/provs"),
+      recursive = TRUE,
+      showWarnings = FALSE
+    )
+    stopifnot(all(file.copy(
+      list.files("data/provs", "^CP_[0-9]{2}[.]gpkg$", full.names = TRUE),
+      file.path(raiz, "respaldo/provs")
+    )))
+    stopifnot(all(file.copy(
+      c("data/codigos_postales.gpkg", "data/avance.png"),
+      file.path(raiz, "respaldo")
+    )))
     source("scripts/recintos.R", local = TRUE, encoding = "UTF-8")
     equivalencias <- c(
       A_CORUNA = "15",
@@ -126,9 +172,30 @@ local({
       )
     )
     manifiesto <- manifiesto[order(manifiesto$cpro), ]
-    municipios <- mapSpain::esp_get_munic_siane(moveCAN = FALSE, rawcols = TRUE)
-    provincias <- mapSpain::esp_get_prov_siane(moveCAN = FALSE) |>
-      st_make_valid()
+    base_path <- Sys.getenv("CP_BASE_ADMIN_RDS", "")
+    base_elegida <- if (nzchar(base_path)) readRDS(base_path) else NULL
+    municipios <- if (is.null(base_elegida)) {
+      mapSpain::esp_get_munic_siane(moveCAN = FALSE, rawcols = TRUE)
+    } else {
+      base_elegida$municipios
+    }
+    provincias <- (if (is.null(base_elegida)) {
+      mapSpain::esp_get_prov_siane(moveCAN = FALSE)
+    } else {
+      base_elegida$provincias
+    }) |>
+      st_make_valid() |>
+      st_transform(25830)
+    exclusion <- st_read(
+      file.path(raiz, "evidencia/exclusiones_territoriales.gpkg"),
+      quiet = TRUE
+    ) |>
+      st_transform(25830)
+    k_cadiz <- which(provincias$cpro == "11")
+    st_geometry(provincias)[k_cadiz] <- st_difference(
+      st_geometry(provincias)[k_cadiz],
+      st_union(st_geometry(exclusion))
+    )
     asignacion <- asignar_provincias_condominios(municipios, provincias)
     readr::write_csv(
       asignacion,
@@ -148,7 +215,14 @@ local({
       function(cp) sum(asignacion$cpro == cp),
       integer(1)
     )
-    for (f in c("cp_prov.R", "ggplot.R", "reejecutar.R", "recintos.R")) {
+    for (f in c(
+      "cp_prov.R",
+      "ggplot.R",
+      "reejecutar.R",
+      "recintos.R",
+      "correcciones.R",
+      "flujo.R"
+    )) {
       file.copy(
         file.path("scripts", f),
         file.path(raiz, "scripts", f),
@@ -168,7 +242,27 @@ local({
       algo = "sha256"
     )
     readr::write_csv(manifiesto, manifiesto_path)
-    readr::write_csv(manifiesto, "data/full_analisis/reejecucion_manifest.csv")
+    manifiesto$evidencia_sha256 <- digest::digest(
+      file = file.path(raiz, "evidencia/catalogo.json"),
+      algo = "sha256"
+    )
+    manifiesto$correcciones_sha256 <- digest::digest(
+      file = file.path(raiz, "scripts/correcciones.R"),
+      algo = "sha256"
+    )
+    manifiesto$flujo_sha256 <- digest::digest(
+      file = file.path(raiz, "scripts/flujo.R"),
+      algo = "sha256"
+    )
+    manifiesto$consolidacion_sha256 <- digest::digest(
+      file = file.path(raiz, "scripts/ggplot.R"),
+      algo = "sha256"
+    )
+    readr::write_csv(manifiesto, manifiesto_path)
+    readr::write_csv(
+      manifiesto,
+      file.path(raiz, "analisis/reejecucion_manifest.csv")
+    )
     capture.output(sessionInfo(), file = file.path(raiz, "sessionInfo.txt"))
   }
   manifiesto <- readr::read_csv(
@@ -199,6 +293,39 @@ local({
     ) {
       stop("Ha cambiado la copia congelada de las funciones de recintos.")
     }
+  }
+  for (campo in intersect(
+    c(
+      "correcciones_sha256",
+      "flujo_sha256",
+      "consolidacion_sha256",
+      "evidencia_sha256"
+    ),
+    names(manifiesto)
+  )) {
+    f <- switch(
+      campo,
+      correcciones_sha256 = "scripts/correcciones.R",
+      flujo_sha256 = "scripts/flujo.R",
+      consolidacion_sha256 = "scripts/ggplot.R",
+      evidencia_sha256 = "evidencia/catalogo.json"
+    )
+    if (
+      !identical(
+        unique(manifiesto[[campo]]),
+        digest::digest(file = file.path(raiz, f), algo = "sha256")
+      )
+    ) {
+      stop("Ha cambiado un archivo congelado: ", f)
+    }
+  }
+  if (
+    !identical(
+      unique(manifiesto$admin_sha256),
+      digest::digest(file = file.path(raiz, "base_admin.rds"), algo = "sha256")
+    )
+  ) {
+    stop("Ha cambiado la base administrativa congelada.")
   }
   Sys.setenv(
     CP_METODO_DIR = file.path(raiz, "scripts"),
@@ -341,11 +468,16 @@ local({
     )
     estados <<- bind_rows(estados[estados$cpro != cp, ], fila_estado)
     readr::write_csv(estados, estado_path)
-    readr::write_csv(estados, "data/full_analisis/reejecucion_estado.csv")
+    readr::write_csv(
+      estados,
+      file.path(raiz, "analisis/reejecucion_estado.csv")
+    )
     message("FIN ", cp, " ", fila_estado$estado, " ", resultado)
     invisible(fila_estado)
   }
-  if (fase %in% c("piloto", "resto")) {
+  if (fase == "preparar") {
+    message("LOTE PREPARADO: ", raiz)
+  } else if (fase %in% c("piloto", "resto")) {
     if (
       fase == "resto" &&
         !all(piloto %in% estados$cpro[estados$estado == "validado"])
@@ -386,53 +518,17 @@ local({
       }
     }
     source(
-      file.path(raiz, "scripts/ggplot.R"),
+      file.path(raiz, "scripts/correcciones.R"),
       local = TRUE,
       encoding = "UTF-8"
     )
-    pruebas <- file.path(raiz, "scripts/regeneracion-tests.R")
-    if (!file.exists(pruebas)) {
-      file.copy("tests/regeneracion.R", pruebas, overwrite = FALSE)
+    source(file.path(raiz, "scripts/flujo.R"), local = TRUE, encoding = "UTF-8")
+    if (
+      fase == "corregir" ||
+        !file.exists(file.path(raiz, "EVIDENCIA_APLICADA.txt"))
+    ) {
+      corregir_lote(raiz)
     }
-    Sys.setenv(
-      CP_TEST_DIR = file.path(raiz, "provs"),
-      CP_TEST_BASE = file.path(raiz, "base_admin.rds"),
-      CP_TEST_ANALISIS = file.path(raiz, "analisis"),
-      CP_TEST_CONSOLIDADO = file.path(raiz, "consolidado/codigos_postales.gpkg")
-    )
-    source("tests/solapes_recintos.R", local = new.env(), encoding = "UTF-8")
-    source(pruebas, local = new.env(), encoding = "UTF-8")
-    archivos <- list.files(file.path(raiz, "provs"), full.names = TRUE)
-    for (f in archivos) {
-      if (
-        !file.copy(f, file.path("data/provs", basename(f)), overwrite = TRUE)
-      ) {
-        stop("No se pudo publicar ", f)
-      }
-    }
-    for (f in list.files(file.path(raiz, "analisis"), full.names = TRUE)) {
-      if (
-        !file.copy(
-          f,
-          file.path("data/full_analisis", basename(f)),
-          overwrite = TRUE
-        )
-      ) {
-        stop("No se pudo publicar ", f)
-      }
-    }
-    for (f in c("codigos_postales.gpkg", "avance.png")) {
-      if (
-        !file.copy(
-          file.path(raiz, "consolidado", f),
-          file.path("data", f),
-          overwrite = TRUE
-        )
-      ) {
-        stop("No se pudo publicar ", f)
-      }
-    }
-    writeLines(as.character(Sys.time()), file.path(raiz, "PUBLICADO.txt"))
-    message("PUBLICADAS ", nrow(manifiesto), " PROVINCIAS")
+    if (fase == "publicar") publicar_lote(raiz)
   }
 })

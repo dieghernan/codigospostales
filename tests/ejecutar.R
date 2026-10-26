@@ -7,6 +7,8 @@ for (archivo in c(
   "solapes_recintos.R",
   "recintos.R",
   "componentes.R",
+  "correcciones.R",
+  "evidencia.R",
   "correcciones_pendientes.R",
   "regeneracion.R"
 )) {

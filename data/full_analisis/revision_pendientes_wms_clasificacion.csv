@@ -1,0 +1,7 @@
+estado,componentes,registros,area_km2,area_ine_coincidente_km2,area_solape_cp_km2
+Un CP con INE coincidente; candidato a revisión,204,176,805.2281688878984,754.3446639454049,1.213037327455396e-6
+Respaldo con solape entre CP,15,15,109.34937634545112,102.30136930299261,3.748053026114742e-4
+Solo respaldo de otro INE,178,58,76.14094228148775,3.885889039529049e-9,2.2754215936024686e-5
+Sin respaldo WMS recuperado,19,13,20.743149908774576,0,0
+Diferencia de límites; requiere criterio territorial,2353,51,0.0772421326560934,0,6.083815650845849e-8
+Residuo geométrico menor de 1 m²,1339,61,2.889408300846726e-4,9.067122293345165e-9,6.8265907416143465e-9

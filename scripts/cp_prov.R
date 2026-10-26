@@ -40,6 +40,19 @@ local({
   library(sf)
   library(dplyr)
   library(mapSpain)
+  helper_correcciones <- file.path(
+    Sys.getenv("CP_METODO_DIR", "scripts"),
+    "correcciones.R"
+  )
+  source(
+    if (file.exists(helper_correcciones)) {
+      helper_correcciones
+    } else {
+      "scripts/correcciones.R"
+    },
+    local = TRUE,
+    encoding = "UTF-8"
+  )
   source(
     file.path(Sys.getenv("CP_METODO_DIR", "scripts"), "recintos.R"),
     local = TRUE,
@@ -264,6 +277,7 @@ local({
     group_by(cpro, LAU_CODE, nombre, motivo) |>
     summarise(.groups = "drop")
   # Ajusta las dos capas al contorno provincial sin rellenar huecos postales.
+  finalcp <- limpiar_ranuras_numericas(finalcp)$postal
   st_agr(finalcp) <- "constant"
   st_agr(pendientes) <- "constant"
   finalcp <- st_intersection(finalcp, st_geometry(prov)) |>

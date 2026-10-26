@@ -53,7 +53,7 @@ test_that("las ampliaciones seleccionadas están en los CP publicados", {
   expect_equal(sum(grepl(";", seleccion$cp_en_muestras, fixed = TRUE)), 0L)
   expect_equal(sum(!nzchar(seleccion$cp_ine_coincidente)), 0L)
   expect_equal(sum(is.na(seleccion$cp_ine_coincidente)), 0L)
-  expect_equal(nrow(despues), 10851L)
+  expect_equal(nrow(despues), cierre$codigos_resultado)
   expect_equal(nrow(asignaciones), 34L)
   for (cp in unique(asignaciones$COD_POSTAL)) {
     nuevo <- st_geometry(despues[despues$COD_POSTAL == cp, ])

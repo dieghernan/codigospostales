@@ -9,7 +9,7 @@
   "area_pendiente_km2": 1011.5391684971,
   "consolidado_sha256": "7fba25378cf1af6efd4b6e495c6a4fcdfebf7f77083989526b9ee4c157a18ff7",
   "metodo": "Voronoi por componente desconectado; evidencia WMS reaplicada sobre pendientes",
-  "estado": "publicada_y_verificada",
+  "estado": "auditoria_historica",
   "fecha_publicacion": "2026-10-26T11:56:29.109655+01:00",
   "metodo_git": "a5c1549",
   "metodo_sha256": "4cb418ad02f924576f1fa14defefdc44e36eeb8c63e297d11950e8bef8618e68",
@@ -26,5 +26,6 @@
   "comprobaciones_prepublicacion": 1096,
   "comprobaciones_pospublicacion": 1096,
   "incidencias_navarra": "Petilla de Aragón y Piedramillera documentadas en PENDIENTES.md; sin nuevas correcciones.",
-  "validacion_manual_navarra": "validacion_wms_navarra_resumen.json"
+  "validacion_manual_navarra": "validacion_wms_navarra_resumen.json",
+  "consolidado_vigente": "publicacion_actual.json"
 }

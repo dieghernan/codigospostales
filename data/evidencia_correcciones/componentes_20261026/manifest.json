@@ -1,0 +1,27 @@
+[
+  {
+    "archivo": "asignaciones.gpkg",
+    "bytes": 548864,
+    "sha256": "657f7b6d5b72e421876fce2dd964cf8dd3c5cc5f8b4eeb6aa7679dcc1c8b77ea"
+  },
+  {
+    "archivo": "fuentes.csv",
+    "bytes": 37740,
+    "sha256": "70600c6ac40539690588a9d0b78f68ad772ef161a99d9a30696096f611c89fea"
+  },
+  {
+    "archivo": "respaldo.gpkg",
+    "bytes": 397312,
+    "sha256": "90e0484ffddfa6b053f73ada2c311880caab0835a1f2bd99bd0596ffd8e72f70"
+  },
+  {
+    "archivo": "revision.json",
+    "bytes": 561,
+    "sha256": "1e04c91e46eb50c422e493e454ec01cbd9f11eda9a7af526ea8f90cca44b27ae"
+  },
+  {
+    "archivo": "seleccion.csv",
+    "bytes": 6477,
+    "sha256": "ac93c918e54e8158bb92ed7c1e370792e992ef9e9bd238d03d2312fbe3018b73"
+  }
+]

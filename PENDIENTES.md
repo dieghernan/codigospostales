@@ -7,7 +7,7 @@ registro recoge las superficies que aún no tienen una asignación postal.
 ## Alcance
 
 La capa `pendientes` de `data/codigos_postales.gpkg` contiene 304 registros,
-4.108 polígonos separados y 1.011,539168 km². Un registro puede contener varios
+5.310 polígonos separados y 155,887315 km². Un registro puede contener varios
 polígonos y no equivale a un municipio ni a un código postal perdido.
 
 La corrección publicada el 26 de octubre excluyó 6,203289 km² de Gibraltar
@@ -17,13 +17,16 @@ recintos con varios CP observados y los cuatro sin coincidencia de
 identificador administrativo no recibieron una corrección localizada.
 La regeneración por componentes conserva esa evidencia y deja sin asignar
 cualquier parte desconectada sin direcciones propias. Esto aumenta la
-superficie pendiente respecto a los 28,004800 km² de la publicación anterior.
+superficie pendiente hasta 1.011,539168 km² respecto a los 28,004800 km² de la
+publicación anterior. La corrección posterior aprobada incorpora 191
+asignaciones de 189 recintos, conserva los residuos y reduce el pendiente
+a los 155,887315 km² actuales. No se recalculó el Voronoi.
 
 | Motivo | Registros | Polígonos | Área (km²) |
 |---|---:|---:|---:|
-| Sin direcciones seleccionadas con código postal | 253 | 428 | 1.011,461638 |
+| Sin direcciones seleccionadas con código postal | 253 | 1.630 | 155,809785 |
 | Superficie provincial fuera de los recintos seleccionados | 51 | 3.680 | 0,077530 |
-| Total | 304 | 4.108 | 1.011,539168 |
+| Total | 304 | 5.310 | 155,887315 |
 
 Las áreas se calculan en la proyección del consolidado, ETRS89 / UTM 30N.
 El [detalle por registro](data/full_analisis/pendientes_detalle.csv) conserva
@@ -38,16 +41,16 @@ Los identificadores pertenecen a la base administrativa congelada del lote.
 
 | Provincia | LAU_CODE | Área pendiente (km²) |
 |---|---|---:|
-| Badajoz | 06033 | 41,074062 |
-| Sevilla | 41039 | 36,918574 |
-| León | 24051 | 28,452238 |
-| Toledo | 45071 | 25,776405 |
-| Tarragona | 43136 | 25,477128 |
-| Zaragoza | 50298 | 24,244404 |
-| Badajoz | 06087 | 22,702660 |
-| Valladolid | 47084 | 19,540021 |
-| Toledo | 45123 | 19,243295 |
-| Jaén | 23081 | 17,436781 |
+| Badajoz | 06160 | 15,365283 |
+| Las Palmas | 35024 | 11,845446 |
+| Badajoz | 06034 | 10,953698 |
+| Badajoz | 06134 | 10,709397 |
+| Teruel | 44266 | 6,531379 |
+| Zaragoza | 50026 | 5,381690 |
+| Pontevedra | 36057 | 4,478947 |
+| Teruel | 44063 | 3,897024 |
+| Teruel | 44009 | 3,444076 |
+| Toledo | 45145 | 3,308063 |
 
 En la investigación anterior se comprobaron los 46 recintos sin direcciones
 mediante sus 13 ZIP provinciales originales. La investigación siguiente
@@ -280,18 +283,89 @@ no añade un registro a la capa `pendientes`. La diferencia entre el límite
 administrativo simplificado y el límite detallado del IGN requiere una
 revisión independiente.
 
+## Revisión manual de los pendientes anterior a la corrección
+
+Tras la publicación por componentes se revisaron los 304 registros y sus
+4.108 componentes mediante 5.186 consultas WMS, sin errores. Se consultó un
+punto interior por componente y una malla adicional de 1 km en componentes
+mayores de 0,1 km². Se reutilizaron también las entidades de las revisiones
+anteriores del mismo día. Esta investigación preparó los candidatos de la
+corrección posterior aprobada. No incorpora consultas al flujo de generación
+ni a las pruebas.
+
+| Clasificación | Componentes | Área pendiente (km²) | Intersección con INE coincidente (km²) |
+|---|---:|---:|---:|
+| Un CP con INE coincidente; candidato a revisión | 204 | 805,228169 | 754,344664 |
+| Respaldo con solape entre CP | 15 | 109,349376 | 102,301369 |
+| Solo respaldo de otro INE | 178 | 76,140942 | 0,000000 |
+| Sin respaldo WMS recuperado | 19 | 20,743150 | 0,000000 |
+| Diferencias de límites de al menos 1 m² | 2.353 | 0,077242 | 0,000000 |
+| Residuos menores de 1 m² | 1.339 | 0,000289 | 0,000000 |
+
+El conjunto presenta 856,645706 km² de intersección con el mismo INE y sin
+solape detectado entre los CP recuperados. Esa superficie es candidata a
+estudiar correcciones parciales; no respalda rellenar los recintos completos.
+La clasificación de solapes incluye pequeñas diferencias: los 15 componentes
+de esa categoría suman unos 375 m² de solape entre CP. Los límites y los
+residuos requieren un tratamiento separado.
+
+Se detectaron además dos códigos ausentes del consolidado y de los inventarios
+de direcciones provinciales utilizados:
+
+- **43548**, en un componente de La Ràpita (43136): 24,443337 km² de
+  intersección con INE coincidente. Lo devolvieron 22 consultas.
+- **04071**, en un componente de Almería (04013): 0,057011 km² de intersección
+  con INE coincidente. Lo devolvió una consulta.
+
+La conservación de todos los CP de las fuentes de direcciones sigue siendo
+cierta, pero no equivale a incluir todos los códigos del WMS o de Correos.
+Los dos códigos adicionales se registraron para revisión y se incorporaron
+después mediante la corrección aprobada, junto con las intersecciones
+compatibles del resto de los candidatos. El resultado contiene 10.853 CP.
+
+Se conservan el [resumen](data/full_analisis/revision_pendientes_wms_resumen.json),
+la [clasificación](data/full_analisis/revision_pendientes_wms_clasificacion.csv),
+el [detalle de registros](data/full_analisis/revision_pendientes_wms_registros.csv),
+el [resumen provincial](data/full_analisis/revision_pendientes_wms_provincias.csv)
+y los [CP adicionales](data/full_analisis/revision_pendientes_wms_cp_adicionales.csv).
+Las respuestas y geometrías completas quedan fuera de Git, en el directorio
+local indicado por `data/cartociudad/revision_pendientes_wms_actual.txt`.
+
+El muestreo puede no descubrir todas las entidades. Se comprueba la geometría
+devuelta por el WMS, no solo el código del punto consultado. Para clasificar
+los CP se exige una intersección mayor que el menor de 1 m² y el 1 % del
+componente. Se verificó que los 55 archivos principales publicados conservan
+sus huellas SHA-256.
+
+## Corrección posterior aprobada
+
+Se aplicaron las intersecciones respaldadas de los 219 componentes candidatos,
+agrupadas en 191 asignaciones de 189 recintos. Se excluyó de cada transferencia
+toda geometría recuperada de un CP diferente. La aprobación final se recortó
+en la proyección nativa de la provincia y se conserva como evidencia local
+versionada. La reducción del pendiente en el consolidado es de 855,651854 km²;
+el área potencial del análisis previo en EPSG:25830 era 856,645706 km².
+
+El [catálogo](data/evidencia_correcciones/catalogo.json) incluye tanto las 34
+asignaciones originales como el nuevo paquete. La nueva evidencia evita
+repetir consultas WMS para reaplicar estas correcciones. La revisión manual
+continúa fuera del flujo automático. El
+[registro vigente](data/full_analisis/publicacion_actual.json) recoge el cierre.
+
 ## Revisión manual de Navarra
 
 La validación solicitada para Navarra contrastó 10.678 puntos con el WMS de
 CartoCiudad, sin errores de consulta. Se conserva como análisis manual fuera
-del flujo de generación y de las pruebas habituales. No se han aplicado
-correcciones nuevas a partir de este contraste.
+del flujo de generación y de las pruebas habituales. El contraste provincial
+no introdujo excepciones al método; Petilla recibió después una corrección
+parcial respaldada durante la revisión de todos los pendientes.
 
 - **Petilla de Aragón (31203):** el componente menor ocupa 7,291850 km² y no
   contiene direcciones, incluso sin margen. El WMS respalda principalmente
   el CP 50686; las diferencias de contorno incluyen otros códigos. Un hito
-  a 44,95 metros fuera del componente lleva 50680. Se mantiene pendiente,
-  sin ampliar el recinto ni heredar el CP de su otra parte.
+  a 44,95 metros fuera del componente lleva 50680. La corrección posterior
+  incorpora únicamente la intersección respaldada con 50686 y conserva
+  el residuo, sin ampliar el recinto ni heredar el CP de su otra parte.
 - **Piedramillera (31204):** el componente menor ocupa 1,771419 km² y contiene
   dos hitos de la A-12 con CP 31210 e INE 31029, de Los Arcos. El margen de
   50 metros selecciona uno y el método extiende su CP al componente entero.

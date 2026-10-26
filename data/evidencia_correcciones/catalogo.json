@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "criterio": "Evidencia aprobada por el usuario; solo aplicación local, sin consultas WMS automáticas.",
+  "paquetes": [
+    {
+      "id": "recintos_20261026",
+      "archivo": "asignaciones_respaldadas.gpkg",
+      "capas": "asignaciones_respaldadas",
+      "sha256": "6fb92a2b5f8e8a0e0e66cfdd575bcb823a6caac546bbe57b07ef887327144020"
+    },
+    {
+      "id": "componentes_20261026",
+      "archivo": "componentes_20261026/asignaciones.gpkg",
+      "capas": ["asignaciones_01", "asignaciones_02", "asignaciones_03", "asignaciones_04", "asignaciones_05", "asignaciones_06", "asignaciones_07", "asignaciones_08", "asignaciones_09", "asignaciones_10", "asignaciones_13", "asignaciones_14", "asignaciones_15", "asignaciones_16", "asignaciones_17", "asignaciones_18", "asignaciones_19", "asignaciones_20", "asignaciones_22", "asignaciones_23", "asignaciones_24", "asignaciones_25", "asignaciones_26", "asignaciones_28", "asignaciones_29", "asignaciones_30", "asignaciones_31", "asignaciones_33", "asignaciones_34", "asignaciones_37", "asignaciones_38", "asignaciones_40", "asignaciones_41", "asignaciones_42", "asignaciones_43", "asignaciones_44", "asignaciones_45", "asignaciones_46", "asignaciones_47", "asignaciones_49", "asignaciones_50"],
+      "sha256": "657f7b6d5b72e421876fce2dd964cf8dd3c5cc5f8b4eeb6aa7679dcc1c8b77ea"
+    }
+  ]
+}

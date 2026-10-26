@@ -4,6 +4,12 @@ local({
   library(dplyr)
   library(sf)
   library(mapSpain)
+  metodo <- file.path(Sys.getenv("CP_METODO_DIR", "scripts"), "correcciones.R")
+  source(
+    if (file.exists(metodo)) metodo else "scripts/correcciones.R",
+    local = TRUE,
+    encoding = "UTF-8"
+  )
   entrada <- Sys.getenv("CP_OUTPUT_DIR", "data/provs")
   destino <- Sys.getenv("CP_CONSOLIDADO_DIR", "data")
   analisis <- Sys.getenv("CP_ANALISIS_DIR", "data/full_analisis")
@@ -28,7 +34,8 @@ local({
   codigos <- bind_rows(capas) |>
     group_by(COD_POSTAL) |>
     summarise(.groups = "drop") |>
-    st_make_valid()
+    st_make_valid(geos_method = "valid_linework")
+  codigos <- limpiar_ranuras_numericas(codigos)$postal
   pendientes <- lapply(archivos, function(archivo) {
     if (!"pendientes" %in% st_layers(archivo)$name) {
       return(NULL)
@@ -36,7 +43,7 @@ local({
     st_read(archivo, layer = "pendientes", quiet = TRUE) |> st_transform(25830)
   }) |>
     bind_rows() |>
-    st_make_valid()
+    st_make_valid(geos_method = "valid_linework")
   if (anyDuplicated(codigos$COD_POSTAL) || !all(st_is_valid(codigos))) {
     stop(
       "El consolidado no supera la validación de códigos únicos o geometrías."

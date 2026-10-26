@@ -1,0 +1,11 @@
+{
+  "fecha": "2026-10-26 12:47:16.396452",
+  "fuente": "https://www.cartociudad.es/wms-inspire/direcciones-ccpp",
+  "revision": "revision_pendientes_wms_20261026_122316",
+  "consolidado_origen_sha256": "7fba25378cf1af6efd4b6e495c6a4fcdfebf7f77083989526b9ee4c157a18ff7",
+  "componentes_revisados": 219,
+  "asignaciones": 191,
+  "recintos": 189,
+  "area_km2": 856.645706087859,
+  "criterio": "Intersección con INE coincidente, menos toda geometría recuperada de CP diferente; se conservan los residuos y no se transfieren piezas menores de 1 m²."
+}

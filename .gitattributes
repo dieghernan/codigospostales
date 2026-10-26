@@ -1,5 +1,9 @@
 # La evidencia auditada conserva sus bytes para verificar las huellas SHA-256.
 data/evidencia_correcciones/*.csv -text
 data/evidencia_correcciones/*.geojson -text
+data/evidencia_correcciones/catalogo.json -text whitespace=cr-at-eol
 data/evidencia_correcciones/*.log -text -whitespace
+data/evidencia_correcciones/**/*.csv -text
+data/evidencia_correcciones/**/*.json -text whitespace=cr-at-eol
 data/full_analisis/verificacion_regeneracion_componentes.log -text -whitespace
+data/full_analisis/verificacion_flujo.log -text -whitespace

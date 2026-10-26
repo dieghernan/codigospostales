@@ -1,5 +1,5 @@
 {
-  "estado": "auditoria_historica_de_correcciones_reaplicadas",
+  "estado": "auditoria_historica",
   "alcance": "monocodigo",
   "recintos_corregidos": 34,
   "recintos_adicionales": 27,
@@ -54,5 +54,5 @@
   "evidencia": "data/evidencia_correcciones",
   "manifiesto_evidencia": "data/evidencia_correcciones/manifest.json",
   "respaldo_local": "Conservado fuera de Git en el directorio de corrección local.",
-  "consolidado_vigente": "regeneracion_componentes_publicada.json"
+  "consolidado_vigente": "publicacion_actual.json"
 }

@@ -1,0 +1,73 @@
+{
+  "fecha": "2026-10-26 12:34:24.634571",
+  "consolidado_sha256": "7fba25378cf1af6efd4b6e495c6a4fcdfebf7f77083989526b9ee4c157a18ff7",
+  "registros": 304,
+  "componentes": 4108,
+  "puntos_consultados": 5186,
+  "errores_consulta": 0,
+  "entidades_recuperadas": 2704,
+  "area_pendiente_km2": 1011.5391684971,
+  "area_con_respaldo_ine_coincidente_km2": 856.646033261351,
+  "area_ine_coincidente_sin_disputa_km2": 856.645706100805,
+  "area_solape_cp_km2": 0.000398840220622204,
+  "clasificacion": [
+    {
+      "estado": "Un CP con INE coincidente; candidato a revisión",
+      "componentes": 204,
+      "registros": 176,
+      "area_km2": 805.228168887898,
+      "area_ine_coincidente_km2": 754.344663945405,
+      "area_solape_cp_km2": 1.2130373274554e-06
+    },
+    {
+      "estado": "Respaldo con solape entre CP",
+      "componentes": 15,
+      "registros": 15,
+      "area_km2": 109.349376345451,
+      "area_ine_coincidente_km2": 102.301369302993,
+      "area_solape_cp_km2": 0.000374805302611474
+    },
+    {
+      "estado": "Solo respaldo de otro INE",
+      "componentes": 178,
+      "registros": 58,
+      "area_km2": 76.1409422814878,
+      "area_ine_coincidente_km2": 3.88588903952905e-09,
+      "area_solape_cp_km2": 2.27542159360247e-05
+    },
+    {
+      "estado": "Sin respaldo WMS recuperado",
+      "componentes": 19,
+      "registros": 13,
+      "area_km2": 20.7431499087746,
+      "area_ine_coincidente_km2": 0,
+      "area_solape_cp_km2": 0
+    },
+    {
+      "estado": "Diferencia de límites; requiere criterio territorial",
+      "componentes": 2353,
+      "registros": 51,
+      "area_km2": 0.0772421326560934,
+      "area_ine_coincidente_km2": 0,
+      "area_solape_cp_km2": 6.08381565084585e-08
+    },
+    {
+      "estado": "Residuo geométrico menor de 1 m²",
+      "componentes": 1339,
+      "registros": 61,
+      "area_km2": 0.000288940830084673,
+      "area_ine_coincidente_km2": 9.06712229334517e-09,
+      "area_solape_cp_km2": 6.82659074161435e-09
+    }
+  ],
+  "alcance": "Análisis manual solicitado. Las geometrías se descubren mediante puntos y pueden faltar entidades. El respaldo por intersección no implica corrección aprobada ni concordancia oficial. Las filas por estado pueden compartir registros. No se modifica ninguna asignación.",
+  "archivos_principales_publicados_intactos": 55,
+  "cp_wms_ine_coincidente_ausentes_consolidado": [
+    "04071",
+    "43548"
+  ],
+  "fuente": "https://www.cartociudad.es/wms-inspire/direcciones-ccpp",
+  "muestreo": "Un punto interior por componente y malla adicional de 1 km en componentes mayores de 0,1 km².",
+  "ambito_comparacion_codigos": "CP de las intersecciones con INE coincidente mayores de 1 m² frente al consolidado publicado.",
+  "resultados_postales_modificados": false
+}
