@@ -2,8 +2,10 @@
 
 Corrección publicada el 26 de octubre de 2026. Se han sustituido los resultados
 provinciales afectados, el consolidado, el mapa y los informes de pendientes.
-El directorio indicado en `data/cartociudad/correccion_pendientes_actual.txt`
-conserva la evidencia, la validación y el respaldo de la versión anterior.
+El directorio local indicado en
+`data/cartociudad/correccion_pendientes_actual.txt` conserva la validación y el
+respaldo de la versión anterior. Esa referencia y los respaldos están
+excluidos de Git; la evidencia mínima se incluye en el repositorio.
 
 ## Corrección ampliada publicada
 
@@ -51,7 +53,10 @@ recintos. Cada ejecución escribe en un directorio nuevo y conserva respaldo.
 
 ## Comparación del ensayo inicial
 
-| Indicador | Publicado | Propuesta |
+Este ensayo de siete recintos es un antecedente de la corrección ampliada,
+no el estado publicado actual.
+
+| Indicador | Antes del ensayo | Propuesta inicial |
 |---|---:|---:|
 | Códigos postales | 10.851 | 10.851 |
 | Registros pendientes | 97 | 97 |
@@ -92,7 +97,7 @@ Se identifica el componente de `PROV_GAP_11` que contiene el punto interior
 36,131722 N, 5,348342 O, en Gibraltar. Solo se excluye ese componente de
 6,203289 km². Los restantes fragmentos de Cádiz se mantienen pendientes.
 
-La base administrativa de validación y el mapa provisionales utilizan el
+La base administrativa de validación y el mapa publicados utilizan el
 contorno de Cádiz ajustado. La base administrativa congelada de la generación
 original se conserva sin cambios.
 
@@ -111,18 +116,26 @@ general y 32 específicas de esta corrección. Se comprobó que:
 - Los siete recintos mantienen sus residuos sin asignación.
 
 La revisión detectó además geometrías pendientes que quedaban inválidas al
-reproyectarse al CRS nacional. La consolidación provisional aplica
+reproyectarse al CRS nacional. La consolidación publicada aplica
 `st_make_valid()` también a esa capa. No se recalculó ninguna provincia y
 la comparación geométrica no detectó cambios de superficie relevantes fuera
 de las correcciones descritas.
 
 ## Archivos y reproducibilidad
 
-`scripts/corregir_pendientes.R` prepara la propuesta a partir de los resultados
-publicados y la evidencia de la investigación anterior. No sobrescribe esos
-resultados. `tests/correcciones_pendientes.R` verifica las modificaciones.
+`scripts/corregir_pendientes.R` preparó la propuesta a partir de los resultados
+anteriores a la corrección y la evidencia de la investigación. No sobrescribe
+los archivos de entrada: escribe en un directorio nuevo. Requiere la base
+congelada, la referencia del lote y las entidades WMS de la investigación
+local, que no se incluyen íntegramente en Git. No debe ejecutarse sobre los
+resultados ya corregidos para intentar reproducir la publicación original.
 
-El directorio provisional conserva:
+`tests/correcciones_pendientes.R` verifica las asignaciones en los resultados
+actuales con la evidencia mínima versionada. La comparación completa contra
+la versión anterior se conserva en los logs históricos y necesita los
+respaldos locales para repetirse.
+
+El directorio local de la corrección conserva:
 
 - `respaldo/`: las 52 provincias y el consolidado anteriores.
 - `provs/` y `consolidado/`: los resultados propuestos y el mapa actualizado.
@@ -136,5 +149,7 @@ El directorio provisional conserva:
 - `verificacion.log` y `PROPUESTA_VALIDADA.json`: resultados de las pruebas
   y huellas del consolidado publicado y del propuesto.
 
-Los casos con varios CP, identificadores distintos y menor coincidencia de
-contornos siguen pendientes de revisión. Esta propuesta no los modifica.
+Los ocho casos con varios CP y los cuatro sin correspondencia de
+identificador administrativo siguen pendientes. En los 34 recintos tratados,
+incluidos los 27 con menor coincidencia de contornos, se incorporaron las
+intersecciones respaldadas y se conservaron sus residuos sin asignación.

@@ -18,8 +18,9 @@ respaldos completos.
 - `manifest.json` registra los tamaños y las huellas SHA-256 de esos archivos.
 
 Las pruebas portables comprueban las huellas, el respaldo espacial de las
-asignaciones, su presencia en los CP publicados y la conservación de los
-residuos. La comparación histórica completa con las geometrías anteriores
+asignaciones, su presencia en los CP publicados y la existencia de residuos
+pendientes en los 34 recintos. La comparación histórica completa con las
+geometrías anteriores
 se ejecutó antes de publicar; sus respaldos permanecen fuera de Git.
 
 Para ejecutar las pruebas desde la raíz del repositorio:

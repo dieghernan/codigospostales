@@ -19,7 +19,7 @@ identificador administrativo mantienen su geometría anterior.
 | Motivo | Registros | Polígonos | Área (km²) |
 |---|---:|---:|---:|
 | Sin direcciones seleccionadas con código postal | 46 | 196 | 27,927240 |
-| Superficie provincial fuera de los recintos seleccionados | 51 | 3685 | 0,077560 |
+| Superficie provincial fuera de los recintos seleccionados | 51 | 3.685 | 0,077560 |
 | Total | 97 | 3.881 | 28,004800 |
 
 Las áreas se calculan en la proyección del consolidado, ETRS89 / UTM 30N.
@@ -79,12 +79,12 @@ con la [relación de Goerlich](https://www.uv.es/goerlich/Ivie/LAU2boundaries4Sp
 | Comunidad del Valle de Salazar | Navarra | 53067 | 31691 | 87,11 % |
 | Cuarto del Madroño | Jaén | 53050 | 23393 | 92,01 % |
 
-Son candidatos respaldados por la consulta oficial, no asignaciones ya
-incorporadas. La cobertura incompleta muestra diferencias entre el contorno
-postal devuelto y el administrativo. Debe revisarse el resto de cada recinto
-y comprobar si existen otros sectores antes de atribuir un único CP a toda
-su superficie. La dirección postal de la sede de una mancomunidad no equivale
-necesariamente al código postal de sus terrenos.
+Esta consulta inicial aportó candidatos para el contraste multipunto
+posterior. Seis de estos siete recintos recibieron después una asignación
+parcial respaldada; el recinto 53049 de Huesca sigue sin corregirse porque
+se observaron varios CP. La cobertura incompleta muestra diferencias entre
+el contorno postal devuelto y el administrativo. La dirección postal de la
+sede de una mancomunidad no equivale necesariamente al CP de sus terrenos.
 
 Las consultas y propiedades devueltas se guardan en
 `data/full_analisis/investigacion_pendientes_wms.json`; las mediciones, en
@@ -95,8 +95,9 @@ de puntos y el contraste con provincias vecinas están en los CSV
 
 ### Cádiz: incidencia de alcance territorial
 
-Antes de la corrección, `PROV_GAP_11` contenía 60 polígonos y 6,204121 km². Uno suma 6,203289 km²,
-el 99,9866 % del área, y tiene un punto interior en 36,131722 N, 5,348342 O,
+Antes de la corrección, `PROV_GAP_11` contenía 60 polígonos y 6,204121 km².
+Uno sumaba 6,203289 km², el 99,9866 % del área, y tenía un punto interior
+en 36,131722 N, 5,348342 O,
 en Gibraltar. Los otros 59 fragmentos suman unos 832 m². Ningún punto del
 ZIP provincial cae dentro del conjunto pendiente.
 
@@ -112,8 +113,8 @@ la validación territorial de Cádiz. Los otros 59 fragmentos siguen pendientes.
 
 ## Ampliación a todos los recintos sin direcciones
 
-La revisión cubre los 46 registros y sus 47 polígonos, con 186,963514 km².
-Se releen los puntos originales de los 13 ZIP provinciales correspondientes,
+La revisión previa cubrió los 46 registros y sus 47 polígonos originales,
+con 186,963514 km². Se releyeron los puntos de los 13 ZIP correspondientes,
 sin filtrar CP ni aplicar márgenes: ninguno contiene puntos interiores a los
 recintos pendientes que le corresponden. Esto confirma la ausencia de datos
 en esas fuentes provinciales, no necesariamente en cualquier otra fuente.
@@ -174,8 +175,9 @@ una revisión de esa correspondencia; no se deduce una equivalencia de códigos.
 | Lleida | 53055 | 25723 | 99,99985 % |
 
 Estos siete candidatos se incorporaron a la corrección localizada publicada
-mediante su intersección respaldada, conservando los residuos. La etiqueta de provincia sigue siendo diagnóstica: el CP 42140
-no se descarta por aparecer en un recinto procesado con Burgos.
+mediante su intersección respaldada, conservando los residuos. La etiqueta
+de provincia sigue siendo diagnóstica: el CP 42140 no se descarta por aparecer
+en un recinto procesado con Burgos.
 
 En Aldovera, los cinco puntos consultados devuelven 19119 y la geometría
 consultada cubre el 98,25 % del recinto, unos 44,79 km². Esto mejora la
@@ -184,15 +186,19 @@ deja unos 0,80 km² que requieren contraste de contornos.
 
 ### Fragmentos entre límites
 
-Descontando el polígono de Gibraltar, quedan 3.577 fragmentos de diferencia
-entre límites que suman 77.275,85 m², unos 0,077276 km². De ellos, 1.258
+En el análisis previo, al descontar el polígono de Gibraltar se identificaron
+3.577 fragmentos de diferencia entre límites que sumaban 77.275,85 m²,
+unos 0,077276 km². De ellos, 1.258
 tienen menos de 1 m²; 2.173 tienen entre 1 y 100 m²; 139 tienen entre 100 y
 1.000 m² y 7 superan los 1.000 m². El mayor de estos últimos está en Granada
 y suma unos 3.439 m²; el siguiente está en Zaragoza y suma unos 3.234 m².
 
 Esta distribución apoya revisar los pequeños fragmentos como incidencias de
 ajuste de límites antes de tratarlos como zonas postales independientes. No
-se ha asignado ningún CP ni se ha eliminado superficie durante el análisis.
+se asignó ningún CP ni se eliminó superficie durante ese análisis. La
+consolidación posterior también reparó las geometrías pendientes al
+reproyectarlas. Por ello, el estado publicado actual de estas diferencias
+es el de la tabla de alcance: 3.685 componentes y 0,077560 km².
 
 ### Archivos de la ampliación
 
@@ -221,7 +227,9 @@ los márgenes de 200 y 50 metros ni la teselación de Voronoi.
 
 En una franja exterior de 500 metros aparece un punto con CP 19118. Esa
 proximidad no demuestra que el código corresponda a todo el condominio.
-El resto del pendiente provincial son 82 fragmentos que suman unos 1.669 m².
+La publicación incorporó la intersección respaldada del CP 19119 y dejó
+0,795935 km² pendientes en Aldovera. El otro registro pendiente provincial
+contiene 82 fragmentos que suman unos 1.669 m².
 
 ## Criterios para resolver los pendientes
 
@@ -261,4 +269,4 @@ resultado postal publicado.
 
 La falta de códigos respecto a las fuentes es cero. Sigue pendiente una
 comparación independiente con el catálogo oficial completo de Correos y la
-resolución de las superficies anteriores con evidencia postal adicional.
+resolución de las superficies que siguen pendientes con evidencia adicional.

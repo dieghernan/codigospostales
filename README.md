@@ -2,7 +2,7 @@
 
 Este proyecto genera una cartografía aproximada de los códigos postales de
 España con R, a partir de las direcciones de CartoCiudad y los límites
-municipales obtenidos con `mapSpain`. Los resultados se guardan por provincia en
+municipales obtenidos con **mapSpain**. Los resultados se guardan por provincia en
 formato GeoPackage. El resultado final tiene un registro por código postal, que
 puede abarcar varios municipios o provincias.
 
@@ -43,6 +43,12 @@ provincias:
     postal, incluso cuando aparece en varias provincias. Guarda el resultado
     conjunto en `data/codigos_postales.gpkg`.
 
+La publicación incluye además una corrección posterior respaldada por
+geometrías del WMS de CartoCiudad: incorpora intersecciones de 34 recintos
+sin direcciones y excluye Gibraltar del alcance territorial español. Esta
+corrección se documenta en [su informe](CORRECCION_PENDIENTES.md) y no forma
+parte del cálculo de Voronoi.
+
 Los límites resultantes son estimaciones y pueden diferir de la delimitación
 oficial de Correos. Su precisión depende de los datos de partida y del
 procesamiento; el margen interior puede excluir direcciones y códigos postales
@@ -63,7 +69,11 @@ y guarda el ZIP en `data/cartociudad/`. El script espera un nombre como
 los espacios sustituidos por guiones bajos.
 
 Selecciona la provincia mediante `CP_PROVINCIA` y ejecuta el script desde la
-raíz del proyecto. La provincia predeterminada es Cádiz:
+raíz del proyecto. La provincia predeterminada es Cádiz. Para utilizar el
+alcance territorial publicado, configura `CP_BASE_ADMIN_RDS` con
+`data/full_analisis/base_admin_publicada.rds` antes de ejecutar el script.
+Este cálculo sustituye el resultado de la provincia y no reaplica las
+correcciones posteriores respaldadas por el WMS.
 
 ``` r
 Sys.setenv(CP_PROVINCIA = "CADIZ")
@@ -93,7 +103,11 @@ Para Baleares y Álava, los nombres de los ZIP del CNIG son
 `CARTOCIUDAD_CALLEJERO_BALEARES.zip` y `CARTOCIUDAD_CALLEJERO_ALAVA.zip`.
 
 Para actualizar el resultado conjunto, el mapa y el CSV a partir de los
-GeoPackage existentes:
+GeoPackage existentes, utiliza también la base administrativa corregida
+mediante `CP_BASE_ADMIN_RDS`. Sin esa variable, el fondo del mapa se obtiene
+de los límites de **mapSpain** y puede volver a mostrar Gibraltar como parte
+del contorno de Cádiz. La consolidación no actualiza automáticamente las
+tablas de detalle y resumen provincial de pendientes.
 
 ``` r
 source("scripts/ggplot.R")
@@ -107,6 +121,11 @@ source("scripts/ggplot.R")
 `data/cartociudad/reejecucion_actual.txt`. Allí conserva el respaldo, el
 manifiesto de fuentes con huellas SHA-256, las copias del método y de las capas
 administrativas, los registros y los resultados provisionales.
+
+Ese directorio y el archivo que lo señala son locales y están excluidos de
+Git. El script necesita que exista esa referencia; un clon del repositorio
+no incluye un lote preparado ni los ZIP originales. Los comandos siguientes
+describen las fases de un lote local ya configurado.
 
 El inventario del script reconoce las 52 fuentes provinciales, incluidas Ceuta
 y Melilla. Una ejecución existente conserva su manifiesto y su copia congelada
@@ -163,9 +182,11 @@ un punto interior calculado con `st_point_on_surface()`.
 | `scripts/reejecutar.R` | Reejecución por lotes con respaldo, validación y publicación. |
 | `tests/regeneracion.R` | Comprobaciones de geometría, cobertura y consolidación. |
 | `scripts/revisar_margenes.R` | Revisión de los códigos próximos a los límites municipales de Cádiz. |
-| `data/cartociudad/` | Archivos ZIP de CartoCiudad. |
+| `data/cartociudad/` | Fuentes, lotes y respaldos locales, excluidos de Git. |
 | `data/provs/` | Resultados provinciales en formato GeoPackage. |
-| `data/provs/old/` | Resultados anteriores, excluidos del mapa de avance. |
+| `data/evidencia_correcciones/` | Evidencia mínima y registros de validación de las correcciones publicadas. |
+| `data/full_analisis/base_admin_publicada.rds` | Base administrativa de validación con el alcance territorial corregido. |
+| `tests/ejecutar.R` | Verificación de los resultados publicados sin las fuentes locales. |
 | `data/codigos_postales.gpkg` | Capas `codigos_postales`, con un registro por CP, y `pendientes`. |
 | `data/full_analisis/revision_margenes_11.csv` | Revisión por municipio y código postal de Cádiz. |
 | `data/full_analisis/missing.csv` | Superficies pendientes de asignación postal. |
@@ -181,13 +202,16 @@ distintos presentes en las 52 fuentes de CartoCiudad utilizadas: no se ha
 perdido ninguno en el resultado nacional. Esta comprobación no sustituye una
 comparación con el catálogo oficial completo de Correos.
 
-La publicación superó 797 comprobaciones de geometría, cobertura, unicidad de
-códigos, conservación del CP 41760 y reglas de asignación de recintos. La
+La publicación inicial del 25 de octubre superó 797 comprobaciones de
+geometría, cobertura, unicidad de códigos, conservación del CP 41760 y reglas
+de asignación de recintos. La
 cobertura se comprueba sumando las capas asignadas y pendientes; no significa
 que toda la superficie tenga un código postal.
 
-La revisión de cierre del 26 de octubre superó 803 comprobaciones sobre los
-resultados publicados, incluidas las del inventario completo y los EPSG.
+La revisión de cierre anterior a la corrección localizada superó 803
+comprobaciones, incluidas las del inventario completo y los EPSG. Estas
+cifras corresponden a validaciones históricas; la corrección posterior y sus
+pruebas se describen a continuación.
 
 Quedan 97 registros pendientes, con 3.881 polígonos separados y 28,0048 km².
 De ellos, 46 registros corresponden a recintos sin direcciones seleccionadas
@@ -204,8 +228,8 @@ CP observado e identificador administrativo coincidente. Conserva los 10.851
 códigos y deja pendientes las franjas residuales y los casos ambiguos.
 
 La propuesta superó 1.021 comprobaciones antes de publicarse. Después de
-copiar los archivos se volvió a validar la cobertura de las 52 provincias y
-el consolidado. El [informe de corrección](CORRECCION_PENDIENTES.md) documenta
+copiar los archivos se superaron otras 790 comprobaciones de las 52 provincias
+y el consolidado. El [informe de corrección](CORRECCION_PENDIENTES.md) documenta
 los cambios y el respaldo. La investigación de los 46 recintos, con 246
 consultas puntuales al WMS, se conserva como antecedente en
 `data/full_analisis/pendientes_priorizacion.csv`.
@@ -216,8 +240,9 @@ se ejecutan desde la raíz con `Rscript tests/ejecutar.R`. Esta verificación
 usa los resultados actuales; los logs conservan la validación histórica
 completa contra la versión anterior.
 
-Las pruebas de los resultados publicados deben utilizar la base territorial
-corregida, que excluye Gibraltar:
+Las pruebas de los resultados publicados utilizan por defecto la base
+territorial corregida, que excluye Gibraltar. `CP_TEST_BASE` permite elegir
+explícitamente esa base u otra para una ejecución distinta:
 
 ```r
 Sys.setenv(CP_TEST_BASE = "data/full_analisis/base_admin_publicada.rds")
