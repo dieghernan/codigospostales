@@ -259,6 +259,22 @@ diagnóstico. El resultado postal sigue agrupándose exclusivamente por
   puntos fuera del límite de esa provincia. Todos están representados en el
   consolidado nacional a través de otra provincia.
 
+## Incidencia de asignación en Alegría-Dulantzi
+
+La revisión posterior detectó que el cálculo conjunto de las partes
+desconectadas de 01001 extendía el CP 01193 de Egileta a 1,829509 km² de la
+parte principal de Alegría-Dulantzi. Todos los puntos seleccionados de esa
+parte principal llevan 01240. La consulta WMS respalda 01240 en 1,696689 km²
+del sector; la diferencia restante refleja desacuerdos de contorno.
+
+El método actualizado procesa los componentes por separado y deja pendiente
+cualquier componente sin direcciones válidas. Se ha validado en salidas de
+prueba de Álava, Segovia, Navarra y Burgos y todavía no se ha aplicado a la
+cartografía publicada. La incidencia afecta a una asignación existente, no añade un
+registro a la capa `pendientes` publicada. La diferencia entre el límite
+administrativo simplificado y el límite detallado del IGN requiere una
+revisión independiente.
+
 ## Trazabilidad
 
 El directorio indicado en `data/cartociudad/reejecucion_actual.txt` conserva

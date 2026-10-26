@@ -27,15 +27,17 @@ provincias:
     con un punto interior calculado con `st_point_on_surface()`. Si ambos
     criterios discrepan, detiene el cálculo. Lee los portales y puntos
     kilométricos de CartoCiudad con código postal.
-2.  Selecciona las direcciones dentro de cada municipio, aplicando un margen
-    interior de 200 metros para reducir problemas cerca de los límites. Si no
-    quedan direcciones, reduce el margen a 50 metros. Recupera los códigos que
-    solo aparecen en la franja exterior cuando las direcciones caen dentro del
-    municipio y su código municipal en CartoCiudad coincide con ese recinto.
-3.  Si queda un único código postal, lo asigna a todo el municipio. Si hay
-    varios, genera una teselación de Voronoi, la recorta al límite municipal y
-    agrupa los polígonos por código postal. Si no quedan direcciones, conserva
-    el recinto en la capa `pendientes`, sin asignarle un código postal.
+2.  Divide cada recinto en sus componentes poligonales desconectados, tras
+    resolver los solapamientos. Selecciona las direcciones dentro de cada
+    componente y aplica un margen interior de 200 metros. Si no quedan
+    direcciones, reduce el margen a 50 metros en ese componente. Recupera los
+    códigos que solo aparecen en su franja exterior cuando las direcciones
+    caen dentro del componente y su código municipal en CartoCiudad coincide
+    con el recinto.
+3.  Si queda un único CP, lo asigna a todo el componente. Si hay varios,
+    genera un Voronoi con sus puntos y lo recorta al componente, conservando
+    los huecos interiores. Si no quedan direcciones válidas, deja esa parte
+    pendiente; no hereda el CP de otro componente del municipio.
 4.  Agrupa los resultados por código postal dentro de cada provincia, conserva
     los huecos interiores para evitar solapamientos y exporta un GeoPackage con
     una capa `codigos_postales` con `COD_POSTAL` y geometría y otra capa
@@ -90,6 +92,10 @@ local y conserva los objetos de la sesión.
 
 También guarda un diagnóstico por municipio con el número de direcciones, el
 margen utilizado y los códigos postales recuperados o excluidos por ese margen.
+El diagnóstico detallado `diagnostico_componentes_<código provincial>.csv`
+conserva una fila por componente. El resumen municipal mantiene una fila por
+`LAU_CODE`, indica cuántos componentes quedan sin CP y recoge los márgenes
+utilizados, separados por punto y coma si difieren entre componentes.
 El prefijo provincial del código postal no se utiliza como filtro. Los casos con
 coordenadas compartidas por distintos códigos postales detienen el proceso para
 evitar una asignación ambigua.
@@ -201,6 +207,7 @@ un punto interior calculado con `st_point_on_surface()`.
 | `data/full_analisis/revision_margenes_11.csv` | Revisión por municipio y código postal de Cádiz. |
 | `data/full_analisis/missing.csv` | Superficies pendientes de asignación postal. |
 | `data/full_analisis/diagnostico_<código provincial>.csv` | Diagnóstico del filtrado de direcciones por municipio. |
+| `data/full_analisis/diagnostico_componentes_<código provincial>.csv` | Diagnóstico por componente generado por el método actualizado. |
 | `data/avance.png` | Mapa de avance del procesamiento. |
 
 ## Grado de avance
@@ -263,6 +270,12 @@ source("tests/regeneracion.R", encoding = "UTF-8")
 Una nueva generación mediante Voronoi no incorpora automáticamente estas
 correcciones posteriores. El lote congelado anterior conserva su trazabilidad;
 su fase `publicar` sustituiría los resultados corregidos por los de ese lote.
+
+El método actualizado procesa por separado los componentes desconectados.
+Esta mejora aún no se ha incorporado a los resultados nacionales publicados:
+su validación utiliza salidas de prueba. Corrige la influencia de puntos de
+una parte del municipio sobre otra, detectada en Alegría-Dulantzi. No modifica
+la resolución de los límites administrativos de partida.
 
 Los textos de los resultados y los logs se corrigieron mediante reemplazos
 mecánicos, sin recalcular las geometrías. Se verificó que los códigos, las

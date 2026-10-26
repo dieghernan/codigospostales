@@ -179,7 +179,9 @@ local({
     file.path(analisis, paste0("solapes_recintos_", cpro, ".csv"))
   )
 
-  # Calcula el índice espacial una vez para cada margen, no por municipio.
+  munis <- separar_componentes_recintos(munis)
+
+  # Cada componente selecciona sus direcciones y aplica sus propios márgenes.
   indices <- st_intersects(st_geometry(munis), st_geometry(portales))
   indices_200 <- st_intersects(st_buffer(st_geometry(munis), -200), portales)
   indices_50 <- st_intersects(st_buffer(st_geometry(munis), -50), portales)
@@ -205,32 +207,20 @@ local({
       " ",
       municipio$name
     )
-    seleccion <- indices_200[[i]]
-    margen <- 200
-    if (!length(seleccion)) {
-      seleccion <- indices_50[[i]]
-      margen <- 50
-    }
-    codigos_interior <- unique(portales$COD_POSTAL[seleccion])
-    # Recupera códigos limitados a la franja exterior cuando el municipio
-    # atribuido por CartoCiudad coincide con el recinto. El CP puede empezar
-    # por el código de otra provincia.
-    candidatos <- indices[[i]]
-    recuperados <- candidatos[
-      !portales$COD_POSTAL[candidatos] %in% codigos_interior &
-        !is.na(portales$INE_MUN[candidatos]) &
-        portales$INE_MUN[candidatos] == municipio$LAU_CODE
-    ]
-    seleccion <- union(seleccion, recuperados)
-    puntos <- portales[seleccion, ]
-    claves <- data.frame(st_coordinates(puntos), COD_POSTAL = puntos$COD_POSTAL)
-    puntos <- puntos[!duplicated(claves), ]
+    seleccion <- seleccionar_direcciones_componente(
+      portales,
+      municipio,
+      indices[[i]],
+      indices_200[[i]],
+      indices_50[[i]]
+    )
+    puntos <- seleccion$puntos
     codigos <- unique(puntos$COD_POSTAL)
-    codigos_originales <- unique(portales$COD_POSTAL[indices[[i]]])
-    descartados <- setdiff(codigos_originales, codigos)
+    descartados <- setdiff(seleccion$codigos_originales, codigos)
     diagnosticos[[i]] <- data.frame(
       cpro = cpro,
       LAU_CODE = municipio$LAU_CODE,
+      componente = municipio$componente,
       tipo_recinto = if (es_condominio(municipio)) {
         "condominio"
       } else {
@@ -242,53 +232,18 @@ local({
       municipio = municipio$name,
       direcciones = length(indices[[i]]),
       seleccionadas = nrow(puntos),
-      margen = margen,
-      direcciones_recuperadas = length(recuperados),
+      margen = seleccion$margen,
+      direcciones_recuperadas = length(seleccion$recuperados),
       codigos_recuperados = paste(
-        sort(setdiff(codigos, codigos_interior)),
+        sort(setdiff(codigos, seleccion$codigos_interior)),
         collapse = ";"
       ),
       codigos = length(codigos),
+      codigos_seleccionados = paste(sort(codigos), collapse = ";"),
       codigos_descartados = paste(sort(descartados), collapse = ";")
     )
 
-    if (length(codigos) <= 1L) {
-      municipio$COD_POSTAL <- if (length(codigos)) codigos else NA_character_
-      resultados[[i]] <- municipio
-      next
-    }
-
-    # Dos códigos en la misma coordenada no se pueden separar con Voronoi.
-    xy <- st_coordinates(puntos)
-    if (anyDuplicated(data.frame(xy))) {
-      stop("Hay coordenadas con códigos postales distintos en ", municipio$name)
-    }
-    celdas <- puntos |>
-      st_union() |>
-      st_voronoi(envelope = st_as_sfc(st_bbox(municipio))) |>
-      st_collection_extract("POLYGON")
-    celdas <- st_sf(geometry = celdas)
-    # Asigna el código antes del recorte: una celda puede quedar sin su punto
-    # generador al recortar municipios con varias partes o huecos.
-    asignacion <- st_intersects(celdas, puntos)
-    if (any(lengths(asignacion) != 1L)) {
-      stop(
-        "No se puede asignar un único portal a cada celda en ",
-        municipio$name
-      )
-    }
-    celdas$COD_POSTAL <- puntos$COD_POSTAL[unlist(asignacion)]
-    st_agr(celdas) <- "constant"
-    recortadas <- st_intersection(celdas, st_geometry(municipio))
-    recortadas <- recortadas[!st_is_empty(recortadas), ] |>
-      group_by(COD_POSTAL) |>
-      summarise(.groups = "drop") |>
-      st_make_valid()
-    atributos <- st_drop_geometry(municipio)
-    for (nombre in names(atributos)) {
-      recortadas[[nombre]] <- atributos[[nombre]][1]
-    }
-    resultados[[i]] <- recortadas
+    resultados[[i]] <- generar_codigos_componente(municipio, puntos)
   }
 
   por_municipio <- bind_rows(resultados)
@@ -305,7 +260,9 @@ local({
       LAU_CODE,
       nombre = name,
       motivo = "Sin direcciones seleccionadas con código postal"
-    )
+    ) |>
+    group_by(cpro, LAU_CODE, nombre, motivo) |>
+    summarise(.groups = "drop")
   # Ajusta las dos capas al contorno provincial sin rellenar huecos postales.
   st_agr(finalcp) <- "constant"
   st_agr(pendientes) <- "constant"
@@ -353,7 +310,49 @@ local({
       "Falló la validación de geometrías, cobertura, solapamientos o códigos únicos."
     )
   }
-  diagnosticos <- bind_rows(diagnosticos)
+  componentes_diagnostico <- bind_rows(diagnosticos)
+  unir_codigos <- function(x) {
+    valores <- unlist(strsplit(x, ";", fixed = TRUE))
+    paste(sort(unique(valores[nzchar(valores)])), collapse = ";")
+  }
+  diagnosticos <- componentes_diagnostico |>
+    group_by(cpro, LAU_CODE, tipo_recinto, id_prov, t_ua, cmun, municipio) |>
+    summarise(
+      componentes = n(),
+      componentes_sin_cp = sum(codigos == 0L),
+      direcciones = sum(direcciones),
+      seleccionadas = sum(seleccionadas),
+      margen = paste(sort(unique(margen)), collapse = ";"),
+      direcciones_recuperadas = sum(direcciones_recuperadas),
+      codigos_recuperados = unir_codigos(codigos_recuperados),
+      codigos_seleccionados = unir_codigos(codigos_seleccionados),
+      codigos_descartados = unir_codigos(codigos_descartados),
+      .groups = "drop"
+    )
+  diagnosticos$codigos <- lengths(strsplit(
+    diagnosticos$codigos_seleccionados,
+    ";",
+    fixed = TRUE
+  ))
+  diagnosticos$codigos_descartados <- vapply(
+    seq_len(nrow(diagnosticos)),
+    function(i) {
+      paste(
+        setdiff(
+          strsplit(diagnosticos$codigos_descartados[i], ";", fixed = TRUE)[[1]],
+          strsplit(diagnosticos$codigos_seleccionados[i], ";", fixed = TRUE)[[
+            1
+          ]]
+        ),
+        collapse = ";"
+      )
+    },
+    character(1)
+  )
+  readr::write_csv(
+    componentes_diagnostico,
+    file.path(analisis, paste0("diagnostico_componentes_", cpro, ".csv"))
+  )
   fuente <- portales |>
     st_drop_geometry() |>
     count(COD_POSTAL, name = "direcciones")

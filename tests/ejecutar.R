@@ -6,6 +6,7 @@ for (archivo in c(
   "provincias.R",
   "solapes_recintos.R",
   "recintos.R",
+  "componentes.R",
   "correcciones_pendientes.R",
   "regeneracion.R"
 )) {
