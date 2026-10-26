@@ -158,7 +158,14 @@ corregir_lote <- function(raiz) {
     )
     if (
       sum(resultado$operaciones$transferido_km2) > 0 ||
-        resultado$ranuras_eliminadas > 0
+        resultado$ranuras_eliminadas > 0 ||
+        !inherits(sf::st_geometry(postal), "sfc_MULTIPOLYGON") ||
+        !inherits(sf::st_geometry(pendiente), "sfc_MULTIPOLYGON") ||
+        any(vapply(
+          sf::st_layers(archivo)$geomtype,
+          function(tipo) !identical(tipo, "Multi Polygon"),
+          logical(1)
+        ))
     ) {
       temporal <- tempfile(tmpdir = raiz, fileext = ".gpkg")
       sf::st_write(

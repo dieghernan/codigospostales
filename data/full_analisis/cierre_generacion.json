@@ -8,7 +8,7 @@
   "registros_pendientes": 304,
   "poligonos_pendientes": 5310,
   "area_pendiente_km2": 155.887314802916,
-  "consolidado_sha256": "eadc4299c6131dc906fac853b11fa871ca743c96d37f7da6e38e1d85dc4a6927",
+  "consolidado_sha256": "0c8752943f847445c27acf135c6005077fb3015e4e0dae61d69b178e3fde185b",
   "evidencia_sha256": "385ff7c2bf1233603e78baf95571493df4f9b115e7905fd3d5f26f669dae8692",
   "metodo": "Voronoi por componente; correcciones locales validadas; disolución por CP y limpieza de ranuras numéricas"
 }

@@ -179,6 +179,10 @@ por CP y limpia ranuras numéricas. `publicar` ejecuta esa fase si falta y
 después consolida, actualiza informes, valida, copia y vuelve a validar.
 Un lote publicado queda cerrado y requiere preparar otro para actualizarlo.
 
+Las dos capas publicadas usan exclusivamente geometrías `MultiPolygon`,
+también cuando proceden de colecciones con restos de líneas o puntos. La
+normalización conserva los atributos, los huecos y la superficie poligonal.
+
 Antes de publicar se comprueban las geometrías, la unicidad de los códigos,
 la cobertura provincial y los solapamientos. Los informes distinguen los
 códigos de la fuente que no aparecen en el resultado e indican si sus puntos

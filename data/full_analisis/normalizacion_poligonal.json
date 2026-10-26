@@ -1,0 +1,27 @@
+{
+  "codigos_postales": {
+    "registros": 10853,
+    "colecciones_antes": 44,
+    "colecciones_despues": 0,
+    "diferencia_maxima_area_m2": 3.42726707458496e-07
+  },
+  "pendientes": {
+    "registros": 304,
+    "colecciones_antes": 18,
+    "colecciones_despues": 0,
+    "diferencia_maxima_area_m2": 2.52015070145717e-07
+  },
+  "casos": [
+    {
+      "COD_POSTAL": "37312"
+    },
+    {
+      "COD_POSTAL": "37409"
+    },
+    {
+      "COD_POSTAL": "37710"
+    }
+  ],
+  "regeneracion_voronoi": false,
+  "consultas_wms": 0
+}

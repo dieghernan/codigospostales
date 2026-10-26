@@ -1,5 +1,48 @@
 area_geometria <- function(g) sum(as.numeric(sf::st_area(g)))
 
+normalizar_poligonos <- function(capa) {
+  originales <- sf::st_geometry(capa)
+  extraer <- function(g) {
+    if (inherits(g, "POLYGON")) {
+      return(list(unclass(g)))
+    }
+    if (inherits(g, "MULTIPOLYGON")) {
+      return(unclass(g))
+    }
+    if (inherits(g, "GEOMETRYCOLLECTION")) {
+      return(do.call(c, lapply(g, extraer)))
+    }
+    list()
+  }
+  geometrias <- lapply(originales, function(g) {
+    partes <- extraer(g)
+    if (!length(partes)) {
+      stop("Una geometría carece de superficie poligonal.")
+    }
+    sf::st_multipolygon(partes)
+  })
+  sf::st_geometry(capa) <- if (length(geometrias)) {
+    sf::st_sfc(geometrias, crs = sf::st_crs(capa))
+  } else {
+    sf::st_sfc(sf::st_multipolygon(), crs = sf::st_crs(capa))[0]
+  }
+  if (!all(sf::st_is_valid(capa))) {
+    stop("La extracción poligonal ha producido una geometría inválida.")
+  }
+  if (
+    any(
+      abs(
+        as.numeric(sf::st_area(originales)) -
+          as.numeric(sf::st_area(capa))
+      ) >
+        1e-4
+    )
+  ) {
+    stop("La extracción poligonal ha cambiado la superficie.")
+  }
+  capa
+}
+
 solo_poligonos <- function(g) {
   g <- sf::st_make_valid(g)
   g <- g[!sf::st_is_empty(g) & sf::st_dimension(g) == 2L]
@@ -159,7 +202,8 @@ aplicar_asignaciones <- function(
     !sf::st_is_empty(pendientes) & sf::st_dimension(pendientes) == 2L,
   ]
   limpieza <- limpiar_ranuras_numericas(disolver_codigos(postal))
-  postal <- limpieza$postal
+  postal <- normalizar_poligonos(limpieza$postal)
+  pendientes <- normalizar_poligonos(pendientes)
   despues <- sf::st_union(c(
     sf::st_geometry(postal),
     sf::st_geometry(pendientes)

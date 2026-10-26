@@ -35,6 +35,7 @@ local({
     group_by(COD_POSTAL) |>
     summarise(.groups = "drop") |>
     st_make_valid(geos_method = "valid_linework")
+  codigos <- normalizar_poligonos(codigos)
   codigos <- limpiar_ranuras_numericas(codigos)$postal
   pendientes <- lapply(archivos, function(archivo) {
     if (!"pendientes" %in% st_layers(archivo)$name) {
@@ -43,7 +44,8 @@ local({
     st_read(archivo, layer = "pendientes", quiet = TRUE) |> st_transform(25830)
   }) |>
     bind_rows() |>
-    st_make_valid(geos_method = "valid_linework")
+    st_make_valid(geos_method = "valid_linework") |>
+    normalizar_poligonos()
   if (anyDuplicated(codigos$COD_POSTAL) || !all(st_is_valid(codigos))) {
     stop(
       "El consolidado no supera la validación de códigos únicos o geometrías."

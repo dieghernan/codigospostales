@@ -172,3 +172,36 @@ test_that("el consolidado contiene un registro por CP y una capa de pendientes",
   expect_setequal(resultado$COD_POSTAL, codigos_entrada)
   expect_all_true(st_is_valid(resultado))
 })
+
+test_that("las capas publicadas contienen exclusivamente multipolígonos", {
+  nacional <- Sys.getenv("CP_TEST_CONSOLIDADO", "data/codigos_postales.gpkg")
+  if (identical(Sys.getenv("CP_TEST_SOLO_PROVINCIAS"), "true")) {
+    nacional <- ""
+  }
+  nacional <- nacional[nzchar(nacional)]
+  if (length(nacional)) {
+    cp <- st_read(nacional, layer = "codigos_postales", quiet = TRUE)
+    casos <- cp[cp$COD_POSTAL %in% c("37312", "37409", "37710"), ]
+    expect_setequal(casos$COD_POSTAL, c("37312", "37409", "37710"))
+    expect_equal(as.character(st_geometry_type(casos)), rep("MULTIPOLYGON", 3))
+  }
+  for (archivo in c(archivos, nacional)) {
+    for (capa in c("codigos_postales", "pendientes")) {
+      x <- st_read(archivo, layer = capa, quiet = TRUE)
+      expect_equal(
+        unique(as.character(st_geometry_type(x))),
+        if (nrow(x)) "MULTIPOLYGON" else character()
+      )
+      conexion <- DBI::dbConnect(RSQLite::SQLite(), archivo)
+      esquema <- DBI::dbGetQuery(
+        conexion,
+        "SELECT table_name, geometry_type_name FROM gpkg_geometry_columns"
+      )
+      DBI::dbDisconnect(conexion)
+      expect_equal(
+        esquema$geometry_type_name[esquema$table_name == capa],
+        "MULTIPOLYGON"
+      )
+    }
+  }
+})

@@ -62,3 +62,29 @@ test_that("la limpieza elimina ranuras numéricas y conserva huecos reales", {
   expect_equal(st_geometry(limpio$postal)[[1]][[2]], hueco)
   expect_equal(limpiar_ranuras_numericas(limpio$postal)$ranuras_eliminadas, 0L)
 })
+
+test_that("la normalización conserva polígonos, huecos y atributos de colecciones", {
+  anillo <- rbind(c(0, 0), c(10, 0), c(10, 10), c(0, 10), c(0, 0))
+  hueco <- rbind(c(2, 2), c(2, 3), c(3, 3), c(3, 2), c(2, 2))
+  poligono <- st_polygon(list(anillo, hueco))
+  capa <- st_sf(
+    COD_POSTAL = "37312",
+    geometry = st_sfc(
+      st_geometrycollection(list(
+        poligono,
+        st_linestring(rbind(c(10, 0), c(11, 0)))
+      )),
+      crs = 25830
+    )
+  )
+  resultado <- normalizar_poligonos(capa)
+  expect_identical(resultado$COD_POSTAL, capa$COD_POSTAL)
+  expect_identical(as.character(st_geometry_type(resultado)), "MULTIPOLYGON")
+  expect_equal(as.numeric(st_area(resultado)), 99)
+  expect_equal(length(st_geometry(resultado)[[1]][[1]]), 2L)
+  expect_equal(normalizar_poligonos(resultado), resultado)
+  expect_identical(
+    class(st_geometry(normalizar_poligonos(capa[0, ])))[1],
+    "sfc_MULTIPOLYGON"
+  )
+})

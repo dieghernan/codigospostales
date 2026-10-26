@@ -305,6 +305,8 @@ local({
       )
     )
   }
+  finalcp <- normalizar_poligonos(finalcp)
+  pendientes <- normalizar_poligonos(pendientes)
   geometria <- c(st_geometry(finalcp), st_geometry(pendientes))
   union_total <- st_union(geometria)
   diferencia_m2 <- sum(as.numeric(st_area(st_sym_difference(
