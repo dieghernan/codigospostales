@@ -70,7 +70,7 @@ recinto original de menor superficie. En un empate se conserva el primero en
 el archivo de entrada. No se aplican tolerancias para cerrar huecos.
 
 Cada ejecución guarda el resultado intermedio en `data/provs/CP_XX.gpkg` y
-ejecuta `scripts/ggplot.R`. Este reúne todos los resultados provinciales,
+ejecuta `scripts/consolidado.R`. Este reúne todos los resultados provinciales,
 los transforma a EPSG:25830 y disuelve las superficies por `COD_POSTAL`, sin
 restringir los códigos por su prefijo provincial. Así actualiza el producto
 final `data/codigos_postales.gpkg`. Los registros sin CP quedan excluidos del
@@ -88,10 +88,16 @@ Windows. Estas mejoras se aplican al regenerar cada provincia; consolidar
 resultados antiguos no repite su asignación postal ni resuelve sus solapes
 administrativos de origen.
 
+La consolidación elimina anillos interiores de hasta 1 mm² que no contienen
+superficie de otro CP ni de un pendiente. Conserva los enclaves, los agujeros
+mayores y todos los contornos exteriores; no simplifica ni desplaza vértices.
+La detección usa el área del anillo con coordenadas trasladadas al origen para
+evitar cancelaciones numéricas. Esta limpieza no asigna los recintos pendientes.
+
 Para reconstruir únicamente el consolidado y el mapa, sin regenerar provincias:
 
 ```r
-source("scripts/ggplot.R")
+source("scripts/consolidado.R")
 ```
 
 ## Grado de avance

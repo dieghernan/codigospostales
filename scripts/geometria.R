@@ -15,6 +15,60 @@ solo_poligonos <- function(x) {
   x[!st_is_empty(x), ]
 }
 
+# Elimina solo anillos interiores numéricos en coordenadas métricas.
+limpiar_anillos <- function(x, pendientes, umbral_m2 = 1e-6) {
+  stopifnot(!st_is_longlat(x), st_crs(x) == st_crs(pendientes))
+  original <- st_geometry(x)
+  proteccion <- c(original, st_geometry(pendientes))
+  cajas <- st_sfc(
+    lapply(original, function(g) {
+      st_as_sfc(st_bbox(st_sfc(g, crs = st_crs(x))))[[1]]
+    }),
+    crs = st_crs(x)
+  )
+  cercanos <- st_intersects(cajas, proteccion)
+  eliminados <- 0L
+  resultado <- lapply(seq_along(original), function(i) {
+    poligonos <- lapply(original[[i]], function(poligono) {
+      conservar <- rep(TRUE, length(poligono))
+      for (j in seq_along(poligono)[-1L]) {
+        anillo <- poligono[[j]]
+        # Trasladar al origen evita cancelaciones con coordenadas UTM grandes.
+        xy <- sweep(anillo, 2, anillo[1, ], "-")
+        area <- abs(sum(
+          xy[-nrow(xy), 1] * xy[-1, 2] - xy[-1, 1] * xy[-nrow(xy), 2]
+        )) /
+          2
+        if (area > umbral_m2) {
+          next
+        }
+        hueco <- st_sfc(st_polygon(list(anillo)), crs = st_crs(x))
+        vecinos <- setdiff(cercanos[[i]], i)
+        vecinos <- vecinos[st_intersects(hueco, proteccion[vecinos])[[1]]]
+        ocupado <- length(vecinos) &&
+          any(
+            as.numeric(st_area(
+              suppressWarnings(st_intersection(hueco, proteccion[vecinos]))
+            )) >
+              0
+          )
+        if (!ocupado) {
+          conservar[j] <- FALSE
+          eliminados <<- eliminados + 1L
+        }
+      }
+      poligono[conservar]
+    })
+    st_multipolygon(poligonos)
+  })
+  st_geometry(x) <- st_sfc(resultado, crs = st_crs(x))
+  if (!all(st_is_valid(x))) {
+    stop("La limpieza ha producido geometrías inválidas.")
+  }
+  message("Anillos numéricos eliminados: ", eliminados)
+  x
+}
+
 # En cada solape conserva la superficie del recinto original más pequeño.
 resolver_solapes <- function(x) {
   x <- solo_poligonos(x)

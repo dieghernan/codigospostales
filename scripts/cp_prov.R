@@ -251,4 +251,4 @@ st_write(finalcp, filename, append = FALSE)
 st_write(pendientes, filename, layer = "pendientes", append = FALSE)
 
 
-source("scripts/ggplot.R")
+source("scripts/consolidado.R")

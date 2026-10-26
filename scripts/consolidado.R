@@ -34,14 +34,6 @@ codigos <- all |>
   summarise(.groups = "drop") |>
   solo_poligonos()
 
-st_write(
-  codigos,
-  "data/codigos_postales.gpkg",
-  layer = "codigos_postales",
-  append = FALSE,
-  quiet = TRUE
-)
-
 pendientes <- lapply(files, function(file) {
   capas <- st_layers(file)$name
   if ("pendientes" %in% capas) {
@@ -58,6 +50,15 @@ pendientes <- lapply(files, function(file) {
   x
 }) |>
   bind_rows()
+
+codigos <- limpiar_anillos(codigos, pendientes)
+st_write(
+  codigos,
+  "data/codigos_postales.gpkg",
+  layer = "codigos_postales",
+  append = FALSE,
+  quiet = TRUE
+)
 st_write(
   pendientes,
   "data/codigos_postales.gpkg",

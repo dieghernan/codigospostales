@@ -58,4 +58,36 @@ local({
     recuperar_cp_municipal(casos)$COD_POSTAL,
     c("01001", "01001", "02001", "02002", NA, NA, NA)
   ))
+
+  micro <- unclass(cuadrado(2, 0.0005))[[1]]
+  enclave <- unclass(cuadrado(4, 1))[[1]]
+  micro[, 2] <- micro[, 2] + 2
+  enclave[, 2] <- enclave[, 2] + 2
+  prueba <- st_sf(
+    COD_POSTAL = c("00001", "00002"),
+    geometry = st_sfc(
+      st_multipolygon(list(list(
+        unclass(cuadrado(0, 10))[[1]],
+        micro,
+        enclave
+      ))),
+      st_multipolygon(list(list(enclave))),
+      crs = 25830
+    )
+  )
+  limpio <- limpiar_anillos(prueba, prueba[FALSE, ])
+  protegido <- limpiar_anillos(
+    prueba,
+    st_sf(
+      geometry = st_sfc(
+        st_multipolygon(list(list(micro))),
+        crs = 25830
+      )
+    )
+  )
+  stopifnot(
+    length(st_geometry(limpio)[[1]][[1]]) == 2L,
+    length(st_geometry(protegido)[[1]][[1]]) == 3L,
+    identical(st_geometry(limpio)[[2]], st_geometry(prueba)[[2]])
+  )
 })
