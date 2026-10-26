@@ -1,5 +1,5 @@
 {
-  "estado": "publicada_y_verificada",
+  "estado": "auditoria_historica_de_correcciones_reaplicadas",
   "alcance": "monocodigo",
   "recintos_corregidos": 34,
   "recintos_adicionales": 27,
@@ -53,5 +53,6 @@
   "log_postpublicacion_sha256": "0145c75e3b7b4f2feee37d3d9551a315148fd06014518cafb30580c061f4f7f9",
   "evidencia": "data/evidencia_correcciones",
   "manifiesto_evidencia": "data/evidencia_correcciones/manifest.json",
-  "respaldo_local": "Conservado fuera de Git en el directorio de corrección local."
+  "respaldo_local": "Conservado fuera de Git en el directorio de corrección local.",
+  "consolidado_vigente": "regeneracion_componentes_publicada.json"
 }

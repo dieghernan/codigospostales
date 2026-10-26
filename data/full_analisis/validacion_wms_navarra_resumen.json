@@ -1,0 +1,34 @@
+{
+  "fecha": "2026-10-26",
+  "fase": "tras_reaplicacion_wms",
+  "provincia": "31",
+  "puntos": 10678,
+  "entidades_wms": 423,
+  "clasificacion_antes": {
+    "coincide": 10007,
+    "cp_distinto": 658,
+    "pendiente": 9,
+    "sin_cobertura_wms": 4
+  },
+  "clasificacion_ahora": {
+    "coincide": 9970,
+    "cp_distinto": 649,
+    "pendiente": 55,
+    "sin_cobertura_wms": 4
+  },
+  "puntos_comparables": 10619,
+  "coincidencias_antes_en_comparables": 9971,
+  "coincidencias_ahora_en_comparables": 9970,
+  "ambito_comun_evaluado_km2": 10317.5860783436,
+  "area_coincidente_antes_km2": 9698.00343630064,
+  "area_coincidente_ahora_km2": 9697.12011651502,
+  "area_discrepante_antes_km2": 619.582642042989,
+  "area_discrepante_ahora_km2": 620.46596182861,
+  "control_petilla": {
+    "cp_antes": ["50686", "50686"],
+    "cp_ahora": ["", "50686"],
+    "cp_wms": ["50686", "50686"]
+  },
+  "alcance": "Malla de centros a 1 km y controles dirigidos; no demuestra concordancia completa. Geometrías WMS recuperadas mediante consultas puntuales; posibles entidades no descubiertas.",
+  "fuente": "https://www.cartociudad.es/wms-inspire/direcciones-ccpp"
+}

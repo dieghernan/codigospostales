@@ -1,0 +1,245 @@
+cpro,LAU_CODE,componente,tipo_recinto,id_prov,t_ua,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_seleccionados,codigos_descartados
+47,47001,1,municipio,47,99,001,Adalia,149,148,200,0,,1,47129,
+47,47002,1,municipio,47,99,002,Aguasal,61,61,200,0,,1,47418,
+47,47003,1,municipio,47,99,003,Aguilar de Campos,333,332,200,0,,1,47814,
+47,47004,1,municipio,47,99,004,Alaejos,1477,1474,200,0,,1,47510,
+47,47005,1,municipio,47,99,005,Alcazarén,764,757,200,0,,1,47238,47250
+47,47006,1,municipio,47,99,006,Aldea de San Miguel,267,261,200,0,,1,47160,
+47,47007,1,municipio,47,99,007,Aldeamayor de San Martín,4990,4307,200,0,,1,47162,47151
+47,47008,1,municipio,47,99,008,Almenara de Adaja,88,88,200,0,,1,47419,
+47,47009,1,municipio,47,99,009,Amusquillo,184,182,200,0,,1,47177,
+47,47010,1,municipio,47,99,010,Arroyo de la Encomienda,4191,3231,200,0,,2,47130;47195,47197
+47,47011,1,municipio,47,99,011,Ataquines,620,618,200,0,,1,47210,
+47,47012,1,municipio,47,99,012,Bahabón,286,285,200,0,,1,47312,
+47,47013,1,municipio,47,99,013,Barcial de la Loma,195,195,200,0,,1,47674,
+47,47014,1,municipio,47,99,014,Barruelo del Valle,138,137,200,0,,1,47129,
+47,47015,1,municipio,47,99,015,Becilla de Valderaduey,401,396,200,0,,1,47670,47676
+47,47016,1,municipio,47,99,016,Benafarces,194,194,200,0,,1,47880,
+47,47017,1,municipio,47,99,017,Bercero,358,356,200,0,,1,47115,
+47,47018,1,municipio,47,99,018,Berceruelo,57,56,200,0,,1,47115,
+47,47019,1,municipio,47,99,019,Berrueces,165,163,200,0,,1,47813,
+47,47020,1,municipio,47,99,020,Bobadilla del Campo,342,341,200,0,,1,47462,
+47,47021,1,municipio,47,99,021,Bocigas,180,179,200,0,,1,47419,
+47,47022,1,municipio,47,99,022,Bocos de Duero,120,10,200,0,,1,47317,
+47,47023,1,municipio,47,99,023,Boecillo,2801,2539,200,0,,1,47151,47140;47150
+47,47024,1,municipio,47,99,024,Bolaños de Campos,366,363,200,0,,1,47675,
+47,47025,1,municipio,47,99,025,Brahojos de Medina,172,172,200,0,,1,47461,
+47,47026,1,municipio,47,99,026,Bustillo de Chaves,93,93,200,0,,1,47608,
+47,47027,1,municipio,47,99,027,Cabezón de Pisuerga,1698,1663,200,0,,1,47260,47155
+47,47028,1,municipio,47,99,028,Cabezón de Valderaduey,51,49,200,0,,1,47689,47608
+47,47029,1,municipio,47,99,029,Cabreros del Monte,174,173,200,0,,1,47832,
+47,47030,1,municipio,47,99,030,Campaspero,1347,1346,200,0,,1,47310,
+47,47031,1,municipio,47,99,031,El Campillo,353,254,200,0,,1,47460,47400
+47,47032,1,municipio,47,99,032,Camporredondo,312,310,200,0,,1,47165,
+47,47033,1,municipio,47,99,033,Canalejas de Peñafiel,510,510,200,0,,1,47311,
+47,47034,1,municipio,47,99,034,Canillas de Esgueva,236,235,200,0,,1,47185,47184
+47,47035,1,municipio,47,99,035,Carpio,1048,1047,200,0,,1,47470,
+47,47036,1,municipio,47,99,036,Casasola de Arión,524,523,200,0,,1,47110,47113
+47,47037,1,municipio,47,99,037,Castrejón de Trabancos,291,288,200,0,,1,47512,
+47,47038,1,municipio,47,99,038,Castrillo de Duero,327,321,200,0,,1,47318,
+47,47039,1,municipio,47,99,039,Castrillo-Tejeriego,258,256,200,0,,1,47329,
+47,47040,1,municipio,47,99,040,Castrobol,173,172,200,0,,1,47689,
+47,47041,1,municipio,47,99,041,Castrodeza,316,314,200,0,,1,47192,47190
+47,47042,1,municipio,47,99,042,Castromembibre,134,133,200,0,,1,47882,
+47,47043,1,municipio,47,99,043,Castromonte,523,521,200,0,,1,47641,
+47,47044,1,municipio,47,99,044,Castronuevo de Esgueva,423,423,200,0,,1,47171,
+47,47045,1,municipio,47,99,045,Castronuño,1188,1187,200,0,,1,47520,
+47,47046,1,municipio,47,99,046,Castroponce,214,214,200,0,,1,47664,
+47,47047,1,municipio,47,99,047,Castroverde de Cerrato,302,302,200,0,,1,47182,
+47,47048,1,municipio,47,99,048,Ceinos de Campos,277,274,200,0,,1,47692,
+47,47049,1,municipio,47,99,049,Cervillego de la Cruz,125,125,200,0,,1,47494,
+47,47050,1,municipio,47,99,050,Cigales,2223,2179,200,0,,1,47270,47194
+47,47051,1,municipio,47,99,051,Ciguñuela,0,0,50,0,,0,,
+47,47051,2,municipio,47,99,051,Ciguñuela,353,351,200,0,,1,47191,
+47,47052,1,municipio,47,99,052,Cistérniga,2127,1863,200,2,47012;47013,4,47012;47013;47161;47193,47169;47320
+47,47053,1,municipio,47,99,053,Cogeces de Íscar,215,212,200,0,,1,47440,
+47,47054,1,municipio,47,99,054,Cogeces del Monte,1074,1067,200,0,,1,47313,
+47,47055,1,municipio,47,99,055,Corcos,253,246,200,0,,2,47280;47281,47270;47282
+47,47056,1,municipio,47,99,056,Corrales de Duero,0,0,50,0,,0,,
+47,47056,2,municipio,47,99,056,Corrales de Duero,209,209,200,0,,1,47317,
+47,47057,1,municipio,47,99,057,Cubillas de Santa Marta,497,486,200,0,,1,47290,
+47,47058,1,municipio,47,99,058,Cuenca de Campos,425,422,200,0,,1,47650,
+47,47059,1,municipio,47,99,059,Curiel de Duero,232,228,200,0,,1,47316,
+47,47059,2,municipio,47,99,059,Curiel de Duero,1,1,200,0,,1,47317,
+47,47060,1,municipio,47,99,060,Encinas de Esgueva,494,493,200,0,,1,47186,
+47,47061,1,municipio,47,99,061,Esguevillas de Esgueva,575,573,200,0,,1,47176,47180
+47,47062,1,municipio,47,99,062,Fombellida,319,316,200,0,,1,47184,
+47,47063,1,municipio,47,99,063,Fompedraza,189,189,200,0,,1,47311,
+47,47064,1,municipio,47,99,064,Fontihoyuelo,124,123,200,0,,1,47609,
+47,47065,1,municipio,47,99,065,Fresno el Viejo,879,875,200,0,,1,47480,47470
+47,47066,1,municipio,47,99,066,Fuensaldaña,1127,1095,200,0,,1,47194,47270
+47,47067,1,municipio,47,99,067,Fuente el Sol,207,206,200,0,,1,47494,
+47,47068,1,municipio,47,99,068,Fuente-Olmedo,111,111,200,0,,1,47418,
+47,47069,1,municipio,47,99,069,Gallegos de Hornija,159,159,200,0,,1,47134,
+47,47070,1,municipio,47,99,070,Gatón de Campos,163,163,200,0,,1,47606,
+47,47071,1,municipio,47,99,071,Geria,453,429,200,0,,1,47131,
+47,47073,1,municipio,47,99,073,Herrín de Campos,267,267,200,0,,1,47607,
+47,47074,1,municipio,47,99,074,Hornillos de Eresma,324,218,200,0,,1,47238,47410
+47,47075,1,municipio,47,99,075,Íscar,3559,3542,200,0,,2,47420;47430,
+47,47076,1,municipio,47,99,076,Laguna de Duero,5458,4893,200,0,,3,47140;47153;47169,47151;47193
+47,47077,1,municipio,47,99,077,Langayo,454,453,200,0,,1,47314,
+47,47078,1,municipio,47,99,078,Lomoviejo,205,204,200,0,,1,47494,47219
+47,47079,1,municipio,47,99,079,Llano de Olmedo,124,124,200,0,,1,47418,
+47,47080,1,municipio,47,99,080,Manzanillo,102,100,200,0,,1,47314,
+47,47081,1,municipio,47,99,081,Marzales,101,101,200,0,,1,47133,
+47,47082,1,municipio,47,99,082,Matapozuelos,986,983,200,0,,2,47230;47237,47238
+47,47083,1,municipio,47,99,083,Matilla de los Caños,127,126,200,0,,1,47114,
+47,47084,1,municipio,47,99,084,Mayorga,0,0,50,0,,0,,
+47,47084,2,municipio,47,99,084,Mayorga,1355,1320,200,0,,1,47680,
+47,47084,3,municipio,47,99,084,Mayorga,0,0,50,0,,0,,
+47,47085,1,municipio,47,99,085,Medina del Campo,5239,5168,200,0,,3,47400;47492;47493,
+47,47086,1,municipio,47,99,086,Medina de Rioseco,12,12,200,0,,1,47640,
+47,47086,2,municipio,47,99,086,Medina de Rioseco,1978,1924,200,0,,2,47800;47816,
+47,47087,1,municipio,47,99,087,Megeces,508,496,200,0,,1,47440,
+47,47088,1,municipio,47,99,088,Melgar de Abajo,292,291,200,0,,1,47687,
+47,47089,1,municipio,47,99,089,Melgar de Arriba,354,352,200,0,,1,47686,
+47,47090,1,municipio,47,99,090,Mojados,2299,2093,200,0,,1,47250,
+47,47091,1,municipio,47,99,091,Monasterio de Vega,162,162,200,0,,1,47688,
+47,47092,1,municipio,47,99,092,Montealegre de Campos,204,198,200,0,,1,47816,
+47,47093,1,municipio,47,99,093,Montemayor de Pililla,1110,1106,200,0,,1,47320,47165
+47,47094,1,municipio,47,99,094,Moral de la Reina,255,253,200,0,,1,47691,
+47,47095,1,municipio,47,99,095,Moraleja de las Panaderas,55,55,200,0,,1,47454,
+47,47096,1,municipio,47,99,096,Morales de Campos,190,189,200,0,,1,47811,47810
+47,47097,1,municipio,47,99,097,Mota del Marqués,484,481,200,0,,1,47120,47113
+47,47098,1,municipio,47,99,098,Mucientes,690,687,200,0,,1,47194,
+47,47099,1,municipio,47,99,099,La Mudarra,216,216,200,0,,1,47630,
+47,47100,1,municipio,47,99,100,Muriel,260,260,200,0,,1,47219,
+47,47101,1,municipio,47,99,101,Nava del Rey,1792,1740,200,0,,1,47500,47511
+47,47102,1,municipio,47,99,102,Nueva Villa de las Torres,336,333,200,0,,1,47464,
+47,47103,1,municipio,47,99,103,Olivares de Duero,423,377,200,0,,1,47359,
+47,47104,1,municipio,47,99,104,Olmedo,1901,1839,200,0,,2,47410;47451,47238
+47,47105,1,municipio,47,99,105,Olmos de Esgueva,230,229,200,0,,1,47173,47172
+47,47106,1,municipio,47,99,106,Olmos de Peñafiel,141,140,200,0,,1,47318,
+47,47109,1,municipio,47,99,109,Palazuelo de Vedija,318,317,200,0,,1,47812,
+47,47110,1,municipio,47,99,110,La Parrilla,552,550,200,0,,1,47328,
+47,47111,1,municipio,47,99,111,La Pedraja de Portillo,1156,1095,200,0,,1,47196,47162
+47,47112,1,municipio,47,99,112,Pedrajas de San Esteban,2180,2167,200,0,,1,47430,47420
+47,47113,1,municipio,47,99,113,Pedrosa del Rey,340,338,200,0,,1,47112,
+47,47114,1,municipio,47,99,114,Peñafiel,3283,3213,200,0,,3,47300;47314;47318,47313
+47,47115,1,municipio,47,99,115,Peñaflor de Hornija,388,386,200,0,,1,47640,47190
+47,47116,1,municipio,47,99,116,Pesquera de Duero,833,633,200,0,,1,47315,47316
+47,47117,1,municipio,47,99,117,Piña de Esgueva,395,395,200,0,,1,47175,
+47,47118,1,municipio,47,99,118,Piñel de Abajo,339,339,200,0,,1,47316,
+47,47119,1,municipio,47,99,119,Piñel de Arriba,258,257,200,0,,1,47316,
+47,47121,1,municipio,47,99,121,Pollos,694,686,200,0,,1,47116,
+47,47122,1,municipio,47,99,122,Portillo,1701,1687,200,0,,1,47160,47162
+47,47123,1,municipio,47,99,123,Pozal de Gallinas,484,482,200,0,,1,47450,
+47,47124,1,municipio,47,99,124,Pozaldez,571,570,200,1,47492,2,47220;47492,
+47,47125,1,municipio,47,99,125,Pozuelo de la Orden,155,153,200,0,,1,47831,
+47,47126,1,municipio,47,99,126,Puras,78,77,200,0,,1,47419,
+47,47127,1,municipio,47,99,127,Quintanilla de Arriba,333,133,200,0,,1,47360,
+47,47128,1,municipio,47,99,128,Quintanilla del Molar,86,86,200,0,,1,47673,
+47,47129,1,municipio,47,99,129,Quintanilla de Onésimo,1096,968,200,0,,1,47350,47359
+47,47130,1,municipio,47,99,130,Quintanilla de Trigueros,159,158,200,0,,1,47283,
+47,47131,1,municipio,47,99,131,Rábano,424,422,200,0,,1,47319,
+47,47132,1,municipio,47,99,132,Ramiro,96,96,200,0,,1,47453,
+47,47133,1,municipio,47,99,133,Renedo de Esgueva,1851,1478,200,0,,1,47170,
+47,47134,1,municipio,47,99,134,Roales de Campos,323,322,200,0,,1,47673,
+47,47135,1,municipio,47,99,135,Robladillo,78,78,200,0,,1,47131,
+47,47137,1,municipio,47,99,137,Roturas,0,0,50,0,,0,,
+47,47137,2,municipio,47,99,137,Roturas,159,159,200,0,,1,47316,
+47,47138,1,municipio,47,99,138,Rubí de Bracamonte,246,244,200,0,,1,47494,
+47,47139,1,municipio,47,99,139,Rueda,1314,1310,200,0,,3,47490;47492;47509,
+47,47140,1,municipio,47,99,140,Saelices de Mayorga,265,264,200,0,,1,47689,
+47,47141,1,municipio,47,99,141,Salvador de Zapardiel,91,90,200,0,,1,47219,47494
+47,47141,2,municipio,47,99,141,Salvador de Zapardiel,84,82,200,0,,1,47219,
+47,47142,1,municipio,47,99,142,San Cebrián de Mazote,298,298,200,0,,1,47129,
+47,47143,1,municipio,47,99,143,San Llorente,0,0,50,0,,0,,
+47,47143,2,municipio,47,99,143,San Llorente,342,340,200,0,,1,47317,
+47,47144,1,municipio,47,99,144,San Martín de Valvení,161,160,200,0,,1,47209,
+47,47145,1,municipio,47,99,145,San Miguel del Arroyo,1237,1234,200,0,,1,47164,
+47,47146,1,municipio,47,99,146,San Miguel del Pino,302,301,200,0,,1,47132,
+47,47147,1,municipio,47,99,147,San Pablo de la Moraleja,137,137,200,0,,1,47219,
+47,47148,1,municipio,47,99,148,San Pedro de Latarce,687,686,200,0,,1,47851,
+47,47149,1,municipio,47,99,149,San Pelayo,109,107,200,0,,1,47129,47134
+47,47150,1,municipio,47,99,150,San Román de Hornija,536,535,200,0,,1,47530,
+47,47151,1,municipio,47,99,151,San Salvador,80,79,200,0,,1,47134,
+47,47152,1,municipio,47,99,152,Santa Eufemia del Arroyo,208,208,200,0,,1,47811,
+47,47153,1,municipio,47,99,153,Santervás de Campos,414,414,200,0,,1,47609,
+47,47154,1,municipio,47,99,154,Santibáñez de Valcorba,273,269,200,0,,1,47331,
+47,47155,1,municipio,47,99,155,Santovenia de Pisuerga,1926,1664,200,0,,1,47155,
+47,47156,1,municipio,47,99,156,San Vicente del Palacio,187,172,200,0,,1,47493,47460;47463;47494
+47,47157,1,municipio,47,99,157,Sardón de Duero,627,621,200,0,,1,47340,
+47,47158,1,municipio,47,99,158,La Seca,982,977,200,0,,1,47491,
+47,47159,1,municipio,47,99,159,Serrada,833,802,200,0,,1,47231,
+47,47160,1,municipio,47,99,160,Siete Iglesias de Trabancos,800,798,200,0,,1,47511,
+47,47161,1,municipio,47,99,161,Simancas,3316,3193,200,0,,1,47130,
+47,47162,1,municipio,47,99,162,Tamariz de Campos,210,209,200,0,,1,47815,47813
+47,47163,1,municipio,47,99,163,Tiedra,745,743,200,0,,2,47870;47881,
+47,47164,1,municipio,47,99,164,Tordehumos,470,469,200,0,,1,47830,
+47,47165,1,municipio,47,99,165,Tordesillas,4,3,200,0,,1,47100,
+47,47165,2,municipio,47,99,165,Tordesillas,4180,4153,200,0,,3,47100;47113;47132,47114;47490
+47,47166,1,municipio,47,99,166,Torrecilla de la Abadesa,3,3,200,0,,1,47114,
+47,47166,2,municipio,47,99,166,Torrecilla de la Abadesa,289,285,200,0,,1,47114,47113
+47,47167,1,municipio,47,99,167,Torrecilla de la Orden,529,527,200,0,,1,47513,
+47,47168,1,municipio,47,99,168,Torrecilla de la Torre,59,58,200,0,,1,47129,
+47,47169,1,municipio,47,99,169,Torre de Esgueva,191,190,200,0,,1,47183,
+47,47169,2,municipio,47,99,169,Torre de Esgueva,0,0,50,0,,0,,
+47,47170,1,municipio,47,99,170,Torre de Peñafiel,107,107,200,0,,1,47319,
+47,47170,2,municipio,47,99,170,Torre de Peñafiel,185,173,200,0,,1,47313,
+47,47171,1,municipio,47,99,171,Torrelobatón,631,627,200,0,,1,47134,47115
+47,47171,2,municipio,47,99,171,Torrelobatón,3,2,200,0,,1,47134,
+47,47172,1,municipio,47,99,172,Torrescárcela,353,344,200,0,,1,47313,47320
+47,47173,1,municipio,47,99,173,Traspinedo,2026,1898,200,0,,1,47330,47320;47329
+47,47174,1,municipio,47,99,174,Trigueros del Valle,468,453,200,17,47280,2,47280;47282,
+47,47175,1,municipio,47,99,175,Tudela de Duero,864,618,200,0,,2,47161;47169,47162
+47,47175,2,municipio,47,99,175,Tudela de Duero,4113,4000,200,0,,1,47320,47329
+47,47176,1,municipio,47,99,176,La Unión de Campos,309,308,200,0,,1,47670,
+47,47177,1,municipio,47,99,177,Urones de Castroponce,165,165,200,0,,1,47671,
+47,47178,1,municipio,47,99,178,Urueña,310,309,200,0,,1,47862,
+47,47179,1,municipio,47,99,179,Valbuena de Duero,726,671,200,0,,1,47359,
+47,47180,1,municipio,47,99,180,Valdearcos de la Vega,198,198,200,0,,1,47317,
+47,47181,1,municipio,47,99,181,Valdenebro de los Valles,287,282,200,0,,1,47816,
+47,47182,1,municipio,47,99,182,Valdestillas,1211,1209,200,0,,1,47240,
+47,47183,1,municipio,47,99,183,Valdunquillo,292,290,200,0,,1,47672,
+47,47184,1,municipio,47,99,184,Valoria la Buena,737,732,200,0,,2,47200;47209,
+47,47185,1,municipio,47,99,185,Valverde de Campos,166,165,200,0,,1,47690,
+47,47186,1,municipio,47,99,186,Valladolid,29249,27561,200,10,47195,22,47001;47002;47003;47004;47005;47006;47007;47008;47009;47010;47011;47012;47013;47014;47015;47016;47017;47152;47153;47194;47195;47197,47130;47140;47150;47155;47169;47170;47193;47239;47610
+47,47186,2,municipio,47,99,186,Valladolid,2,1,200,0,,1,47008,47131
+47,47186,3,municipio,47,99,186,Valladolid,0,0,50,0,,0,,
+47,47186,4,municipio,47,99,186,Valladolid,44,40,200,0,,1,47639,
+47,47187,1,municipio,47,99,187,Vega de Ruiponce,298,298,200,0,,1,47609,
+47,47188,1,municipio,47,99,188,Vega de Valdetronco,216,216,200,0,,1,47133,
+47,47189,1,municipio,47,99,189,Velascálvaro,126,125,200,0,,1,47463,47460
+47,47190,1,municipio,47,99,190,Velilla,185,184,200,0,,1,47114,
+47,47191,1,municipio,47,99,191,Velliza,313,311,200,0,,1,47131,
+47,47192,1,municipio,47,99,192,Ventosa de la Cuesta,175,173,200,0,,1,47232,
+47,47193,1,municipio,47,99,193,Viana de Cega,1672,1352,200,0,,2,47150;47152,
+47,47194,1,municipio,47,99,194,Viloria,531,525,200,0,,1,47166,
+47,47195,1,municipio,47,99,195,Villabáñez,757,665,200,0,,1,47329,47320;47330
+47,47196,1,municipio,47,99,196,Villabaruz de Campos,128,128,200,0,,1,47815,
+47,47197,1,municipio,47,99,197,Villabrágima,850,845,200,0,,2,47811;47820,47641
+47,47198,1,municipio,47,99,198,Villacarralón,200,199,200,0,,1,47609,
+47,47199,1,municipio,47,99,199,Villacid de Campos,247,247,200,0,,1,47607,
+47,47200,1,municipio,47,99,200,Villaco,169,168,200,0,,1,47181,
+47,47203,1,municipio,47,99,203,Villafrades de Campos,217,217,200,0,,1,47606,
+47,47204,1,municipio,47,99,204,Villafranca de Duero,453,390,200,0,,1,47529,
+47,47205,1,municipio,47,99,205,Villafrechós,547,543,200,0,,1,47810,47674;47811;47812
+47,47206,1,municipio,47,99,206,Villafuerte,222,221,200,0,,1,47180,47181
+47,47207,1,municipio,47,99,207,Villagarcía de Campos,273,272,200,0,,1,47840,
+47,47208,1,municipio,47,99,208,Villagómez la Nueva,204,202,200,0,,1,47608,
+47,47209,1,municipio,47,99,209,Villalán de Campos,92,91,200,0,,1,47675,
+47,47210,1,municipio,47,99,210,Villalar de los Comuneros,404,401,200,0,,1,47111,
+47,47211,1,municipio,47,99,211,Villalba de la Loma,102,100,200,0,,1,47689,
+47,47212,1,municipio,47,99,212,Villalba de los Alcores,464,459,200,0,,1,47639,47194
+47,47213,1,municipio,47,99,213,Villalbarba,180,179,200,0,,1,47113,47120
+47,47213,2,municipio,47,99,213,Villalbarba,0,0,50,0,,0,,
+47,47214,1,municipio,47,99,214,Villalón de Campos,1427,1420,200,0,,1,47600,
+47,47215,1,municipio,47,99,215,Villamuriel de Campos,156,154,200,0,,1,47814,
+47,47216,1,municipio,47,99,216,Villán de Tordesillas,174,173,200,0,,1,47131,
+47,47217,1,municipio,47,99,217,Villanubla,1450,1409,200,0,,1,47620,47639
+47,47218,1,municipio,47,99,218,Villanueva de Duero,1452,1399,200,0,,1,47239,
+47,47219,1,municipio,47,99,219,Villanueva de la Condesa,64,64,200,0,,1,47608,
+47,47220,1,municipio,47,99,220,Villanueva de los Caballeros,315,170,200,0,,1,47850,
+47,47221,1,municipio,47,99,221,Villanueva de los Infantes,132,132,200,0,,1,47174,
+47,47222,1,municipio,47,99,222,Villanueva de San Mancio,144,142,200,0,,1,47813,
+47,47223,1,municipio,47,99,223,Villardefrades,293,290,200,0,,1,47860,47850
+47,47224,1,municipio,47,99,224,Villarmentero de Esgueva,105,78,200,0,,1,47172,
+47,47225,1,municipio,47,99,225,Villasexmir,143,143,200,0,,1,47134,
+47,47226,1,municipio,47,99,226,Villavaquerín,254,253,200,0,,1,47329,
+47,47227,1,municipio,47,99,227,Villavellid,173,172,200,0,,1,47883,
+47,47228,1,municipio,47,99,228,Villaverde de Medina,484,481,200,0,,1,47465,
+47,47229,1,municipio,47,99,229,Villavicencio de los Caballeros,354,354,200,0,,1,47676,
+47,47230,1,municipio,47,99,230,Wamba,288,287,200,0,,1,47190,
+47,47231,1,municipio,47,99,231,Zaratán,2081,1810,200,0,,1,47610,47009;47014;47016
+47,47232,1,municipio,47,99,232,La Zarza,169,166,200,0,,1,47452,47410

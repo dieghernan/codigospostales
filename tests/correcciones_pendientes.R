@@ -2,8 +2,11 @@ library(testthat)
 library(sf)
 
 carpeta <- "data/evidencia_correcciones"
+consolidado <- Sys.getenv("CP_TEST_CONSOLIDADO", "data/codigos_postales.gpkg")
+analisis <- Sys.getenv("CP_TEST_ANALISIS", "data/full_analisis")
+cierre <- jsonlite::read_json(file.path(analisis, "cierre_generacion.json"))
 despues <- st_read(
-  "data/codigos_postales.gpkg",
+  consolidado,
   layer = "codigos_postales",
   quiet = TRUE
 )
@@ -16,7 +19,7 @@ exclusion <- st_read(
   quiet = TRUE
 )
 pendientes_despues <- st_read(
-  "data/codigos_postales.gpkg",
+  consolidado,
   layer = "pendientes",
   quiet = TRUE
 )
@@ -32,6 +35,10 @@ test_that("la evidencia conserva las huellas de la publicación", {
       registro$sha256
     )
   }
+  expect_equal(
+    digest::digest(file = consolidado, algo = "sha256"),
+    cierre$consolidado_sha256
+  )
 })
 
 test_that("las ampliaciones seleccionadas están en los CP publicados", {
@@ -68,10 +75,10 @@ test_that("las ampliaciones seleccionadas están en los CP publicados", {
 
 test_that("las ampliaciones y Gibraltar quedan fuera de los pendientes", {
   expect_all_true(st_is_valid(pendientes_despues))
-  expect_equal(nrow(pendientes_despues), 97L)
+  expect_equal(nrow(pendientes_despues), cierre$registros_pendientes)
   expect_equal(
     sum(as.numeric(st_area(pendientes_despues))) / 1e6,
-    28.004800263379277,
+    cierre$area_pendiente_km2,
     tolerance = 1e-8
   )
   expect_lt(
@@ -133,7 +140,7 @@ test_that("cada ampliación tiene respaldo espacial sin disputa conocida", {
 
 test_that("se conserva una geometría para el CP nuevo en la provincia", {
   provincia <- st_read(
-    "data/provs/CP_09.gpkg",
+    file.path(Sys.getenv("CP_TEST_DIR", "data/provs"), "CP_09.gpkg"),
     layer = "codigos_postales",
     quiet = TRUE
   )

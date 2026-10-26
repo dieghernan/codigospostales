@@ -1,0 +1,11 @@
+{
+  "fecha": "2026-10-26",
+  "codigos_postales": 10851,
+  "codigos_fuente": 10851,
+  "registros_pendientes": 304,
+  "poligonos_pendientes": 4108,
+  "area_pendiente_km2": 1011.5391684971,
+  "recintos_modificados": 512,
+  "provincias_con_cambios": 50,
+  "consolidado_sha256": "7fba25378cf1af6efd4b6e495c6a4fcdfebf7f77083989526b9ee4c157a18ff7"
+}

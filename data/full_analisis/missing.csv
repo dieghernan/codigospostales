@@ -1,98 +1,305 @@
 cpro,LAU_CODE,nombre,motivo
+01,01051,Agurain/Salvatierra,Sin direcciones seleccionadas con código postal
 01,53001,NA,Sin direcciones seleccionadas con código postal
 01,PROV_GAP_01,NA,Superficie provincial fuera de los recintos seleccionados
+02,02008,Alcaraz,Sin direcciones seleccionadas con código postal
+02,02041,Jorquera,Sin direcciones seleccionadas con código postal
+02,02067,Riópar,Sin direcciones seleccionadas con código postal
+02,02076,Vianos,Sin direcciones seleccionadas con código postal
 02,PROV_GAP_02,NA,Superficie provincial fuera de los recintos seleccionados
+03,03014,Alacant/Alicante,Sin direcciones seleccionadas con código postal
 03,PROV_GAP_03,NA,Superficie provincial fuera de los recintos seleccionados
+04,04013,Almería,Sin direcciones seleccionadas con código postal
+04,04023,Beires,Sin direcciones seleccionadas con código postal
 04,PROV_GAP_04,NA,Superficie provincial fuera de los recintos seleccionados
+05,05059,Cillán,Sin direcciones seleccionadas con código postal
+05,05126,Mesegar de Corneja,Sin direcciones seleccionadas con código postal
+05,05132,Mombeltrán,Sin direcciones seleccionadas con código postal
+05,05246,Tórtoles,Sin direcciones seleccionadas con código postal
+05,05257,Villafranca de la Sierra,Sin direcciones seleccionadas con código postal
 05,PROV_GAP_05,NA,Superficie provincial fuera de los recintos seleccionados
+06,06003,Ahillones,Sin direcciones seleccionadas con código postal
+06,06005,La Albuera,Sin direcciones seleccionadas con código postal
+06,06021,Bodonal de la Sierra,Sin direcciones seleccionadas con código postal
+06,06031,Carmonita,Sin direcciones seleccionadas con código postal
+06,06033,Casas de Don Pedro,Sin direcciones seleccionadas con código postal
+06,06034,Casas de Reina,Sin direcciones seleccionadas con código postal
+06,06053,Fuente del Arco,Sin direcciones seleccionadas con código postal
+06,06062,Helechosa de los Montes,Sin direcciones seleccionadas con código postal
+06,06083,Mérida,Sin direcciones seleccionadas con código postal
+06,06087,Monterrubio de la Serena,Sin direcciones seleccionadas con código postal
+06,06112,Retamal de Llerena,Sin direcciones seleccionadas con código postal
+06,06134,Trasierra,Sin direcciones seleccionadas con código postal
+06,06151,Villagonzalo,Sin direcciones seleccionadas con código postal
+06,06160,Zalamea de la Serena,Sin direcciones seleccionadas con código postal
 06,PROV_GAP_06,NA,Superficie provincial fuera de los recintos seleccionados
+07,07024,Formentera,Sin direcciones seleccionadas con código postal
+07,07032,Maó,Sin direcciones seleccionadas con código postal
+07,07040,Palma,Sin direcciones seleccionadas con código postal
+07,07048,Sant Josep de sa Talaia,Sin direcciones seleccionadas con código postal
+07,07052,Sant Lluís,Sin direcciones seleccionadas con código postal
 07,PROV_GAP_07,NA,Superficie provincial fuera de los recintos seleccionados
+08,08016,Bagà,Sin direcciones seleccionadas con código postal
+08,08078,l'Espunyola,Sin direcciones seleccionadas con código postal
+08,08283,Tona,Sin direcciones seleccionadas con código postal
 08,PROV_GAP_08,NA,Superficie provincial fuera de los recintos seleccionados
+09,09029,Atapuerca,Sin direcciones seleccionadas con código postal
+09,09056,Briviesca,Sin direcciones seleccionadas con código postal
+09,09091,Castrojeriz,Sin direcciones seleccionadas con código postal
+09,09114,Cubillo del Campo,Sin direcciones seleccionadas con código postal
+09,09155,Haza,Sin direcciones seleccionadas con código postal
+09,09219,Miranda de Ebro,Sin direcciones seleccionadas con código postal
+09,09247,Palacios de Riopisuerga,Sin direcciones seleccionadas con código postal
+09,09251,Pancorbo,Sin direcciones seleccionadas con código postal
+09,09294,Quintanilla de la Mata,Sin direcciones seleccionadas con código postal
+09,09321,Roa,Sin direcciones seleccionadas con código postal
+09,09330,Salas de los Infantes,Sin direcciones seleccionadas con código postal
+09,09361,Sargentes de la Lora,Sin direcciones seleccionadas con código postal
+09,09431,Villafranca Montes de Oca,Sin direcciones seleccionadas con código postal
 09,53005,NA,Sin direcciones seleccionadas con código postal
-09,53040,NA,Sin direcciones seleccionadas con código postal
-09,53041,NA,Sin direcciones seleccionadas con código postal
-09,53038,NA,Sin direcciones seleccionadas con código postal
-09,53039,NA,Sin direcciones seleccionadas con código postal
-09,53007,NA,Sin direcciones seleccionadas con código postal
 09,53006,NA,Sin direcciones seleccionadas con código postal
-09,53035,NA,Sin direcciones seleccionadas con código postal
-09,53034,NA,Sin direcciones seleccionadas con código postal
-09,53033,NA,Sin direcciones seleccionadas con código postal
-09,53019,NA,Sin direcciones seleccionadas con código postal
-09,53032,NA,Sin direcciones seleccionadas con código postal
-09,53018,NA,Sin direcciones seleccionadas con código postal
-09,53046,NA,Sin direcciones seleccionadas con código postal
-09,53014,NA,Sin direcciones seleccionadas con código postal
-09,53043,NA,Sin direcciones seleccionadas con código postal
-09,53023,NA,Sin direcciones seleccionadas con código postal
-09,53022,NA,Sin direcciones seleccionadas con código postal
-09,53017,NA,Sin direcciones seleccionadas con código postal
-09,53028,NA,Sin direcciones seleccionadas con código postal
-09,53015,NA,Sin direcciones seleccionadas con código postal
+09,53007,NA,Sin direcciones seleccionadas con código postal
 09,53012,NA,Sin direcciones seleccionadas con código postal
 09,53013,NA,Sin direcciones seleccionadas con código postal
+09,53014,NA,Sin direcciones seleccionadas con código postal
+09,53015,NA,Sin direcciones seleccionadas con código postal
+09,53017,NA,Sin direcciones seleccionadas con código postal
+09,53018,NA,Sin direcciones seleccionadas con código postal
+09,53019,NA,Sin direcciones seleccionadas con código postal
+09,53022,NA,Sin direcciones seleccionadas con código postal
+09,53023,NA,Sin direcciones seleccionadas con código postal
+09,53028,NA,Sin direcciones seleccionadas con código postal
 09,53031,NA,Sin direcciones seleccionadas con código postal
+09,53032,NA,Sin direcciones seleccionadas con código postal
+09,53033,NA,Sin direcciones seleccionadas con código postal
+09,53034,NA,Sin direcciones seleccionadas con código postal
+09,53035,NA,Sin direcciones seleccionadas con código postal
+09,53038,NA,Sin direcciones seleccionadas con código postal
+09,53039,NA,Sin direcciones seleccionadas con código postal
+09,53040,NA,Sin direcciones seleccionadas con código postal
+09,53041,NA,Sin direcciones seleccionadas con código postal
+09,53043,NA,Sin direcciones seleccionadas con código postal
+09,53046,NA,Sin direcciones seleccionadas con código postal
 09,PROV_GAP_09,NA,Superficie provincial fuera de los recintos seleccionados
+10,10010,Alcuéscar,Sin direcciones seleccionadas con código postal
+10,10038,Cachorrilla,Sin direcciones seleccionadas con código postal
+10,10039,Cadalso,Sin direcciones seleccionadas con código postal
+10,10057,Casas de Miravete,Sin direcciones seleccionadas con código postal
+10,10124,Mohedas de Granadilla,Sin direcciones seleccionadas con código postal
+10,10143,Pescueza,Sin direcciones seleccionadas con código postal
+10,10165,Santa Ana,Sin direcciones seleccionadas con código postal
+10,10177,Sierra de Fuentes,Sin direcciones seleccionadas con código postal
 10,PROV_GAP_10,NA,Superficie provincial fuera de los recintos seleccionados
 11,PROV_GAP_11,NA,Superficie provincial fuera de los recintos seleccionados
+12,12040,Castelló de la Plana/Castellón de la Plana,Sin direcciones seleccionadas con código postal
 12,PROV_GAP_12,NA,Superficie provincial fuera de los recintos seleccionados
+13,13013,Almagro,Sin direcciones seleccionadas con código postal
+13,13047,Herencia,Sin direcciones seleccionadas con código postal
 13,PROV_GAP_13,NA,Superficie provincial fuera de los recintos seleccionados
+14,14057,La Rambla,Sin direcciones seleccionadas con código postal
 14,PROV_GAP_14,NA,Superficie provincial fuera de los recintos seleccionados
+15,15043,Malpica de Bergantiños,Sin direcciones seleccionadas con código postal
+15,15073,Ribeira,Sin direcciones seleccionadas con código postal
 15,PROV_GAP_15,NA,Superficie provincial fuera de los recintos seleccionados
+16,16035,Beteta,Sin direcciones seleccionadas con código postal
+16,16078,Cuenca,Sin direcciones seleccionadas con código postal
+16,16113,Iniesta,Sin direcciones seleccionadas con código postal
+16,16124,Las Mesas,Sin direcciones seleccionadas con código postal
+16,16141,Olmeda del Rey,Sin direcciones seleccionadas con código postal
 16,PROV_GAP_16,NA,Superficie provincial fuera de los recintos seleccionados
+17,17039,Camprodon,Sin direcciones seleccionadas con código postal
+17,17199,Torroella de Montgrí,Sin direcciones seleccionadas con código postal
 17,PROV_GAP_17,NA,Superficie provincial fuera de los recintos seleccionados
+18,18018,Alquife,Sin direcciones seleccionadas con código postal
+18,18032,Bubión,Sin direcciones seleccionadas con código postal
+18,18051,Colomera,Sin direcciones seleccionadas con código postal
+18,18074,Ferreira,Sin direcciones seleccionadas con código postal
 18,PROV_GAP_18,NA,Superficie provincial fuera de los recintos seleccionados
+19,19021,Almoguera,Sin direcciones seleccionadas con código postal
+19,19042,Arroyo de las Fraguas,Sin direcciones seleccionadas con código postal
+19,19044,Atienza,Sin direcciones seleccionadas con código postal
+19,19086,Cifuentes,Sin direcciones seleccionadas con código postal
+19,19263,Taragudo,Sin direcciones seleccionadas con código postal
+19,19280,Torrejón del Rey,Sin direcciones seleccionadas con código postal
+19,19285,Torrubia,Sin direcciones seleccionadas con código postal
 19,53047,NA,Sin direcciones seleccionadas con código postal
 19,PROV_GAP_19,NA,Superficie provincial fuera de los recintos seleccionados
+20,20015,Ataun,Sin direcciones seleccionadas con código postal
+20,20054,Lizartza,Sin direcciones seleccionadas con código postal
+20,20060,Orexa,Sin direcciones seleccionadas con código postal
+20,20069,Donostia/San Sebastián,Sin direcciones seleccionadas con código postal
+20,20078,Zaldibia,Sin direcciones seleccionadas con código postal
+20,20907,Gaztelu,Sin direcciones seleccionadas con código postal
 20,53048,NA,Sin direcciones seleccionadas con código postal
 20,PROV_GAP_20,NA,Superficie provincial fuera de los recintos seleccionados
 21,PROV_GAP_21,NA,Superficie provincial fuera de los recintos seleccionados
+22,22068,Borau,Sin direcciones seleccionadas con código postal
+22,22190,El Pueyo de Araguás,Sin direcciones seleccionadas con código postal
 22,53049,NA,Sin direcciones seleccionadas con código postal
 22,PROV_GAP_22,NA,Superficie provincial fuera de los recintos seleccionados
+23,23016,Benatae,Sin direcciones seleccionadas con código postal
+23,23025,Castellar,Sin direcciones seleccionadas con código postal
+23,23081,Segura de la Sierra,Sin direcciones seleccionadas con código postal
+23,23092,Úbeda,Sin direcciones seleccionadas con código postal
 23,53050,NA,Sin direcciones seleccionadas con código postal
 23,PROV_GAP_23,NA,Superficie provincial fuera de los recintos seleccionados
+24,24050,Castrotierra de Valmadrigal,Sin direcciones seleccionadas con código postal
+24,24051,Cea,Sin direcciones seleccionadas con código postal
 24,53051,NA,Sin direcciones seleccionadas con código postal
 24,53053,NA,Sin direcciones seleccionadas con código postal
 24,53054,NA,Sin direcciones seleccionadas con código postal
 24,PROV_GAP_24,NA,Superficie provincial fuera de los recintos seleccionados
+25,25057,Es Bòrdes,Sin direcciones seleccionadas con código postal
+25,25061,Cabó,Sin direcciones seleccionadas con código postal
+25,25119,Juneda,Sin direcciones seleccionadas con código postal
+25,25185,Ribera d'Urgellet,Sin direcciones seleccionadas con código postal
+25,25193,Sant Llorenç de Morunys,Sin direcciones seleccionadas con código postal
+25,25203,la Seu d'Urgell,Sin direcciones seleccionadas con código postal
+25,25234,Tremp,Sin direcciones seleccionadas con código postal
+25,25247,Vilamòs,Sin direcciones seleccionadas con código postal
 25,53055,NA,Sin direcciones seleccionadas con código postal
 25,PROV_GAP_25,NA,Superficie provincial fuera de los recintos seleccionados
+26,26024,Bañares,Sin direcciones seleccionadas con código postal
+26,26027,Berceo,Sin direcciones seleccionadas con código postal
+26,26128,Sajazarra,Sin direcciones seleccionadas con código postal
+26,26129,San Asensio,Sin direcciones seleccionadas con código postal
 26,53056,NA,Sin direcciones seleccionadas con código postal
 26,PROV_GAP_26,NA,Superficie provincial fuera de los recintos seleccionados
 27,PROV_GAP_27,NA,Superficie provincial fuera de los recintos seleccionados
+28,28018,Becerril de la Sierra,Sin direcciones seleccionadas con código postal
+28,28023,El Boalo,Sin direcciones seleccionadas con código postal
+28,28092,Móstoles,Sin direcciones seleccionadas con código postal
+28,28093,Navacerrada,Sin direcciones seleccionadas con código postal
+28,28135,Santa María de la Alameda,Sin direcciones seleccionadas con código postal
+28,28140,Serranillos del Valle,Sin direcciones seleccionadas con código postal
+28,28143,Somosierra,Sin direcciones seleccionadas con código postal
+28,28163,Valdepiélagos,Sin direcciones seleccionadas con código postal
+28,28173,Villamanrique de Tajo,Sin direcciones seleccionadas con código postal
 28,53058,NA,Sin direcciones seleccionadas con código postal
 28,PROV_GAP_28,NA,Superficie provincial fuera de los recintos seleccionados
+29,29015,Antequera,Sin direcciones seleccionadas con código postal
 29,PROV_GAP_29,NA,Superficie provincial fuera de los recintos seleccionados
+30,30035,San Javier,Sin direcciones seleccionadas con código postal
 30,PROV_GAP_30,NA,Superficie provincial fuera de los recintos seleccionados
+31,31004,Abaurrepea/Abaurrea Baja,Sin direcciones seleccionadas con código postal
+31,31062,Cabanillas,Sin direcciones seleccionadas con código postal
+31,31091,Ergoiena,Sin direcciones seleccionadas con código postal
+31,31138,Lakuntza,Sin direcciones seleccionadas con código postal
+31,31160,Luquin,Sin direcciones seleccionadas con código postal
+31,31164,Mélida,Sin direcciones seleccionadas con código postal
+31,31203,Petilla de Aragón,Sin direcciones seleccionadas con código postal
+31,31210,Roncal/Erronkari,Sin direcciones seleccionadas con código postal
+31,31241,Urraul Alto,Sin direcciones seleccionadas con código postal
+31,31249,Valtierra,Sin direcciones seleccionadas con código postal
+31,31255,Villamayor de Monjardín,Sin direcciones seleccionadas con código postal
 31,53060,NA,Sin direcciones seleccionadas con código postal
-31,53067,NA,Sin direcciones seleccionadas con código postal
 31,53061,NA,Sin direcciones seleccionadas con código postal
-31,53065,NA,Sin direcciones seleccionadas con código postal
-31,53070,NA,Sin direcciones seleccionadas con código postal
-31,53066,NA,Sin direcciones seleccionadas con código postal
-31,53064,NA,Sin direcciones seleccionadas con código postal
-31,53069,NA,Sin direcciones seleccionadas con código postal
 31,53062,NA,Sin direcciones seleccionadas con código postal
+31,53064,NA,Sin direcciones seleccionadas con código postal
+31,53065,NA,Sin direcciones seleccionadas con código postal
+31,53066,NA,Sin direcciones seleccionadas con código postal
+31,53067,NA,Sin direcciones seleccionadas con código postal
+31,53069,NA,Sin direcciones seleccionadas con código postal
+31,53070,NA,Sin direcciones seleccionadas con código postal
 31,PROV_GAP_31,NA,Superficie provincial fuera de los recintos seleccionados
 32,PROV_GAP_32,NA,Superficie provincial fuera de los recintos seleccionados
+33,33022,Degaña,Sin direcciones seleccionadas con código postal
 33,PROV_GAP_33,NA,Superficie provincial fuera de los recintos seleccionados
+34,34029,Becerril de Campos,Sin direcciones seleccionadas con código postal
+34,34102,Mazariegos,Sin direcciones seleccionadas con código postal
+34,34114,Olmos de Ojeda,Sin direcciones seleccionadas con código postal
+34,34121,Palenzuela,Sin direcciones seleccionadas con código postal
+34,34139,Prádanos de Ojeda,Sin direcciones seleccionadas con código postal
+34,34222,Villameriel,Sin direcciones seleccionadas con código postal
 34,PROV_GAP_34,NA,Superficie provincial fuera de los recintos seleccionados
+35,35024,Teguise,Sin direcciones seleccionadas con código postal
 35,PROV_GAP_35,NA,Superficie provincial fuera de los recintos seleccionados
+36,36004,Bueu,Sin direcciones seleccionadas con código postal
+36,36026,Marín,Sin direcciones seleccionadas con código postal
+36,36057,Vigo,Sin direcciones seleccionadas con código postal
+36,36060,Vilagarcía de Arousa,Sin direcciones seleccionadas con código postal
+36,36901,A Illa de Arousa,Sin direcciones seleccionadas con código postal
 36,PROV_GAP_36,NA,Superficie provincial fuera de los recintos seleccionados
+37,37040,Barbadillo,Sin direcciones seleccionadas con código postal
+37,37059,Buenamadre,Sin direcciones seleccionadas con código postal
+37,37116,Doñinos de Ledesma,Sin direcciones seleccionadas con código postal
+37,37119,La Encina,Sin direcciones seleccionadas con código postal
+37,37223,Olmedo de Camaces,Sin direcciones seleccionadas con código postal
+37,37230,Parada de Arriba,Sin direcciones seleccionadas con código postal
+37,37255,Pizarral,Sin direcciones seleccionadas con código postal
+37,37267,Retortillo,Sin direcciones seleccionadas con código postal
+37,37287,San Miguel de Valero,Sin direcciones seleccionadas con código postal
+37,37307,Serradilla del Llano,Sin direcciones seleccionadas con código postal
+37,37321,Tenebrón,Sin direcciones seleccionadas con código postal
 37,53071,NA,Sin direcciones seleccionadas con código postal
 37,PROV_GAP_37,NA,Superficie provincial fuera de los recintos seleccionados
+38,38014,Fuencaliente de la Palma,Sin direcciones seleccionadas con código postal
 38,PROV_GAP_38,NA,Superficie provincial fuera de los recintos seleccionados
 39,PROV_GAP_39,NA,Superficie provincial fuera de los recintos seleccionados
+40,40061,Corral de Ayllón,Sin direcciones seleccionadas con código postal
+40,40065,Chañe,Sin direcciones seleccionadas con código postal
+40,40078,Fresneda de Cuéllar,Sin direcciones seleccionadas con código postal
+40,40111,Lastras del Pozo,Sin direcciones seleccionadas con código postal
+40,40143,Navares de Enmedio,Sin direcciones seleccionadas con código postal
+40,40164,Rapariegos,Sin direcciones seleccionadas con código postal
+40,40170,Riaza,Sin direcciones seleccionadas con código postal
+40,40203,Torrecaballeros,Sin direcciones seleccionadas con código postal
 40,PROV_GAP_40,NA,Superficie provincial fuera de los recintos seleccionados
+41,41014,Badolatosa,Sin direcciones seleccionadas con código postal
+41,41016,Bollullos de la Mitación,Sin direcciones seleccionadas con código postal
+41,41039,Écija,Sin direcciones seleccionadas con código postal
+41,41040,Espartinas,Sin direcciones seleccionadas con código postal
+41,41091,Sevilla,Sin direcciones seleccionadas con código postal
 41,PROV_GAP_41,NA,Superficie provincial fuera de los recintos seleccionados
+42,42010,Aldealices,Sin direcciones seleccionadas con código postal
+42,42025,Arcos de Jalón,Sin direcciones seleccionadas con código postal
+42,42113,Medinaceli,Sin direcciones seleccionadas con código postal
 42,PROV_GAP_42,NA,Superficie provincial fuera de los recintos seleccionados
+43,43043,El Catllar,Sin direcciones seleccionadas con código postal
+43,43095,El Morell,Sin direcciones seleccionadas con código postal
+43,43136,La Ràpita,Sin direcciones seleccionadas con código postal
+43,43155,Tortosa,Sin direcciones seleccionadas con código postal
 43,PROV_GAP_43,NA,Superficie provincial fuera de los recintos seleccionados
+44,44009,Albarracín,Sin direcciones seleccionadas con código postal
+44,44063,Cañizar del Olivar,Sin direcciones seleccionadas con código postal
+44,44109,Frías de Albarracín,Sin direcciones seleccionadas con código postal
+44,44266,Visiedo,Sin direcciones seleccionadas con código postal
 44,53077,NA,Sin direcciones seleccionadas con código postal
 44,PROV_GAP_44,NA,Superficie provincial fuera de los recintos seleccionados
+45,45011,Almendral de la Cañada,Sin direcciones seleccionadas con código postal
+45,45019,Bargas,Sin direcciones seleccionadas con código postal
+45,45071,La Guardia,Sin direcciones seleccionadas con código postal
+45,45121,Ocaña,Sin direcciones seleccionadas con código postal
+45,45123,Ontígola,Sin direcciones seleccionadas con código postal
+45,45145,Recas,Sin direcciones seleccionadas con código postal
+45,45184,Las Ventas de San Julián,Sin direcciones seleccionadas con código postal
 45,PROV_GAP_45,NA,Superficie provincial fuera de los recintos seleccionados
+46,46002,Ador,Sin direcciones seleccionadas con código postal
+46,46075,Bufali,Sin direcciones seleccionadas con código postal
+46,46106,Chelva,Sin direcciones seleccionadas con código postal
+46,46145,Xàtiva,Sin direcciones seleccionadas con código postal
 46,PROV_GAP_46,NA,Superficie provincial fuera de los recintos seleccionados
+47,47051,Ciguñuela,Sin direcciones seleccionadas con código postal
+47,47056,Corrales de Duero,Sin direcciones seleccionadas con código postal
+47,47084,Mayorga,Sin direcciones seleccionadas con código postal
+47,47137,Roturas,Sin direcciones seleccionadas con código postal
+47,47143,San Llorente,Sin direcciones seleccionadas con código postal
+47,47169,Torre de Esgueva,Sin direcciones seleccionadas con código postal
+47,47186,Valladolid,Sin direcciones seleccionadas con código postal
+47,47213,Villalbarba,Sin direcciones seleccionadas con código postal
 47,PROV_GAP_47,NA,Superficie provincial fuera de los recintos seleccionados
+48,48916,Usansolo,Sin direcciones seleccionadas con código postal
 48,PROV_GAP_48,NA,Superficie provincial fuera de los recintos seleccionados
+49,49113,Matilla de Arzón,Sin direcciones seleccionadas con código postal
+49,49134,Muelas de los Caballeros,Sin direcciones seleccionadas con código postal
 49,PROV_GAP_49,NA,Superficie provincial fuera de los recintos seleccionados
+50,50026,Alpartir,Sin direcciones seleccionadas con código postal
+50,50045,Belchite,Sin direcciones seleccionadas con código postal
+50,50185,Murillo de Gállego,Sin direcciones seleccionadas con código postal
+50,50251,Tarazona,Sin direcciones seleccionadas con código postal
+50,50252,Tauste,Sin direcciones seleccionadas con código postal
+50,50265,Trasmoz,Sin direcciones seleccionadas con código postal
+50,50297,Zaragoza,Sin direcciones seleccionadas con código postal
+50,50298,Zuera,Sin direcciones seleccionadas con código postal
 50,PROV_GAP_50,NA,Superficie provincial fuera de los recintos seleccionados
 52,PROV_GAP_52,NA,Superficie provincial fuera de los recintos seleccionados

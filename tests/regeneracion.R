@@ -123,6 +123,34 @@ test_that("se conserva el CP 41760 sin filtrar por provincia", {
   )
 })
 
+test_that("Alegría-Dulantzi no hereda el CP de Egileta en su parte principal", {
+  archivo <- file.path(entrada, "CP_01.gpkg")
+  if (!file.exists(archivo)) {
+    skip("Álava no forma parte de esta fase.")
+  }
+  municipio <- base$municipios[base$municipios$LAU_CODE == "01001", ] |>
+    st_transform(25830) |>
+    st_make_valid()
+  partes <- suppressWarnings(st_cast(st_geometry(municipio), "POLYGON"))
+  expect_length(partes, 2L)
+  principal <- which.max(as.numeric(st_area(partes)))
+  egileta <- which.min(as.numeric(st_area(partes)))
+  resultado <- st_read(archivo, layer = "codigos_postales", quiet = TRUE) |>
+    st_transform(25830)
+  expect_equal(sum(resultado$COD_POSTAL == "01240"), 1L)
+  expect_equal(sum(resultado$COD_POSTAL == "01193"), 1L)
+  for (caso in list(
+    list(parte = principal, cp = "01240"),
+    list(parte = egileta, cp = "01193")
+  )) {
+    falta <- st_difference(
+      partes[caso$parte],
+      st_union(st_geometry(resultado[resultado$COD_POSTAL == caso$cp, ]))
+    )
+    expect_lt(sum(as.numeric(st_area(falta))), 1)
+  }
+})
+
 test_that("el consolidado contiene un registro por CP y una capa de pendientes", {
   if (identical(Sys.getenv("CP_TEST_SOLO_PROVINCIAS"), "true")) {
     skip("El consolidado se comprueba al finalizar el lote.")

@@ -1,0 +1,394 @@
+cpro,LAU_CODE,componente,tipo_recinto,id_prov,t_ua,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_seleccionados,codigos_descartados
+37,37001,1,municipio,37,99,001,Abusejo,460,460,200,0,,1,37640,
+37,37002,1,municipio,37,99,002,Agallas,1,1,50,0,,1,37510,
+37,37002,2,municipio,37,99,002,Agallas,486,486,200,0,,1,37510,
+37,37003,1,municipio,37,99,003,Ahigal de los Aceiteros,506,506,200,0,,1,37248,
+37,37004,1,municipio,37,99,004,Ahigal de Villarino,230,229,200,0,,1,37173,
+37,37005,1,municipio,37,99,005,La Alameda de Gardón,417,409,200,0,,1,37497,
+37,37006,1,municipio,37,99,006,La Alamedilla,366,363,200,0,,1,37554,
+37,37007,1,municipio,37,99,007,Alaraz,877,877,200,0,,1,37312,
+37,37008,1,municipio,37,99,008,Alba de Tormes,2172,2047,200,0,,5,37800;37882;37890;37892;37893,37870
+37,37009,1,municipio,37,99,009,Alba de Yeltes,338,336,200,0,,1,37478,
+37,37010,1,municipio,37,99,010,La Alberca,1107,1104,200,0,,1,37624,
+37,37011,1,municipio,37,99,011,La Alberguería de Argañán,451,448,200,0,,1,37555,
+37,37012,1,municipio,37,99,012,Alconada,281,277,200,0,,1,37329,37337
+37,37013,1,municipio,37,99,013,Aldeacipreste,495,492,200,0,,1,37718,
+37,37014,1,municipio,37,99,014,Aldeadávila de la Ribera,1841,1839,200,0,,3,37250;37251;37253,
+37,37015,1,municipio,37,99,015,Aldea del Obispo,614,609,200,0,,1,37488,
+37,37016,1,municipio,37,99,016,Aldealengua,580,505,200,0,,1,37350,37193
+37,37017,1,municipio,37,99,017,Aldeanueva de Figueroa,561,559,200,0,,1,37429,
+37,37018,1,municipio,37,99,018,Aldeanueva de la Sierra,263,263,200,0,,1,37621,
+37,37019,1,municipio,37,99,019,Aldearrodrigo,295,292,200,0,,1,37110,
+37,37020,1,municipio,37,99,020,Aldearrubia,815,806,200,0,,1,37340,
+37,37021,1,municipio,37,99,021,Aldeaseca de Alba,201,201,200,0,,1,37870,
+37,37022,1,municipio,37,99,022,Aldeaseca de la Frontera,428,425,200,0,,1,37317,37300
+37,37023,1,municipio,37,99,023,Aldeatejada,1111,1004,200,0,,4,37008;37186;37187;37192,
+37,37024,1,municipio,37,99,024,Aldeavieja de Tormes,282,279,200,0,,1,37779,
+37,37025,1,municipio,37,99,025,Aldehuela de la Bóveda,419,412,200,0,,2,37460;37466,37492;37493
+37,37026,1,municipio,37,99,026,Aldehuela de Yeltes,466,465,200,0,,1,37639,
+37,37027,1,municipio,37,99,027,Almenara de Tormes,397,396,200,0,,1,37115,
+37,37028,1,municipio,37,99,028,Almendra,621,621,200,0,,1,37176,
+37,37029,1,municipio,37,99,029,Anaya de Alba,472,469,200,0,,2,37863;37864,37891
+37,37030,1,municipio,37,99,030,Añover de Tormes,175,174,200,0,,1,37111,
+37,37031,1,municipio,37,99,031,Arabayona de Mógica,736,736,200,0,,1,37418,
+37,37032,1,municipio,37,99,032,Arapiles,1040,1012,200,3,37008,3,37008;37187;37796,
+37,37033,1,municipio,37,99,033,Arcediano,179,179,200,0,,1,37429,
+37,37034,1,municipio,37,99,034,El Arco,149,149,200,0,,1,37110,
+37,37035,1,municipio,37,99,035,Armenteros,765,765,200,0,,4,37753;37754;37755;37756,
+37,37036,1,municipio,37,99,036,San Miguel del Robledo,242,232,200,0,,1,37659,
+37,37037,1,municipio,37,99,037,La Atalaya,282,282,200,0,,1,37591,
+37,37038,1,municipio,37,99,038,Babilafuente,861,846,200,0,,1,37330,
+37,37039,1,municipio,37,99,039,Bañobárez,1,1,200,0,,1,37271,
+37,37039,2,municipio,37,99,039,Bañobárez,698,695,200,0,,1,37271,
+37,37040,1,municipio,37,99,040,Barbadillo,0,0,50,0,,0,,
+37,37040,2,municipio,37,99,040,Barbadillo,107,21,200,0,,1,37440,
+37,37040,3,municipio,37,99,040,Barbadillo,678,665,200,0,,1,37440,
+37,37041,1,municipio,37,99,041,Barbalos,278,278,200,0,,1,37607,
+37,37042,1,municipio,37,99,042,Barceo,273,271,200,0,,1,37217,
+37,37044,1,municipio,37,99,044,Barruecopardo,975,974,200,0,,1,37255,
+37,37045,1,municipio,37,99,045,La Bastida,107,106,200,0,,1,37621,
+37,37046,1,municipio,37,99,046,Béjar,4062,3858,200,0,,3,37700;37717;37793,37710
+37,37047,1,municipio,37,99,047,Beleña,303,301,200,0,,1,37789,
+37,37049,1,municipio,37,99,049,Bermellar,545,544,200,0,,1,37291,
+37,37050,1,municipio,37,99,050,Berrocal de Huebra,374,373,200,0,,1,37609,
+37,37051,1,municipio,37,99,051,Berrocal de Salvatierra,283,283,200,0,,1,37795,
+37,37052,1,municipio,37,99,052,Boada,500,500,200,0,,1,37290,
+37,37054,1,municipio,37,99,054,El Bodón,613,609,200,0,,1,37520,37497
+37,37055,1,municipio,37,99,055,Bogajo,496,495,200,0,,1,37291,
+37,37056,1,municipio,37,99,056,La Bouza,174,174,200,0,,1,37488,
+37,37057,1,municipio,37,99,057,Bóveda del Río Almar,362,360,200,0,,1,37316,
+37,37058,1,municipio,37,99,058,Brincones,362,361,200,0,,1,37217,
+37,37059,1,municipio,37,99,059,Buenamadre,0,0,50,0,,0,,
+37,37059,2,municipio,37,99,059,Buenamadre,232,229,200,0,,2,37209;37290,37281
+37,37060,1,municipio,37,99,060,Buenavista,759,567,200,0,,2,37789;37796,37891
+37,37061,1,municipio,37,99,061,El Cabaco,464,457,200,0,,1,37621,37532
+37,37062,1,municipio,37,99,062,Cabezabellosa de la Calzada,331,330,200,0,,1,37490,
+37,37063,1,municipio,37,99,063,La Cabeza de Béjar,300,296,200,0,,1,37773,37790
+37,37065,1,municipio,37,99,065,Cabeza del Caballo,978,974,200,0,,1,37214,
+37,37067,1,municipio,37,99,067,Cabrerizos,2032,1825,200,0,,1,37193,37003;37350
+37,37068,1,municipio,37,99,068,Cabrillas,724,724,200,0,,1,37630,
+37,37069,1,municipio,37,99,069,Calvarrasa de Abajo,1313,1186,200,0,,1,37181,
+37,37070,1,municipio,37,99,070,Calvarrasa de Arriba,933,865,200,0,,1,37191,37188;37190
+37,37071,1,municipio,37,99,071,La Calzada de Béjar,293,286,200,0,,1,37714,
+37,37072,1,municipio,37,99,072,Calzada de Don Diego,457,455,200,0,,2,37440;37448,
+37,37073,1,municipio,37,99,073,Calzada de Valdunciel,821,814,200,0,,1,37797,37798
+37,37074,1,municipio,37,99,074,Campillo de Azaba,287,284,200,0,,1,37550,
+37,37077,1,municipio,37,99,077,El Campo de Peñaranda,384,380,200,0,,1,37317,
+37,37078,1,municipio,37,99,078,Candelario,1185,1137,200,0,,1,37710,37700
+37,37079,1,municipio,37,99,079,Canillas de Abajo,271,270,200,0,,2,37130;37448,
+37,37080,1,municipio,37,99,080,Cantagallo,319,318,200,0,,1,37716,
+37,37081,1,municipio,37,99,081,Cantalapiedra,1035,1033,200,0,,1,37400,
+37,37082,1,municipio,37,99,082,Cantalpino,1122,1120,200,0,,1,37405,
+37,37083,1,municipio,37,99,083,Cantaracillo,330,328,200,0,,1,37319,
+37,37085,1,municipio,37,99,085,Carbajosa de la Sagrada,2616,1933,200,8,37008;37900,4,37008;37188;37191;37900,37796
+37,37086,1,municipio,37,99,086,Carpio de Azaba,169,154,200,0,,1,37497,37500
+37,37087,1,municipio,37,99,087,Carrascal de Barregas,2,2,200,0,,1,37440,
+37,37087,2,municipio,37,99,087,Carrascal de Barregas,3,2,200,0,,1,37440,
+37,37087,3,municipio,37,99,087,Carrascal de Barregas,797,422,200,0,,4,37120;37192;37440;37449,
+37,37087,4,municipio,37,99,087,Carrascal de Barregas,372,264,200,0,,1,37170,
+37,37087,5,municipio,37,99,087,Carrascal de Barregas,93,90,200,0,,1,37129,
+37,37088,1,municipio,37,99,088,Carrascal del Obispo,401,401,200,0,,2,37451;37609,
+37,37088,2,municipio,37,99,088,Carrascal del Obispo,9,9,200,0,,1,37451,
+37,37089,1,municipio,37,99,089,Casafranca,262,261,200,0,,1,37767,
+37,37090,1,municipio,37,99,090,Las Casas del Conde,271,265,200,0,,1,37659,
+37,37091,1,municipio,37,99,091,Casillas de Flores,459,459,200,0,,1,37541,
+37,37092,1,municipio,37,99,092,Castellanos de Moriscos,1066,934,200,0,,1,37439,37184
+37,37096,1,municipio,37,99,096,Castillejo de Martín Viejo,416,414,200,0,,2,37470;37592,
+37,37097,1,municipio,37,99,097,Castraz,95,94,200,0,,1,37496,
+37,37098,1,municipio,37,99,098,Cepeda,616,615,200,0,,1,37656,
+37,37099,1,municipio,37,99,099,Cereceda de la Sierra,249,247,200,0,,1,37621,
+37,37100,1,municipio,37,99,100,Cerezal de Peñahorcada,576,576,200,0,,1,37253,
+37,37101,1,municipio,37,99,101,Cerralbo,730,728,200,0,,1,37291,
+37,37102,1,municipio,37,99,102,El Cerro,969,966,200,0,,2,37720;37724,
+37,37103,1,municipio,37,99,103,Cespedosa de Tormes,1116,1115,200,0,,1,37750,
+37,37104,1,municipio,37,99,104,Cilleros de la Bastida,108,108,200,0,,1,37621,
+37,37106,1,municipio,37,99,106,Cipérez,1062,1062,200,0,,2,37216;37468,
+37,37107,1,municipio,37,99,107,Ciudad Rodrigo,5627,5556,200,12,37497,6,37497;37500;37591;37593;37594;37595,37470
+37,37108,1,municipio,37,99,108,Coca de Alba,178,177,200,0,,1,37830,
+37,37109,1,municipio,37,99,109,Colmenar de Montemayor,484,483,200,0,,1,37711,
+37,37110,1,municipio,37,99,110,Cordovilla,183,182,200,0,,1,37337,
+37,37112,1,municipio,37,99,112,Cristóbal,459,457,200,0,,1,37684,
+37,37113,1,municipio,37,99,113,El Cubo de Don Sancho,806,805,200,0,,2,37281;37290,37209
+37,37114,1,municipio,37,99,114,Chagarcía Medianero,320,320,200,0,,1,37861,
+37,37115,1,municipio,37,99,115,Dios le Guarde,269,268,200,0,,1,37478,
+37,37116,1,municipio,37,99,116,Doñinos de Ledesma,0,0,50,0,,0,,
+37,37116,2,municipio,37,99,116,Doñinos de Ledesma,254,252,200,0,,2,37114;37130,
+37,37117,1,municipio,37,99,117,Doñinos de Salamanca,1,1,50,0,,1,37440,
+37,37117,2,municipio,37,99,117,Doñinos de Salamanca,16,9,50,0,,1,37440,
+37,37117,3,municipio,37,99,117,Doñinos de Salamanca,1276,1097,200,0,,2,37120;37129,37009;37192;37449
+37,37118,1,municipio,37,99,118,Éjeme,349,345,200,0,,1,37891,
+37,37119,1,municipio,37,99,119,La Encina,297,293,200,0,,1,37515,37500
+37,37119,2,municipio,37,99,119,La Encina,0,0,50,0,,0,,
+37,37120,1,municipio,37,99,120,Encina de San Silvestre,345,341,200,0,,1,37114,37468
+37,37121,1,municipio,37,99,121,Encinas de Abajo,557,549,200,0,,2,37874;37893,
+37,37122,1,municipio,37,99,122,Encinas de Arriba,225,209,200,0,,1,37892,
+37,37123,1,municipio,37,99,123,Encinasola de los Comendadores,569,568,200,0,,1,37256,
+37,37124,1,municipio,37,99,124,Endrinal,407,405,200,20,37765,2,37765;37766,37768
+37,37125,1,municipio,37,99,125,Escurial de la Sierra,718,718,200,0,,1,37762,
+37,37126,1,municipio,37,99,126,Espadaña,390,390,200,0,,1,37148,
+37,37127,1,municipio,37,99,127,Espeja,435,428,200,0,,1,37497,37481;37554
+37,37128,1,municipio,37,99,128,Espino de la Orbada,529,528,200,0,,1,37419,
+37,37129,1,municipio,37,99,129,Florida de Liébana,477,473,200,0,,1,37129,
+37,37130,1,municipio,37,99,130,Forfoleda,242,242,200,0,,1,37799,
+37,37131,1,municipio,37,99,131,Frades de la Sierra,542,541,200,0,,1,37766,
+37,37132,1,municipio,37,99,132,La Fregeneda,751,750,200,0,,1,37220,
+37,37133,1,municipio,37,99,133,Fresnedoso,312,308,200,0,,1,37775,
+37,37134,1,municipio,37,99,134,Fresno Alhándiga,328,317,200,0,,1,37789,
+37,37135,1,municipio,37,99,135,La Fuente de San Esteban,1869,1862,200,0,,4,37200;37208;37493;37690,37494
+37,37135,2,municipio,37,99,135,La Fuente de San Esteban,2,1,50,0,,1,37493,
+37,37136,1,municipio,37,99,136,Fuenteguinaldo,1305,1301,200,0,,1,37540,37521
+37,37137,1,municipio,37,99,137,Fuenteliante,223,222,200,0,,1,37291,
+37,37138,1,municipio,37,99,138,Fuenterroble de Salvatierra,448,446,200,0,,1,37768,
+37,37139,1,municipio,37,99,139,Fuentes de Béjar,614,610,200,0,,1,37790,
+37,37140,1,municipio,37,99,140,Fuentes de Oñoro,949,935,200,0,,2,37480;37481,
+37,37141,1,municipio,37,99,141,Gajates,443,442,200,0,,2,37873;37874,
+37,37142,1,municipio,37,99,142,Galindo y Perahuy,1,1,200,0,,1,37449,
+37,37142,2,municipio,37,99,142,Galindo y Perahuy,1273,1112,200,0,,1,37449,
+37,37143,1,municipio,37,99,143,Galinduste,876,873,200,0,,2,37785;37786,
+37,37144,1,municipio,37,99,144,Galisancho,521,454,200,0,,1,37891,
+37,37145,1,municipio,37,99,145,Gallegos de Argañán,504,504,200,0,,1,37497,
+37,37146,1,municipio,37,99,146,Gallegos de Solmirón,585,581,200,0,,1,37751,
+37,37147,1,municipio,37,99,147,Garcibuey,369,344,200,0,,1,37658,37670
+37,37148,1,municipio,37,99,148,Garcihernández,668,655,200,0,,2,37810;37874,
+37,37149,1,municipio,37,99,149,Garcirrey,153,151,200,0,,2,37209;37460,
+37,37150,1,municipio,37,99,150,Gejuelo del Barro,130,126,200,0,,1,37114,37468
+37,37151,1,municipio,37,99,151,Golpejas,294,294,200,0,,1,37170,
+37,37152,1,municipio,37,99,152,Gomecello,687,686,200,0,,1,37420,
+37,37154,1,municipio,37,99,154,Guadramiro,510,508,200,0,,1,37219,37210
+37,37155,1,municipio,37,99,155,Guijo de Ávila,265,259,200,0,,1,37774,
+37,37156,1,municipio,37,99,156,Guijuelo,3401,3388,200,0,,3,37770;37778;37795,37774
+37,37157,1,municipio,37,99,157,Herguijuela de Ciudad Rodrigo,111,111,200,0,,1,37510,
+37,37157,2,municipio,37,99,157,Herguijuela de Ciudad Rodrigo,128,127,200,0,,1,37516,
+37,37158,1,municipio,37,99,158,Herguijuela de la Sierra,382,358,200,0,,2,37617;37619,
+37,37159,1,municipio,37,99,159,Herguijuela del Campo,458,455,200,0,,1,37759,
+37,37160,1,municipio,37,99,160,Hinojosa de Duero,1185,1181,200,0,,1,37230,37246
+37,37161,1,municipio,37,99,161,Horcajo de Montemayor,495,495,200,0,,1,37712,
+37,37162,1,municipio,37,99,162,Horcajo Medianero,778,777,200,0,,1,37860,
+37,37163,1,municipio,37,99,163,La Hoya,196,190,200,0,,1,37716,
+37,37164,1,municipio,37,99,164,Huerta,428,424,200,0,,1,37336,
+37,37165,1,municipio,37,99,165,Iruelos,218,217,200,0,,1,37217,
+37,37166,1,municipio,37,99,166,Ituero de Azaba,388,384,200,0,,1,37551,
+37,37167,1,municipio,37,99,167,Juzbado,204,201,200,0,,1,37115,
+37,37168,1,municipio,37,99,168,Lagunilla,971,969,200,0,,1,37724,
+37,37169,1,municipio,37,99,169,Larrodrigo,422,419,200,0,,1,37865,
+37,37170,1,municipio,37,99,170,Ledesma,1735,1731,200,1,37114,5,37100;37111;37114;37115;37116,
+37,37171,1,municipio,37,99,171,Ledrada,744,742,200,0,,1,37730,37794
+37,37172,1,municipio,37,99,172,Linares de Riofrío,1218,1208,200,0,,1,37760,
+37,37173,1,municipio,37,99,173,Lumbrales,2250,2241,200,0,,1,37240,
+37,37174,1,municipio,37,99,174,Macotera,1670,1666,200,0,,1,37310,
+37,37175,1,municipio,37,99,175,Machacón,473,462,200,0,,2,37893;37894,
+37,37176,1,municipio,37,99,176,Madroñal,197,194,200,0,,1,37619,
+37,37177,1,municipio,37,99,177,El Maíllo,582,581,200,0,,1,37621,
+37,37178,1,municipio,37,99,178,Malpartida,324,324,200,0,,1,37313,
+37,37179,1,municipio,37,99,179,Mancera de Abajo,392,391,200,0,,1,37315,
+37,37180,1,municipio,37,99,180,El Manzano,285,285,200,0,,1,37171,
+37,37181,1,municipio,37,99,181,Martiago,556,554,200,0,,1,37510,
+37,37182,1,municipio,37,99,182,Martinamor,276,234,200,0,,1,37891,37789
+37,37183,1,municipio,37,99,183,Martín de Yeltes,801,798,200,0,,2,37494;37496,
+37,37184,1,municipio,37,99,184,Masueco,1073,1072,200,0,,1,37251,
+37,37185,1,municipio,37,99,185,Castellanos de Villiquera,878,776,200,0,,2,37797;37798,
+37,37186,1,municipio,37,99,186,La Mata de Ledesma,277,275,200,0,,2,37130;37170,
+37,37187,1,municipio,37,99,187,Matilla de los Caños del Río,684,682,200,0,,2,37450;37453,
+37,37188,1,municipio,37,99,188,La Maya,323,322,200,0,,1,37780,
+37,37189,1,municipio,37,99,189,Membribe de la Sierra,242,238,200,0,,2,37759;37766,
+37,37190,1,municipio,37,99,190,Mieza,659,659,200,0,,1,37254,
+37,37191,1,municipio,37,99,191,El Milano,619,619,200,0,,1,37256,
+37,37192,1,municipio,37,99,192,Miranda de Azán,515,505,200,0,,1,37187,
+37,37193,1,municipio,37,99,193,Miranda del Castañar,801,792,200,0,,1,37660,37658
+37,37194,1,municipio,37,99,194,Mogarraz,450,423,200,0,,1,37610,37618
+37,37195,1,municipio,37,99,195,Molinillo,167,167,200,0,,1,37683,
+37,37196,1,municipio,37,99,196,Monforte de la Sierra,206,205,200,0,,1,37618,
+37,37197,1,municipio,37,99,197,Monleón,309,251,200,0,,1,37765,
+37,37198,1,municipio,37,99,198,Monleras,565,564,200,0,,1,37171,
+37,37199,1,municipio,37,99,199,Monsagro,435,432,200,0,,1,37532,
+37,37200,1,municipio,37,99,200,Montejo,422,419,200,0,,1,37795,
+37,37201,1,municipio,37,99,201,Montemayor del Río,478,477,200,0,,1,37727,
+37,37202,1,municipio,37,99,202,Monterrubio de Armuña,645,629,200,0,,1,37798,37797
+37,37203,1,municipio,37,99,203,Monterrubio de la Sierra,304,304,200,0,,1,37781,
+37,37204,1,municipio,37,99,204,Morasverdes,642,640,200,0,,1,37590,37639
+37,37205,1,municipio,37,99,205,Morille,444,442,200,0,,1,37183,37789
+37,37206,1,municipio,37,99,206,Moríñigo,216,209,200,0,,1,37337,
+37,37207,1,municipio,37,99,207,Moriscos,330,311,200,0,,1,37430,
+37,37208,1,municipio,37,99,208,Moronta,336,335,200,0,,1,37216,37210
+37,37209,1,municipio,37,99,209,Mozárbez,716,667,200,0,,3,37183;37186;37796,37891
+37,37211,1,municipio,37,99,211,Narros de Matalayegua,426,424,200,0,,2,37452;37609,
+37,37211,2,municipio,37,99,211,Narros de Matalayegua,71,71,200,0,,1,37452,
+37,37212,1,municipio,37,99,212,Navacarros,357,345,200,0,,1,37716,37700;37717
+37,37213,1,municipio,37,99,213,Nava de Béjar,378,374,200,0,,1,37776,
+37,37214,1,municipio,37,99,214,Nava de Francia,480,478,200,0,,1,37659,
+37,37215,1,municipio,37,99,215,Nava de Sotrobal,401,400,200,0,,1,37850,
+37,37216,1,municipio,37,99,216,Navales,547,545,200,0,,1,37882,
+37,37217,1,municipio,37,99,217,Navalmoral de Béjar,231,226,200,0,,1,37794,37793
+37,37218,1,municipio,37,99,218,Navamorales,409,408,200,0,,1,37749,
+37,37219,1,municipio,37,99,219,Navarredonda de la Rinconada,495,494,200,0,,1,37607,
+37,37221,1,municipio,37,99,221,Navasfrías,814,809,200,0,,1,37542,
+37,37222,1,municipio,37,99,222,Negrilla de Palencia,175,171,200,0,,1,37426,
+37,37222,2,municipio,37,99,222,Negrilla de Palencia,3,2,200,0,,1,37426,
+37,37223,1,municipio,37,99,223,Olmedo de Camaces,0,0,50,0,,0,,
+37,37223,2,municipio,37,99,223,Olmedo de Camaces,9,9,200,0,,1,37292,
+37,37223,3,municipio,37,99,223,Olmedo de Camaces,358,355,200,0,,2,37291;37292,37271
+37,37224,1,municipio,37,99,224,La Orbada,528,525,200,0,,1,37428,
+37,37225,1,municipio,37,99,225,Pajares de la Laguna,224,222,200,0,,1,37428,
+37,37226,1,municipio,37,99,226,Palacios del Arzobispo,345,344,200,0,,1,37111,
+37,37228,1,municipio,37,99,228,Palaciosrubios,523,522,200,0,,1,37406,
+37,37229,1,municipio,37,99,229,Palencia de Negrilla,259,246,200,0,,1,37426,
+37,37230,1,municipio,37,99,230,Parada de Arriba,0,0,50,0,,0,,
+37,37230,2,municipio,37,99,230,Parada de Arriba,407,400,200,0,,2,37129;37449,
+37,37231,1,municipio,37,99,231,Parada de Rubiales,718,718,200,0,,1,37419,
+37,37232,1,municipio,37,99,232,Paradinas de San Juan,550,549,200,0,,1,37318,
+37,37233,1,municipio,37,99,233,Pastores,121,116,200,0,,1,37510,37591
+37,37234,1,municipio,37,99,234,El Payo,725,720,200,0,,1,37524,37523;37542
+37,37235,1,municipio,37,99,235,Pedraza de Alba,360,360,200,0,,1,37882,
+37,37236,1,municipio,37,99,236,Pedrosillo de Alba,343,342,200,0,,1,37871,
+37,37237,1,municipio,37,99,237,Pedrosillo de los Aires,555,555,200,0,,2,37788;37792,
+37,37238,1,municipio,37,99,238,Pedrosillo el Ralo,273,267,200,0,,1,37427,37428
+37,37239,1,municipio,37,99,239,El Pedroso de la Armuña,425,425,200,0,,1,37410,
+37,37240,1,municipio,37,99,240,Pelabravo,1586,1475,200,0,,1,37181,37900
+37,37241,1,municipio,37,99,241,Pelarrodríguez,21,21,200,0,,1,37493,
+37,37241,2,municipio,37,99,241,Pelarrodríguez,265,263,200,0,,1,37209,
+37,37242,1,municipio,37,99,242,Pelayos,279,275,200,0,,1,37787,
+37,37243,1,municipio,37,99,243,La Peña,603,602,200,0,,1,37214,
+37,37244,1,municipio,37,99,244,Peñacaballera,278,273,200,0,,1,37727,
+37,37245,1,municipio,37,99,245,Peñaparda,648,647,200,0,,1,37523,37522
+37,37246,1,municipio,37,99,246,Peñaranda de Bracamonte,2432,2411,200,0,,1,37300,37319
+37,37247,1,municipio,37,99,247,Peñarandilla,330,329,200,0,,1,37820,
+37,37248,1,municipio,37,99,248,Peralejos de Abajo,553,552,200,0,,1,37216,
+37,37249,1,municipio,37,99,249,Peralejos de Arriba,272,272,200,0,,1,37216,
+37,37250,1,municipio,37,99,250,Pereña de la Ribera,1070,1067,200,0,,1,37175,37214
+37,37251,1,municipio,37,99,251,Peromingo,408,407,200,0,,1,37791,
+37,37252,1,municipio,37,99,252,Pinedas,359,358,200,0,,1,37712,
+37,37253,1,municipio,37,99,253,El Pino de Tormes,253,209,200,0,,1,37170,37129
+37,37254,1,municipio,37,99,254,Pitiegua,417,416,200,0,,1,37490,
+37,37255,1,municipio,37,99,255,Pizarral,208,207,200,0,,1,37795,
+37,37255,2,municipio,37,99,255,Pizarral,0,0,50,0,,0,,
+37,37256,1,municipio,37,99,256,Poveda de las Cintas,350,350,200,0,,1,37406,
+37,37257,1,municipio,37,99,257,Pozos de Hinojo,227,224,200,0,,2,37216;37281,
+37,37258,1,municipio,37,99,258,Puebla de Azaba,507,506,200,0,,2,37552;37553,
+37,37259,1,municipio,37,99,259,Puebla de San Medel,224,223,200,0,,1,37791,
+37,37260,1,municipio,37,99,260,Puebla de Yeltes,434,434,200,0,,1,37606,
+37,37261,1,municipio,37,99,261,Puente del Congosto,979,976,200,0,,2,37748;37750,37740
+37,37262,1,municipio,37,99,262,Puertas,498,497,200,0,,1,37159,37217
+37,37263,1,municipio,37,99,263,Puerto de Béjar,766,722,200,0,,1,37720,
+37,37264,1,municipio,37,99,264,Puerto Seguro,311,311,200,0,,1,37488,
+37,37265,1,municipio,37,99,265,Rágama,315,315,200,0,,1,37318,
+37,37266,1,municipio,37,99,266,La Redonda,298,295,200,0,,1,37247,37240
+37,37267,1,municipio,37,99,267,Retortillo,0,0,50,0,,0,,
+37,37267,2,municipio,37,99,267,Retortillo,378,378,200,0,,1,37495,
+37,37268,1,municipio,37,99,268,La Rinconada de la Sierra,346,342,200,0,,1,37607,
+37,37269,1,municipio,37,99,269,Robleda,798,798,200,0,,1,37521,
+37,37270,1,municipio,37,99,270,Robliza de Cojos,342,342,200,0,,2,37130;37492,
+37,37271,1,municipio,37,99,271,Rollán,685,684,200,0,,1,37447,
+37,37272,1,municipio,37,99,272,Saelices el Chico,350,347,200,0,,1,37592,
+37,37273,1,municipio,37,99,273,La Sagrada,235,235,200,0,,1,37465,
+37,37274,1,municipio,37,99,274,Salamanca,14542,12492,200,9,37184;37188;37193;37900,16,37001;37002;37003;37004;37005;37006;37007;37008;37009;37120;37184;37185;37187;37188;37193;37900,37192
+37,37275,1,municipio,37,99,275,Saldeana,361,360,200,0,,1,37259,
+37,37276,1,municipio,37,99,276,Salmoral,537,537,200,0,,1,37314,
+37,37277,1,municipio,37,99,277,Salvatierra de Tormes,251,248,200,0,,1,37779,
+37,37278,1,municipio,37,99,278,San Cristóbal de la Cuesta,663,587,200,0,,1,37439,
+37,37279,1,municipio,37,99,279,Sancti-Spíritus,8,7,200,0,,1,37470,
+37,37279,2,municipio,37,99,279,Sancti-Spíritus,1179,1162,200,0,,1,37470,
+37,37280,1,municipio,37,99,280,Sanchón de la Ribera,523,523,200,0,,1,37217,
+37,37281,1,municipio,37,99,281,Sanchón de la Sagrada,132,128,200,0,,1,37466,
+37,37282,1,municipio,37,99,282,Sanchotello,666,660,200,0,,1,37794,
+37,37283,1,municipio,37,99,283,Sando,330,327,200,0,,2,37460;37468,37114
+37,37284,1,municipio,37,99,284,San Esteban de la Sierra,624,621,200,0,,1,37671,
+37,37285,1,municipio,37,99,285,San Felices de los Gallegos,804,801,200,0,,1,37270,37271
+37,37286,1,municipio,37,99,286,San Martín del Castañar,423,421,200,0,,1,37659,
+37,37287,1,municipio,37,99,287,San Miguel de Valero,597,594,200,0,,1,37763,
+37,37287,2,municipio,37,99,287,San Miguel de Valero,0,0,50,0,,0,,
+37,37288,1,municipio,37,99,288,San Morales,342,281,200,0,,1,37340,
+37,37289,1,municipio,37,99,289,San Muñoz,773,770,200,0,,1,37208,
+37,37290,1,municipio,37,99,290,San Pedro del Valle,223,221,200,0,,1,37170,
+37,37291,1,municipio,37,99,291,San Pedro de Rozados,521,519,200,0,,5,37183;37186;37440;37453;37455,
+37,37292,1,municipio,37,99,292,San Pelayo de Guareña,183,182,200,0,,2,37110;37111,
+37,37293,1,municipio,37,99,293,Santa María de Sando,277,277,200,0,,1,37468,
+37,37294,1,municipio,37,99,294,Santa Marta de Tormes,3098,2628,200,4,37188;37191,4,37181;37188;37191;37900,
+37,37296,1,municipio,37,99,296,Santiago de la Puebla,795,793,200,0,,1,37311,
+37,37297,1,municipio,37,99,297,Santibáñez de Béjar,805,804,200,0,,1,37740,
+37,37298,1,municipio,37,99,298,Santibáñez de la Sierra,364,360,200,0,,2,37670;37682,37658
+37,37299,1,municipio,37,99,299,Santiz,333,333,200,0,,1,37110,
+37,37300,1,municipio,37,99,300,Los Santos,1384,1384,200,0,,1,37768,
+37,37301,1,municipio,37,99,301,Sardón de los Frailes,308,308,200,0,,1,37172,
+37,37302,1,municipio,37,99,302,Saucelle,738,735,200,0,,1,37257,37230
+37,37303,1,municipio,37,99,303,El Sahugo,314,314,200,0,,1,37510,
+37,37304,1,municipio,37,99,304,Sepulcro-Hilario,512,508,200,0,,1,37638,37639
+37,37305,1,municipio,37,99,305,Sequeros,484,482,200,0,,1,37650,37658
+37,37306,1,municipio,37,99,306,Serradilla del Arroyo,922,918,200,0,,2,37531;37596,
+37,37307,1,municipio,37,99,307,Serradilla del Llano,481,478,200,0,,1,37530,
+37,37307,2,municipio,37,99,307,Serradilla del Llano,0,0,50,0,,0,,
+37,37309,1,municipio,37,99,309,La Sierpe,149,148,200,0,,1,37759,
+37,37310,1,municipio,37,99,310,Sieteiglesias de Tormes,198,197,200,0,,1,37892,
+37,37311,1,municipio,37,99,311,Sobradillo,1045,1045,200,0,,1,37246,
+37,37312,1,municipio,37,99,312,Sorihuela,784,777,200,0,,1,37777,37775
+37,37313,1,municipio,37,99,313,Sotoserrano,449,443,200,0,,1,37657,37619
+37,37314,1,municipio,37,99,314,Tabera de Abajo,115,112,200,0,,2,37130;37460,
+37,37315,1,municipio,37,99,315,La Tala,389,389,200,0,,1,37752,
+37,37316,1,municipio,37,99,316,Tamames,1375,1370,200,0,,2,37600;37609,
+37,37317,1,municipio,37,99,317,Tarazona de Guareña,352,351,200,0,,1,37409,
+37,37318,1,municipio,37,99,318,Tardáguila,302,302,200,0,,1,37429,
+37,37319,1,municipio,37,99,319,El Tejado,682,680,200,0,,1,37749,
+37,37320,1,municipio,37,99,320,Tejeda y Segoyuela,304,303,200,0,,1,37607,
+37,37321,1,municipio,37,99,321,Tenebrón,0,0,50,0,,0,,
+37,37321,2,municipio,37,99,321,Tenebrón,233,231,200,0,,1,37589,37470
+37,37322,1,municipio,37,99,322,Terradillos,1127,888,200,6,37800,4,37190;37800;37882;37893,37191
+37,37323,1,municipio,37,99,323,Topas,686,681,200,0,,1,37799,
+37,37324,1,municipio,37,99,324,Tordillos,568,568,200,0,,1,37840,
+37,37325,1,municipio,37,99,325,El Tornadizo,273,272,200,0,,1,37765,
+37,37327,1,municipio,37,99,327,Torresmenudas,270,269,200,0,,1,37110,37115
+37,37328,1,municipio,37,99,328,Trabanca,624,292,200,0,,1,37173,37160
+37,37329,1,municipio,37,99,329,Tremedal de Tormes,191,188,200,0,,2,37148;37149,37159
+37,37330,1,municipio,37,99,330,Valdecarros,611,610,200,0,,1,37881,
+37,37331,1,municipio,37,99,331,Valdefuentes de Sangusín,757,753,200,0,,1,37680,37712
+37,37332,1,municipio,37,99,332,Valdehijaderos,315,313,200,0,,1,37713,
+37,37333,1,municipio,37,99,333,Valdelacasa,543,538,200,0,,1,37791,
+37,37334,1,municipio,37,99,334,Valdelageve,202,201,200,0,,1,37724,
+37,37335,1,municipio,37,99,335,Valdelosa,490,490,200,0,,1,37799,
+37,37336,1,municipio,37,99,336,Valdemierque,193,193,200,0,,1,37891,
+37,37337,1,municipio,37,99,337,Valderrodrigo,334,333,200,0,,1,37256,
+37,37338,1,municipio,37,99,338,Valdunciel,316,279,200,0,,2,37798;37799,
+37,37339,1,municipio,37,99,339,Valero,367,362,200,0,,1,37764,37658
+37,37340,1,municipio,37,99,340,Valsalabroso,551,549,200,0,,2,37214;37217,
+37,37341,1,municipio,37,99,341,Valverde de Valdelacasa,252,250,200,0,,1,37791,
+37,37342,1,municipio,37,99,342,Valverdón,427,356,200,0,,2,37115;37185,37129
+37,37343,1,municipio,37,99,343,Vallejera de Riofrío,248,242,200,0,,1,37717,
+37,37344,1,municipio,37,99,344,Vecinos,328,327,200,0,,3,37452;37453;37456,
+37,37345,1,municipio,37,99,345,Vega de Tirados,265,262,200,0,,2,37115;37170,
+37,37346,1,municipio,37,99,346,Las Veguillas,517,514,200,0,,4,37452;37454;37455;37456,
+37,37347,1,municipio,37,99,347,La Vellés,592,589,200,0,,1,37427,
+37,37348,1,municipio,37,99,348,Ventosa del Río Almar,275,275,200,0,,1,37329,
+37,37349,1,municipio,37,99,349,La Vídola,679,676,200,0,,1,37214,
+37,37350,1,municipio,37,99,350,Vilvestre,896,894,200,0,,1,37258,37255
+37,37351,1,municipio,37,99,351,Villaflores,419,419,200,0,,1,37406,
+37,37352,1,municipio,37,99,352,Villagonzalo de Tormes,417,345,200,0,,1,37893,37882
+37,37352,2,municipio,37,99,352,Villagonzalo de Tormes,4,4,200,0,,1,37894,
+37,37353,1,municipio,37,99,353,Villalba de los Llanos,270,269,200,0,,1,37446,
+37,37354,1,municipio,37,99,354,Villamayor,2998,2412,200,6,37007,2,37007;37185,37189
+37,37355,1,municipio,37,99,355,Villanueva del Conde,438,429,200,0,,1,37658,37660
+37,37356,1,municipio,37,99,356,Villar de Argañán,274,272,200,0,,1,37497,
+37,37357,1,municipio,37,99,357,Villar de Ciervo,652,652,200,0,,1,37488,
+37,37358,1,municipio,37,99,358,Villar de Gallimazo,288,283,200,0,,1,37320,37317;37329;37850
+37,37359,1,municipio,37,99,359,Villar de la Yegua,604,601,200,0,,2,37488;37497,
+37,37360,1,municipio,37,99,360,Villar de Peralonso,703,701,200,0,,2,37147;37148,
+37,37361,1,municipio,37,99,361,Villar de Samaniego,458,458,200,0,,1,37217,
+37,37362,1,municipio,37,99,362,Villares de la Reina,3599,2959,200,20,37005;37006,4,37005;37006;37184;37189,37185
+37,37363,1,municipio,37,99,363,Villares de Yeltes,343,322,200,0,,1,37267,37216
+37,37364,1,municipio,37,99,364,Villarino de los Aires,2816,2745,200,0,,2,37160;37174,37173
+37,37365,1,municipio,37,99,365,Villarmayor,344,334,200,0,,3,37115;37130;37170,
+37,37366,1,municipio,37,99,366,Villarmuerto,340,340,200,0,,1,37217,
+37,37367,1,municipio,37,99,367,Villasbuenas,732,728,200,0,,1,37256,37255
+37,37368,1,municipio,37,99,368,Villasdardo,66,62,200,0,,1,37468,
+37,37369,1,municipio,37,99,369,Villaseco de los Gamitos,420,416,200,0,,1,37114,
+37,37370,1,municipio,37,99,370,Villaseco de los Reyes,699,696,200,0,,3,37140;37150;37159,
+37,37371,1,municipio,37,99,371,Villasrubias,391,390,200,0,,1,37522,
+37,37372,1,municipio,37,99,372,Villaverde de Guareña,239,235,200,0,,1,37428,
+37,37373,1,municipio,37,99,373,Villavieja de Yeltes,1684,1680,200,0,,1,37260,
+37,37374,1,municipio,37,99,374,Villoria,1254,1250,200,0,,1,37339,
+37,37375,1,municipio,37,99,375,Villoruela,761,759,200,0,,1,37338,
+37,37376,1,municipio,37,99,376,Vitigudino,1680,1673,200,0,,1,37210,
+37,37377,1,municipio,37,99,377,Yecla de Yeltes,617,615,200,0,,1,37219,
+37,37378,1,municipio,37,99,378,Zamarra,374,369,200,0,,2,37510;37591,
+37,37379,1,municipio,37,99,379,Zamayón,246,242,200,0,,1,37110,
+37,37380,1,municipio,37,99,380,Zarapicos,193,170,200,0,,1,37170,
+37,37381,1,municipio,37,99,381,La Zarza de Pumareda,576,573,200,0,,1,37253,37254
+37,37382,1,municipio,37,99,382,Zorita de la Frontera,315,315,200,0,,1,37408,
+37,53071,1,condominio,37,4,NA,NA,0,0,50,0,,0,,

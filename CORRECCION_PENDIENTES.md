@@ -1,7 +1,11 @@
-# Corrección localizada publicada
+# Antecedente de la corrección localizada publicada
 
-Corrección publicada el 26 de octubre de 2026. Se han sustituido los resultados
-provinciales afectados, el consolidado, el mapa y los informes de pendientes.
+Este informe documenta la corrección localizada original del 26 de octubre
+de 2026. Sus cifras describen esa publicación histórica. La posterior
+regeneración por componentes reaplica las 34 intersecciones respaldadas y
+conserva la exclusión de Gibraltar. El estado vigente se recoge en el
+[README](README.md) y en el
+[registro de regeneración](data/full_analisis/regeneracion_componentes_publicada.json).
 El directorio local indicado en
 `data/cartociudad/correccion_pendientes_actual.txt` conserva la validación y el
 respaldo de la versión anterior. Esa referencia y los respaldos están
@@ -16,7 +20,7 @@ siempre con identificador administrativo coincidente. Se dejan pendientes
 las zonas sin esa intersección y cualquier zona con respaldo contradictorio
 de otro código conocido. No se aplica el CP al recinto administrativo entero.
 
-| Indicador | Antes | Publicado ahora |
+| Indicador | Antes | Tras la corrección original |
 |---|---:|---:|
 | Códigos postales | 10.851 | 10.851 |
 | Registros pendientes | 97 | 97 |

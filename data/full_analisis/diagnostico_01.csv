@@ -1,54 +1,54 @@
-cpro,LAU_CODE,tipo_recinto,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_descartados
-01,01001,municipio,001,Alegría-Dulantzi,824,822,200,0,,2,
-01,01002,municipio,002,Amurrio,1895,1809,200,0,,3,01449
-01,01003,municipio,003,Aramaio,545,528,200,0,,3,
-01,01004,municipio,004,Artziniega,574,567,200,0,,2,
-01,01006,municipio,006,Armiñón,214,201,200,0,,2,
-01,01008,municipio,008,Arratzua-Ubarrundia,772,640,200,0,,2,01013
-01,01009,municipio,009,Asparrena,819,803,200,0,,3,
-01,01010,municipio,010,Ayala/Aiara,1278,1228,200,0,,7,01400
-01,01011,municipio,011,Baños de Ebro/Mañueta,394,390,200,1,26359,2,
-01,01013,municipio,013,Barrundia,810,795,200,0,,2,01192
-01,01014,municipio,014,Berantevilla,528,512,200,0,,3,
-01,01016,municipio,016,Bernedo,924,919,200,2,09216,5,
-01,01017,municipio,017,Campezo/Kanpezu,1006,1005,200,0,,3,
-01,01018,municipio,018,Zigoitia,1220,1206,200,0,,2,01170
-01,01019,municipio,019,Kripan,211,209,200,0,,1,01309
-01,01020,municipio,020,Kuartango,441,439,200,0,,2,
-01,01021,municipio,021,Elburgo/Burgelu,403,389,200,1,01206,3,
-01,01022,municipio,022,Elciego,696,693,200,0,,1,
-01,01023,municipio,023,Elvillar/Bilar,385,383,200,0,,1,01300
-01,01027,municipio,027,Iruraiz-Gauna,492,458,200,0,,3,
-01,01028,municipio,028,Labastida/Bastida,1332,1322,200,0,,2,
-01,01030,municipio,030,Lagrán,458,455,200,1,01212,3,
-01,01031,municipio,031,Laguardia,1011,955,200,2,01307,5,
-01,01032,municipio,032,Lanciego/Lantziego,630,596,200,0,,2,
-01,01033,municipio,033,Lapuebla de Labarca,594,586,200,0,,1,
-01,01034,municipio,034,Leza,324,322,200,0,,1,
-01,01036,municipio,036,Laudio/Llodio,1557,1448,200,11,48498,2,
-01,01037,municipio,037,Arraia-Maeztu,763,763,200,0,,3,
-01,01039,municipio,039,Moreda de Álava/Moreda Araba,361,360,200,0,,1,
-01,01041,municipio,041,Navaridas,238,238,200,0,,1,
-01,01042,municipio,042,Okondo,452,427,200,0,,1,01400
-01,01043,municipio,043,Oyón-Oion,1188,1179,200,1,26009,3,
-01,01044,municipio,044,Peñacerrada-Urizaharra,429,394,200,0,,3,
-01,01046,municipio,046,Erriberagoitia/Ribera Alta,1178,1172,200,0,,6,
-01,01047,municipio,047,Ribera Baja/Erriberabeitia,880,801,200,0,,2,
-01,01049,municipio,049,Añana,329,328,200,0,,2,
-01,01051,municipio,051,Agurain/Salvatierra,930,921,200,0,,2,
-01,01052,municipio,052,Samaniego,333,257,200,0,,1,
-01,01053,municipio,053,San Millán/Donemiliaga,798,753,200,0,,2,
-01,01054,municipio,054,Urkabustaiz,546,528,200,6,01450,3,
-01,01055,municipio,055,Valdegovía/Gaubea,1837,1827,200,0,,4,
-01,01056,municipio,056,Harana/Valle de Arana,402,400,200,0,,1,
-01,01057,municipio,057,Villabuena de Álava/Eskuernaga,357,357,200,0,,1,
-01,01058,municipio,058,Legutio,798,767,200,31,01138;01510;48145,4,01520
-01,01059,municipio,059,Vitoria-Gasteiz,15336,15252,200,13,01230;09217,24,
-01,01060,municipio,060,Yécora/Iekora,402,402,200,0,,1,
-01,01061,municipio,061,Zalduondo,157,155,200,0,,1,
-01,01062,municipio,062,Zambrana,669,659,200,0,,2,
-01,01063,municipio,063,Zuia,1343,1306,200,0,,3,01449
-01,01901,municipio,901,Iruña Oka/Iruña de Oca,1401,1383,200,0,,4,
-01,01902,municipio,902,Lantarón,1016,796,200,0,,2,
-01,53002,condominio,NA,NA,9,9,200,0,,1,
-01,53001,condominio,NA,NA,0,0,50,0,,0,
+cpro,LAU_CODE,tipo_recinto,id_prov,t_ua,cmun,municipio,componentes,componentes_sin_cp,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos_seleccionados,codigos_descartados,codigos
+01,01001,municipio,01,99,001,Alegría-Dulantzi,2,0,824,822,200,0,,01193;01240,,2
+01,01002,municipio,01,99,002,Amurrio,2,0,1895,1809,200,0,,01450;01468;01470,01449,3
+01,01003,municipio,01,99,003,Aramaio,1,0,545,528,200,0,,01160;01165;01169,,3
+01,01004,municipio,01,99,004,Artziniega,1,0,574,567,200,0,,01474;01478,,2
+01,01006,municipio,01,99,006,Armiñón,2,0,214,201,200,0,,01211;01220,,2
+01,01008,municipio,01,99,008,Arratzua-Ubarrundia,2,0,772,641,50;200,1,01520,01510;01520,01013,2
+01,01009,municipio,01,99,009,Asparrena,2,0,819,803,200,0,,01208;01250;01260,,3
+01,01010,municipio,01,99,010,Ayala/Aiara,1,0,1278,1228,200,0,,01408;01470;01474;01476;01477;01478;01479,01400,7
+01,01011,municipio,01,99,011,Baños de Ebro/Mañueta,1,0,394,390,200,1,26359,01307;26359,,2
+01,01013,municipio,01,99,013,Barrundia,1,0,810,795,200,0,,01206;01208,01192,2
+01,01014,municipio,01,99,014,Berantevilla,2,0,528,512,200,0,,01211;01212;01220,,3
+01,01016,municipio,01,99,016,Bernedo,1,0,924,919,200,2,09216,01118;01128;01194;01216;09216,,5
+01,01017,municipio,01,99,017,Campezo/Kanpezu,1,0,1006,1005,200,0,,01110;01117;01128,,3
+01,01018,municipio,01,99,018,Zigoitia,1,0,1220,1206,200,0,,01138;01196,01170,2
+01,01019,municipio,01,99,019,Kripan,1,0,211,209,200,0,,01308,01309,1
+01,01020,municipio,01,99,020,Kuartango,1,0,441,439,200,0,,01430;01439,,2
+01,01021,municipio,01,99,021,Elburgo/Burgelu,2,0,403,389,200,1,01206,01192;01193;01206,,3
+01,01022,municipio,01,99,022,Elciego,1,0,696,693,200,0,,01340,,1
+01,01023,municipio,01,99,023,Elvillar/Bilar,1,0,385,383,200,0,,01309,01300,1
+01,01027,municipio,01,99,027,Iruraiz-Gauna,6,0,492,458,200,0,,01193;01206;01207,,3
+01,01028,municipio,01,99,028,Labastida/Bastida,1,0,1332,1322,200,0,,01212;01330,,2
+01,01030,municipio,01,99,030,Lagrán,1,0,458,455,200,1,01212,01118;01211;01212,,3
+01,01031,municipio,01,99,031,Laguardia,2,0,1011,956,200,3,01307;01308,01300;01307;01308;01309;01321,,5
+01,01032,municipio,01,99,032,Lanciego/Lantziego,1,0,630,596,200,0,,01308;01321,,2
+01,01033,municipio,01,99,033,Lapuebla de Labarca,1,0,594,586,200,0,,01306,,1
+01,01034,municipio,01,99,034,Leza,1,0,324,322,200,0,,01309,,1
+01,01036,municipio,01,99,036,Laudio/Llodio,1,0,1557,1448,200,11,48498,01400;48498,,2
+01,01037,municipio,01,99,037,Arraia-Maeztu,1,0,763,763,200,0,,01120;01128;01129,,3
+01,01039,municipio,01,99,039,Moreda de Álava/Moreda Araba,1,0,361,360,200,0,,01322,,1
+01,01041,municipio,01,99,041,Navaridas,1,0,238,238,200,0,,01309,,1
+01,01042,municipio,01,99,042,Okondo,1,0,452,427,200,0,,01409,01400,1
+01,01043,municipio,01,99,043,Oyón-Oion,1,0,1188,1179,200,1,26009,01320;01322;26009,,3
+01,01044,municipio,01,99,044,Peñacerrada-Urizaharra,1,0,429,394,200,0,,01211;01212;01216,,3
+01,01046,municipio,01,99,046,Erriberagoitia/Ribera Alta,2,0,1178,1172,200,0,,01213;01220;01420;01423;01426;01428,,6
+01,01047,municipio,01,99,047,Ribera Baja/Erriberabeitia,1,0,880,801,200,0,,01213;01220,,2
+01,01049,municipio,01,99,049,Añana,1,0,329,328,200,0,,01423;01426,,2
+01,01051,municipio,01,99,051,Agurain/Salvatierra,2,1,930,921,50;200,0,,01200;01207,,2
+01,01052,municipio,01,99,052,Samaniego,1,0,333,257,200,0,,01307,,1
+01,01053,municipio,01,99,053,San Millán/Donemiliaga,3,0,798,753,200,0,,01207;01208,,2
+01,01054,municipio,01,99,054,Urkabustaiz,1,0,546,528,200,6,01450,01440;01449;01450,,3
+01,01055,municipio,01,99,055,Valdegovía/Gaubea,1,0,1837,1827,200,0,,01423;01426;01427;01428,,4
+01,01056,municipio,01,99,056,Harana/Valle de Arana,1,0,402,400,200,0,,01117,,1
+01,01057,municipio,01,99,057,Villabuena de Álava/Eskuernaga,1,0,357,357,200,0,,01307,,1
+01,01058,municipio,01,99,058,Legutio,1,0,798,767,200,31,01138;01510;48145,01138;01170;01510;48145,01520,4
+01,01059,municipio,01,99,059,Vitoria-Gasteiz,1,0,15336,15252,200,13,01230;09217,01001;01002;01003;01004;01005;01006;01007;01008;01009;01010;01012;01013;01015;01100;01191;01192;01193;01194;01195;01196;01230;01510;01520;09217,,24
+01,01060,municipio,01,99,060,Yécora/Iekora,1,0,402,402,200,0,,01322,,1
+01,01061,municipio,01,99,061,Zalduondo,1,0,157,155,200,0,,01208,,1
+01,01062,municipio,01,99,062,Zambrana,1,0,669,659,200,0,,01211;01212,,2
+01,01063,municipio,01,99,063,Zuia,1,0,1343,1306,200,0,,01130;01139;01450,01449,3
+01,01901,municipio,01,99,901,Iruña Oka/Iruña de Oca,1,0,1401,1383,200,0,,01191;01195;01230;01428,,4
+01,01902,municipio,01,99,902,Lantarón,2,0,1016,796,200,0,,01213;01423,,2
+01,53001,condominio,01,4,NA,NA,1,1,0,0,50,0,,,,0
+01,53002,condominio,01,4,NA,NA,1,0,9,9,200,0,,01117,,1

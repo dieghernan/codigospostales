@@ -1,2 +1,2 @@
-cpro,LAU_CODE,tipo_recinto,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_descartados
-51,51001,municipio,001,Ceuta,6655,5602,200,0,,5,
+cpro,LAU_CODE,tipo_recinto,id_prov,t_ua,cmun,municipio,componentes,componentes_sin_cp,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos_seleccionados,codigos_descartados,codigos
+51,51001,municipio,51,99,001,Ceuta,1,0,6655,5602,200,0,,51001;51002;51003;51004;51005,,5

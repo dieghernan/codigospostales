@@ -104,8 +104,8 @@ Los diagnósticos nuevos conservan también `id_prov` y `t_ua` de la fuente.
 Las bases congeladas anteriores que no contienen esos campos siguen siendo
 compatibles: se identifican los condominios por la ausencia de nombre y se
 asignan mediante el punto interior. En ese caso, los campos originales quedan
-vacíos; no se completan con datos de otra versión. Los diagnósticos publicados
-anteriores no se han regenerado por este cambio.
+vacíos; no se completan con datos de otra versión. Los diagnósticos de la
+regeneración nacional actual incluyen ambos campos de la fuente.
 
 El cálculo utiliza ETRS89 / UTM 29N en A Coruña, Badajoz, Cáceres, Huelva,
 Lugo, Ourense, Pontevedra y Salamanca. Utiliza ETRS89 / UTM 31N en Baleares,
@@ -196,6 +196,7 @@ un punto interior calculado con `st_point_on_surface()`.
 | `scripts/recintos.R` | Identificación de condominios y contraste de su provincia original con el punto interior. |
 | `scripts/ggplot.R` | Unión de resultados, mapa de avance y exportación de superficies pendientes. |
 | `scripts/reejecutar.R` | Reejecución por lotes con respaldo, validación y publicación. |
+| `scripts/reaplicar_correcciones.R` | Reaplicación de la evidencia WMS local sobre los pendientes de un lote provisional. |
 | `tests/regeneracion.R` | Comprobaciones de geometría, cobertura y consolidación. |
 | `scripts/revisar_margenes.R` | Revisión de los códigos próximos a los límites municipales de Cádiz. |
 | `data/cartociudad/` | Fuentes, lotes y respaldos locales, excluidos de Git. |
@@ -230,21 +231,26 @@ comprobaciones, incluidas las del inventario completo y los EPSG. Estas
 cifras corresponden a validaciones históricas; la corrección posterior y sus
 pruebas se describen a continuación.
 
-Quedan 97 registros pendientes, con 3.881 polígonos separados y 28,0048 km².
-De ellos, 46 registros corresponden a recintos sin direcciones seleccionadas
-con CP y 51 a diferencias entre los límites provinciales y los recintos.
+Quedan 304 registros pendientes, con 4.108 polígonos separados y
+1.011,539168 km². De ellos, 253 registros corresponden a recintos con algún
+componente sin direcciones seleccionadas con CP y 51 a diferencias entre los
+límites provinciales y los recintos. Antes del cálculo por componentes quedaban
+28,004800 km²: el aumento identifica superficies que antes heredaban el CP de
+otra parte desconectada del municipio, sin direcciones propias que lo apoyaran.
 El [registro de pendientes](PENDIENTES.md) documenta los casos principales y
 las comprobaciones necesarias para resolverlos. También están disponibles el
 [resumen provincial](data/full_analisis/resumen_pendientes_provincia.csv) y el
 [detalle de superficies](data/full_analisis/pendientes_detalle.csv).
 
-La corrección localizada publicada el 26 de octubre excluye los 6,203289 km²
-de Gibraltar que incluía el contorno provincial de Cádiz. Incorpora
+La corrección localizada original del 26 de octubre excluyó los 6,203289 km²
+de Gibraltar que incluía el contorno provincial de Cádiz. Incorporó
 159,035989 km² mediante intersecciones respaldadas de 34 recintos con un solo
-CP observado e identificador administrativo coincidente. Conserva los 10.851
-códigos y deja pendientes las franjas residuales y los casos ambiguos.
+CP observado e identificador administrativo coincidente. Conservó los 10.851
+códigos y dejó pendientes las franjas residuales y los casos ambiguos. La
+regeneración actual conserva la exclusión y reaplica las 34 intersecciones
+validadas sobre los nuevos pendientes, sin realizar consultas WMS nuevas.
 
-La propuesta superó 1.021 comprobaciones antes de publicarse. Después de
+Aquella propuesta superó 1.021 comprobaciones antes de publicarse. Después de
 copiar los archivos se superaron otras 790 comprobaciones de las 52 provincias
 y el consolidado. El [informe de corrección](CORRECCION_PENDIENTES.md) documenta
 los cambios y el respaldo. La investigación de los 46 recintos, con 246
@@ -268,19 +274,34 @@ source("tests/regeneracion.R", encoding = "UTF-8")
 ```
 
 Una nueva generación mediante Voronoi no incorpora automáticamente estas
-correcciones posteriores. El lote congelado anterior conserva su trazabilidad;
-su fase `publicar` sustituiría los resultados corregidos por los de ese lote.
+correcciones posteriores. `scripts/reaplicar_correcciones.R` permite recuperar
+la evidencia validada sobre los pendientes de un lote provisional mediante
+`CP_REAPLICACION_DIR`. Requiere `GENERACION_VALIDADA.txt`, conserva los resultados
+brutos y detiene la operación ante conflictos de superficie de al menos 1 m².
+No admite modificar un lote marcado como publicado. Esta fase debe preceder
+a la consolidación y a la validación final del lote que se vaya a publicar.
 
-El método actualizado procesa por separado los componentes desconectados.
-Esta mejora aún no se ha incorporado a los resultados nacionales publicados:
-su validación utiliza salidas de prueba. Corrige la influencia de puntos de
-una parte del municipio sobre otra, detectada en Alegría-Dulantzi. No modifica
-la resolución de los límites administrativos de partida.
+La regeneración nacional publicada procesa por separado los componentes
+desconectados de las 52 provincias y ciudades autónomas. Corrige la influencia
+de puntos de una parte del municipio sobre otra, detectada en Alegría-Dulantzi.
+No modifica la resolución de los límites administrativos de partida. El
+[registro de publicación](data/full_analisis/regeneracion_componentes_publicada.json)
+y la [comparación provincial](data/full_analisis/comparacion_componentes_provincia.csv)
+documentan el resultado y los cambios.
+La propuesta superó 1.096 comprobaciones completas antes de publicarse y
+otras 1.096 sobre los archivos publicados. Se comprobaron también las
+huellas SHA-256 de los 52 GeoPackage provinciales, el consolidado, el mapa y
+la base administrativa.
+
+El contraste provincial con geometrías del WMS se realiza solo a petición,
+fuera del flujo automático y de las pruebas habituales. La revisión de Navarra
+detectó limitaciones en Petilla de Aragón y Piedramillera que se conservan en
+el [registro de pendientes](PENDIENTES.md), sin excepciones nuevas al método.
 
 Los textos de los resultados y los logs se corrigieron mediante reemplazos
 mecánicos, sin recalcular las geometrías. Se verificó que los códigos, las
 geometrías y los recuentos permanecieran intactos. El respaldo y la auditoría
-de esa corrección se conservan en `correccion_textos/` dentro del último lote.
+de esa corrección se conservan en `correccion_textos/` dentro del lote anterior.
 
 El mapa muestra los resultados publicados en `data/provs/`: las superficies
 con código postal en azul y las pendientes de asignación en naranja. Durante

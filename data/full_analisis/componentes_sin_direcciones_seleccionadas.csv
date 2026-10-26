@@ -1,0 +1,298 @@
+cpro,LAU_CODE,componente,tipo_recinto,id_prov,t_ua,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_seleccionados,codigos_descartados
+01,01051,2,municipio,01,99,051,Agurain/Salvatierra,0,0,50,0,NA,0,NA,NA
+01,53001,1,condominio,01,4,NA,NA,0,0,50,0,NA,0,NA,NA
+02,02008,3,municipio,02,99,008,Alcaraz,0,0,50,0,NA,0,NA,NA
+02,02041,1,municipio,02,99,041,Jorquera,0,0,50,0,NA,0,NA,NA
+02,02067,2,municipio,02,99,067,Riópar,0,0,50,0,NA,0,NA,NA
+02,02076,1,municipio,02,99,076,Vianos,0,0,50,0,NA,0,NA,NA
+03,03014,4,municipio,03,99,014,Alacant/Alicante,0,0,50,0,NA,0,NA,NA
+04,04013,1,municipio,04,99,013,Almería,0,0,50,0,NA,0,NA,NA
+04,04023,1,municipio,04,99,023,Beires,0,0,50,0,NA,0,NA,NA
+04,04023,2,municipio,04,99,023,Beires,0,0,50,0,NA,0,NA,NA
+05,05059,1,municipio,05,99,059,Cillán,1,0,50,0,NA,0,NA,05143
+05,05126,2,municipio,05,99,126,Mesegar de Corneja,0,0,50,0,NA,0,NA,NA
+05,05132,1,municipio,05,99,132,Mombeltrán,0,0,50,0,NA,0,NA,NA
+05,05132,2,municipio,05,99,132,Mombeltrán,0,0,50,0,NA,0,NA,NA
+05,05132,3,municipio,05,99,132,Mombeltrán,0,0,50,0,NA,0,NA,NA
+05,05246,2,municipio,05,99,246,Tórtoles,0,0,50,0,NA,0,NA,NA
+05,05257,3,municipio,05,99,257,Villafranca de la Sierra,0,0,50,0,NA,0,NA,NA
+06,06003,1,municipio,06,99,003,Ahillones,0,0,50,0,NA,0,NA,NA
+06,06005,2,municipio,06,99,005,La Albuera,0,0,50,0,NA,0,NA,NA
+06,06021,2,municipio,06,99,021,Bodonal de la Sierra,0,0,50,0,NA,0,NA,NA
+06,06031,2,municipio,06,99,031,Carmonita,0,0,50,0,NA,0,NA,NA
+06,06033,1,municipio,06,99,033,Casas de Don Pedro,0,0,50,0,NA,0,NA,NA
+06,06033,3,municipio,06,99,033,Casas de Don Pedro,0,0,50,0,NA,0,NA,NA
+06,06034,1,municipio,06,99,034,Casas de Reina,0,0,50,0,NA,0,NA,NA
+06,06034,2,municipio,06,99,034,Casas de Reina,0,0,50,0,NA,0,NA,NA
+06,06053,2,municipio,06,99,053,Fuente del Arco,0,0,50,0,NA,0,NA,NA
+06,06062,1,municipio,06,99,062,Helechosa de los Montes,0,0,50,0,NA,0,NA,NA
+06,06083,1,municipio,06,99,083,Mérida,0,0,50,0,NA,0,NA,NA
+06,06083,2,municipio,06,99,083,Mérida,0,0,50,0,NA,0,NA,NA
+06,06087,2,municipio,06,99,087,Monterrubio de la Serena,0,0,50,0,NA,0,NA,NA
+06,06112,1,municipio,06,99,112,Retamal de Llerena,0,0,50,0,NA,0,NA,NA
+06,06134,1,municipio,06,99,134,Trasierra,0,0,50,0,NA,0,NA,NA
+06,06151,1,municipio,06,99,151,Villagonzalo,0,0,50,0,NA,0,NA,NA
+06,06160,2,municipio,06,99,160,Zalamea de la Serena,0,0,50,0,NA,0,NA,NA
+07,07024,3,municipio,07,99,024,Formentera,0,0,50,0,NA,0,NA,NA
+07,07032,1,municipio,07,99,032,Maó,0,0,50,0,NA,0,NA,NA
+07,07032,3,municipio,07,99,032,Maó,0,0,50,0,NA,0,NA,NA
+07,07040,1,municipio,07,99,040,Palma,0,0,50,0,NA,0,NA,NA
+07,07040,2,municipio,07,99,040,Palma,0,0,50,0,NA,0,NA,NA
+07,07048,1,municipio,07,99,048,Sant Josep de sa Talaia,0,0,50,0,NA,0,NA,NA
+07,07048,3,municipio,07,99,048,Sant Josep de sa Talaia,0,0,50,0,NA,0,NA,NA
+07,07048,4,municipio,07,99,048,Sant Josep de sa Talaia,0,0,50,0,NA,0,NA,NA
+07,07052,1,municipio,07,99,052,Sant Lluís,0,0,50,0,NA,0,NA,NA
+08,08016,2,municipio,08,99,016,Bagà,0,0,50,0,NA,0,NA,NA
+08,08078,2,municipio,08,99,078,l'Espunyola,0,0,50,0,NA,0,NA,NA
+08,08283,2,municipio,08,99,283,Tona,0,0,50,0,NA,0,NA,NA
+09,09029,1,municipio,09,99,029,Atapuerca,0,0,50,0,NA,0,NA,NA
+09,09056,2,municipio,09,99,056,Briviesca,0,0,50,0,NA,0,NA,NA
+09,09091,1,municipio,09,99,091,Castrojeriz,0,0,50,0,NA,0,NA,NA
+09,09114,1,municipio,09,99,114,Cubillo del Campo,0,0,50,0,NA,0,NA,NA
+09,09155,1,municipio,09,99,155,Haza,0,0,50,0,NA,0,NA,NA
+09,09155,5,municipio,09,99,155,Haza,0,0,50,0,NA,0,NA,NA
+09,09219,2,municipio,09,99,219,Miranda de Ebro,0,0,50,0,NA,0,NA,NA
+09,09247,2,municipio,09,99,247,Palacios de Riopisuerga,0,0,50,0,NA,0,NA,NA
+09,09251,2,municipio,09,99,251,Pancorbo,0,0,50,0,NA,0,NA,NA
+09,09294,2,municipio,09,99,294,Quintanilla de la Mata,0,0,50,0,NA,0,NA,NA
+09,09321,2,municipio,09,99,321,Roa,0,0,50,0,NA,0,NA,NA
+09,09321,3,municipio,09,99,321,Roa,0,0,50,0,NA,0,NA,NA
+09,09330,4,municipio,09,99,330,Salas de los Infantes,0,0,50,0,NA,0,NA,NA
+09,09361,2,municipio,09,99,361,Sargentes de la Lora,0,0,50,0,NA,0,NA,NA
+09,09431,2,municipio,09,99,431,Villafranca Montes de Oca,0,0,50,0,NA,0,NA,NA
+09,53005,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53040,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53041,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53038,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53039,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53007,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53006,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53035,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53034,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53033,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53019,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53032,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53018,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53046,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53014,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53043,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53023,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53022,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53017,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53028,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53015,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53015,2,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53012,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53013,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+09,53031,1,condominio,09,4,NA,NA,0,0,50,0,NA,0,NA,NA
+10,10010,1,municipio,10,99,010,Alcuéscar,0,0,50,0,NA,0,NA,NA
+10,10038,2,municipio,10,99,038,Cachorrilla,0,0,50,0,NA,0,NA,NA
+10,10039,1,municipio,10,99,039,Cadalso,0,0,50,0,NA,0,NA,NA
+10,10057,2,municipio,10,99,057,Casas de Miravete,0,0,50,0,NA,0,NA,NA
+10,10124,1,municipio,10,99,124,Mohedas de Granadilla,0,0,50,0,NA,0,NA,NA
+10,10124,3,municipio,10,99,124,Mohedas de Granadilla,0,0,50,0,NA,0,NA,NA
+10,10143,2,municipio,10,99,143,Pescueza,0,0,50,0,NA,0,NA,NA
+10,10165,1,municipio,10,99,165,Santa Ana,0,0,50,0,NA,0,NA,NA
+10,10177,1,municipio,10,99,177,Sierra de Fuentes,1,0,50,0,NA,0,NA,10163
+12,12040,1,municipio,12,99,040,Castelló de la Plana/Castellón de la Plana,0,0,50,0,NA,0,NA,NA
+12,12040,2,municipio,12,99,040,Castelló de la Plana/Castellón de la Plana,0,0,50,0,NA,0,NA,NA
+13,13013,2,municipio,13,99,013,Almagro,0,0,50,0,NA,0,NA,NA
+13,13013,3,municipio,13,99,013,Almagro,0,0,50,0,NA,0,NA,NA
+13,13047,2,municipio,13,99,047,Herencia,0,0,50,0,NA,0,NA,NA
+14,14057,2,municipio,14,99,057,La Rambla,0,0,50,0,NA,0,NA,NA
+15,15043,2,municipio,15,99,043,Malpica de Bergantiños,0,0,50,0,NA,0,NA,NA
+15,15073,1,municipio,15,99,073,Ribeira,0,0,50,0,NA,0,NA,NA
+16,16035,3,municipio,16,99,035,Beteta,0,0,50,0,NA,0,NA,NA
+16,16078,2,municipio,16,99,078,Cuenca,0,0,50,0,NA,0,NA,NA
+16,16078,3,municipio,16,99,078,Cuenca,0,0,50,0,NA,0,NA,NA
+16,16078,4,municipio,16,99,078,Cuenca,0,0,50,0,NA,0,NA,NA
+16,16113,1,municipio,16,99,113,Iniesta,0,0,50,0,NA,0,NA,NA
+16,16124,2,municipio,16,99,124,Las Mesas,0,0,50,0,NA,0,NA,NA
+16,16141,2,municipio,16,99,141,Olmeda del Rey,0,0,50,0,NA,0,NA,NA
+17,17039,2,municipio,17,99,039,Camprodon,0,0,50,0,NA,0,NA,NA
+17,17199,1,municipio,17,99,199,Torroella de Montgrí,0,0,50,0,NA,0,NA,NA
+18,18018,2,municipio,18,99,018,Alquife,0,0,50,0,NA,0,NA,NA
+18,18032,3,municipio,18,99,032,Bubión,0,0,50,0,NA,0,NA,NA
+18,18051,2,municipio,18,99,051,Colomera,0,0,50,0,NA,0,NA,NA
+18,18074,2,municipio,18,99,074,Ferreira,0,0,50,0,NA,0,NA,NA
+19,19021,4,municipio,19,99,021,Almoguera,0,0,50,0,NA,0,NA,NA
+19,19042,1,municipio,19,99,042,Arroyo de las Fraguas,0,0,50,0,NA,0,NA,NA
+19,19044,1,municipio,19,99,044,Atienza,0,0,50,0,NA,0,NA,NA
+19,19044,2,municipio,19,99,044,Atienza,0,0,50,0,NA,0,NA,NA
+19,19086,2,municipio,19,99,086,Cifuentes,0,0,50,0,NA,0,NA,NA
+19,19263,2,municipio,19,99,263,Taragudo,0,0,50,0,NA,0,NA,NA
+19,19280,1,municipio,19,99,280,Torrejón del Rey,0,0,50,0,NA,0,NA,NA
+19,19285,1,municipio,19,99,285,Torrubia,0,0,50,0,NA,0,NA,NA
+19,53047,1,condominio,19,4,NA,NA,0,0,50,0,NA,0,NA,NA
+20,20015,2,municipio,20,99,015,Ataun,0,0,50,0,NA,0,NA,NA
+20,20054,1,municipio,20,99,054,Lizartza,0,0,50,0,NA,0,NA,NA
+20,20060,1,municipio,20,99,060,Orexa,0,0,50,0,NA,0,NA,NA
+20,20069,1,municipio,20,99,069,Donostia/San Sebastián,0,0,50,0,NA,0,NA,NA
+20,20078,1,municipio,20,99,078,Zaldibia,0,0,50,0,NA,0,NA,NA
+20,20078,2,municipio,20,99,078,Zaldibia,0,0,50,0,NA,0,NA,NA
+20,20907,1,municipio,20,99,907,Gaztelu,4,0,50,0,NA,0,NA,20490
+20,53048,1,condominio,20,4,NA,NA,0,0,50,0,NA,0,NA,NA
+22,22068,2,municipio,22,99,068,Borau,0,0,50,0,NA,0,NA,NA
+22,22190,2,municipio,22,99,190,El Pueyo de Araguás,0,0,50,0,NA,0,NA,NA
+22,53049,1,condominio,22,4,NA,NA,0,0,50,0,NA,0,NA,NA
+23,23016,1,municipio,23,99,016,Benatae,0,0,50,0,NA,0,NA,NA
+23,23025,2,municipio,23,99,025,Castellar,0,0,50,0,NA,0,NA,NA
+23,23081,1,municipio,23,99,081,Segura de la Sierra,0,0,50,0,NA,0,NA,NA
+23,23081,2,municipio,23,99,081,Segura de la Sierra,0,0,50,0,NA,0,NA,NA
+23,23092,3,municipio,23,99,092,Úbeda,1,0,50,0,NA,0,NA,23410
+23,53050,1,condominio,23,4,NA,NA,0,0,50,0,NA,0,NA,NA
+24,24050,2,municipio,24,99,050,Castrotierra de Valmadrigal,0,0,50,0,NA,0,NA,NA
+24,24051,2,municipio,24,99,051,Cea,0,0,50,0,NA,0,NA,NA
+24,24051,3,municipio,24,99,051,Cea,0,0,50,0,NA,0,NA,NA
+24,53051,1,condominio,24,4,NA,NA,0,0,50,0,NA,0,NA,NA
+24,53053,1,condominio,24,4,NA,NA,0,0,50,0,NA,0,NA,NA
+24,53054,1,condominio,24,4,NA,NA,0,0,50,0,NA,0,NA,NA
+25,25057,2,municipio,25,99,057,Es Bòrdes,0,0,50,0,NA,0,NA,NA
+25,25061,1,municipio,25,99,061,Cabó,0,0,50,0,NA,0,NA,NA
+25,25119,2,municipio,25,99,119,Juneda,0,0,50,0,NA,0,NA,NA
+25,25185,1,municipio,25,99,185,Ribera d'Urgellet,0,0,50,0,NA,0,NA,NA
+25,25193,1,municipio,25,99,193,Sant Llorenç de Morunys,0,0,50,0,NA,0,NA,NA
+25,25203,1,municipio,25,99,203,la Seu d'Urgell,0,0,50,0,NA,0,NA,NA
+25,25234,5,municipio,25,99,234,Tremp,0,0,50,0,NA,0,NA,NA
+25,25247,1,municipio,25,99,247,Vilamòs,0,0,50,0,NA,0,NA,NA
+25,53055,1,condominio,25,4,NA,NA,0,0,50,0,NA,0,NA,NA
+26,26024,3,municipio,26,99,024,Bañares,0,0,50,0,NA,0,NA,NA
+26,26027,1,municipio,26,99,027,Berceo,0,0,50,0,NA,0,NA,NA
+26,26027,2,municipio,26,99,027,Berceo,0,0,50,0,NA,0,NA,NA
+26,26128,2,municipio,26,99,128,Sajazarra,0,0,50,0,NA,0,NA,NA
+26,26129,1,municipio,26,99,129,San Asensio,0,0,50,0,NA,0,NA,NA
+26,53056,1,condominio,26,4,NA,NA,0,0,50,0,NA,0,NA,NA
+28,28018,1,municipio,28,99,018,Becerril de la Sierra,0,0,50,0,NA,0,NA,NA
+28,28018,3,municipio,28,99,018,Becerril de la Sierra,0,0,50,0,NA,0,NA,NA
+28,28023,2,municipio,28,99,023,El Boalo,0,0,50,0,NA,0,NA,NA
+28,28092,1,municipio,28,99,092,Móstoles,0,0,50,0,NA,0,NA,NA
+28,28093,2,municipio,28,99,093,Navacerrada,0,0,50,0,NA,0,NA,NA
+28,28135,2,municipio,28,99,135,Santa María de la Alameda,0,0,50,0,NA,0,NA,NA
+28,28140,1,municipio,28,99,140,Serranillos del Valle,0,0,50,0,NA,0,NA,NA
+28,28143,2,municipio,28,99,143,Somosierra,0,0,50,0,NA,0,NA,NA
+28,28163,1,municipio,28,99,163,Valdepiélagos,0,0,50,0,NA,0,NA,NA
+28,28173,1,municipio,28,99,173,Villamanrique de Tajo,0,0,50,0,NA,0,NA,NA
+28,53058,1,condominio,28,4,NA,NA,0,0,50,0,NA,0,NA,NA
+29,29015,2,municipio,29,99,015,Antequera,1,0,50,0,NA,0,NA,29532
+30,30035,1,municipio,30,99,035,San Javier,0,0,50,0,NA,0,NA,NA
+31,31004,1,municipio,31,99,004,Abaurrepea/Abaurrea Baja,0,0,50,0,NA,0,NA,NA
+31,31004,2,municipio,31,99,004,Abaurrepea/Abaurrea Baja,0,0,50,0,NA,0,NA,NA
+31,31062,1,municipio,31,99,062,Cabanillas,0,0,50,0,NA,0,NA,NA
+31,31091,2,municipio,31,99,091,Ergoiena,0,0,50,0,NA,0,NA,NA
+31,31138,2,municipio,31,99,138,Lakuntza,0,0,50,0,NA,0,NA,NA
+31,31160,1,municipio,31,99,160,Luquin,0,0,50,0,NA,0,NA,NA
+31,31164,1,municipio,31,99,164,Mélida,0,0,50,0,NA,0,NA,NA
+31,31203,1,municipio,31,99,203,Petilla de Aragón,0,0,50,0,NA,0,NA,NA
+31,31210,2,municipio,31,99,210,Roncal/Erronkari,0,0,50,0,NA,0,NA,NA
+31,31241,1,municipio,31,99,241,Urraul Alto,0,0,50,0,NA,0,NA,NA
+31,31249,2,municipio,31,99,249,Valtierra,0,0,50,0,NA,0,NA,NA
+31,31255,1,municipio,31,99,255,Villamayor de Monjardín,0,0,50,0,NA,0,NA,NA
+31,53060,1,condominio,31,4,NA,NA,0,0,50,0,NA,0,NA,NA
+31,53067,1,condominio,31,4,NA,NA,0,0,50,0,NA,0,NA,NA
+31,53061,1,condominio,31,4,NA,NA,0,0,50,0,NA,0,NA,NA
+31,53065,1,condominio,31,4,NA,NA,0,0,50,0,NA,0,NA,NA
+31,53070,1,condominio,31,4,NA,NA,0,0,50,0,NA,0,NA,NA
+31,53066,1,condominio,31,4,NA,NA,0,0,50,0,NA,0,NA,NA
+31,53064,1,condominio,31,4,NA,NA,0,0,50,0,NA,0,NA,NA
+31,53069,1,condominio,31,4,NA,NA,0,0,50,0,NA,0,NA,NA
+31,53062,1,condominio,31,4,NA,NA,0,0,50,0,NA,0,NA,NA
+33,33022,2,municipio,33,99,022,Degaña,0,0,50,0,NA,0,NA,NA
+34,34029,2,municipio,34,99,029,Becerril de Campos,0,0,50,0,NA,0,NA,NA
+34,34102,2,municipio,34,99,102,Mazariegos,0,0,50,0,NA,0,NA,NA
+34,34114,1,municipio,34,99,114,Olmos de Ojeda,0,0,50,0,NA,0,NA,NA
+34,34121,2,municipio,34,99,121,Palenzuela,0,0,50,0,NA,0,NA,NA
+34,34121,3,municipio,34,99,121,Palenzuela,0,0,50,0,NA,0,NA,NA
+34,34139,1,municipio,34,99,139,Prádanos de Ojeda,0,0,50,0,NA,0,NA,NA
+34,34222,2,municipio,34,99,222,Villameriel,0,0,50,0,NA,0,NA,NA
+35,35024,3,municipio,35,99,024,Teguise,0,0,50,0,NA,0,NA,NA
+35,35024,4,municipio,35,99,024,Teguise,0,0,50,0,NA,0,NA,NA
+36,36004,2,municipio,36,99,004,Bueu,0,0,50,0,NA,0,NA,NA
+36,36026,2,municipio,36,99,026,Marín,0,0,50,0,NA,0,NA,NA
+36,36057,2,municipio,36,99,057,Vigo,0,0,50,0,NA,0,NA,NA
+36,36057,3,municipio,36,99,057,Vigo,0,0,50,0,NA,0,NA,NA
+36,36060,2,municipio,36,99,060,Vilagarcía de Arousa,0,0,50,0,NA,0,NA,NA
+36,36901,1,municipio,36,99,901,A Illa de Arousa,0,0,50,0,NA,0,NA,NA
+37,37040,1,municipio,37,99,040,Barbadillo,0,0,50,0,NA,0,NA,NA
+37,37059,1,municipio,37,99,059,Buenamadre,0,0,50,0,NA,0,NA,NA
+37,37116,1,municipio,37,99,116,Doñinos de Ledesma,0,0,50,0,NA,0,NA,NA
+37,37119,2,municipio,37,99,119,La Encina,0,0,50,0,NA,0,NA,NA
+37,37223,1,municipio,37,99,223,Olmedo de Camaces,0,0,50,0,NA,0,NA,NA
+37,37230,1,municipio,37,99,230,Parada de Arriba,0,0,50,0,NA,0,NA,NA
+37,37255,2,municipio,37,99,255,Pizarral,0,0,50,0,NA,0,NA,NA
+37,37267,1,municipio,37,99,267,Retortillo,0,0,50,0,NA,0,NA,NA
+37,37287,2,municipio,37,99,287,San Miguel de Valero,0,0,50,0,NA,0,NA,NA
+37,37307,2,municipio,37,99,307,Serradilla del Llano,0,0,50,0,NA,0,NA,NA
+37,37321,1,municipio,37,99,321,Tenebrón,0,0,50,0,NA,0,NA,NA
+37,53071,1,condominio,37,4,NA,NA,0,0,50,0,NA,0,NA,NA
+38,38014,2,municipio,38,99,014,Fuencaliente de la Palma,0,0,50,0,NA,0,NA,NA
+40,40061,1,municipio,40,99,061,Corral de Ayllón,0,0,50,0,NA,0,NA,NA
+40,40065,2,municipio,40,99,065,Chañe,0,0,50,0,NA,0,NA,NA
+40,40078,1,municipio,40,99,078,Fresneda de Cuéllar,0,0,50,0,NA,0,NA,NA
+40,40111,1,municipio,40,99,111,Lastras del Pozo,0,0,50,0,NA,0,NA,NA
+40,40143,2,municipio,40,99,143,Navares de Enmedio,0,0,50,0,NA,0,NA,NA
+40,40164,2,municipio,40,99,164,Rapariegos,0,0,50,0,NA,0,NA,NA
+40,40170,4,municipio,40,99,170,Riaza,0,0,50,0,NA,0,NA,NA
+40,40203,2,municipio,40,99,203,Torrecaballeros,0,0,50,0,NA,0,NA,NA
+41,41014,2,municipio,41,99,014,Badolatosa,0,0,50,0,NA,0,NA,NA
+41,41016,2,municipio,41,99,016,Bollullos de la Mitación,1,0,50,0,NA,0,NA,41110
+41,41039,2,municipio,41,99,039,Écija,0,0,50,0,NA,0,NA,NA
+41,41040,1,municipio,41,99,040,Espartinas,1,0,50,0,NA,0,NA,41807
+41,41091,3,municipio,41,99,091,Sevilla,0,0,50,0,NA,0,NA,NA
+42,42010,2,municipio,42,99,010,Aldealices,0,0,50,0,NA,0,NA,NA
+42,42025,2,municipio,42,99,025,Arcos de Jalón,0,0,50,0,NA,0,NA,NA
+42,42113,2,municipio,42,99,113,Medinaceli,0,0,50,0,NA,0,NA,NA
+43,43043,2,municipio,43,99,043,El Catllar,0,0,50,0,NA,0,NA,NA
+43,43095,1,municipio,43,99,095,El Morell,0,0,50,0,NA,0,NA,NA
+43,43136,1,municipio,43,99,136,La Ràpita,0,0,50,0,NA,0,NA,NA
+43,43155,1,municipio,43,99,155,Tortosa,0,0,50,0,NA,0,NA,NA
+44,44009,1,municipio,44,99,009,Albarracín,0,0,50,0,NA,0,NA,NA
+44,44009,3,municipio,44,99,009,Albarracín,0,0,50,0,NA,0,NA,NA
+44,44009,4,municipio,44,99,009,Albarracín,0,0,50,0,NA,0,NA,NA
+44,44009,5,municipio,44,99,009,Albarracín,0,0,50,0,NA,0,NA,NA
+44,44009,6,municipio,44,99,009,Albarracín,0,0,50,0,NA,0,NA,NA
+44,44009,8,municipio,44,99,009,Albarracín,0,0,50,0,NA,0,NA,NA
+44,44009,11,municipio,44,99,009,Albarracín,0,0,50,0,NA,0,NA,NA
+44,44009,14,municipio,44,99,009,Albarracín,0,0,50,0,NA,0,NA,NA
+44,44009,15,municipio,44,99,009,Albarracín,0,0,50,0,NA,0,NA,NA
+44,44009,17,municipio,44,99,009,Albarracín,0,0,50,0,NA,0,NA,NA
+44,44009,18,municipio,44,99,009,Albarracín,0,0,50,0,NA,0,NA,NA
+44,44009,19,municipio,44,99,009,Albarracín,0,0,50,0,NA,0,NA,NA
+44,44009,21,municipio,44,99,009,Albarracín,0,0,50,0,NA,0,NA,NA
+44,44063,1,municipio,44,99,063,Cañizar del Olivar,0,0,50,0,NA,0,NA,NA
+44,44109,1,municipio,44,99,109,Frías de Albarracín,0,0,50,0,NA,0,NA,NA
+44,44266,1,municipio,44,99,266,Visiedo,0,0,50,0,NA,0,NA,NA
+44,53077,1,condominio,44,4,NA,NA,0,0,50,0,NA,0,NA,NA
+45,45011,2,municipio,45,99,011,Almendral de la Cañada,0,0,50,0,NA,0,NA,NA
+45,45019,2,municipio,45,99,019,Bargas,0,0,50,0,NA,0,NA,NA
+45,45071,2,municipio,45,99,071,La Guardia,0,0,50,0,NA,0,NA,NA
+45,45121,2,municipio,45,99,121,Ocaña,0,0,50,0,NA,0,NA,NA
+45,45123,2,municipio,45,99,123,Ontígola,0,0,50,0,NA,0,NA,NA
+45,45123,3,municipio,45,99,123,Ontígola,0,0,50,0,NA,0,NA,NA
+45,45145,1,municipio,45,99,145,Recas,0,0,50,0,NA,0,NA,NA
+45,45184,1,municipio,45,99,184,Las Ventas de San Julián,0,0,50,0,NA,0,NA,NA
+46,46002,2,municipio,46,99,002,Ador,0,0,50,0,NA,0,NA,NA
+46,46075,1,municipio,46,99,075,Bufali,0,0,50,0,NA,0,NA,NA
+46,46106,2,municipio,46,99,106,Chelva,0,0,50,0,NA,0,NA,NA
+46,46145,4,municipio,46,99,145,Xàtiva,0,0,50,0,NA,0,NA,NA
+46,46145,7,municipio,46,99,145,Xàtiva,0,0,50,0,NA,0,NA,NA
+47,47051,1,municipio,47,99,051,Ciguñuela,0,0,50,0,NA,0,NA,NA
+47,47056,1,municipio,47,99,056,Corrales de Duero,0,0,50,0,NA,0,NA,NA
+47,47084,1,municipio,47,99,084,Mayorga,0,0,50,0,NA,0,NA,NA
+47,47084,3,municipio,47,99,084,Mayorga,0,0,50,0,NA,0,NA,NA
+47,47137,1,municipio,47,99,137,Roturas,0,0,50,0,NA,0,NA,NA
+47,47143,1,municipio,47,99,143,San Llorente,0,0,50,0,NA,0,NA,NA
+47,47169,2,municipio,47,99,169,Torre de Esgueva,0,0,50,0,NA,0,NA,NA
+47,47186,3,municipio,47,99,186,Valladolid,0,0,50,0,NA,0,NA,NA
+47,47213,2,municipio,47,99,213,Villalbarba,0,0,50,0,NA,0,NA,NA
+48,48916,1,municipio,48,99,916,Usansolo,0,0,50,0,NA,0,NA,NA
+49,49113,1,municipio,49,99,113,Matilla de Arzón,0,0,50,0,NA,0,NA,NA
+49,49134,1,municipio,49,99,134,Muelas de los Caballeros,0,0,50,0,NA,0,NA,NA
+50,50026,1,municipio,50,99,026,Alpartir,0,0,50,0,NA,0,NA,NA
+50,50045,2,municipio,50,99,045,Belchite,0,0,50,0,NA,0,NA,NA
+50,50185,2,municipio,50,99,185,Murillo de Gállego,0,0,50,0,NA,0,NA,NA
+50,50251,2,municipio,50,99,251,Tarazona,0,0,50,0,NA,0,NA,NA
+50,50252,1,municipio,50,99,252,Tauste,0,0,50,0,NA,0,NA,NA
+50,50265,1,municipio,50,99,265,Trasmoz,0,0,50,0,NA,0,NA,NA
+50,50265,3,municipio,50,99,265,Trasmoz,0,0,50,0,NA,0,NA,NA
+50,50297,1,municipio,50,99,297,Zaragoza,0,0,50,0,NA,0,NA,NA
+50,50298,1,municipio,50,99,298,Zuera,0,0,50,0,NA,0,NA,NA

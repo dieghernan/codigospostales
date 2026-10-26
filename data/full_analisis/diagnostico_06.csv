@@ -1,166 +1,166 @@
-cpro,LAU_CODE,tipo_recinto,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_descartados
-06,06001,municipio,001,Acedera,678,677,200,0,,2,
-06,06002,municipio,002,Aceuchal,3351,3348,200,0,,1,
-06,06003,municipio,003,Ahillones,956,956,200,0,,1,
-06,06004,municipio,004,Alange,1329,1320,200,1,06830,2,
-06,06005,municipio,005,La Albuera,1337,1325,200,0,,1,
-06,06006,municipio,006,Alburquerque,3513,3482,200,1,10910,3,
-06,06007,municipio,007,Alconchel,1293,1291,200,0,,2,
-06,06008,municipio,008,Alconera,501,499,200,0,,1,06300
-06,06009,municipio,009,Aljucén,316,313,200,0,,1,
-06,06010,municipio,010,Almendral,952,948,200,0,,1,
-06,06011,municipio,011,Almendralejo,11368,11327,200,0,,1,06207
-06,06012,municipio,012,Arroyo de San Serván,2336,2322,200,0,,1,06800
-06,06013,municipio,013,Atalaya,297,295,200,0,,1,06378
-06,06014,municipio,014,Azuaga,5439,5345,200,0,,2,06939
-06,06015,municipio,015,Badajoz,28636,26731,200,0,,22,06109;06172;06480
-06,06016,municipio,016,Barcarrota,2423,2344,200,0,,1,06108
-06,06017,municipio,017,Baterno,346,342,200,0,,1,
-06,06018,municipio,018,Benquerencia de la Serena,1254,1252,200,0,,4,
-06,06019,municipio,019,Berlanga,2030,1983,200,0,,1,
-06,06020,municipio,020,Bienvenida,1503,1481,200,0,,1,
-06,06021,municipio,021,Bodonal de la Sierra,973,962,200,0,,1,
-06,06022,municipio,022,Burguillos del Cerro,2323,2283,200,0,,1,06329;06378
-06,06023,municipio,023,Cabeza del Buey,3691,3616,200,0,,2,06611;06655
-06,06024,municipio,024,Cabeza la Vaca,1377,1373,200,0,,1,
-06,06025,municipio,025,Calamonte,2991,2535,200,0,,1,06800
-06,06026,municipio,026,Calera de León,746,734,200,0,,1,
-06,06027,municipio,027,Calzadilla de los Barros,595,590,200,0,,1,06320
-06,06028,municipio,028,Campanario,3829,3685,200,0,,2,06420
-06,06029,municipio,029,Campillo de Llerena,1209,1193,200,0,,1,
-06,06030,municipio,030,Capilla,297,293,200,0,,1,
-06,06031,municipio,031,Carmonita,410,408,200,0,,1,
-06,06032,municipio,032,El Carrascalejo,100,99,200,0,,1,
-06,06033,municipio,033,Casas de Don Pedro,1985,1977,200,0,,2,
-06,06034,municipio,034,Casas de Reina,385,381,200,0,,1,
-06,06035,municipio,035,Castilblanco,1926,1893,200,0,,1,
-06,06036,municipio,036,Castuera,4121,3898,200,0,,1,
-06,06037,municipio,037,La Codosera,1404,1301,200,9,06510,3,
-06,06038,municipio,038,Cordobilla de Lácara,786,778,200,0,,1,
-06,06039,municipio,039,La Coronada,1616,1586,200,0,,1,
-06,06040,municipio,040,Corte de Peleas,800,782,200,0,,1,
-06,06041,municipio,041,Cristina,430,427,200,0,,1,
-06,06042,municipio,042,Cheles,930,905,200,0,,1,
-06,06043,municipio,043,Don Álvaro,561,550,200,0,,1,
-06,06044,municipio,044,Don Benito,12775,12058,200,0,,5,06700
-06,06045,municipio,045,Entrín Bajo,561,428,200,0,,1,
-06,06046,municipio,046,Esparragalejo,1015,988,200,1,06800,2,
-06,06047,municipio,047,Esparragosa de la Serena,855,847,200,0,,1,06420
-06,06048,municipio,048,Esparragosa de Lares,1398,1394,200,0,,1,
-06,06049,municipio,049,Feria,1302,1289,200,0,,1,
-06,06050,municipio,050,Fregenal de la Sierra,3029,2811,200,0,,1,06270
-06,06051,municipio,051,Fuenlabrada de los Montes,2141,2072,200,0,,1,
-06,06052,municipio,052,Fuente de Cantos,2956,2937,200,0,,1,06270;06320
-06,06053,municipio,053,Fuente del Arco,658,657,200,0,,1,
-06,06054,municipio,054,Fuente del Maestre,4212,4116,200,0,,1,
-06,06055,municipio,055,Fuentes de León,1866,1855,200,0,,1,06270
-06,06056,municipio,056,Garbayuela,759,754,200,0,,1,06660
-06,06057,municipio,057,Garlitos,845,842,200,0,,1,
-06,06058,municipio,058,La Garrovilla,1388,1353,200,2,06860,2,
-06,06059,municipio,059,Granja de Torrehermosa,2133,2124,200,0,,1,
-06,06060,municipio,060,Guareña,3886,3852,200,0,,2,06474
-06,06061,municipio,061,La Haba,1056,1032,200,0,,1,
-06,06062,municipio,062,Helechosa de los Montes,924,907,200,0,,2,
-06,06063,municipio,063,Herrera del Duque,3634,3624,200,0,,2,
-06,06064,municipio,064,Higuera de la Serena,1143,1141,200,0,,1,
-06,06065,municipio,065,Higuera de Llerena,456,422,200,0,,1,06900
-06,06066,municipio,066,Higuera de Vargas,1434,1431,200,0,,1,
-06,06067,municipio,067,Higuera la Real,1776,1757,200,0,,1,
-06,06068,municipio,068,Hinojosa del Valle,456,454,200,0,,1,06227
-06,06069,municipio,069,Hornachos,2951,2896,200,1,06477,2,
-06,06070,municipio,070,Jerez de los Caballeros,5283,4927,200,0,,2,06177
-06,06071,municipio,071,La Lapa,244,242,200,0,,1,
-06,06072,municipio,072,Lobón,1788,1741,200,1,06499,3,
-06,06073,municipio,073,Llera,797,793,200,0,,1,
-06,06074,municipio,074,Llerena,3024,2950,200,0,,1,
-06,06075,municipio,075,Magacela,914,910,200,0,,1,06714
-06,06076,municipio,076,Maguilla,842,838,200,0,,1,
-06,06077,municipio,077,Malcocinado,501,427,200,0,,1,06920
-06,06078,municipio,078,Malpartida de la Serena,669,667,200,0,,2,
-06,06079,municipio,079,Manchita,455,449,200,0,,1,
-06,06080,municipio,080,Medellín,1778,1713,200,0,,2,
-06,06081,municipio,081,Medina de las Torres,1268,1265,200,0,,1,
-06,06082,municipio,082,Mengabril,349,341,200,0,,1,06411
-06,06083,municipio,083,Mérida,13630,12956,200,5,06810,3,06860;06891;06894
-06,06084,municipio,084,Mirandilla,905,899,200,0,,1,06893
-06,06085,municipio,085,Monesterio,2628,2562,200,1,06291,2,
-06,06086,municipio,086,Montemolín,1347,1338,200,1,06906,4,
-06,06087,municipio,087,Monterrubio de la Serena,2739,2659,200,0,,1,
-06,06088,municipio,088,Montijo,7062,6791,200,0,,3,06490;06880
-06,06089,municipio,089,La Morera,597,591,200,0,,1,
-06,06090,municipio,090,La Nava de Santiago,825,825,200,0,,1,
-06,06091,municipio,091,Navalvillar de Pela,3638,3626,200,0,,3,
-06,06092,municipio,092,Nogales,679,674,200,0,,1,06150
-06,06093,municipio,093,Oliva de la Frontera,3436,3347,200,0,,1,06134
-06,06094,municipio,094,Oliva de Mérida,1525,1515,200,0,,1,06228;06442
-06,06095,municipio,095,Olivenza,5313,4807,200,0,,5,
-06,06096,municipio,096,Orellana de la Sierra,502,502,200,0,,1,
-06,06097,municipio,097,Orellana la Vieja,2719,2649,200,0,,1,
-06,06098,municipio,098,Palomas,485,470,200,0,,1,06475;06477
-06,06099,municipio,099,La Parra,877,871,200,0,,1,
-06,06100,municipio,100,Peñalsordo,1746,1738,200,0,,1,06611;06612
-06,06101,municipio,101,Peraleda del Zaucejo,632,629,200,0,,1,06427
-06,06102,municipio,102,Puebla de Alcocer,1874,1847,200,0,,1,06650;06760
-06,06103,municipio,103,Puebla de la Calzada,3022,2648,200,0,,1,06480;06498
-06,06104,municipio,104,Puebla de la Reina,711,706,200,0,,1,06228
-06,06105,municipio,105,Puebla del Maestre,1059,1051,200,0,,1,
-06,06106,municipio,106,Puebla del Prior,489,485,200,0,,1,
-06,06107,municipio,107,Puebla de Obando,1519,1503,200,0,,1,
-06,06108,municipio,108,Puebla de Sancho Pérez,2001,1804,200,0,,2,06230;06300
-06,06109,municipio,109,Quintana de la Serena,3092,2997,200,0,,1,06460
-06,06110,municipio,110,Reina,302,299,200,0,,1,
-06,06111,municipio,111,Rena,394,388,200,0,,1,
-06,06112,municipio,112,Retamal de Llerena,674,671,200,0,,1,
-06,06113,municipio,113,Ribera del Fresno,2728,2691,200,0,,1,06230
-06,06114,municipio,114,Risco,325,324,200,0,,1,
-06,06115,municipio,115,La Roca de la Sierra,1208,1196,200,0,,1,
-06,06116,municipio,116,Salvaleón,1570,1553,200,0,,1,
-06,06117,municipio,117,Salvatierra de los Barros,1308,1298,200,0,,1,
-06,06118,municipio,118,Sancti-Spíritus,425,425,200,0,,1,
-06,06119,municipio,119,San Pedro de Mérida,618,612,200,0,,1,
-06,06120,municipio,120,Santa Amalia,2689,2654,200,0,,1,
-06,06121,municipio,121,Santa Marta,2487,2413,200,1,06208,2,06176
-06,06122,municipio,122,Los Santos de Maimona,4798,4629,200,0,,1,06225;06310
-06,06123,municipio,123,San Vicente de Alcántara,3134,3103,200,0,,2,
-06,06124,municipio,124,Segura de León,1714,1692,200,0,,1,
-06,06125,municipio,125,Siruela,2915,2906,200,0,,1,
-06,06126,municipio,126,Solana de los Barros,2024,1745,200,0,,2,
-06,06127,municipio,127,Talarrubias,3494,3417,200,0,,1,06689
-06,06128,municipio,128,Talavera la Real,2872,2548,200,0,,1,
-06,06129,municipio,129,Táliga,491,488,200,0,,1,
-06,06130,municipio,130,Tamurejo,431,427,200,0,,1,
-06,06131,municipio,131,Torre de Miguel Sesmero,885,880,200,0,,1,06171
-06,06132,municipio,132,Torremayor,670,639,200,0,,1,
-06,06133,municipio,133,Torremejía,1541,1488,200,0,,1,
-06,06134,municipio,134,Trasierra,587,586,200,0,,1,06960
-06,06135,municipio,135,Trujillanos,863,863,200,0,,1,
-06,06136,municipio,136,Usagre,1529,1471,200,0,,2,
-06,06137,municipio,137,Valdecaballeros,1435,1397,200,0,,1,
-06,06138,municipio,138,Valdetorres,910,902,200,0,,1,
-06,06139,municipio,139,Valencia de las Torres,768,767,200,0,,1,
-06,06140,municipio,140,Valencia del Mombuey,591,591,200,0,,1,
-06,06141,municipio,141,Valencia del Ventoso,1714,1701,200,0,,1,
-06,06142,municipio,142,Valverde de Burguillos,351,349,200,0,,1,
-06,06143,municipio,143,Valverde de Leganés,2087,2033,200,0,,1,
-06,06144,municipio,144,Valverde de Llerena,683,683,200,0,,1,
-06,06145,municipio,145,Valverde de Mérida,760,750,200,0,,1,
-06,06146,municipio,146,Valle de la Serena,1445,1442,200,0,,2,
-06,06147,municipio,147,Valle de Matamoros,465,274,200,0,,1,
-06,06148,municipio,148,Valle de Santa Ana,1006,944,200,0,,1,
-06,06149,municipio,149,Villafranca de los Barros,6517,6271,200,1,06225,2,06230
-06,06150,municipio,150,Villagarcía de la Torre,956,946,200,0,,1,06900
-06,06151,municipio,151,Villagonzalo,1060,1048,200,0,,1,06840
-06,06152,municipio,152,Villalba de los Barros,1198,1165,200,0,,1,
-06,06153,municipio,153,Villanueva de la Serena,9959,9606,200,0,,5,06400
-06,06154,municipio,154,Villanueva del Fresno,1717,1701,200,0,,1,
-06,06155,municipio,155,Villar del Rey,1431,1392,200,0,,1,
-06,06156,municipio,156,Villar de Rena,1008,1002,200,0,,2,06719
-06,06157,municipio,157,Villarta de los Montes,854,854,200,0,,1,
-06,06158,municipio,158,Zafra,4427,4030,200,0,,1,
-06,06159,municipio,159,Zahínos,2415,1576,200,0,,2,
-06,06160,municipio,160,Zalamea de la Serena,2813,2794,200,0,,2,06441
-06,06161,municipio,161,Zarza-Capilla,790,786,200,0,,1,
-06,06162,municipio,162,La Zarza,2761,2726,200,0,,1,06800
-06,06901,municipio,901,Valdelacalzada,1552,1409,200,0,,1,06186
-06,06902,municipio,902,Pueblonuevo del Guadiana,1137,1042,200,0,,1,
-06,06903,municipio,903,Guadiana,1226,1115,200,0,,2,
+cpro,LAU_CODE,tipo_recinto,id_prov,t_ua,cmun,municipio,componentes,componentes_sin_cp,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos_seleccionados,codigos_descartados,codigos
+06,06001,municipio,06,99,001,Acedera,1,0,678,677,200,0,,06713;06730,,2
+06,06002,municipio,06,99,002,Aceuchal,1,0,3351,3348,200,0,,06207,,1
+06,06003,municipio,06,99,003,Ahillones,2,1,956,956,50;200,0,,06940,,1
+06,06004,municipio,06,99,004,Alange,1,0,1329,1320,200,1,06830,06830;06840,,2
+06,06005,municipio,06,99,005,La Albuera,2,1,1337,1325,50;200,0,,06170,,1
+06,06006,municipio,06,99,006,Alburquerque,1,0,3513,3482,200,1,10910,06510;06519;10910,,3
+06,06007,municipio,06,99,007,Alconchel,1,0,1293,1291,200,0,,06105;06131,,2
+06,06008,municipio,06,99,008,Alconera,1,0,501,499,200,0,,06393,06300,1
+06,06009,municipio,06,99,009,Aljucén,1,0,316,313,200,0,,06894,,1
+06,06010,municipio,06,99,010,Almendral,1,0,952,948,200,0,,06171,,1
+06,06011,municipio,06,99,011,Almendralejo,1,0,11368,11327,200,0,,06200,06207,1
+06,06012,municipio,06,99,012,Arroyo de San Serván,1,0,2336,2322,200,0,,06850,06800,1
+06,06013,municipio,06,99,013,Atalaya,1,0,297,295,200,0,,06329,06378,1
+06,06014,municipio,06,99,014,Azuaga,1,0,5439,5345,200,0,,06920;06929,06939,2
+06,06015,municipio,06,99,015,Badajoz,1,0,28636,26731,200,0,,06001;06002;06003;06004;06005;06006;06007;06008;06009;06010;06011;06050;06140;06170;06180;06181;06182;06183;06186;06193;06194;06195,06109;06172;06480,22
+06,06016,municipio,06,99,016,Barcarrota,1,0,2423,2344,200,0,,06160,06108,1
+06,06017,municipio,06,99,017,Baterno,1,0,346,342,200,0,,06659,,1
+06,06018,municipio,06,99,018,Benquerencia de la Serena,1,0,1254,1252,200,0,,06428;06429;06613;06615,,4
+06,06019,municipio,06,99,019,Berlanga,1,0,2030,1983,200,0,,06930,,1
+06,06020,municipio,06,99,020,Bienvenida,1,0,1503,1481,200,0,,06250,,1
+06,06021,municipio,06,99,021,Bodonal de la Sierra,2,1,973,962,50;200,0,,06394,,1
+06,06022,municipio,06,99,022,Burguillos del Cerro,1,0,2323,2283,200,0,,06370,06329;06378,1
+06,06023,municipio,06,99,023,Cabeza del Buey,1,0,3691,3616,200,0,,06600;06614,06611;06655,2
+06,06024,municipio,06,99,024,Cabeza la Vaca,1,0,1377,1373,200,0,,06293,,1
+06,06025,municipio,06,99,025,Calamonte,1,0,2991,2535,200,0,,06810,06800,1
+06,06026,municipio,06,99,026,Calera de León,1,0,746,734,200,0,,06292,,1
+06,06027,municipio,06,99,027,Calzadilla de los Barros,1,0,595,590,200,0,,06249,06320,1
+06,06028,municipio,06,99,028,Campanario,2,0,3829,3685,200,0,,06459;06460,06420,2
+06,06029,municipio,06,99,029,Campillo de Llerena,1,0,1209,1193,200,0,,06443,,1
+06,06030,municipio,06,99,030,Capilla,1,0,297,293,200,0,,06612,,1
+06,06031,municipio,06,99,031,Carmonita,2,1,410,408,50;200,0,,06488,,1
+06,06032,municipio,06,99,032,El Carrascalejo,1,0,100,99,200,0,,06894,,1
+06,06033,municipio,06,99,033,Casas de Don Pedro,3,2,1985,1977,50;200,0,,06630;06770,,2
+06,06034,municipio,06,99,034,Casas de Reina,3,2,385,381,50;200,0,,06960,,1
+06,06035,municipio,06,99,035,Castilblanco,1,0,1926,1893,200,0,,06680,,1
+06,06036,municipio,06,99,036,Castuera,1,0,4121,3898,200,0,,06420,,1
+06,06037,municipio,06,99,037,La Codosera,1,0,1404,1301,200,9,06510,06510;06518;06519,,3
+06,06038,municipio,06,99,038,Cordobilla de Lácara,1,0,786,778,200,0,,06487,,1
+06,06039,municipio,06,99,039,La Coronada,1,0,1616,1586,200,0,,06469,,1
+06,06040,municipio,06,99,040,Corte de Peleas,1,0,800,782,200,0,,06196,,1
+06,06041,municipio,06,99,041,Cristina,1,0,430,427,200,0,,06479,,1
+06,06042,municipio,06,99,042,Cheles,1,0,930,905,200,0,,06105,,1
+06,06043,municipio,06,99,043,Don Álvaro,1,0,561,550,200,0,,06820,,1
+06,06044,municipio,06,99,044,Don Benito,3,0,12775,12058,200,0,,06400;06410;06412;06711;06719,06700,5
+06,06045,municipio,06,99,045,Entrín Bajo,1,0,561,428,200,0,,06197,,1
+06,06046,municipio,06,99,046,Esparragalejo,1,0,1015,988,200,1,06800,06800;06860,,2
+06,06047,municipio,06,99,047,Esparragosa de la Serena,1,0,855,847,200,0,,06439,06420,1
+06,06048,municipio,06,99,048,Esparragosa de Lares,1,0,1398,1394,200,0,,06620,,1
+06,06049,municipio,06,99,049,Feria,1,0,1302,1289,200,0,,06390,,1
+06,06050,municipio,06,99,050,Fregenal de la Sierra,1,0,3029,2811,200,0,,06340,06270,1
+06,06051,municipio,06,99,051,Fuenlabrada de los Montes,1,0,2141,2072,200,0,,06660,,1
+06,06052,municipio,06,99,052,Fuente de Cantos,1,0,2956,2937,200,0,,06240,06270;06320,1
+06,06053,municipio,06,99,053,Fuente del Arco,2,1,658,657,50;200,0,,06980,,1
+06,06054,municipio,06,99,054,Fuente del Maestre,1,0,4212,4116,200,0,,06360,,1
+06,06055,municipio,06,99,055,Fuentes de León,1,0,1866,1855,200,0,,06280,06270,1
+06,06056,municipio,06,99,056,Garbayuela,1,0,759,754,200,0,,06690,06660,1
+06,06057,municipio,06,99,057,Garlitos,1,0,845,842,200,0,,06656,,1
+06,06058,municipio,06,99,058,La Garrovilla,1,0,1388,1353,200,2,06860,06860;06870,,2
+06,06059,municipio,06,99,059,Granja de Torrehermosa,1,0,2133,2124,200,0,,06910,,1
+06,06060,municipio,06,99,060,Guareña,1,0,3886,3852,200,0,,06410;06470,06474,2
+06,06061,municipio,06,99,061,La Haba,1,0,1056,1032,200,0,,06714,,1
+06,06062,municipio,06,99,062,Helechosa de los Montes,2,1,924,907,50;200,0,,06692;13110,,2
+06,06063,municipio,06,99,063,Herrera del Duque,1,0,3634,3624,200,0,,06670;06679,,2
+06,06064,municipio,06,99,064,Higuera de la Serena,1,0,1143,1141,200,0,,06441,,1
+06,06065,municipio,06,99,065,Higuera de Llerena,1,0,456,422,200,0,,06445,06900,1
+06,06066,municipio,06,99,066,Higuera de Vargas,1,0,1434,1431,200,0,,06132,,1
+06,06067,municipio,06,99,067,Higuera la Real,1,0,1776,1757,200,0,,06350,,1
+06,06068,municipio,06,99,068,Hinojosa del Valle,1,0,456,454,200,0,,06226,06227,1
+06,06069,municipio,06,99,069,Hornachos,1,0,2951,2896,200,1,06477,06228;06477,,2
+06,06070,municipio,06,99,070,Jerez de los Caballeros,1,0,5283,4927,200,0,,06380;06389,06177,2
+06,06071,municipio,06,99,071,La Lapa,1,0,244,242,200,0,,06391,,1
+06,06072,municipio,06,99,072,Lobón,1,0,1788,1741,200,1,06499,06187;06498;06499,,3
+06,06073,municipio,06,99,073,Llera,1,0,797,793,200,0,,06227,,1
+06,06074,municipio,06,99,074,Llerena,1,0,3024,2950,200,0,,06900,,1
+06,06075,municipio,06,99,075,Magacela,1,0,914,910,200,0,,06468,06714,1
+06,06076,municipio,06,99,076,Maguilla,1,0,842,838,200,0,,06939,,1
+06,06077,municipio,06,99,077,Malcocinado,1,0,501,427,200,0,,06928,06920,1
+06,06078,municipio,06,99,078,Malpartida de la Serena,1,0,669,667,200,0,,06420;06440,,2
+06,06079,municipio,06,99,079,Manchita,1,0,455,449,200,0,,06478,,1
+06,06080,municipio,06,99,080,Medellín,1,0,1778,1713,200,0,,06411;06415,,2
+06,06081,municipio,06,99,081,Medina de las Torres,1,0,1268,1265,200,0,,06320,,1
+06,06082,municipio,06,99,082,Mengabril,1,0,349,341,200,0,,06413,06411,1
+06,06083,municipio,06,99,083,Mérida,4,2,13630,12956,50;200,5,06810,06800;06810;06893,06860;06891;06894,3
+06,06084,municipio,06,99,084,Mirandilla,1,0,905,899,200,0,,06891,06893,1
+06,06085,municipio,06,99,085,Monesterio,1,0,2628,2562,200,1,06291,06260;06291,,2
+06,06086,municipio,06,99,086,Montemolín,2,0,1347,1338,200,1,06906,06291;06906;06907;06908,,4
+06,06087,municipio,06,99,087,Monterrubio de la Serena,2,1,2739,2659,50;200,0,,06427,,1
+06,06088,municipio,06,99,088,Montijo,1,0,7062,6791,200,0,,06480;06489;06499,06490;06880,3
+06,06089,municipio,06,99,089,La Morera,1,0,597,591,200,0,,06176,,1
+06,06090,municipio,06,99,090,La Nava de Santiago,1,0,825,825,200,0,,06486,,1
+06,06091,municipio,06,99,091,Navalvillar de Pela,1,0,3638,3626,200,0,,06730;06731;06760,,3
+06,06092,municipio,06,99,092,Nogales,1,0,679,674,200,0,,06173,06150,1
+06,06093,municipio,06,99,093,Oliva de la Frontera,1,0,3436,3347,200,0,,06120,06134,1
+06,06094,municipio,06,99,094,Oliva de Mérida,1,0,1525,1515,200,0,,06475,06228;06442,1
+06,06095,municipio,06,99,095,Olivenza,1,0,5313,4807,200,0,,06100;06106;06107;06108;06109,,5
+06,06096,municipio,06,99,096,Orellana de la Sierra,1,0,502,502,200,0,,06750,,1
+06,06097,municipio,06,99,097,Orellana la Vieja,1,0,2719,2649,200,0,,06740,,1
+06,06098,municipio,06,99,098,Palomas,1,0,485,470,200,0,,06476,06475;06477,1
+06,06099,municipio,06,99,099,La Parra,1,0,877,871,200,0,,06176,,1
+06,06100,municipio,06,99,100,Peñalsordo,1,0,1746,1738,200,0,,06610,06611;06612,1
+06,06101,municipio,06,99,101,Peraleda del Zaucejo,1,0,632,629,200,0,,06919,06427,1
+06,06102,municipio,06,99,102,Puebla de Alcocer,4,0,1874,1847,200,0,,06630,06650;06760,1
+06,06103,municipio,06,99,103,Puebla de la Calzada,1,0,3022,2648,200,0,,06490,06480;06498,1
+06,06104,municipio,06,99,104,Puebla de la Reina,1,0,711,706,200,0,,06477,06228,1
+06,06105,municipio,06,99,105,Puebla del Maestre,1,0,1059,1051,200,0,,06906,,1
+06,06106,municipio,06,99,106,Puebla del Prior,1,0,489,485,200,0,,06229,,1
+06,06107,municipio,06,99,107,Puebla de Obando,1,0,1519,1503,200,0,,06191,,1
+06,06108,municipio,06,99,108,Puebla de Sancho Pérez,1,0,2001,1804,200,0,,06310;06392,06230;06300,2
+06,06109,municipio,06,99,109,Quintana de la Serena,1,0,3092,2997,200,0,,06450,06460,1
+06,06110,municipio,06,99,110,Reina,2,0,302,299,200,0,,06970,,1
+06,06111,municipio,06,99,111,Rena,1,0,394,388,200,0,,06715,,1
+06,06112,municipio,06,99,112,Retamal de Llerena,2,1,674,671,50;200,0,,06442,,1
+06,06113,municipio,06,99,113,Ribera del Fresno,1,0,2728,2691,200,0,,06225,06230,1
+06,06114,municipio,06,99,114,Risco,1,0,325,324,200,0,,06657,,1
+06,06115,municipio,06,99,115,La Roca de la Sierra,1,0,1208,1196,200,0,,06190,,1
+06,06116,municipio,06,99,116,Salvaleón,1,0,1570,1553,200,0,,06174,,1
+06,06117,municipio,06,99,117,Salvatierra de los Barros,1,0,1308,1298,200,0,,06175,,1
+06,06118,municipio,06,99,118,Sancti-Spíritus,1,0,425,425,200,0,,06655,,1
+06,06119,municipio,06,99,119,San Pedro de Mérida,1,0,618,612,200,0,,06893,,1
+06,06120,municipio,06,99,120,Santa Amalia,1,0,2689,2654,200,0,,06410,,1
+06,06121,municipio,06,99,121,Santa Marta,1,0,2487,2413,200,1,06208,06150;06208,06176,2
+06,06122,municipio,06,99,122,Los Santos de Maimona,1,0,4798,4629,200,0,,06230,06225;06310,1
+06,06123,municipio,06,99,123,San Vicente de Alcántara,2,0,3134,3103,200,0,,06500;06519,,2
+06,06124,municipio,06,99,124,Segura de León,1,0,1714,1692,200,0,,06270,,1
+06,06125,municipio,06,99,125,Siruela,1,0,2915,2906,200,0,,06650,,1
+06,06126,municipio,06,99,126,Solana de los Barros,1,0,2024,1745,200,0,,06196;06209,,2
+06,06127,municipio,06,99,127,Talarrubias,2,0,3494,3418,50;200,0,,06640,06689,1
+06,06128,municipio,06,99,128,Talavera la Real,1,0,2872,2548,200,0,,06140,,1
+06,06129,municipio,06,99,129,Táliga,1,0,491,488,200,0,,06133,,1
+06,06130,municipio,06,99,130,Tamurejo,1,0,431,427,200,0,,06658,,1
+06,06131,municipio,06,99,131,Torre de Miguel Sesmero,1,0,885,880,200,0,,06172,06171,1
+06,06132,municipio,06,99,132,Torremayor,1,0,670,639,200,0,,06880,,1
+06,06133,municipio,06,99,133,Torremejía,1,0,1541,1488,200,0,,06210,,1
+06,06134,municipio,06,99,134,Trasierra,2,1,587,586,50;200,0,,06909,06960,1
+06,06135,municipio,06,99,135,Trujillanos,1,0,863,863,200,0,,06892,,1
+06,06136,municipio,06,99,136,Usagre,1,0,1529,1471,200,0,,06290;06392,,2
+06,06137,municipio,06,99,137,Valdecaballeros,1,0,1435,1397,200,0,,06689,,1
+06,06138,municipio,06,99,138,Valdetorres,1,0,910,902,200,0,,06474,,1
+06,06139,municipio,06,99,139,Valencia de las Torres,1,0,768,767,200,0,,06444,,1
+06,06140,municipio,06,99,140,Valencia del Mombuey,1,0,591,591,200,0,,06134,,1
+06,06141,municipio,06,99,141,Valencia del Ventoso,1,0,1714,1701,200,0,,06330,,1
+06,06142,municipio,06,99,142,Valverde de Burguillos,1,0,351,349,200,0,,06378,,1
+06,06143,municipio,06,99,143,Valverde de Leganés,1,0,2087,2033,200,0,,06130,,1
+06,06144,municipio,06,99,144,Valverde de Llerena,1,0,683,683,200,0,,06927,,1
+06,06145,municipio,06,99,145,Valverde de Mérida,1,0,760,750,200,0,,06890,,1
+06,06146,municipio,06,99,146,Valle de la Serena,2,0,1445,1442,200,0,,06430;06458,,2
+06,06147,municipio,06,99,147,Valle de Matamoros,1,0,465,274,200,0,,06177,,1
+06,06148,municipio,06,99,148,Valle de Santa Ana,1,0,1006,944,200,0,,06178,,1
+06,06149,municipio,06,99,149,Villafranca de los Barros,1,0,6517,6271,200,1,06225,06220;06225,06230,2
+06,06150,municipio,06,99,150,Villagarcía de la Torre,1,0,956,946,200,0,,06950,06900,1
+06,06151,municipio,06,99,151,Villagonzalo,3,1,1060,1052,50;200,0,,06473;06840,,2
+06,06152,municipio,06,99,152,Villalba de los Barros,1,0,1198,1165,200,0,,06208,,1
+06,06153,municipio,06,99,153,Villanueva de la Serena,1,0,9959,9606,200,0,,06700;06710;06712;06718;06720,06400,5
+06,06154,municipio,06,99,154,Villanueva del Fresno,1,0,1717,1701,200,0,,06110,,1
+06,06155,municipio,06,99,155,Villar del Rey,1,0,1431,1392,200,0,,06192,,1
+06,06156,municipio,06,99,156,Villar de Rena,1,0,1008,1002,200,0,,06716;06717,06719,2
+06,06157,municipio,06,99,157,Villarta de los Montes,1,0,854,854,200,0,,06678,,1
+06,06158,municipio,06,99,158,Zafra,1,0,4427,4030,200,0,,06300,,1
+06,06159,municipio,06,99,159,Zahínos,1,0,2415,1576,200,0,,06129;06380,,2
+06,06160,municipio,06,99,160,Zalamea de la Serena,2,1,2813,2794,50;200,0,,06430;06446,06441,2
+06,06161,municipio,06,99,161,Zarza-Capilla,1,0,790,786,200,0,,06611,,1
+06,06162,municipio,06,99,162,La Zarza,2,0,2761,2726,200,0,,06830,06800,1
+06,06901,municipio,06,99,901,Valdelacalzada,1,0,1552,1409,200,0,,06185,06186,1
+06,06902,municipio,06,99,902,Pueblonuevo del Guadiana,1,0,1137,1042,200,0,,06184,,1
+06,06903,municipio,06,99,903,Guadiana,1,0,1226,1115,200,0,,06182;06186,,2

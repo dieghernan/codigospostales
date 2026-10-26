@@ -1,82 +1,82 @@
-LAU_CODE,cpro
-53026,09
-53025,09
-53056,26
-53047,19
-53002,01
-53072,39
-53068,31
-53060,31
-53003,02
-53048,20
-53000,20
-53042,09
-53050,23
-53059,31
-53005,09
-53040,09
-53037,09
-53051,24
-53053,24
-53024,09
-53041,09
-53038,09
-53063,31
-53067,31
-53061,31
-53065,31
-53070,31
-53080,31
-53004,09
-53008,09
-53039,09
-53083,31
-53078,31
-53074,40
-53007,09
-53036,09
-53010,09
-53006,09
-53045,09
-53035,09
-53034,09
-53033,09
-53016,09
-53027,09
-53077,44
-53066,31
-53055,25
-53058,28
-53019,09
-53032,09
-53018,09
-53073,09
-53046,09
-53075,42
-53044,09
-53014,09
-53020,09
-53052,24
-53011,09
-53043,09
-53054,24
-53076,44
-53023,09
-53057,28
-53022,09
-53049,22
-53064,31
-53021,09
-53001,01
-53017,09
-53028,09
-53069,31
-53062,31
-53015,09
-53009,09
-53029,09
-53012,09
-53071,37
-53013,09
-53081,31
-53031,09
+LAU_CODE,cpro,id_prov,t_ua,criterio_provincia
+53026,09,09,4,id_prov contrastado con punto interior
+53025,09,09,4,id_prov contrastado con punto interior
+53056,26,26,4,id_prov contrastado con punto interior
+53047,19,19,4,id_prov contrastado con punto interior
+53002,01,01,4,id_prov contrastado con punto interior
+53072,39,39,4,id_prov contrastado con punto interior
+53068,31,31,4,id_prov contrastado con punto interior
+53060,31,31,4,id_prov contrastado con punto interior
+53003,02,02,4,id_prov contrastado con punto interior
+53048,20,20,4,id_prov contrastado con punto interior
+53000,20,20,4,id_prov contrastado con punto interior
+53042,09,09,4,id_prov contrastado con punto interior
+53050,23,23,4,id_prov contrastado con punto interior
+53059,31,31,4,id_prov contrastado con punto interior
+53005,09,09,4,id_prov contrastado con punto interior
+53040,09,09,4,id_prov contrastado con punto interior
+53037,09,09,4,id_prov contrastado con punto interior
+53051,24,24,4,id_prov contrastado con punto interior
+53053,24,24,4,id_prov contrastado con punto interior
+53024,09,09,4,id_prov contrastado con punto interior
+53041,09,09,4,id_prov contrastado con punto interior
+53038,09,09,4,id_prov contrastado con punto interior
+53063,31,31,4,id_prov contrastado con punto interior
+53067,31,31,4,id_prov contrastado con punto interior
+53061,31,31,4,id_prov contrastado con punto interior
+53065,31,31,4,id_prov contrastado con punto interior
+53070,31,31,4,id_prov contrastado con punto interior
+53080,31,31,4,id_prov contrastado con punto interior
+53004,09,09,4,id_prov contrastado con punto interior
+53008,09,09,4,id_prov contrastado con punto interior
+53039,09,09,4,id_prov contrastado con punto interior
+53083,31,31,4,id_prov contrastado con punto interior
+53078,31,31,4,id_prov contrastado con punto interior
+53074,40,40,4,id_prov contrastado con punto interior
+53007,09,09,4,id_prov contrastado con punto interior
+53036,09,09,4,id_prov contrastado con punto interior
+53010,09,09,4,id_prov contrastado con punto interior
+53006,09,09,4,id_prov contrastado con punto interior
+53045,09,09,4,id_prov contrastado con punto interior
+53035,09,09,4,id_prov contrastado con punto interior
+53034,09,09,4,id_prov contrastado con punto interior
+53033,09,09,4,id_prov contrastado con punto interior
+53016,09,09,4,id_prov contrastado con punto interior
+53027,09,09,4,id_prov contrastado con punto interior
+53077,44,44,4,id_prov contrastado con punto interior
+53066,31,31,4,id_prov contrastado con punto interior
+53055,25,25,4,id_prov contrastado con punto interior
+53058,28,28,4,id_prov contrastado con punto interior
+53019,09,09,4,id_prov contrastado con punto interior
+53032,09,09,4,id_prov contrastado con punto interior
+53018,09,09,4,id_prov contrastado con punto interior
+53073,09,09,4,id_prov contrastado con punto interior
+53046,09,09,4,id_prov contrastado con punto interior
+53075,42,42,4,id_prov contrastado con punto interior
+53044,09,09,4,id_prov contrastado con punto interior
+53014,09,09,4,id_prov contrastado con punto interior
+53020,09,09,4,id_prov contrastado con punto interior
+53052,24,24,4,id_prov contrastado con punto interior
+53011,09,09,4,id_prov contrastado con punto interior
+53043,09,09,4,id_prov contrastado con punto interior
+53054,24,24,4,id_prov contrastado con punto interior
+53076,44,44,4,id_prov contrastado con punto interior
+53023,09,09,4,id_prov contrastado con punto interior
+53057,28,28,4,id_prov contrastado con punto interior
+53022,09,09,4,id_prov contrastado con punto interior
+53049,22,22,4,id_prov contrastado con punto interior
+53064,31,31,4,id_prov contrastado con punto interior
+53021,09,09,4,id_prov contrastado con punto interior
+53001,01,01,4,id_prov contrastado con punto interior
+53017,09,09,4,id_prov contrastado con punto interior
+53028,09,09,4,id_prov contrastado con punto interior
+53069,31,31,4,id_prov contrastado con punto interior
+53062,31,31,4,id_prov contrastado con punto interior
+53015,09,09,4,id_prov contrastado con punto interior
+53009,09,09,4,id_prov contrastado con punto interior
+53029,09,09,4,id_prov contrastado con punto interior
+53012,09,09,4,id_prov contrastado con punto interior
+53071,37,37,4,id_prov contrastado con punto interior
+53013,09,09,4,id_prov contrastado con punto interior
+53081,31,31,4,id_prov contrastado con punto interior
+53031,09,09,4,id_prov contrastado con punto interior

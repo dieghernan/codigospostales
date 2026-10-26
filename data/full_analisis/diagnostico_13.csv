@@ -1,103 +1,103 @@
-cpro,LAU_CODE,tipo_recinto,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_descartados
-13,13001,municipio,001,Abenójar,1369,1222,200,0,,1,13473;13580
-13,13002,municipio,002,Agudo,2134,2133,200,0,,1,
-13,13003,municipio,003,Alamillo,758,756,200,0,,1,13400
-13,13004,municipio,004,Albaladejo,1294,1289,200,0,,1,
-13,13005,municipio,005,Alcázar de San Juan,10917,10709,200,1,13640,4,13610;13710
-13,13006,municipio,006,Alcoba,762,762,200,0,,2,
-13,13007,municipio,007,Alcolea de Calatrava,1206,1202,200,0,,1,
-13,13008,municipio,008,Alcubillas,695,695,200,0,,1,
-13,13009,municipio,009,Aldea del Rey,1741,1737,200,0,,1,
-13,13010,municipio,010,Alhambra,1229,1220,200,0,,2,13247
-13,13011,municipio,011,Almadén,3245,3127,200,0,,1,13412;13414;13480
-13,13012,municipio,012,Almadenejos,549,548,200,0,,2,
-13,13013,municipio,013,Almagro,4296,4278,200,0,,2,13260
-13,13014,municipio,014,Almedina,614,611,200,0,,1,
-13,13015,municipio,015,Almodóvar del Campo,4865,4563,200,0,,10,13180;13450;13500
-13,13016,municipio,016,Almuradiel,647,620,200,0,,2,13770
-13,13017,municipio,017,Anchuras,742,740,200,0,,2,
-13,13018,municipio,018,Arenas de San Juan,933,929,200,0,,1,
-13,13019,municipio,019,Argamasilla de Alba,3970,3943,200,0,,1,13249;13700
-13,13020,municipio,020,Argamasilla de Calatrava,3715,3464,200,0,,1,13500
-13,13021,municipio,021,Arroba de los Montes,626,624,200,0,,1,
-13,13022,municipio,022,Ballesteros de Calatrava,510,509,200,0,,1,
-13,13023,municipio,023,Bolaños de Calatrava,6007,5951,200,0,,1,
-13,13024,municipio,024,Brazatortas,1120,1113,200,0,,3,13130
-13,13025,municipio,025,Cabezarados,348,333,200,0,,1,
-13,13026,municipio,026,Cabezarrubias del Puerto,735,732,200,0,,1,13450
-13,13027,municipio,027,Calzada de Calatrava,2684,2670,200,0,,3,
-13,13028,municipio,028,Campo de Criptana,6632,6544,200,1,13619,2,
-13,13029,municipio,029,Cañada de Calatrava,146,137,200,0,,1,13005
-13,13030,municipio,030,Caracuel de Calatrava,193,160,200,0,,1,13595
-13,13031,municipio,031,Carrión de Calatrava,2106,2072,200,0,,1,
-13,13032,municipio,032,Carrizosa,1339,1333,200,0,,1,
-13,13033,municipio,033,Castellar de Santiago,2111,2087,200,0,,1,
-13,13034,municipio,034,Ciudad Real,10295,10140,200,3,13170,8,
-13,13035,municipio,035,Corral de Calatrava,1003,993,200,0,,1,13430;13433
-13,13036,municipio,036,Los Cortijos,1288,1287,200,0,,1,
-13,13037,municipio,037,Cózar,1027,1027,200,0,,1,
-13,13038,municipio,038,Chillón,2086,2054,200,0,,2,
-13,13039,municipio,039,Daimiel,6277,6242,200,0,,2,
-13,13040,municipio,040,Fernán Caballero,1074,1071,200,0,,1,
-13,13041,municipio,041,Fontanarejo,521,520,200,0,,1,
-13,13042,municipio,042,Fuencaliente,1004,975,200,0,,1,
-13,13043,municipio,043,Fuenllana,372,370,200,0,,1,13332
-13,13044,municipio,044,Fuente el Fresno,2750,2744,200,0,,2,
-13,13045,municipio,045,Granátula de Calatrava,907,905,200,0,,1,
-13,13046,municipio,046,Guadalmez,955,954,200,0,,1,
-13,13047,municipio,047,Herencia,4836,4807,200,1,13600,2,13210
-13,13048,municipio,048,Hinojosas de Calatrava,1086,1084,200,0,,1,
-13,13049,municipio,049,Horcajo de los Montes,1308,1305,200,0,,1,13116
-13,13050,municipio,050,Las Labores,591,588,200,0,,1,
-13,13051,municipio,051,Luciana,487,486,200,0,,1,
-13,13052,municipio,052,Malagón,6548,6431,200,0,,4,13250;13427
-13,13053,municipio,053,Manzanares,5646,5414,200,0,,1,
-13,13054,municipio,054,Membrilla,3422,3371,200,0,,1,
-13,13055,municipio,055,Mestanza,1333,1330,200,0,,2,
-13,13056,municipio,056,Miguelturra,5012,4745,200,4,13005;13150,4,13179
-13,13057,municipio,057,Montiel,1700,1680,200,0,,2,13341;13342
-13,13058,municipio,058,Moral de Calatrava,4058,4030,200,1,13200,2,13300
-13,13059,municipio,059,Navalpino,457,456,200,0,,1,
-13,13060,municipio,060,Navas de Estena,584,581,200,0,,1,
-13,13061,municipio,061,Pedro Muñoz,5281,5268,200,0,,1,
-13,13062,municipio,062,Picón,662,657,200,0,,1,
-13,13063,municipio,063,Piedrabuena,3432,3424,200,0,,2,13107
-13,13064,municipio,064,Poblete,1325,1319,200,0,,1,
-13,13065,municipio,065,Porzuna,3217,3210,200,0,,4,
-13,13066,municipio,066,Pozuelo de Calatrava,1754,1737,200,1,13432,2,
-13,13067,municipio,067,Los Pozuelos de Calatrava,492,492,200,0,,1,
-13,13068,municipio,068,Puebla de Don Rodrigo,1138,1125,200,0,,1,13414
-13,13069,municipio,069,Puebla del Príncipe,868,862,200,0,,1,
-13,13070,municipio,070,Puerto Lápice,894,890,200,0,,1,
-13,13071,municipio,071,Puertollano,13556,12996,200,0,,2,13440
-13,13072,municipio,072,Retuerta del Bullaque,1040,1034,200,0,,1,
-13,13073,municipio,073,Saceruela,602,594,200,0,,1,13411
-13,13074,municipio,074,San Carlos del Valle,861,857,200,0,,1,
-13,13075,municipio,075,San Lorenzo de Calatrava,530,529,200,0,,1,
-13,13076,municipio,076,Santa Cruz de los Cáñamos,543,541,200,0,,1,
-13,13077,municipio,077,Santa Cruz de Mudela,2895,2826,200,0,,1,
-13,13078,municipio,078,Socuéllamos,6723,6700,200,0,,1,13700
-13,13079,municipio,079,La Solana,7235,7203,200,0,,1,
-13,13080,municipio,080,Solana del Pino,629,625,200,0,,1,13592
-13,13081,municipio,081,Terrinches,878,877,200,0,,1,
-13,13082,municipio,082,Tomelloso,13560,13338,200,2,13710,3,
-13,13083,municipio,083,Torralba de Calatrava,2500,2437,200,0,,1,13250;13270
-13,13084,municipio,084,Torre de Juan Abad,1525,1510,200,0,,1,13326;13750
-13,13085,municipio,085,Torrenueva,2150,2144,200,0,,1,
-13,13086,municipio,086,Valdemanco del Esteras,491,369,200,0,,1,13109
-13,13087,municipio,087,Valdepeñas,10069,9869,200,0,,2,13230
-13,13088,municipio,088,Valenzuela de Calatrava,731,730,200,0,,1,
-13,13089,municipio,089,Villahermosa,2522,2501,200,0,,2,13329
-13,13090,municipio,090,Villamanrique,1362,1359,200,0,,1,
-13,13091,municipio,091,Villamayor de Calatrava,700,687,200,0,,1,
-13,13092,municipio,092,Villanueva de la Fuente,2445,2436,200,0,,1,
-13,13093,municipio,093,Villanueva de los Infantes,3289,3282,200,0,,2,
-13,13094,municipio,094,Villanueva de San Carlos,455,454,200,0,,1,
-13,13095,municipio,095,Villar del Pozo,115,115,200,0,,1,
-13,13096,municipio,096,Villarrubia de los Ojos,5927,5916,200,0,,1,
-13,13097,municipio,097,Villarta de San Juan,1912,1883,200,0,,1,13640
-13,13098,municipio,098,Viso del Marqués,2230,2223,200,0,,2,
-13,13901,municipio,901,El Robledo,1212,1178,200,0,,1,
-13,13902,municipio,902,Ruidera,893,815,200,0,,1,13248
-13,13903,municipio,903,Arenales de San Gregorio,603,603,200,0,,1,
-13,13904,municipio,904,Llanos del Caudillo,348,337,200,0,,2,
+cpro,LAU_CODE,tipo_recinto,id_prov,t_ua,cmun,municipio,componentes,componentes_sin_cp,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos_seleccionados,codigos_descartados,codigos
+13,13001,municipio,13,99,001,Abenójar,1,0,1369,1222,200,0,,13180,13473;13580,1
+13,13002,municipio,13,99,002,Agudo,1,0,2134,2133,200,0,,13410,,1
+13,13003,municipio,13,99,003,Alamillo,1,0,758,756,200,0,,13413,13400,1
+13,13004,municipio,13,99,004,Albaladejo,1,0,1294,1289,200,0,,13340,,1
+13,13005,municipio,13,99,005,Alcázar de San Juan,1,0,10917,10709,200,1,13640,13600;13640;13690;13720,13610;13710,4
+13,13006,municipio,13,99,006,Alcoba,1,0,762,762,200,0,,13115;13116,,2
+13,13007,municipio,13,99,007,Alcolea de Calatrava,1,0,1206,1202,200,0,,13107,,1
+13,13008,municipio,13,99,008,Alcubillas,1,0,695,695,200,0,,13391,,1
+13,13009,municipio,13,99,009,Aldea del Rey,1,0,1741,1737,200,0,,13380,,1
+13,13010,municipio,13,99,010,Alhambra,2,0,1229,1220,200,0,,13248;13390,13247,2
+13,13011,municipio,13,99,011,Almadén,1,0,3245,3127,200,0,,13400,13412;13414;13480,1
+13,13012,municipio,13,99,012,Almadenejos,1,0,549,548,200,0,,13414;13480,,2
+13,13013,municipio,13,99,013,Almagro,3,2,4296,4278,50;200,0,,13179;13270,13260,2
+13,13014,municipio,13,99,014,Almedina,1,0,614,611,200,0,,13328,,1
+13,13015,municipio,13,99,015,Almodóvar del Campo,1,0,4865,4563,200,0,,13189;13192;13415;13459;13460;13470;13473;13580;13596;13598,13180;13450;13500,10
+13,13016,municipio,13,99,016,Almuradiel,1,0,647,620,200,0,,13760;13768,13770,2
+13,13017,municipio,13,99,017,Anchuras,1,0,742,740,200,0,,13117;13118,,2
+13,13018,municipio,13,99,018,Arenas de San Juan,1,0,933,929,200,0,,13679,,1
+13,13019,municipio,13,99,019,Argamasilla de Alba,1,0,3970,3943,200,0,,13710,13249;13700,1
+13,13020,municipio,13,99,020,Argamasilla de Calatrava,1,0,3715,3464,200,0,,13440,13500,1
+13,13021,municipio,13,99,021,Arroba de los Montes,1,0,626,624,200,0,,13193,,1
+13,13022,municipio,13,99,022,Ballesteros de Calatrava,1,0,510,509,200,0,,13432,,1
+13,13023,municipio,13,99,023,Bolaños de Calatrava,1,0,6007,5951,200,0,,13260,,1
+13,13024,municipio,13,99,024,Brazatortas,3,0,1120,1113,200,0,,13450;13580;14449,13130,3
+13,13025,municipio,13,99,025,Cabezarados,1,0,348,333,200,0,,13192,,1
+13,13026,municipio,13,99,026,Cabezarrubias del Puerto,1,0,735,732,200,0,,13591,13450,1
+13,13027,municipio,13,99,027,Calzada de Calatrava,1,0,2684,2670,200,0,,13370;13739;13779,,3
+13,13028,municipio,13,99,028,Campo de Criptana,1,0,6632,6544,200,1,13619,13610;13619,,2
+13,13029,municipio,13,99,029,Cañada de Calatrava,1,0,146,137,200,0,,13430,13005,1
+13,13030,municipio,13,99,030,Caracuel de Calatrava,1,0,193,160,200,0,,13433,13595,1
+13,13031,municipio,13,99,031,Carrión de Calatrava,1,0,2106,2072,200,0,,13150,,1
+13,13032,municipio,13,99,032,Carrizosa,1,0,1339,1333,200,0,,13329,,1
+13,13033,municipio,13,99,033,Castellar de Santiago,1,0,2111,2087,200,0,,13750,,1
+13,13034,municipio,13,99,034,Ciudad Real,1,0,10295,10140,200,3,13170,13001;13002;13003;13004;13005;13170;13195;13196,,8
+13,13035,municipio,13,99,035,Corral de Calatrava,1,0,1003,993,200,0,,13190,13430;13433,1
+13,13036,municipio,13,99,036,Los Cortijos,1,0,1288,1287,200,0,,13427,,1
+13,13037,municipio,13,99,037,Cózar,1,0,1027,1027,200,0,,13345,,1
+13,13038,municipio,13,99,038,Chillón,1,0,2086,2054,200,0,,13400;13412,,2
+13,13039,municipio,13,99,039,Daimiel,1,0,6277,6242,200,0,,13250;13670,,2
+13,13040,municipio,13,99,040,Fernán Caballero,1,0,1074,1071,200,0,,13140,,1
+13,13041,municipio,13,99,041,Fontanarejo,1,0,521,520,200,0,,13193,,1
+13,13042,municipio,13,99,042,Fuencaliente,1,0,1004,975,200,0,,13130,,1
+13,13043,municipio,13,99,043,Fuenllana,1,0,372,370,200,0,,13333,13332,1
+13,13044,municipio,13,99,044,Fuente el Fresno,1,0,2750,2744,200,0,,13428;13680,,2
+13,13045,municipio,13,99,045,Granátula de Calatrava,1,0,907,905,200,0,,13360,,1
+13,13046,municipio,13,99,046,Guadalmez,1,0,955,954,200,0,,13490,,1
+13,13047,municipio,13,99,047,Herencia,2,1,4836,4807,50;200,1,13600,13600;13640,13210,2
+13,13048,municipio,13,99,048,Hinojosas de Calatrava,1,0,1086,1084,200,0,,13590,,1
+13,13049,municipio,13,99,049,Horcajo de los Montes,1,0,1308,1305,200,0,,13110,13116,1
+13,13050,municipio,13,99,050,Las Labores,2,0,591,588,200,0,,13660,,1
+13,13051,municipio,13,99,051,Luciana,1,0,487,486,200,0,,13108,,1
+13,13052,municipio,13,99,052,Malagón,1,0,6548,6431,200,0,,13129;13420;13428;13429,13250;13427,4
+13,13053,municipio,13,99,053,Manzanares,1,0,5646,5414,200,0,,13200,,1
+13,13054,municipio,13,99,054,Membrilla,1,0,3422,3371,200,0,,13230,,1
+13,13055,municipio,13,99,055,Mestanza,1,0,1333,1330,200,0,,13592;13594,,2
+13,13056,municipio,13,99,056,Miguelturra,2,0,5012,4745,200,4,13005;13150,13005;13140;13150;13170,13179,4
+13,13057,municipio,13,99,057,Montiel,2,0,1700,1680,200,0,,02312;13326,13341;13342,2
+13,13058,municipio,13,99,058,Moral de Calatrava,1,0,4058,4030,200,1,13200,13200;13350,13300,2
+13,13059,municipio,13,99,059,Navalpino,1,0,457,456,200,0,,13193,,1
+13,13060,municipio,13,99,060,Navas de Estena,1,0,584,581,200,0,,13194,,1
+13,13061,municipio,13,99,061,Pedro Muñoz,1,0,5281,5268,200,0,,13620,,1
+13,13062,municipio,13,99,062,Picón,1,0,662,657,200,0,,13196,,1
+13,13063,municipio,13,99,063,Piedrabuena,1,0,3432,3424,200,0,,13100;13113,13107,2
+13,13064,municipio,13,99,064,Poblete,1,0,1325,1319,200,0,,13195,,1
+13,13065,municipio,13,99,065,Porzuna,1,0,3217,3210,200,0,,13120;13128;13129;13194,,4
+13,13066,municipio,13,99,066,Pozuelo de Calatrava,1,0,1754,1737,200,1,13432,13179;13432,,2
+13,13067,municipio,13,99,067,Los Pozuelos de Calatrava,1,0,492,492,200,0,,13191,,1
+13,13068,municipio,13,99,068,Puebla de Don Rodrigo,1,0,1138,1125,200,0,,13109,13414,1
+13,13069,municipio,13,99,069,Puebla del Príncipe,1,0,868,862,200,0,,13342,,1
+13,13070,municipio,13,99,070,Puerto Lápice,2,0,894,890,200,0,,13650,,1
+13,13071,municipio,13,99,071,Puertollano,1,0,13556,12996,200,0,,13500;13597,13440,2
+13,13072,municipio,13,99,072,Retuerta del Bullaque,1,0,1040,1034,200,0,,13194,,1
+13,13073,municipio,13,99,073,Saceruela,1,0,602,594,200,0,,13414,13411,1
+13,13074,municipio,13,99,074,San Carlos del Valle,1,0,861,857,200,0,,13247,,1
+13,13075,municipio,13,99,075,San Lorenzo de Calatrava,1,0,530,529,200,0,,13779,,1
+13,13076,municipio,13,99,076,Santa Cruz de los Cáñamos,1,0,543,541,200,0,,13327,,1
+13,13077,municipio,13,99,077,Santa Cruz de Mudela,1,0,2895,2826,200,0,,13730,,1
+13,13078,municipio,13,99,078,Socuéllamos,1,0,6723,6700,200,0,,13630,13700,1
+13,13079,municipio,13,99,079,La Solana,1,0,7235,7203,200,0,,13240,,1
+13,13080,municipio,13,99,080,Solana del Pino,1,0,629,625,200,0,,13593,13592,1
+13,13081,municipio,13,99,081,Terrinches,1,0,878,877,200,0,,13341,,1
+13,13082,municipio,13,99,082,Tomelloso,1,0,13560,13338,200,2,13710,13620;13700;13710,,3
+13,13083,municipio,13,99,083,Torralba de Calatrava,1,0,2500,2437,200,0,,13160,13250;13270,1
+13,13084,municipio,13,99,084,Torre de Juan Abad,2,0,1525,1510,200,0,,13344,13326;13750,1
+13,13085,municipio,13,99,085,Torrenueva,1,0,2150,2144,200,0,,13740,,1
+13,13086,municipio,13,99,086,Valdemanco del Esteras,1,0,491,369,200,0,,13411,13109,1
+13,13087,municipio,13,99,087,Valdepeñas,1,0,10069,9869,200,0,,13300;13310,13230,2
+13,13088,municipio,13,99,088,Valenzuela de Calatrava,1,0,731,730,200,0,,13279,,1
+13,13089,municipio,13,99,089,Villahermosa,1,0,2522,2501,200,0,,13331;13332,13329,2
+13,13090,municipio,13,99,090,Villamanrique,1,0,1362,1359,200,0,,13343,,1
+13,13091,municipio,13,99,091,Villamayor de Calatrava,1,0,700,687,200,0,,13595,,1
+13,13092,municipio,13,99,092,Villanueva de la Fuente,1,0,2445,2436,200,0,,13330,,1
+13,13093,municipio,13,99,093,Villanueva de los Infantes,1,0,3289,3282,200,0,,13320;13391,,2
+13,13094,municipio,13,99,094,Villanueva de San Carlos,1,0,455,454,200,0,,13379,,1
+13,13095,municipio,13,99,095,Villar del Pozo,1,0,115,115,200,0,,13431,,1
+13,13096,municipio,13,99,096,Villarrubia de los Ojos,1,0,5927,5916,200,0,,13670,,1
+13,13097,municipio,13,99,097,Villarta de San Juan,1,0,1912,1883,200,0,,13210,13640,1
+13,13098,municipio,13,99,098,Viso del Marqués,1,0,2230,2223,200,0,,13739;13770,,2
+13,13901,municipio,13,99,901,El Robledo,1,0,1212,1178,200,0,,13114,,1
+13,13902,municipio,13,99,902,Ruidera,1,0,893,815,200,0,,13249,13248,1
+13,13903,municipio,13,99,903,Arenales de San Gregorio,1,0,603,603,200,0,,13619,,1
+13,13904,municipio,13,99,904,Llanos del Caudillo,1,0,348,337,200,0,,13200;13220,,2

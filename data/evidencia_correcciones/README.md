@@ -14,14 +14,16 @@ respaldos completos.
   del alcance español.
 - `seleccion_recintos.csv` registra los criterios de selección.
 - Los dos logs documentan las 1.021 comprobaciones previas y las 790
-  comprobaciones posteriores a la publicación.
+  comprobaciones posteriores a la publicación original. Son registros
+  históricos; no corresponden a la regeneración posterior por componentes.
 - `manifest.json` registra los tamaños y las huellas SHA-256 de esos archivos.
 
 Las pruebas portables comprueban las huellas, el respaldo espacial de las
 asignaciones, su presencia en los CP publicados y la existencia de residuos
 pendientes en los 34 recintos. La comparación histórica completa con las
-geometrías anteriores
-se ejecutó antes de publicar; sus respaldos permanecen fuera de Git.
+geometrías anteriores se ejecutó antes de publicar; sus respaldos permanecen
+fuera de Git. La regeneración por componentes reutiliza esta evidencia local
+y conserva sus bytes y sus huellas, incluidos los finales de línea de los logs.
 
 Para ejecutar las pruebas desde la raíz del repositorio:
 

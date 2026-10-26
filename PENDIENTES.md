@@ -6,21 +6,24 @@ registro recoge las superficies que aún no tienen una asignación postal.
 
 ## Alcance
 
-La capa `pendientes` de `data/codigos_postales.gpkg` contiene 97 registros,
-3.881 polígonos separados y 28,0048 km². Un registro puede contener varios
+La capa `pendientes` de `data/codigos_postales.gpkg` contiene 304 registros,
+4.108 polígonos separados y 1.011,539168 km². Un registro puede contener varios
 polígonos y no equivale a un municipio ni a un código postal perdido.
 
 La corrección publicada el 26 de octubre excluyó 6,203289 km² de Gibraltar
 del alcance territorial e incorporó 159,035989 km² respaldados a 30 CP en
 34 recintos. Todos conservan una superficie residual pendiente. Los ocho
 recintos con varios CP observados y los cuatro sin coincidencia de
-identificador administrativo mantienen su geometría anterior.
+identificador administrativo no recibieron una corrección localizada.
+La regeneración por componentes conserva esa evidencia y deja sin asignar
+cualquier parte desconectada sin direcciones propias. Esto aumenta la
+superficie pendiente respecto a los 28,004800 km² de la publicación anterior.
 
 | Motivo | Registros | Polígonos | Área (km²) |
 |---|---:|---:|---:|
-| Sin direcciones seleccionadas con código postal | 46 | 196 | 27,927240 |
-| Superficie provincial fuera de los recintos seleccionados | 51 | 3.685 | 0,077560 |
-| Total | 97 | 3.881 | 28,004800 |
+| Sin direcciones seleccionadas con código postal | 253 | 428 | 1.011,461638 |
+| Superficie provincial fuera de los recintos seleccionados | 51 | 3.680 | 0,077530 |
+| Total | 304 | 4.108 | 1.011,539168 |
 
 Las áreas se calculan en la proyección del consolidado, ETRS89 / UTM 30N.
 El [detalle por registro](data/full_analisis/pendientes_detalle.csv) conserva
@@ -30,24 +33,25 @@ incluye las 52 provincias y ciudades autónomas.
 
 ## Casos prioritarios
 
-Estos son los registros de mayor superficie después de la corrección.
+Estos son los registros de mayor superficie después de la regeneración.
 Los identificadores pertenecen a la base administrativa congelada del lote.
 
 | Provincia | LAU_CODE | Área pendiente (km²) |
 |---|---|---:|
-| Huesca | 53049 | 10,116849 |
-| Navarra | 53060 | 2,419543 |
-| Burgos | 53007 | 2,327531 |
-| Gipuzkoa | 53048 | 2,289663 |
-| Navarra | 53066 | 1,379581 |
-| Navarra | 53067 | 1,054872 |
-| Guadalajara | 53047 | 0,795935 |
-| Burgos | 53012 | 0,649861 |
-| Burgos | 53035 | 0,640126 |
-| Burgos | 53043 | 0,608028 |
+| Badajoz | 06033 | 41,074062 |
+| Sevilla | 41039 | 36,918574 |
+| León | 24051 | 28,452238 |
+| Toledo | 45071 | 25,776405 |
+| Tarragona | 43136 | 25,477128 |
+| Zaragoza | 50298 | 24,244404 |
+| Badajoz | 06087 | 22,702660 |
+| Valladolid | 47084 | 19,540021 |
+| Toledo | 45123 | 19,243295 |
+| Jaén | 23081 | 17,436781 |
 
-Se comprobaron los 46 recintos sin direcciones mediante sus 13 ZIP provinciales
-originales. La investigación ampliada siguiente distingue los resultados de
+En la investigación anterior se comprobaron los 46 recintos sin direcciones
+mediante sus 13 ZIP provinciales originales. La investigación siguiente
+distingue los resultados de
 las consultas puntuales iniciales y los del contraste multipunto posterior.
 
 ## Investigación adicional del 26 de octubre
@@ -197,8 +201,9 @@ Esta distribución apoya revisar los pequeños fragmentos como incidencias de
 ajuste de límites antes de tratarlos como zonas postales independientes. No
 se asignó ningún CP ni se eliminó superficie durante ese análisis. La
 consolidación posterior también reparó las geometrías pendientes al
-reproyectarlas. Por ello, el estado publicado actual de estas diferencias
-es el de la tabla de alcance: 3.685 componentes y 0,077560 km².
+reproyectarlas. Tras aquella corrección quedaron 3.685 componentes y
+0,077560 km². La regeneración por componentes actual deja 3.680 polígonos y
+0,077530 km² para este motivo, como recoge la tabla de alcance.
 
 ### Archivos de la ampliación
 
@@ -268,12 +273,44 @@ parte principal llevan 01240. La consulta WMS respalda 01240 en 1,696689 km²
 del sector; la diferencia restante refleja desacuerdos de contorno.
 
 El método actualizado procesa los componentes por separado y deja pendiente
-cualquier componente sin direcciones válidas. Se ha validado en salidas de
-prueba de Álava, Segovia, Navarra y Burgos y todavía no se ha aplicado a la
-cartografía publicada. La incidencia afecta a una asignación existente, no añade un
-registro a la capa `pendientes` publicada. La diferencia entre el límite
+cualquier componente sin direcciones válidas. Tras probarse en Álava, Segovia,
+Navarra y Burgos, se ha aplicado a las 52 provincias y ciudades autónomas de
+la cartografía publicada. La incidencia afecta a una asignación existente y
+no añade un registro a la capa `pendientes`. La diferencia entre el límite
 administrativo simplificado y el límite detallado del IGN requiere una
 revisión independiente.
+
+## Revisión manual de Navarra
+
+La validación solicitada para Navarra contrastó 10.678 puntos con el WMS de
+CartoCiudad, sin errores de consulta. Se conserva como análisis manual fuera
+del flujo de generación y de las pruebas habituales. No se han aplicado
+correcciones nuevas a partir de este contraste.
+
+- **Petilla de Aragón (31203):** el componente menor ocupa 7,291850 km² y no
+  contiene direcciones, incluso sin margen. El WMS respalda principalmente
+  el CP 50686; las diferencias de contorno incluyen otros códigos. Un hito
+  a 44,95 metros fuera del componente lleva 50680. Se mantiene pendiente,
+  sin ampliar el recinto ni heredar el CP de su otra parte.
+- **Piedramillera (31204):** el componente menor ocupa 1,771419 km² y contiene
+  dos hitos de la A-12 con CP 31210 e INE 31029, de Los Arcos. El margen de
+  50 metros selecciona uno y el método extiende su CP al componente entero.
+  El WMS confirma 31210 en ambos puntos, pero respalda aproximadamente
+  1,60 km² del componente con 31219. Se registra la discrepancia y se conserva
+  el resultado del método, sin introducir una excepción localizada.
+
+Queda para una revisión futura evaluar una salvaguarda para componentes cuyo
+único CP seleccionado procede exclusivamente de puntos con INE municipal
+ajeno. El contraste muestra diferencias de los límites administrativos de
+partida; no justifica descartar todos los puntos de otro municipio ni asignar
+un único CP a todo el recinto a partir de una consulta puntual.
+
+La comparación geométrica sobre el ámbito común evaluado de Navarra mide
+619,582642 km² de discrepancia antes y 620,465962 km² después. La validación
+descubre entidades mediante una malla de puntos y controles dirigidos; no
+demuestra concordancia completa con la cartografía postal. Se conservan el
+[resumen del contraste](data/full_analisis/validacion_wms_navarra_resumen.json)
+y los [desacuerdos agrupados](data/full_analisis/validacion_wms_navarra_desacuerdos.csv).
 
 ## Trazabilidad
 
