@@ -1,0 +1,99 @@
+cpro,LAU_CODE,tipo_recinto,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_descartados
+23,23001,municipio,001,Albanchez de Mágina,1260,1259,200,0,,1,23530
+23,23002,municipio,002,Alcalá la Real,9436,8632,200,0,,9,23670;23690
+23,23003,municipio,003,Alcaudete,6786,6759,200,0,,3,23614;23693
+23,23004,municipio,004,Aldeaquemada,700,698,200,0,,1,23250
+23,23005,municipio,005,Andújar,8801,8750,200,0,,4,
+23,23006,municipio,006,Arjona,2965,2953,200,0,,1,23747
+23,23007,municipio,007,Arjonilla,2385,2332,200,0,,1,23770
+23,23008,municipio,008,Arquillos,1446,1441,200,0,,2,
+23,23009,municipio,009,Baeza,8952,8826,200,0,,4,23412;23430;23450;23520
+23,23010,municipio,010,Bailén,5855,5847,200,0,,2,
+23,23011,municipio,011,Baños de la Encina,1991,1985,200,0,,2,
+23,23012,municipio,012,Beas de Segura,3509,3487,200,1,23340,3,23270
+23,23014,municipio,014,Begíjar,2457,2433,200,0,,2,
+23,23015,municipio,015,Bélmez de la Moraleda,1210,1205,200,0,,1,23569
+23,23016,municipio,016,Benatae,812,769,200,0,,1,
+23,23017,municipio,017,Cabra del Santo Cristo,1575,1543,200,0,,2,
+23,23018,municipio,018,Cambil,2331,2311,200,0,,2,23130;23140;23191
+23,23019,municipio,019,Campillo de Arenas,2302,1560,200,0,,2,
+23,23020,municipio,020,Canena,1448,1387,200,1,23430,2,
+23,23021,municipio,021,Carboneros,508,505,200,0,,1,
+23,23024,municipio,024,La Carolina,6414,6395,200,0,,3,23211;23213
+23,23025,municipio,025,Castellar,2508,2502,200,0,,1,23250;23267
+23,23026,municipio,026,Castillo de Locubín,3348,3341,200,0,,2,
+23,23027,municipio,027,Cazalilla,662,660,200,0,,2,
+23,23028,municipio,028,Cazorla,3874,3815,200,0,,4,23476
+23,23029,municipio,029,Chiclana de Segura,1513,1505,200,0,,3,
+23,23030,municipio,030,Chilluévar,1267,1258,200,0,,1,23311
+23,23031,municipio,031,Escañuela,627,627,200,0,,1,
+23,23032,municipio,032,Espeluy,536,438,200,0,,1,23620
+23,23033,municipio,033,Frailes,1401,1349,200,0,,1,23150;23691
+23,23034,municipio,034,Fuensanta de Martos,2090,2087,200,0,,2,23614
+23,23035,municipio,035,Fuerte del Rey,1089,1084,200,0,,1,
+23,23037,municipio,037,Génave,833,828,200,0,,1,23391
+23,23038,municipio,038,La Guardia de Jaén,2342,2082,200,0,,1,23009
+23,23039,municipio,039,Guarromán,1667,1658,200,0,,2,23710
+23,23040,municipio,040,Lahiguera,1255,1253,200,0,,1,
+23,23041,municipio,041,Higuera de Calatrava,704,703,200,0,,1,
+23,23042,municipio,042,Hinojares,482,478,200,0,,1,23487
+23,23043,municipio,043,Hornos,688,683,200,0,,1,23330
+23,23044,municipio,044,Huelma,3936,3926,200,0,,2,23568
+23,23045,municipio,045,Huesa,2064,2028,200,0,,2,23486
+23,23046,municipio,046,Ibros,1869,1861,200,0,,2,
+23,23047,municipio,047,La Iruela,1032,860,200,0,,3,23470
+23,23048,municipio,048,Iznatoraf,1067,947,200,0,,3,
+23,23049,municipio,049,Jabalquinto,1568,1547,200,0,,1,23620
+23,23050,municipio,050,Jaén,17641,17407,200,2,23640;23649,14,23170
+23,23051,municipio,051,Jamilena,1818,1791,200,0,,1,
+23,23052,municipio,052,Jimena,1243,1239,200,0,,1,23539
+23,23053,municipio,053,Jódar,5594,5590,200,0,,1,
+23,23054,municipio,054,Larva,486,482,200,0,,1,23480
+23,23055,municipio,055,Linares,14827,14654,200,0,,3,
+23,23056,municipio,056,Lopera,2605,2598,200,0,,1,
+23,23057,municipio,057,Lupión,781,778,200,0,,2,
+23,23058,municipio,058,Mancha Real,4971,4834,200,0,,3,23529
+23,23059,municipio,059,Marmolejo,3953,3947,200,0,,1,23747
+23,23060,municipio,060,Martos,10513,10478,200,0,,4,23616;23650
+23,23061,municipio,061,Mengíbar,4724,4637,200,0,,1,23628
+23,23062,municipio,062,Montizón,1920,1919,200,0,,3,
+23,23063,municipio,063,Navas de San Juan,3117,3113,200,1,23410,2,
+23,23064,municipio,064,Noalejo,828,173,200,0,,2,23130
+23,23065,municipio,065,Orcera,1828,1803,200,0,,1,23390
+23,23066,municipio,066,Peal de Becerro,3767,3760,200,0,,3,23469
+23,23067,municipio,067,Pegalajar,2095,2089,200,0,,2,
+23,23069,municipio,069,Porcuna,3973,3965,200,0,,1,23760
+23,23070,municipio,070,Pozo Alcón,3692,3690,200,0,,2,
+23,23071,municipio,071,Puente de Génave,2170,2166,200,0,,2,23340
+23,23072,municipio,072,La Puerta de Segura,2635,2621,200,0,,2,23392
+23,23073,municipio,073,Quesada,3763,3748,200,0,,4,23550
+23,23074,municipio,074,Rus,2011,1992,200,0,,3,23420;23440
+23,23075,municipio,075,Sabiote,3222,3216,200,0,,2,23320
+23,23076,municipio,076,Santa Elena,964,949,200,0,,1,
+23,23077,municipio,077,Santiago de Calatrava,864,862,200,0,,1,
+23,23079,municipio,079,Santisteban del Puerto,3138,3134,200,0,,1,23240
+23,23080,municipio,080,Santo Tomé,2149,2132,200,0,,2,23300;23312
+23,23081,municipio,081,Segura de la Sierra,2497,2441,200,0,,4,23292
+23,23082,municipio,082,Siles,1990,1985,200,0,,1,23294
+23,23084,municipio,084,Sorihuela del Guadalimar,1105,1095,200,0,,1,
+23,23085,municipio,085,Torreblascopedro,1912,1906,200,0,,2,23700
+23,23086,municipio,086,Torredelcampo,6291,6261,200,0,,2,23180
+23,23087,municipio,087,Torredonjimeno,7144,7124,200,0,,2,23612;23658
+23,23088,municipio,088,Torreperogil,4084,4069,200,0,,2,23314
+23,23090,municipio,090,Torres,1711,1710,200,0,,1,
+23,23091,municipio,091,Torres de Albánchez,993,989,200,0,,1,23393
+23,23092,municipio,092,Úbeda,10729,10706,200,0,,7,23311;23320;23411;23412
+23,23093,municipio,093,Valdepeñas de Jaén,2421,2417,200,0,,2,
+23,23094,municipio,094,Vilches,3083,3078,200,0,,3,
+23,23095,municipio,095,Villacarrillo,7610,7419,200,0,,5,23311
+23,23096,municipio,096,Villanueva de la Reina,2424,2328,200,0,,3,
+23,23097,municipio,097,Villanueva del Arzobispo,5271,5197,200,0,,2,23270
+23,23098,municipio,098,Villardompardo,952,949,200,0,,1,
+23,23099,municipio,099,Los Villares,3983,3981,200,0,,1,23600;23610
+23,23101,municipio,101,Villarrodrigo,678,655,200,0,,1,23380
+23,23901,municipio,901,Cárcheles,1170,1151,200,0,,2,
+23,23902,municipio,902,Bedmar y Garcíez,2731,2727,200,0,,2,
+23,23903,municipio,903,Villatorres,3170,3166,200,0,,3,
+23,23904,municipio,904,Santiago-Pontones,5013,4889,200,0,,7,23295
+23,23905,municipio,905,Arroyo del Ojanco,1985,1970,200,6,23280;23289,3,
+23,53050,condominio,NA,NA,0,0,50,0,,0,

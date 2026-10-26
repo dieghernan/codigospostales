@@ -1,0 +1,192 @@
+cpro,LAU_CODE,tipo_recinto,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_descartados
+34,34001,municipio,001,Abarca de Campos,92,90,200,0,,1,
+34,34003,municipio,003,Abia de las Torres,301,299,200,0,,1,34460
+34,34004,municipio,004,Aguilar de Campoo,4038,3938,200,0,,7,34487
+34,34005,municipio,005,Alar del Rey,1073,1068,200,0,,3,34406
+34,34006,municipio,006,Alba de Cerrato,243,243,200,0,,1,
+34,34009,municipio,009,Amayuelas de Arriba,87,83,200,0,,1,
+34,34010,municipio,010,Ampudia,884,883,200,0,,3,
+34,34011,municipio,011,Amusco,874,873,200,0,,2,
+34,34012,municipio,012,Antigüedad,832,831,200,0,,1,
+34,34015,municipio,015,Arconada,185,184,200,0,,1,
+34,34017,municipio,017,Astudillo,1262,1256,200,0,,2,34239;34419;34466
+34,34018,municipio,018,Autilla del Pino,430,427,200,0,,1,34005
+34,34019,municipio,019,Autillo de Campos,217,217,200,0,,1,
+34,34020,municipio,020,Ayuela,110,110,200,0,,1,
+34,34022,municipio,022,Baltanás,1986,1969,200,0,,2,
+34,34023,municipio,023,Venta de Baños,3096,2721,200,0,,2,34190;34220
+34,34024,municipio,024,Baquerín de Campos,102,102,200,0,,1,
+34,34025,municipio,025,Bárcena de Campos,173,172,200,0,,1,34478
+34,34027,municipio,027,Barruelo de Santullán,2613,2600,200,0,,3,
+34,34028,municipio,028,Báscones de Ojeda,266,265,200,0,,1,
+34,34029,municipio,029,Becerril de Campos,947,924,200,0,,1,34170;34410
+34,34031,municipio,031,Belmonte de Campos,87,86,200,0,,1,
+34,34032,municipio,032,Berzosilla,220,219,200,0,,1,
+34,34033,municipio,033,Boada de Campos,72,71,200,0,,1,
+34,34034,municipio,034,Boadilla del Camino,252,251,200,0,,1,
+34,34035,municipio,035,Boadilla de Rioseco,376,376,200,0,,1,
+34,34036,municipio,036,Brañosera,782,596,200,0,,1,
+34,34037,municipio,037,Buenavista de Valdavia,758,755,200,0,,2,34475
+34,34038,municipio,038,Bustillo de la Vega,369,367,200,0,,1,
+34,34039,municipio,039,Bustillo del Páramo de Carrión,167,164,200,0,,1,34309
+34,34041,municipio,041,Calahorra de Boedo,238,237,200,0,,1,
+34,34042,municipio,042,Calzada de los Molinos,299,297,200,0,,1,
+34,34045,municipio,045,Capillas,141,139,200,0,,1,
+34,34046,municipio,046,Cardeñosa de Volpejera,94,94,200,0,,1,
+34,34047,municipio,047,Carrión de los Condes,1586,1566,200,0,,2,
+34,34048,municipio,048,Castil de Vela,135,134,200,0,,1,
+34,34049,municipio,049,Castrejón de la Peña,956,952,200,0,,3,
+34,34050,municipio,050,Castrillo de Don Juan,546,544,200,0,,1,
+34,34051,municipio,051,Castrillo de Onielo,336,336,200,0,,1,
+34,34052,municipio,052,Castrillo de Villavega,551,551,200,0,,1,
+34,34053,municipio,053,Castromocho,303,301,200,0,,1,34338
+34,34055,municipio,055,Cervatos de la Cueza,576,575,200,0,,1,
+34,34056,municipio,056,Cervera de Pisuerga,3762,3724,200,0,,5,34484
+34,34057,municipio,057,Cevico de la Torre,694,691,200,0,,1,34210
+34,34058,municipio,058,Cevico Navero,469,466,200,0,,1,
+34,34059,municipio,059,Cisneros,662,660,200,0,,1,
+34,34060,municipio,060,Cobos de Cerrato,490,486,200,0,,1,34257
+34,34061,municipio,061,Collazos de Boedo,253,252,200,0,,2,
+34,34062,municipio,062,Congosto de Valdavia,508,507,200,0,,2,
+34,34063,municipio,063,Cordovilla la Real,185,182,200,0,,1,
+34,34066,municipio,066,Cubillas de Cerrato,251,250,200,0,,1,
+34,34067,municipio,067,Dehesa de Montejo,373,358,200,0,,3,
+34,34068,municipio,068,Dehesa de Romanos,106,105,200,0,,1,
+34,34069,municipio,069,Dueñas,1841,1810,200,0,,2,
+34,34070,municipio,070,Espinosa de Cerrato,868,864,200,0,,1,
+34,34071,municipio,071,Espinosa de Villagonzalo,405,401,200,0,,1,34460
+34,34072,municipio,072,Frechilla,349,346,200,0,,1,34337;34338
+34,34073,municipio,073,Fresno del Río,425,423,200,0,,1,
+34,34074,municipio,074,Frómista,773,773,200,0,,1,
+34,34076,municipio,076,Fuentes de Nava,727,723,200,0,,1,
+34,34077,municipio,077,Fuentes de Valdepero,723,689,200,0,,1,
+34,34079,municipio,079,Grijota,2363,2154,200,0,,1,34005
+34,34080,municipio,080,Guardo,2811,2805,200,0,,3,
+34,34081,municipio,081,Guaza de Campos,211,210,200,0,,1,
+34,34082,municipio,082,Hérmedes de Cerrato,407,406,200,0,,1,
+34,34083,municipio,083,Herrera de Pisuerga,1969,1905,200,0,,3,
+34,34084,municipio,084,Herrera de Valdecañas,328,322,200,0,,1,34250
+34,34086,municipio,086,Hontoria de Cerrato,198,196,200,0,,1,
+34,34087,municipio,087,Hornillos de Cerrato,263,261,200,0,,1,34240
+34,34088,municipio,088,Husillos,694,589,200,0,,1,34192
+34,34089,municipio,089,Itero de la Vega,269,269,200,0,,1,
+34,34091,municipio,091,Lagartos,284,283,200,0,,2,
+34,34092,municipio,092,Lantadilla,669,669,200,0,,1,
+34,34093,municipio,093,La Vid de Ojeda,155,152,200,0,,1,
+34,34094,municipio,094,Ledigos,189,184,200,0,,1,34349
+34,34096,municipio,096,Lomas,123,123,200,0,,1,
+34,34098,municipio,098,Magaz de Pisuerga,815,790,200,0,,1,34190
+34,34099,municipio,099,Manquillos,130,126,200,0,,1,34133
+34,34100,municipio,100,Mantinos,237,237,200,0,,1,
+34,34101,municipio,101,Marcilla de Campos,241,238,200,0,,1,
+34,34102,municipio,102,Mazariegos,232,231,200,0,,1,
+34,34103,municipio,103,Mazuecos de Valdeginate,190,190,200,0,,1,
+34,34104,municipio,104,Melgar de Yuso,410,407,200,0,,1,
+34,34106,municipio,106,Meneses de Campos,238,238,200,0,,1,
+34,34107,municipio,107,Micieces de Ojeda,168,166,200,0,,1,
+34,34108,municipio,108,Monzón de Campos,770,753,200,0,,2,
+34,34109,municipio,109,Moratinos,159,159,200,0,,1,
+34,34110,municipio,110,Mudá,151,151,200,0,,1,
+34,34112,municipio,112,Nogal de las Huertas,167,165,200,0,,1,34120
+34,34113,municipio,113,Olea de Boedo,72,70,200,0,,1,
+34,34114,municipio,114,Olmos de Ojeda,600,597,200,0,,3,
+34,34116,municipio,116,Osornillo,214,214,200,0,,1,
+34,34120,municipio,120,Palencia,8513,8460,200,0,,6,34192;34419
+34,34121,municipio,121,Palenzuela,446,443,200,0,,1,34248
+34,34122,municipio,122,Páramo de Boedo,204,199,200,0,,1,
+34,34123,municipio,123,Paredes de Nava,1705,1697,200,0,,1,
+34,34124,municipio,124,Payo de Ojeda,135,134,200,0,,1,
+34,34125,municipio,125,Pedraza de Campos,209,208,200,0,,1,
+34,34126,municipio,126,Pedrosa de la Vega,437,428,200,0,,2,34114
+34,34127,municipio,127,Perales,189,176,200,0,,2,
+34,34129,municipio,129,Pino del Río,463,461,200,0,,2,34117
+34,34130,municipio,130,Piña de Campos,390,365,200,0,,1,
+34,34131,municipio,131,Población de Arroyo,148,148,200,0,,1,
+34,34132,municipio,132,Población de Campos,305,304,200,0,,1,
+34,34133,municipio,133,Población de Cerrato,201,199,200,0,,1,
+34,34134,municipio,134,Polentinos,151,150,200,0,,1,
+34,34135,municipio,135,Pomar de Valdivia,962,925,200,18,34800,5,
+34,34136,municipio,136,Poza de la Vega,249,248,200,0,,1,
+34,34137,municipio,137,Pozo de Urama,78,78,200,0,,1,
+34,34139,municipio,139,Prádanos de Ojeda,308,305,200,0,,1,
+34,34140,municipio,140,La Puebla de Valdavia,286,285,200,0,,1,34882
+34,34141,municipio,141,Quintana del Puente,309,305,200,0,,1,
+34,34143,municipio,143,Quintanilla de Onsoña,574,573,200,0,,2,
+34,34146,municipio,146,Reinoso de Cerrato,173,172,200,0,,1,
+34,34147,municipio,147,Renedo de la Vega,406,364,200,0,,1,34116
+34,34149,municipio,149,Requena de Campos,152,151,200,0,,1,
+34,34151,municipio,151,Respenda de la Peña,590,589,200,0,,2,34882
+34,34152,municipio,152,Revenga de Campos,375,371,200,0,,1,
+34,34154,municipio,154,Revilla de Collazos,144,144,200,0,,1,
+34,34155,municipio,155,Ribas de Campos,158,157,200,0,,1,
+34,34156,municipio,156,Riberos de la Cueza,126,125,200,0,,1,
+34,34157,municipio,157,Saldaña,2259,2246,200,0,,4,
+34,34158,municipio,158,Salinas de Pisuerga,376,359,200,0,,2,34839
+34,34159,municipio,159,San Cebrián de Campos,418,414,200,0,,1,34310;34411
+34,34160,municipio,160,San Cebrián de Mudá,374,373,200,0,,2,
+34,34161,municipio,161,San Cristóbal de Boedo,122,120,200,0,,1,
+34,34163,municipio,163,San Mamés de Campos,187,184,200,0,,1,
+34,34165,municipio,165,San Román de la Cuba,160,157,200,0,,1,
+34,34167,municipio,167,Santa Cecilia del Alcor,160,160,200,0,,1,
+34,34168,municipio,168,Santa Cruz de Boedo,173,171,200,0,,2,
+34,34169,municipio,169,Santervás de la Vega,778,776,200,0,,1,34113
+34,34170,municipio,170,Santibáñez de Ecla,147,146,200,0,,1,
+34,34171,municipio,171,Santibáñez de la Peña,1873,1872,200,0,,4,
+34,34174,municipio,174,Santoyo,442,441,200,0,,1,
+34,34175,municipio,175,La Serna,168,167,200,0,,1,
+34,34176,municipio,176,Sotobañado y Priorato,279,276,200,0,,1,
+34,34177,municipio,177,Soto de Cerrato,236,235,200,0,,1,
+34,34178,municipio,178,Tabanera de Cerrato,369,369,200,0,,1,
+34,34179,municipio,179,Tabanera de Valdavia,127,127,200,0,,1,
+34,34180,municipio,180,Támara de Campos,249,246,200,0,,1,34490
+34,34181,municipio,181,Tariego de Cerrato,544,515,200,0,,1,
+34,34182,municipio,182,Torquemada,1298,1294,200,0,,1,34249
+34,34184,municipio,184,Torremormojón,110,109,200,0,,1,
+34,34185,municipio,185,Triollo,295,295,200,0,,1,
+34,34186,municipio,186,Valbuena de Pisuerga,147,145,200,0,,1,34450
+34,34189,municipio,189,Valdeolmillos,209,207,200,0,,1,
+34,34190,municipio,190,Valderrábano,165,162,200,0,,2,
+34,34192,municipio,192,Valde-Ucieza,449,449,200,0,,1,
+34,34196,municipio,196,Valle de Cerrato,255,254,200,0,,1,
+34,34199,municipio,199,Velilla del Río Carrión,2017,2010,200,0,,2,34880
+34,34201,municipio,201,Vertavillo,315,314,200,0,,1,
+34,34202,municipio,202,Villabasta de Valdavia,76,75,200,0,,1,
+34,34204,municipio,204,Villacidaler,166,166,200,0,,1,
+34,34205,municipio,205,Villaconancio,233,229,200,0,,1,34240
+34,34206,municipio,206,Villada,1118,1109,200,0,,2,
+34,34208,municipio,208,Villaeles de Valdavia,231,231,200,0,,1,
+34,34210,municipio,210,Villahán,360,358,200,0,,1,
+34,34211,municipio,211,Villaherreros,448,443,200,0,,1,34132
+34,34213,municipio,213,Villalaco,277,277,200,0,,1,
+34,34214,municipio,214,Villalba de Guardo,372,372,200,0,,1,
+34,34215,municipio,215,Villalcázar de Sirga,274,272,200,0,,1,
+34,34216,municipio,216,Villalcón,171,171,200,0,,1,
+34,34217,municipio,217,Villalobón,1285,1226,200,0,,1,34003
+34,34218,municipio,218,Villaluenga de la Vega,883,882,200,0,,3,
+34,34220,municipio,220,Villamartín de Campos,297,297,200,0,,1,
+34,34221,municipio,221,Villamediana,559,553,200,0,,1,34230
+34,34222,municipio,222,Villameriel,323,320,200,0,,3,34491
+34,34223,municipio,223,Villamoronta,305,304,200,0,,1,
+34,34224,municipio,224,Villamuera de la Cueza,124,124,200,0,,1,
+34,34225,municipio,225,Villamuriel de Cerrato,2157,2109,200,0,,1,34200;34208
+34,34227,municipio,227,Villanueva del Rebollar,113,113,200,0,,1,
+34,34228,municipio,228,Villanuño de Valdavia,294,293,200,0,,1,
+34,34229,municipio,229,Villaprovedo,204,203,200,0,,1,34409
+34,34230,municipio,230,Villarmentero de Campos,67,60,200,0,,1,
+34,34231,municipio,231,Villarrabé,535,533,200,0,,2,34129
+34,34232,municipio,232,Villarramiel,1071,1069,200,0,,1,34305
+34,34233,municipio,233,Villasarracino,440,439,200,0,,1,
+34,34234,municipio,234,Villasila de Valdavia,223,222,200,0,,1,
+34,34236,municipio,236,Villaturde,393,319,200,0,,1,34120
+34,34237,municipio,237,Villaumbrales,625,611,200,0,,2,
+34,34238,municipio,238,Villaviudas,563,562,200,0,,1,34239
+34,34240,municipio,240,Villerías de Campos,144,144,200,0,,1,
+34,34241,municipio,241,Villodre,100,99,200,0,,1,
+34,34242,municipio,242,Villodrigo,186,182,200,0,,1,
+34,34243,municipio,243,Villoldo,523,517,200,0,,2,34300
+34,34245,municipio,245,Villota del Páramo,724,718,200,0,,2,
+34,34246,municipio,246,Villovieco,209,206,200,0,,1,
+34,34901,municipio,901,Osorno la Mayor,1653,1646,200,0,,2,
+34,34902,municipio,902,Valle del Retortillo,478,477,200,0,,1,
+34,34903,municipio,903,Loma de Ucieza,717,714,200,0,,4,
+34,34904,municipio,904,La Pernía,1012,1011,200,0,,3,

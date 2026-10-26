@@ -1,0 +1,233 @@
+cpro,LAU_CODE,tipo_recinto,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_descartados
+25,25001,municipio,001,Abella de la Conca,176,170,200,0,,2,25793
+25,25002,municipio,002,Àger,1129,1121,200,0,,3,
+25,25003,municipio,003,Agramunt,2733,2692,200,0,,4,25739
+25,25004,municipio,004,els Alamús,531,499,200,0,,1,
+25,25005,municipio,005,Alàs i Cerc,583,521,200,0,,3,25700
+25,25006,municipio,006,l'Albagés,403,393,200,0,,1,
+25,25007,municipio,007,Albatàrrec,722,678,200,0,,2,25197
+25,25008,municipio,008,Albesa,996,992,200,0,,1,25134
+25,25009,municipio,009,l'Albi,713,700,200,0,,1,25440;25460
+25,25010,municipio,010,Alcanó,230,228,200,0,,1,
+25,25011,municipio,011,Alcarràs,3339,3237,200,0,,4,25111;25192
+25,25012,municipio,012,Alcoletge,1527,1477,200,1,25191,2,
+25,25013,municipio,013,Alfarràs,1389,1356,200,0,,2,25122
+25,25014,municipio,014,Alfés,338,337,200,0,,1,25172
+25,25015,municipio,015,Algerri,440,435,200,0,,1,
+25,25016,municipio,016,Alguaire,1653,1581,200,0,,1,25133
+25,25017,municipio,017,Alins,461,461,200,0,,3,
+25,25019,municipio,019,Almacelles,3149,3034,200,0,,2,25113
+25,25020,municipio,020,Almatret,495,491,200,0,,1,
+25,25021,municipio,021,Almenar,1444,1430,200,0,,1,25109
+25,25022,municipio,022,Alòs de Balaguer,239,236,200,0,,1,
+25,25023,municipio,023,Alpicat,2444,2269,200,6,25198,2,25193;25196
+25,25024,municipio,024,Alt Àneu,1042,979,200,0,,3,25580
+25,25025,municipio,025,Naut Aran,2490,2318,200,0,,3,
+25,25027,municipio,027,Anglesola,979,918,200,0,,1,
+25,25029,municipio,029,Arbeca,1978,1960,200,0,,1,25413
+25,25030,municipio,030,el Pont de Bar,305,299,200,0,,3,
+25,25031,municipio,031,Arres,144,137,200,0,,1,
+25,25032,municipio,032,Arsèguel,122,116,200,0,,1,
+25,25033,municipio,033,Artesa de Lleida,856,835,200,0,,1,25197
+25,25034,municipio,034,Artesa de Segre,3019,2968,200,0,,5,25749
+25,25035,municipio,035,la Sentiu de Sió,532,519,200,0,,1,
+25,25036,municipio,036,Aspa,317,316,200,0,,1,
+25,25037,municipio,037,les Avellanes i Santa Linya,793,785,200,0,,2,
+25,25038,municipio,038,Aitona,1124,1074,200,1,25181,2,25170
+25,25039,municipio,039,Baix Pallars,609,607,200,0,,3,
+25,25040,municipio,040,Balaguer,4410,3876,200,0,,1,25617
+25,25041,municipio,041,Barbens,645,527,200,0,,1,
+25,25042,municipio,042,la Baronia de Rialb,143,142,200,0,,1,
+25,25043,municipio,043,la Vall de Boí,1120,1104,200,0,,3,
+25,25044,municipio,044,Bassella,231,223,200,0,,3,25791
+25,25045,municipio,045,Bausen,227,219,200,0,,1,
+25,25046,municipio,046,Belianes,551,548,200,0,,1,
+25,25047,municipio,047,Bellcaire d'Urgell,921,910,200,0,,1,
+25,25048,municipio,048,Bell-lloc d'Urgell,1332,1321,200,0,,2,
+25,25049,municipio,049,Bellmunt d'Urgell,230,153,200,0,,1,25335
+25,25050,municipio,050,Bellpuig,2095,2048,200,2,25264;25265,4,
+25,25051,municipio,051,Bellver de Cerdanya,3492,3312,200,1,25727,3,
+25,25052,municipio,052,Bellvís,1474,1459,200,0,,2,
+25,25053,municipio,053,Benavent de Segrià,653,617,200,0,,1,25124;25133
+25,25055,municipio,055,Biosca,200,195,200,0,,1,
+25,25056,municipio,056,Bovera,396,376,200,0,,1,
+25,25057,municipio,057,Es Bòrdes,487,463,200,0,,1,25537
+25,25058,municipio,058,les Borges Blanques,2968,2877,200,0,,1,
+25,25059,municipio,059,Bossòst,808,798,200,0,,1,
+25,25060,municipio,060,Cabanabona,282,231,200,0,,1,
+25,25061,municipio,061,Cabó,201,162,200,0,,1,
+25,25062,municipio,062,Camarasa,1074,1066,200,1,25612,4,
+25,25063,municipio,063,Canejan,295,286,200,0,,2,
+25,25064,municipio,064,Castellar de la Ribera,80,75,200,0,,1,25286
+25,25067,municipio,067,Castelldans,749,742,200,0,,1,
+25,25068,municipio,068,Castellnou de Seana,498,495,200,0,,1,
+25,25069,municipio,069,Castelló de Farfanya,587,585,200,0,,1,
+25,25070,municipio,070,Castellserà,1133,1110,200,0,,2,25333
+25,25071,municipio,071,Cava,246,243,200,0,,2,
+25,25072,municipio,072,Cervera,4240,4181,200,0,,4,
+25,25073,municipio,073,Cervià de les Garrigues,775,682,200,0,,1,
+25,25074,municipio,074,Ciutadilla,329,325,200,0,,1,
+25,25075,municipio,075,Clariana de Cardener,74,64,200,0,,2,25286
+25,25076,municipio,076,el Cogul,265,265,200,0,,1,
+25,25077,municipio,077,Coll de Nargó,859,856,200,0,,2,
+25,25078,municipio,078,Corbins,751,747,200,0,,1,25195
+25,25079,municipio,079,Cubells,505,494,200,0,,1,25616
+25,25081,municipio,081,l'Espluga Calba,581,575,200,0,,1,25266
+25,25082,municipio,082,Espot,466,457,200,0,,1,
+25,25085,municipio,085,Estaràs,252,236,200,0,,4,
+25,25086,municipio,086,Esterri d'Àneu,564,521,200,0,,1,25597
+25,25087,municipio,087,Esterri de Cardós,127,123,200,0,,1,
+25,25088,municipio,088,Estamariu,214,202,200,0,,1,
+25,25089,municipio,089,Farrera,179,176,200,0,,2,
+25,25092,municipio,092,la Floresta,204,55,200,0,,1,
+25,25093,municipio,093,Fondarella,610,490,200,0,,1,
+25,25094,municipio,094,Foradada,253,247,200,0,,1,
+25,25096,municipio,096,la Fuliola,1103,1009,200,0,,1,25333
+25,25097,municipio,097,Fulleda,198,197,200,0,,1,
+25,25098,municipio,098,Gavet de la Conca,606,581,200,0,,2,
+25,25099,municipio,099,Golmés,1600,1430,200,0,,1,25230
+25,25100,municipio,100,Gósol,410,405,200,0,,1,
+25,25101,municipio,101,la Granadella,833,827,200,0,,1,
+25,25102,municipio,102,la Granja d'Escarp,732,720,200,0,,1,
+25,25103,municipio,103,Granyanella,256,254,200,1,25360,2,
+25,25104,municipio,104,Granyena de Segarra,238,238,200,0,,1,
+25,25105,municipio,105,Granyena de les Garrigues,286,286,200,0,,1,
+25,25109,municipio,109,Guimerà,778,774,200,0,,1,
+25,25110,municipio,110,Guissona,1906,1860,200,0,,2,
+25,25111,municipio,111,Guixers,112,96,200,1,25284,3,25282
+25,25112,municipio,112,Ivars de Noguera,285,284,200,0,,1,
+25,25113,municipio,113,Ivars d'Urgell,1058,1050,200,0,,2,25332
+25,25114,municipio,114,Ivorra,127,125,200,0,,1,25750
+25,25115,municipio,115,Isona i Conca Dellà,1834,1820,200,0,,7,25638
+25,25118,municipio,118,Juncosa,400,389,200,0,,1,25155
+25,25119,municipio,119,Juneda,2145,2091,200,0,,1,25400
+25,25120,municipio,120,Lleida,23189,22755,200,1,25112,23,25221
+25,25121,municipio,121,Les,573,565,200,0,,1,
+25,25122,municipio,122,Linyola,1556,1546,200,0,,1,25260;25335
+25,25123,municipio,123,Lladorre,317,316,200,0,,3,
+25,25124,municipio,124,Lladurs,146,128,200,0,,2,25289
+25,25125,municipio,125,Llardecans,519,516,200,0,,1,
+25,25126,municipio,126,Llavorsí,383,380,200,0,,2,
+25,25127,municipio,127,Lles de Cerdanya,568,563,200,0,,1,25723
+25,25128,municipio,128,Llimiana,268,257,200,1,25631,3,
+25,25129,municipio,129,Llobera,81,78,200,0,,1,
+25,25130,municipio,130,Maldà,371,367,200,0,,1,
+25,25131,municipio,131,Massalcoreig,401,396,200,0,,2,
+25,25132,municipio,132,Massoteres,167,166,200,0,,1,
+25,25133,municipio,133,Maials,933,927,200,0,,1,
+25,25134,municipio,134,Menàrguens,698,696,200,1,25600,2,
+25,25135,municipio,135,Miralcamp,974,916,200,1,25230,2,25140;25241
+25,25136,municipio,136,la Molsosa,29,26,200,0,,1,
+25,25137,municipio,137,Mollerussa,3354,2861,200,0,,1,25241;25242;25244
+25,25138,municipio,138,Montgai,550,385,200,0,,2,
+25,25139,municipio,139,Montellà i Martinet,797,557,200,0,,2,25726
+25,25140,municipio,140,Montferrer i Castellbò,2491,2122,200,0,,4,
+25,25141,municipio,141,Montoliu de Segarra,289,281,200,0,,1,
+25,25142,municipio,142,Montoliu de Lleida,320,316,200,0,,1,
+25,25143,municipio,143,Montornès de Segarra,163,160,200,0,,1,
+25,25145,municipio,145,Nalec,171,168,200,0,,1,
+25,25146,municipio,146,Navès,277,259,200,0,,1,25283
+25,25148,municipio,148,Odèn,139,136,200,0,,2,
+25,25149,municipio,149,Oliana,1558,1556,200,0,,1,
+25,25150,municipio,150,Oliola,228,224,200,0,,3,25740
+25,25151,municipio,151,Olius,1012,830,200,0,,3,25283
+25,25152,municipio,152,les Oluges,260,257,200,0,,1,
+25,25153,municipio,153,els Omellons,215,214,200,0,,1,
+25,25154,municipio,154,els Omells de na Gaia,344,344,200,0,,1,
+25,25155,municipio,155,Organyà,878,814,200,0,,1,
+25,25156,municipio,156,Os de Balaguer,1004,938,200,0,,4,
+25,25157,municipio,157,Ossó de Sió,248,235,200,0,,1,
+25,25158,municipio,158,el Palau d'Anglesola,2264,2070,200,0,,2,25142;25222;25244
+25,25161,municipio,161,Conca de Dalt,1447,1266,200,0,,4,25500;25513
+25,25163,municipio,163,la Coma i la Pedra,1282,1276,200,0,,1,25285
+25,25164,municipio,164,Penelles,377,357,200,5,25332;25334,6,
+25,25165,municipio,165,Peramola,477,406,200,0,,1,
+25,25166,municipio,166,Pinell de Solsonès,147,139,200,0,,2,25289
+25,25167,municipio,167,Pinós,107,99,200,0,,1,
+25,25168,municipio,168,el Poal,499,484,200,0,,1,25142;25245
+25,25169,municipio,169,la Pobla de Cérvoles,335,330,200,0,,1,25460
+25,25170,municipio,170,Bellaguarda,298,298,200,0,,1,
+25,25171,municipio,171,la Pobla de Segur,1231,1186,200,0,,3,
+25,25172,municipio,172,Ponts,1375,1356,200,0,,3,25747
+25,25173,municipio,173,el Pont de Suert,1146,1102,200,18,25555,8,
+25,25174,municipio,174,la Portella,439,438,200,0,,1,25133
+25,25175,municipio,175,Prats i Sansor,963,693,200,0,,1,
+25,25176,municipio,176,Preixana,469,466,200,1,25250,2,
+25,25177,municipio,177,Preixens,531,524,200,0,,1,25739
+25,25179,municipio,179,Prullans,453,444,200,0,,1,25724
+25,25180,municipio,180,Puiggròs,249,241,200,0,,1,
+25,25181,municipio,181,Puigverd d'Agramunt,239,235,200,0,,2,
+25,25182,municipio,182,Puigverd de Lleida,963,941,200,1,25141,2,25150
+25,25183,municipio,183,Rialp,604,535,200,0,,1,
+25,25185,municipio,185,Ribera d'Urgellet,1331,1163,200,0,,6,25794
+25,25186,municipio,186,Riner,110,95,200,0,,2,
+25,25189,municipio,189,Rosselló,1138,1068,200,0,,1,25133
+25,25190,municipio,190,Salàs de Pallars,558,551,200,0,,1,
+25,25191,municipio,191,Sanaüja,422,419,200,0,,1,
+25,25192,municipio,192,Sant Guim de Freixenet,716,707,200,0,,2,
+25,25193,municipio,193,Sant Llorenç de Morunys,893,815,200,8,25285,2,
+25,25194,municipio,194,Sant Ramon,397,372,200,0,,2,
+25,25196,municipio,196,Sant Esteve de la Sarga,243,241,200,0,,1,
+25,25197,municipio,197,Sant Guim de la Plana,213,177,200,0,,1,
+25,25200,municipio,200,Sarroca de Lleida,362,357,200,0,,1,25170
+25,25201,municipio,201,Sarroca de Bellera,504,481,200,0,,1,25514
+25,25202,municipio,202,Senterada,358,354,200,0,,2,25516
+25,25203,municipio,203,la Seu d'Urgell,3228,3012,200,32,25718,3,25711;25713
+25,25204,municipio,204,Seròs,1027,1019,200,0,,1,
+25,25205,municipio,205,Sidamon,464,458,200,0,,1,
+25,25206,municipio,206,el Soleràs,384,382,200,0,,1,
+25,25207,municipio,207,Solsona,2954,2874,200,0,,1,25283
+25,25208,municipio,208,Soriguera,659,656,200,0,,3,
+25,25209,municipio,209,Sort,1514,1399,200,0,,3,25594
+25,25210,municipio,210,Soses,999,966,200,0,,1,25180
+25,25211,municipio,211,Sudanell,589,574,200,0,,1,25180
+25,25212,municipio,212,Sunyer,223,222,200,0,,1,
+25,25215,municipio,215,Talarn,454,372,200,0,,2,25620;25633;25635
+25,25216,municipio,216,Talavera,232,225,200,0,,1,
+25,25217,municipio,217,Tàrrega,6163,6126,200,0,,7,25330
+25,25218,municipio,218,Tarrés,249,243,200,0,,1,
+25,25219,municipio,219,Tarroja de Segarra,300,297,200,0,,1,
+25,25220,municipio,220,Térmens,887,650,200,0,,1,
+25,25221,municipio,221,Tírvia,212,198,200,0,,1,
+25,25222,municipio,222,Tiurana,33,32,200,0,,1,
+25,25223,municipio,223,Torà,704,684,200,0,,2,
+25,25224,municipio,224,els Torms,195,193,200,0,,1,
+25,25225,municipio,225,Tornabous,559,539,200,0,,1,25262
+25,25226,municipio,226,Torrebesses,381,371,200,0,,2,
+25,25227,municipio,227,La Torre de Cabdella,1836,1778,200,0,,5,
+25,25228,municipio,228,Torrefarrera,1791,1548,200,0,,2,25131
+25,25230,municipio,230,Torregrossa,1500,1483,200,0,,1,25430
+25,25231,municipio,231,Torrelameu,603,544,200,0,,1,
+25,25232,municipio,232,Torres de Segre,1685,1541,200,14,25182,2,25180
+25,25233,municipio,233,Torre-serona,363,268,200,0,,1,25195
+25,25234,municipio,234,Tremp,4023,3711,200,284,25633,9,25630
+25,25238,municipio,238,Vallbona de les Monges,549,525,200,0,,2,
+25,25239,municipio,239,les Valls de Valira,1338,1161,200,0,,5,25700;25718
+25,25240,municipio,240,Vallfogona de Balaguer,1004,859,200,7,25600,3,25670
+25,25242,municipio,242,Verdú,669,664,200,0,,1,25341
+25,25243,municipio,243,Vielha e Mijaran,3628,3466,200,1,25551,5,
+25,25244,municipio,244,Vilagrassa,405,334,200,2,25320,2,
+25,25245,municipio,245,Vilaller,683,651,200,0,,2,25554
+25,25247,municipio,247,Vilamòs,238,47,200,0,,1,
+25,25248,municipio,248,Vilanova de Bellpuig,1066,1050,200,0,,1,
+25,25249,municipio,249,Vilanova de l'Aguda,308,304,200,0,,2,25286;25792
+25,25250,municipio,250,Vilanova de Meià,839,837,200,0,,3,
+25,25251,municipio,251,Vilanova de Segrià,667,564,200,0,,1,25124
+25,25252,municipio,252,Vila-sana,628,588,200,1,25241,2,
+25,25253,municipio,253,el Vilosell,381,370,200,0,,1,
+25,25254,municipio,254,Vilanova de la Barca,689,673,200,0,,1,
+25,25255,municipio,255,Vinaixa,502,495,200,0,,1,25400;25450
+25,25901,municipio,901,Vall de Cardós,881,881,200,0,,4,
+25,25902,municipio,902,Sant Martí de Riucorb,915,913,200,0,,3,
+25,25903,municipio,903,la Guingueta d'Àneu,1678,1601,200,0,,4,
+25,25904,municipio,904,Castell de Mur,601,597,200,6,25633,4,25639
+25,25905,municipio,905,Ribera d'Ondara,522,474,200,2,25200,4,
+25,25906,municipio,906,les Valls d'Aguilar,540,524,200,0,,2,
+25,25907,municipio,907,Torrefeta i Florejacs,743,738,200,0,,2,
+25,25908,municipio,908,Fígols i Alinyà,400,394,200,0,,1,25795
+25,25909,municipio,909,la Vansa i Fórnols,544,544,200,0,,1,
+25,25910,municipio,910,Josa i Tuixén,451,449,200,0,,1,
+25,25911,municipio,911,els Plans de Sió,740,722,200,0,,3,
+25,25912,municipio,912,Gimenells i el Pla de la Font,950,932,200,0,,2,
+25,25913,municipio,913,Riu de Cerdanya,177,175,200,0,,1,
+25,53055,condominio,NA,NA,0,0,50,0,,0,

@@ -1,0 +1,178 @@
+COD_POSTAL,direcciones,municipio_coincide,municipios_origen,interior_200,cmun,municipio,presente_provincia,presente_sin_recuperacion,decision
+11180,2577,2577,11001,2570,001,Alcalá de los Gazules,TRUE,TRUE,Conservar interior
+11693,2647,2647,11002,2646,002,Alcalá del Valle,TRUE,TRUE,Conservar interior
+11630,1,0,11006,0,003,Algar,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11639,869,869,11003,864,003,Algar,TRUE,TRUE,Conservar interior
+11201,1505,1505,11004,1317,004,Algeciras,TRUE,TRUE,Conservar interior
+11202,452,452,11004,396,004,Algeciras,TRUE,TRUE,Conservar interior
+11203,4312,4312,11004,4312,004,Algeciras,TRUE,TRUE,Conservar interior
+11204,4197,4197,11004,4090,004,Algeciras,TRUE,TRUE,Conservar interior
+11205,4404,4404,11004,3876,004,Algeciras,TRUE,TRUE,Conservar interior
+11206,4621,4621,11004,4621,004,Algeciras,TRUE,TRUE,Conservar interior
+11207,8677,8677,11004,8019,004,Algeciras,TRUE,TRUE,Conservar interior
+11370,1,0,11008,0,004,Algeciras,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11379,3,0,11008,0,004,Algeciras,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11390,296,293,11004;11035,293,004,Algeciras,TRUE,TRUE,Conservar interior
+11650,1,1,11005,0,005,Algodonales,TRUE,TRUE,Recuperar direcciones con municipio coincidente
+11680,3625,3625,11005,3619,005,Algodonales,TRUE,TRUE,Conservar interior
+11689,261,261,11005,260,005,Algodonales,TRUE,TRUE,Conservar interior
+11580,1,0,11020,0,006,Arcos de la Frontera,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11620,1721,1721,11006,1715,006,Arcos de la Frontera,TRUE,TRUE,Conservar interior
+11630,8018,8016,11006;11010,8010,006,Arcos de la Frontera,TRUE,TRUE,Conservar interior
+11638,1500,1500,11006,1500,006,Arcos de la Frontera,TRUE,TRUE,Conservar interior
+11639,210,210,11006,209,006,Arcos de la Frontera,TRUE,TRUE,Conservar interior
+11640,13,2,11006;11010,0,006,Arcos de la Frontera,TRUE,TRUE,Recuperar direcciones con municipio coincidente
+11150,237,216,11007;11039,205,007,Barbate,TRUE,TRUE,Conservar interior
+11159,685,682,11007;11039,604,007,Barbate,TRUE,TRUE,Conservar interior
+11160,5063,5063,11007,4997,007,Barbate,TRUE,TRUE,Conservar interior
+11392,3,0,11035,0,007,Barbate,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11393,1026,939,11007;11035,868,007,Barbate,TRUE,TRUE,Conservar interior
+11368,1,0,11033,0,008,Los Barrios,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11370,6290,6290,11008,6278,008,Los Barrios,TRUE,TRUE,Conservar interior
+11379,3707,3707,11008,3349,008,Los Barrios,TRUE,TRUE,Conservar interior
+11612,880,880,11009,877,009,Benaocaz,TRUE,TRUE,Conservar interior
+11640,3283,3279,11006;11010,2802,010,Bornos,TRUE,TRUE,Conservar interior
+11648,2,0,11017,0,010,Bornos,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11649,534,534,11010,533,010,Bornos,TRUE,TRUE,Conservar interior
+11650,1,0,11041,0,010,Bornos,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11660,1,0,11026,0,011,El Bosque,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11670,1955,1955,11011,1953,011,El Bosque,TRUE,TRUE,Conservar interior
+11001,467,467,11012,467,012,Cádiz,TRUE,TRUE,Conservar interior
+11002,951,951,11012,452,012,Cádiz,TRUE,TRUE,Conservar interior
+11003,751,751,11012,574,012,Cádiz,TRUE,TRUE,Conservar interior
+11004,506,506,11012,503,012,Cádiz,TRUE,TRUE,Conservar interior
+11005,687,687,11012,402,012,Cádiz,TRUE,TRUE,Conservar interior
+11006,379,379,11012,285,012,Cádiz,TRUE,TRUE,Conservar interior
+11007,380,380,11012,326,012,Cádiz,TRUE,TRUE,Conservar interior
+11008,737,737,11012,500,012,Cádiz,TRUE,TRUE,Conservar interior
+11009,399,399,11012,299,012,Cádiz,TRUE,TRUE,Conservar interior
+11010,297,297,11012,265,012,Cádiz,TRUE,TRUE,Conservar interior
+11011,820,820,11012,711,012,Cádiz,TRUE,TRUE,Conservar interior
+11012,403,403,11012,199,012,Cádiz,TRUE,TRUE,Conservar interior
+11340,1,0,11903,0,013,Castellar de la Frontera,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11350,1477,1477,11013,1476,013,Castellar de la Frontera,TRUE,TRUE,Conservar interior
+11351,152,152,11013,152,013,Castellar de la Frontera,TRUE,TRUE,Conservar interior
+11379,1,0,11008,0,013,Castellar de la Frontera,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11130,58,10,11014;11015,0,014,Conil de la Frontera,TRUE,TRUE,Recuperar direcciones con municipio coincidente
+11140,5634,5634,11014,5628,014,Conil de la Frontera,TRUE,TRUE,Conservar interior
+11149,11495,11468,11014;11015,10817,014,Conil de la Frontera,TRUE,TRUE,Conservar interior
+11100,3,1,11015;11028,0,015,Chiclana de la Frontera,TRUE,TRUE,Recuperar direcciones con municipio coincidente
+11130,34386,34379,11014;11015,34280,015,Chiclana de la Frontera,TRUE,TRUE,Conservar interior
+11138,4382,4352,11015;11028,4310,015,Chiclana de la Frontera,TRUE,TRUE,Conservar interior
+11139,5267,5238,11014;11015,4843,015,Chiclana de la Frontera,TRUE,TRUE,Conservar interior
+11149,6,1,11014;11015,0,015,Chiclana de la Frontera,TRUE,TRUE,Recuperar direcciones con municipio coincidente
+11520,117,104,11016;11030,69,016,Chipiona,TRUE,TRUE,Conservar interior
+11540,16,6,11016;11032,0,016,Chipiona,TRUE,TRUE,Recuperar direcciones con municipio coincidente
+11550,15226,15224,11016;11030;11032,14029,016,Chipiona,TRUE,TRUE,Conservar interior
+11648,2643,2643,11017,2637,017,Espera,TRUE,TRUE,Conservar interior
+11687,1184,1184,11018,1141,018,El Gastor,TRUE,TRUE,Conservar interior
+11688,9,9,11018,5,018,El Gastor,TRUE,TRUE,Conservar interior
+11610,1228,1228,11019,1224,019,Grazalema,TRUE,TRUE,Conservar interior
+11679,337,337,11019,336,019,Grazalema,TRUE,TRUE,Conservar interior
+11180,1,0,11001,0,020,Jerez de la Frontera,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11400,542,541,11020;11902,514,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11401,1935,1935,11020,1935,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11402,1243,1243,11020,1243,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11403,1494,1494,11020,1494,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11404,1044,1044,11020,1044,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11405,7523,7523,11020,7523,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11406,8581,8581,11020,8581,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11407,4593,4593,11020,4593,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11408,6390,6357,11020;11027,6350,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11500,2,0,11027,0,020,Jerez de la Frontera,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11510,1,0,11028,0,020,Jerez de la Frontera,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11570,2073,2073,11020,2073,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11579,147,147,11020,146,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11580,120,113,11020;11902,43,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11590,251,251,11020,251,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11591,2099,2099,11020,2099,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11592,1347,1347,11020,993,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11593,1217,1217,11020,1217,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11594,729,729,11020,729,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11595,857,857,11020,857,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11596,227,227,11020,227,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11600,2,1,11020;11038,0,020,Jerez de la Frontera,TRUE,TRUE,Recuperar direcciones con municipio coincidente
+11639,7,6,11003;11020,5,020,Jerez de la Frontera,TRUE,TRUE,Conservar interior
+11320,909,909,11021,869,021,Jimena de la Frontera,TRUE,TRUE,Conservar interior
+11330,1902,1902,11021,1901,021,Jimena de la Frontera,TRUE,TRUE,Conservar interior
+11339,1432,1431,11021;11903,1426,021,Jimena de la Frontera,TRUE,TRUE,Conservar interior
+11300,12059,12038,11022;11033,11488,022,La Línea de la Concepción,TRUE,TRUE,Conservar interior
+11315,3689,3685,11022;11033,3669,022,La Línea de la Concepción,TRUE,TRUE,Conservar interior
+11316,553,551,11022;11033,451,022,La Línea de la Concepción,TRUE,TRUE,Conservar interior
+11360,1,1,11022,0,022,La Línea de la Concepción,TRUE,TRUE,Recuperar direcciones con municipio coincidente
+11130,1,0,11015,0,023,Medina Sidonia,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11150,1,0,11039,0,023,Medina Sidonia,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11170,3640,3640,11023,3633,023,Medina Sidonia,TRUE,TRUE,Conservar interior
+11179,719,719,11023,706,023,Medina Sidonia,TRUE,TRUE,Conservar interior
+11190,2,0,11901,0,023,Medina Sidonia,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11400,1,1,11023,0,023,Medina Sidonia,TRUE,TRUE,Recuperar direcciones con municipio coincidente
+11510,2,0,11028,1,023,Medina Sidonia,TRUE,TRUE,Conservar interior
+11690,4827,4827,11024,4802,024,Olvera,TRUE,TRUE,Conservar interior
+11691,1,0,11036,0,024,Olvera,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11170,1,0,11023,0,025,Paterna de Rivera,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11178,3034,3034,11025,3027,025,Paterna de Rivera,TRUE,TRUE,Conservar interior
+11650,1,0,11041,0,026,Prado del Rey,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11660,3210,3210,11026,3203,026,Prado del Rey,TRUE,TRUE,Conservar interior
+11400,3,1,11020;11027,1,027,El Puerto de Santa María,TRUE,TRUE,Conservar interior
+11408,22,22,11027,0,027,El Puerto de Santa María,TRUE,TRUE,Recuperar direcciones con municipio coincidente
+11500,26719,26717,11027;11030,26401,027,El Puerto de Santa María,TRUE,TRUE,Conservar interior
+11510,1,0,11028,0,027,El Puerto de Santa María,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11530,390,390,11027,390,027,El Puerto de Santa María,TRUE,TRUE,Conservar interior
+11100,395,395,11028,389,028,Puerto Real,TRUE,TRUE,Conservar interior
+11138,396,396,11028,330,028,Puerto Real,TRUE,TRUE,Conservar interior
+11400,3,0,11020,0,028,Puerto Real,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11510,8345,8345,11028,7041,028,Puerto Real,TRUE,TRUE,Conservar interior
+11518,957,957,11028,957,028,Puerto Real,TRUE,TRUE,Conservar interior
+11519,664,664,11028,624,028,Puerto Real,TRUE,TRUE,Conservar interior
+11659,4462,4462,11029,4249,029,Puerto Serrano,TRUE,TRUE,Conservar interior
+11680,1,0,11005,0,029,Puerto Serrano,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+41760,1,1,11029,0,029,Puerto Serrano,TRUE,FALSE,Recuperar direcciones con municipio coincidente
+11500,1,1,11030,0,030,Rota,TRUE,TRUE,Recuperar direcciones con municipio coincidente
+11520,10587,10583,11016;11030,9854,030,Rota,TRUE,TRUE,Conservar interior
+11530,20,20,11030,13,030,Rota,TRUE,TRUE,Conservar interior
+11550,2,0,11016,0,030,Rota,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11100,11587,11587,11031,11408,031,San Fernando,TRUE,TRUE,Conservar interior
+11110,71,71,11031,70,031,San Fernando,TRUE,TRUE,Conservar interior
+11120,47,47,11031,47,031,San Fernando,TRUE,TRUE,Conservar interior
+11540,19754,19752,11016;11032,18648,032,Sanlúcar de Barrameda,TRUE,TRUE,Conservar interior
+11549,415,415,11032,415,032,Sanlúcar de Barrameda,TRUE,TRUE,Conservar interior
+11550,9,0,11016,0,032,Sanlúcar de Barrameda,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11300,5,5,11033,0,033,San Roque,TRUE,TRUE,Recuperar direcciones con municipio coincidente
+11310,3808,3808,11033,3777,033,San Roque,TRUE,TRUE,Conservar interior
+11311,1772,1772,11033,1772,033,San Roque,TRUE,TRUE,Conservar interior
+11312,1154,1154,11033,818,033,San Roque,TRUE,TRUE,Conservar interior
+11313,550,550,11033,137,033,San Roque,TRUE,TRUE,Conservar interior
+11314,876,876,11033,654,033,San Roque,TRUE,TRUE,Conservar interior
+11315,2,2,11033,0,033,San Roque,TRUE,TRUE,Recuperar direcciones con municipio coincidente
+11316,17,4,11022;11033,0,033,San Roque,TRUE,TRUE,Recuperar direcciones con municipio coincidente
+11360,3145,3144,11022;11033,3122,033,San Roque,TRUE,TRUE,Conservar interior
+11368,1248,1248,11033,1096,033,San Roque,TRUE,TRUE,Conservar interior
+11369,1209,1209,11033,1128,033,San Roque,TRUE,TRUE,Conservar interior
+11379,16,0,11008,0,033,San Roque,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11692,1685,1685,11034,1683,034,Setenil de las Bodegas,TRUE,TRUE,Conservar interior
+11380,3118,3118,11035,2918,035,Tarifa,TRUE,TRUE,Conservar interior
+11390,282,282,11035,281,035,Tarifa,TRUE,TRUE,Conservar interior
+11391,985,985,11035,971,035,Tarifa,TRUE,TRUE,Conservar interior
+11392,179,179,11035,178,035,Tarifa,TRUE,TRUE,Conservar interior
+11393,744,744,11035,578,035,Tarifa,TRUE,TRUE,Conservar interior
+11691,622,622,11036,614,036,Torre Alháquime,TRUE,TRUE,Conservar interior
+11560,3513,3513,11037,3509,037,Trebujena,TRUE,TRUE,Conservar interior
+11600,5881,5881,11038,5853,038,Ubrique,TRUE,TRUE,Conservar interior
+11612,1,0,11009,0,038,Ubrique,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11149,1,0,11014,0,039,Vejer de la Frontera,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11150,3096,3094,11007;11039,3079,039,Vejer de la Frontera,TRUE,TRUE,Conservar interior
+11158,209,209,11039,208,039,Vejer de la Frontera,TRUE,TRUE,Conservar interior
+11159,86,85,11014;11039,74,039,Vejer de la Frontera,TRUE,TRUE,Conservar interior
+11170,1,0,11023,0,039,Vejer de la Frontera,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11179,142,140,11023;11039,138,039,Vejer de la Frontera,TRUE,TRUE,Conservar interior
+11611,477,477,11040,477,040,Villaluenga del Rosario,TRUE,TRUE,Conservar interior
+11650,5534,5534,11041,5528,041,Villamartín,TRUE,TRUE,Conservar interior
+11680,3,0,11005,0,042,Zahara,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11688,846,845,11018;11042,839,042,Zahara,TRUE,TRUE,Conservar interior
+11179,1,0,11023,0,901,Benalup-Casas Viejas,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11190,3594,3594,11901,3554,901,Benalup-Casas Viejas,TRUE,TRUE,Conservar interior
+11400,1,0,11020,0,902,San José del Valle,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11570,2,0,11020,0,902,San José del Valle,TRUE,TRUE,Revisar discrepancia entre atributo municipal y geometrC-a
+11580,2532,2494,11020;11902,2431,902,San José del Valle,TRUE,TRUE,Conservar interior
+11340,1265,1265,11903,1164,903,San Martín del Tesorillo,TRUE,TRUE,Conservar interior
+11349,83,83,11903,61,903,San Martín del Tesorillo,TRUE,TRUE,Conservar interior

@@ -1,0 +1,78 @@
+cpro,LAU_CODE,tipo_recinto,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_descartados
+14,14001,municipio,001,Adamuz,2889,2850,200,0,,2,14600;14610
+14,14002,municipio,002,Aguilar de la Frontera,6680,6588,200,0,,1,14500;14550
+14,14003,municipio,003,Alcaracejos,1367,1344,200,3,14450,2,14400
+14,14004,municipio,004,Almedinilla,2018,1989,200,4,14816;23689,4,
+14,14005,municipio,005,Almodóvar del Río,3817,3761,200,0,,2,14130;14710;14711;14730
+14,14006,municipio,006,Añora,1513,1488,200,0,,1,14400
+14,14007,municipio,007,Baena,8213,8173,200,0,,2,14860;14870
+14,14008,municipio,008,Belalcázar,2653,2648,200,0,,1,
+14,14009,municipio,009,Belmez,2757,2747,200,0,,2,14200;14230;14249;14250
+14,14010,municipio,010,Benamejí,3962,3954,200,1,29250,3,14913
+14,14011,municipio,011,Los Blázquez,674,666,200,0,,1,14206;14207
+14,14012,municipio,012,Bujalance,4171,4150,200,2,14820,3,14660
+14,14013,municipio,013,Cabra,7122,7049,200,0,,3,14950
+14,14014,municipio,014,Cañete de las Torres,2132,2124,200,0,,2,
+14,14015,municipio,015,Carcabuey,1814,1790,200,0,,2,14816
+14,14016,municipio,016,Cardeña,1797,1783,200,0,,3,
+14,14017,municipio,017,La Carlota,9053,8078,200,16,14140;14540;41409,6,14547
+14,14018,municipio,018,El Carpio,2551,2515,200,0,,1,14659
+14,14019,municipio,019,Castro del Río,4228,4207,200,0,,4,
+14,14020,municipio,020,Conquista,562,560,200,0,,1,
+14,14021,municipio,021,Córdoba,50503,50104,200,0,,25,14191;14300;14320;14729;14840
+14,14022,municipio,022,Doña Mencía,2651,2648,200,1,14870,2,
+14,14023,municipio,023,Dos Torres,1770,1743,200,0,,1,14490
+14,14024,municipio,024,Encinas Reales,1889,1862,200,0,,2,
+14,14025,municipio,025,Espejo,2072,2058,200,0,,1,14530
+14,14026,municipio,026,Espiel,2021,1824,200,0,,3,14310
+14,14027,municipio,027,Fernán-Núñez,4925,4897,200,7,14540,2,
+14,14028,municipio,028,Fuente la Lancha,329,328,200,0,,1,
+14,14029,municipio,029,Fuente Obejuna,5109,5003,200,0,,6,14200
+14,14030,municipio,030,Fuente Palmera,5406,5054,200,0,,6,
+14,14031,municipio,031,Fuente-Tójar,688,686,200,0,,1,14814
+14,14032,municipio,032,La Granjuela,356,355,200,0,,1,
+14,14033,municipio,033,Guadalcázar,941,934,200,0,,1,14111
+14,14034,municipio,034,El Guijo,450,313,200,0,,1,
+14,14035,municipio,035,Hinojosa del Duque,5191,5166,200,0,,1,14200;14206;14280
+14,14036,municipio,036,Hornachuelos,3349,3192,200,0,,4,14120;14700;14739
+14,14037,municipio,037,Iznájar,3443,3272,200,2,14950;29315,6,14960
+14,14038,municipio,038,Lucena,16408,16114,200,1,14510,4,14940
+14,14039,municipio,039,Luque,2637,2622,200,0,,1,14816
+14,14040,municipio,040,Montalbán de Córdoba,2480,2454,200,1,14550,2,14540;14547;14920
+14,14041,municipio,041,Montemayor,2251,2244,200,0,,1,14820
+14,14042,municipio,042,Montilla,8379,8299,200,0,,1,14540;14548;14940
+14,14043,municipio,043,Montoro,5275,5248,200,0,,2,14430;14439
+14,14044,municipio,044,Monturque,1291,1263,200,0,,2,14550
+14,14045,municipio,045,Moriles,2124,2114,200,0,,2,14920
+14,14046,municipio,046,Nueva Carteya,3521,3513,200,0,,1,
+14,14047,municipio,047,Obejo,1295,874,200,0,,3,14430
+14,14048,municipio,048,Palenciana,1039,1036,200,0,,1,
+14,14049,municipio,049,Palma del Río,7131,7009,200,0,,1,14129
+14,14050,municipio,050,Pedro Abad,1852,1848,200,0,,1,14600
+14,14051,municipio,051,Pedroche,1330,1321,200,0,,1,14460
+14,14052,municipio,052,Peñarroya-Pueblonuevo,7399,7288,200,0,,1,14207;14209
+14,14053,municipio,053,Posadas,4017,4002,200,0,,2,14129;14749
+14,14054,municipio,054,Pozoblanco,6924,6831,200,0,,1,14210;14450;14480
+14,14055,municipio,055,Priego de Córdoba,11577,11341,200,0,,6,14813
+14,14056,municipio,056,Puente Genil,11197,11104,200,0,,2,
+14,14057,municipio,057,La Rambla,3927,3745,200,0,,2,14100;14520;14547
+14,14058,municipio,058,Rute,6179,6137,200,0,,3,14900
+14,14059,municipio,059,San Sebastián de los Ballesteros,740,510,200,0,,1,
+14,14060,municipio,060,Santaella,2830,2783,200,1,14500,4,14548
+14,14061,municipio,061,Santa Eufemia,1192,1187,200,0,,1,
+14,14062,municipio,062,Torrecampo,1365,1347,200,0,,1,14413
+14,14063,municipio,063,Valenzuela,1195,1193,200,0,,1,
+14,14064,municipio,064,Valsequillo,518,517,200,0,,1,
+14,14065,municipio,065,La Victoria,1482,1178,200,1,14191,2,14100
+14,14066,municipio,066,Villa del Río,2784,2770,200,0,,1,
+14,14067,municipio,067,Villafranca de Córdoba,2545,2494,200,0,,1,14610
+14,14068,municipio,068,Villaharta,551,512,200,0,,1,14220
+14,14069,municipio,069,Villanueva de Córdoba,5592,5581,200,0,,1,14412;14430
+14,14070,municipio,070,Villanueva del Duque,1371,1341,200,0,,2,14270
+14,14071,municipio,071,Villanueva del Rey,1046,1042,200,0,,1,
+14,14072,municipio,072,Villaralto,1291,1281,200,0,,1,14470
+14,14073,municipio,073,Villaviciosa de Córdoba,3317,3119,200,0,,2,
+14,14074,municipio,074,El Viso,2543,2519,200,0,,1,14490;14491
+14,14075,municipio,075,Zuheros,701,697,200,0,,1,14880
+14,14901,municipio,901,Fuente Carreteros,771,771,200,0,,1,
+14,14902,municipio,902,La Guijarrosa,876,848,200,5,14540,2,

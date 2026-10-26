@@ -1,0 +1,98 @@
+cpro,LAU_CODE,nombre,motivo,provincia,area_km2,poligonos
+22,53049,NA,Sin direcciones seleccionadas con código postal,Huesca,10.116848720781864,1
+31,53060,NA,Sin direcciones seleccionadas con código postal,Navarra,2.4195429541422278,1
+09,53007,NA,Sin direcciones seleccionadas con código postal,Burgos,2.327530667693153,1
+20,53048,NA,Sin direcciones seleccionadas con código postal,Gipuzkoa,2.2896633450630586,6
+31,53066,NA,Sin direcciones seleccionadas con código postal,Navarra,1.3795807787650078,1
+31,53067,NA,Sin direcciones seleccionadas con código postal,Navarra,1.0548722977948195,7
+19,53047,NA,Sin direcciones seleccionadas con código postal,Guadalajara,0.7959347367718862,11
+09,53012,NA,Sin direcciones seleccionadas con código postal,Burgos,0.6498610786277353,1
+09,53035,NA,Sin direcciones seleccionadas con código postal,Burgos,0.6401263158478737,1
+09,53043,NA,Sin direcciones seleccionadas con código postal,Burgos,0.6080283704618812,1
+28,53058,NA,Sin direcciones seleccionadas con código postal,Madrid,0.5882264312040955,1
+23,53050,NA,Sin direcciones seleccionadas con código postal,Jaén,0.5642824932356987,9
+09,53041,NA,Sin direcciones seleccionadas con código postal,Burgos,0.5249028572178278,5
+09,53028,NA,Sin direcciones seleccionadas con código postal,Burgos,0.5128242657255977,1
+09,53013,NA,Sin direcciones seleccionadas con código postal,Burgos,0.5033437486463064,10
+26,53056,NA,Sin direcciones seleccionadas con código postal,"Rioja, La",0.48315682102998636,15
+01,53001,NA,Sin direcciones seleccionadas con código postal,Araba/Álava,0.4432369629667164,14
+44,53077,NA,Sin direcciones seleccionadas con código postal,Teruel,0.39231280167215316,1
+31,53070,NA,Sin direcciones seleccionadas con código postal,Navarra,0.3409458709921762,1
+24,53053,NA,Sin direcciones seleccionadas con código postal,León,0.33190673561594636,1
+31,53061,NA,Sin direcciones seleccionadas con código postal,Navarra,0.17630207564416808,4
+09,53033,NA,Sin direcciones seleccionadas con código postal,Burgos,0.09859866707745864,8
+09,53038,NA,Sin direcciones seleccionadas con código postal,Burgos,0.09354001469081392,8
+31,53062,NA,Sin direcciones seleccionadas con código postal,Navarra,0.09030170897344243,5
+24,53051,NA,Sin direcciones seleccionadas con código postal,León,0.08112151737734116,3
+09,53031,NA,Sin direcciones seleccionadas con código postal,Burgos,0.0805533463730947,9
+37,53071,NA,Sin direcciones seleccionadas con código postal,Salamanca,0.059878876433888374,10
+09,53014,NA,Sin direcciones seleccionadas con código postal,Burgos,0.054516974774767614,8
+09,53019,NA,Sin direcciones seleccionadas con código postal,Burgos,0.046031059059576655,5
+09,53005,NA,Sin direcciones seleccionadas con código postal,Burgos,0.04231608100487804,4
+09,53046,NA,Sin direcciones seleccionadas con código postal,Burgos,0.03047275048284563,6
+09,53023,NA,Sin direcciones seleccionadas con código postal,Burgos,0.026131107375958935,2
+31,53064,NA,Sin direcciones seleccionadas con código postal,Navarra,0.023324812588997185,1
+09,53006,NA,Sin direcciones seleccionadas con código postal,Burgos,0.01456581740868825,3
+31,53065,NA,Sin direcciones seleccionadas con código postal,Navarra,0.01207184589221119,3
+09,53040,NA,Sin direcciones seleccionadas con código postal,Burgos,0.008412241273750056,4
+50,PROV_GAP_50,NA,Superficie provincial fuera de los recintos seleccionados,Zaragoza,0.005915160578666903,101
+09,53032,NA,Sin direcciones seleccionadas con código postal,Burgos,0.005180516191176255,3
+18,PROV_GAP_18,NA,Superficie provincial fuera de los recintos seleccionados,Granada,0.004858985014650341,73
+09,53018,NA,Sin direcciones seleccionadas con código postal,Burgos,0.004072269564098912,4
+09,53022,NA,Sin direcciones seleccionadas con código postal,Burgos,0.004033709577195812,2
+09,PROV_GAP_09,NA,Superficie provincial fuera de los recintos seleccionados,Burgos,0.003780830789822062,134
+06,PROV_GAP_06,NA,Superficie provincial fuera de los recintos seleccionados,Badajoz,0.0036415976657376433,102
+31,53069,NA,Sin direcciones seleccionadas con código postal,Navarra,0.0036109631294757127,1
+10,PROV_GAP_10,NA,Superficie provincial fuera de los recintos seleccionados,Cáceres,0.003182837870898537,74
+35,PROV_GAP_35,NA,Superficie provincial fuera de los recintos seleccionados,"Palmas, Las",0.0029259081009266855,110
+41,PROV_GAP_41,NA,Superficie provincial fuera de los recintos seleccionados,Sevilla,0.0028635934774653075,62
+09,53034,NA,Sin direcciones seleccionadas con código postal,Burgos,0.0027173567567021985,5
+44,PROV_GAP_44,NA,Superficie provincial fuera de los recintos seleccionados,Teruel,0.0025727054529948966,113
+14,PROV_GAP_14,NA,Superficie provincial fuera de los recintos seleccionados,Córdoba,0.0025331395362006583,76
+25,PROV_GAP_25,NA,Superficie provincial fuera de los recintos seleccionados,Lleida,0.0023976591736325167,98
+49,PROV_GAP_49,NA,Superficie provincial fuera de los recintos seleccionados,Zamora,0.002123703624767286,78
+16,PROV_GAP_16,NA,Superficie provincial fuera de los recintos seleccionados,Cuenca,0.001980035058893408,71
+47,PROV_GAP_47,NA,Superficie provincial fuera de los recintos seleccionados,Valladolid,0.001798330458659181,89
+24,PROV_GAP_24,NA,Superficie provincial fuera de los recintos seleccionados,León,0.0017530526465412476,67
+03,PROV_GAP_03,NA,Superficie provincial fuera de los recintos seleccionados,Alicante/Alacant,0.001708581226680113,52
+01,PROV_GAP_01,NA,Superficie provincial fuera de los recintos seleccionados,Araba/Álava,0.0016803003634609293,84
+19,PROV_GAP_19,NA,Superficie provincial fuera de los recintos seleccionados,Guadalajara,0.0016687901515211815,82
+42,PROV_GAP_42,NA,Superficie provincial fuera de los recintos seleccionados,Soria,0.0015959858070416855,82
+43,PROV_GAP_43,NA,Superficie provincial fuera de los recintos seleccionados,Tarragona,0.0015024227609074844,78
+45,PROV_GAP_45,NA,Superficie provincial fuera de los recintos seleccionados,Toledo,0.0013562310160059098,106
+21,PROV_GAP_21,NA,Superficie provincial fuera de los recintos seleccionados,Huelva,0.0013090895346914628,50
+29,PROV_GAP_29,NA,Superficie provincial fuera de los recintos seleccionados,Málaga,0.0012443013120952485,57
+46,PROV_GAP_46,NA,Superficie provincial fuera de los recintos seleccionados,Valencia/València,0.001242287351378936,87
+40,PROV_GAP_40,NA,Superficie provincial fuera de los recintos seleccionados,Segovia,0.001192348446487359,49
+04,PROV_GAP_04,NA,Superficie provincial fuera de los recintos seleccionados,Almería,0.0011773413463004572,41
+27,PROV_GAP_27,NA,Superficie provincial fuera de los recintos seleccionados,Lugo,0.001140133026922281,54
+09,53017,NA,Sin direcciones seleccionadas con código postal,Burgos,0.0010952804096980835,2
+28,PROV_GAP_28,NA,Superficie provincial fuera de los recintos seleccionados,Madrid,0.001093750578808926,87
+22,PROV_GAP_22,NA,Superficie provincial fuera de los recintos seleccionados,Huesca,0.0010695205923492977,65
+05,PROV_GAP_05,NA,Superficie provincial fuera de los recintos seleccionados,Ávila,0.0010683355569636956,65
+17,PROV_GAP_17,NA,Superficie provincial fuera de los recintos seleccionados,Girona,0.0010467042049205945,88
+24,53054,NA,Sin direcciones seleccionadas con código postal,León,0.0010390878303428181,2
+30,PROV_GAP_30,NA,Superficie provincial fuera de los recintos seleccionados,Murcia,0.0010377173417647114,38
+37,PROV_GAP_37,NA,Superficie provincial fuera de los recintos seleccionados,Salamanca,0.0010113661470763109,70
+34,PROV_GAP_34,NA,Superficie provincial fuera de los recintos seleccionados,Palencia,9.856980449777107e-4,71
+48,PROV_GAP_48,NA,Superficie provincial fuera de los recintos seleccionados,Bizkaia,9.510709371686143e-4,41
+08,PROV_GAP_08,NA,Superficie provincial fuera de los recintos seleccionados,Barcelona,9.357094879739025e-4,104
+26,PROV_GAP_26,NA,Superficie provincial fuera de los recintos seleccionados,"Rioja, La",9.177903978659619e-4,60
+32,PROV_GAP_32,NA,Superficie provincial fuera de los recintos seleccionados,Ourense,8.580809398381324e-4,53
+11,PROV_GAP_11,NA,Superficie provincial fuera de los recintos seleccionados,Cádiz,8.317013567193732e-4,59
+02,PROV_GAP_02,NA,Superficie provincial fuera de los recintos seleccionados,Albacete,7.276419528486154e-4,60
+38,PROV_GAP_38,NA,Superficie provincial fuera de los recintos seleccionados,Santa Cruz de Tenerife,7.107748183882179e-4,88
+15,PROV_GAP_15,NA,Superficie provincial fuera de los recintos seleccionados,"Coruña, A",6.74298771277183e-4,98
+07,PROV_GAP_07,NA,Superficie provincial fuera de los recintos seleccionados,"Balears, Illes",6.721804944073974e-4,98
+31,PROV_GAP_31,NA,Superficie provincial fuera de los recintos seleccionados,Navarra,6.586799248875712e-4,119
+23,PROV_GAP_23,NA,Superficie provincial fuera de los recintos seleccionados,Jaén,6.012338978573166e-4,53
+39,PROV_GAP_39,NA,Superficie provincial fuera de los recintos seleccionados,Cantabria,4.940035734982086e-4,60
+13,PROV_GAP_13,NA,Superficie provincial fuera de los recintos seleccionados,Ciudad Real,4.511809779562477e-4,57
+33,PROV_GAP_33,NA,Superficie provincial fuera de los recintos seleccionados,Asturias,4.5109299240289494e-4,55
+12,PROV_GAP_12,NA,Superficie provincial fuera de los recintos seleccionados,Castellón/Castelló,4.3632025581016593e-4,53
+36,PROV_GAP_36,NA,Superficie provincial fuera de los recintos seleccionados,Pontevedra,3.7659213390878795e-4,50
+20,PROV_GAP_20,NA,Superficie provincial fuera de los recintos seleccionados,Gipuzkoa,2.87570960088779e-4,22
+09,53039,NA,Sin direcciones seleccionadas con código postal,Burgos,1.953802785873413e-4,1
+52,PROV_GAP_52,NA,Superficie provincial fuera de los recintos seleccionados,Melilla,6.5740418612957e-5,1
+09,53015,NA,Sin direcciones seleccionadas con código postal,Burgos,2.837660356296692e-5,3
+25,53055,NA,Sin direcciones seleccionadas con código postal,Lleida,6.379882211172116e-8,1

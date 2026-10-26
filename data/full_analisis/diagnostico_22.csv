@@ -1,0 +1,204 @@
+cpro,LAU_CODE,tipo_recinto,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_descartados
+22,22001,municipio,001,Abiego,411,406,200,0,,2,22124;22144
+22,22002,municipio,002,Abizanda,134,133,200,0,,2,
+22,22003,municipio,003,Adahuesca,188,182,200,0,,1,22144
+22,22004,municipio,004,Agüero,403,402,200,0,,1,
+22,22006,municipio,006,Aisa,454,436,200,0,,2,
+22,22007,municipio,007,Albalate de Cinca,708,705,200,0,,1,
+22,22008,municipio,008,Albalatillo,276,275,200,0,,1,
+22,22009,municipio,009,Albelda,670,661,200,0,,1,22560
+22,22011,municipio,011,Albero Alto,117,115,200,0,,1,
+22,22012,municipio,012,Albero Bajo,147,138,200,0,,1,
+22,22013,municipio,013,Alberuela de Tubo,208,208,200,0,,1,
+22,22014,municipio,014,Alcalá de Gurrea,316,315,200,0,,2,22811
+22,22015,municipio,015,Alcalá del Obispo,469,467,200,0,,1,
+22,22016,municipio,016,Alcampell,873,861,200,0,,1,
+22,22017,municipio,017,Alcolea de Cinca,944,941,200,0,,1,
+22,22018,municipio,018,Alcubierre,465,463,200,0,,1,
+22,22019,municipio,019,Alerre,178,176,200,0,,1,
+22,22020,municipio,020,Alfántega,146,143,200,0,,1,
+22,22021,municipio,021,Almudévar,1831,1821,200,0,,2,22282
+22,22022,municipio,022,Almunia de San Juan,663,645,200,0,,2,
+22,22023,municipio,023,Almuniente,454,450,200,0,,2,22253
+22,22024,municipio,024,Alquézar,405,397,200,0,,1,
+22,22025,municipio,025,Altorricón,813,782,200,0,,1,
+22,22027,municipio,027,Angüés,590,584,200,0,,3,
+22,22028,municipio,028,Ansó,612,610,200,0,,2,
+22,22029,municipio,029,Antillón,135,133,200,0,,1,
+22,22032,municipio,032,Aragüés del Puerto,271,250,200,0,,1,22731
+22,22035,municipio,035,Arén,548,528,200,0,,1,
+22,22036,municipio,036,Argavieso,135,134,200,0,,1,
+22,22037,municipio,037,Arguis,327,323,200,0,,2,
+22,22039,municipio,039,Ayerbe,1121,1117,200,0,,3,
+22,22040,municipio,040,Azanuy-Alins,448,446,200,0,,1,
+22,22041,municipio,041,Azara,179,173,200,0,,1,
+22,22042,municipio,042,Azlor,188,188,200,0,,1,
+22,22043,municipio,043,Baélls,225,223,200,0,,1,22560;22572
+22,22044,municipio,044,Bailo,478,470,200,0,,3,22791
+22,22045,municipio,045,Baldellou,268,267,200,0,,1,
+22,22046,municipio,046,Ballobar,960,958,200,0,,1,
+22,22047,municipio,047,Banastás,199,198,200,0,,1,
+22,22048,municipio,048,Barbastro,3765,3727,200,0,,2,
+22,22049,municipio,049,Barbués,102,99,200,0,,1,
+22,22050,municipio,050,Barbuñales,141,140,200,0,,1,
+22,22051,municipio,051,Bárcabo,254,253,200,0,,3,
+22,22052,municipio,052,Belver de Cinca,769,766,200,0,,3,
+22,22053,municipio,053,Benabarre,1293,1289,200,0,,2,
+22,22054,municipio,054,Benasque,1060,1053,200,0,,3,22467
+22,22055,municipio,055,Berbegal,367,367,200,0,,1,
+22,22057,municipio,057,Bielsa,556,553,200,0,,3,
+22,22058,municipio,058,Bierge,445,443,200,0,,2,22147
+22,22059,municipio,059,Biescas,1762,1747,200,0,,7,
+22,22060,municipio,060,Binaced,1079,1077,200,0,,2,
+22,22061,municipio,061,Binéfar,2873,2695,200,0,,2,22511;22512
+22,22062,municipio,062,Bisaurri,286,284,200,0,,2,
+22,22063,municipio,063,Biscarrués,333,328,200,0,,1,
+22,22064,municipio,064,Blecua y Torres,239,236,200,0,,2,
+22,22066,municipio,066,Boltaña,893,860,200,0,,5,
+22,22067,municipio,067,Bonansa,99,95,200,0,,1,
+22,22068,municipio,068,Borau,130,128,200,0,,1,
+22,22069,municipio,069,Broto,660,654,200,0,,5,22377
+22,22072,municipio,072,Caldearenas,409,408,200,0,,3,
+22,22074,municipio,074,Campo,534,534,200,0,,1,
+22,22075,municipio,075,Camporrélls,317,316,200,0,,1,
+22,22076,municipio,076,Canal de Berdún,693,689,200,0,,4,
+22,22077,municipio,077,Candasnos,448,446,200,0,,1,
+22,22078,municipio,078,Canfranc,299,292,200,0,,2,
+22,22079,municipio,079,Capdesaso,184,182,200,0,,1,
+22,22080,municipio,080,Capella,429,424,200,0,,2,
+22,22081,municipio,081,Casbas de Huesca,644,642,200,0,,2,
+22,22082,municipio,082,Castejón del Puente,353,328,200,0,,2,
+22,22083,municipio,083,Castejón de Monegros,586,584,200,0,,1,22221
+22,22084,municipio,084,Castejón de Sos,546,530,200,0,,3,
+22,22085,municipio,085,Castelflorite,120,120,200,0,,1,
+22,22086,municipio,086,Castiello de Jaca,412,394,200,0,,2,
+22,22087,municipio,087,Castigaleu,89,86,200,0,,2,
+22,22088,municipio,088,Castillazuelo,248,241,200,0,,1,22315
+22,22089,municipio,089,Castillonroy,482,478,200,0,,1,
+22,22090,municipio,090,Colungo,197,196,200,0,,1,
+22,22094,municipio,094,Chalamera,145,141,200,0,,1,
+22,22095,municipio,095,Chía,136,134,200,0,,1,
+22,22096,municipio,096,Chimillas,200,194,200,0,,1,
+22,22099,municipio,099,Esplús,515,503,200,0,,2,22511;22550
+22,22102,municipio,102,Estada,228,217,200,0,,1,22312
+22,22103,municipio,103,Estadilla,762,762,200,0,,1,
+22,22105,municipio,105,Estopiñán del Castillo,306,299,200,0,,2,
+22,22106,municipio,106,Fago,161,158,200,0,,1,22771
+22,22107,municipio,107,Fanlo,261,258,200,0,,1,22362
+22,22109,municipio,109,Fiscal,530,520,200,0,,3,22611
+22,22110,municipio,110,Fonz,1008,1006,200,0,,2,
+22,22111,municipio,111,Foradada del Toscar,266,263,200,0,,5,
+22,22112,municipio,112,Fraga,3346,3315,200,0,,2,
+22,22113,municipio,113,La Fueva,773,762,200,0,,5,
+22,22114,municipio,114,Gistaín,147,141,200,0,,1,
+22,22115,municipio,115,El Grado,951,944,200,0,,2,22320
+22,22116,municipio,116,Grañén,1271,1257,200,0,,4,
+22,22117,municipio,117,Graus,2230,2197,200,0,,8,
+22,22119,municipio,119,Gurrea de Gállego,1290,1281,200,0,,2,22283
+22,22122,municipio,122,Hoz de Jaca,238,235,200,0,,1,
+22,22124,municipio,124,Huerto,350,346,200,0,,1,
+22,22125,municipio,125,Huesca,5907,5712,200,0,,10,22190;22191;22193
+22,22126,municipio,126,Ibieca,149,149,200,0,,1,
+22,22127,municipio,127,Igriés,331,214,200,0,,1,22194
+22,22128,municipio,128,Ilche,295,293,200,0,,1,
+22,22129,municipio,129,Isábena,397,393,200,0,,2,
+22,22130,municipio,130,Jaca,4133,3747,200,0,,10,
+22,22131,municipio,131,Jasa,227,11,200,0,,1,
+22,22133,municipio,133,Labuerda,247,243,200,0,,1,22330
+22,22135,municipio,135,Laluenga,255,253,200,0,,1,
+22,22136,municipio,136,Lalueza,928,918,200,0,,3,22269
+22,22137,municipio,137,Lanaja,1272,1270,200,0,,3,
+22,22139,municipio,139,Laperdiguera,121,118,200,0,,1,
+22,22141,municipio,141,Lascellas-Ponzano,301,298,200,0,,1,22132
+22,22142,municipio,142,Lascuarre,224,221,200,0,,1,22587
+22,22143,municipio,143,Laspaúles,431,408,200,0,,4,
+22,22144,municipio,144,Laspuña,400,324,200,0,,1,22363;22364
+22,22149,municipio,149,Loarre,610,610,200,0,,1,
+22,22150,municipio,150,Loporzano,902,877,200,0,,3,22120
+22,22151,municipio,151,Loscorrales,181,177,200,0,,1,
+22,22155,municipio,155,Monesma y Cajigar,77,77,200,0,,1,
+22,22156,municipio,156,Monflorite-Lascasas,369,365,200,0,,2,
+22,22157,municipio,157,Montanuy,459,437,200,0,,3,
+22,22158,municipio,158,Monzón,4788,4531,200,0,,3,22500;22510;22511
+22,22160,municipio,160,Naval,297,296,200,0,,1,
+22,22162,municipio,162,Novales,191,191,200,0,,1,
+22,22163,municipio,163,Nueno,581,567,200,0,,2,
+22,22164,municipio,164,Olvena,118,116,200,0,,1,22424
+22,22165,municipio,165,Ontiñena,591,588,200,0,,1,
+22,22167,municipio,167,Osso de Cinca,408,406,200,0,,2,
+22,22168,municipio,168,Palo,89,87,200,0,,1,
+22,22170,municipio,170,Panticosa,621,584,200,0,,3,22660;22663
+22,22172,municipio,172,Peñalba,534,530,200,0,,1,
+22,22173,municipio,173,Las Peñas de Riglos,892,874,200,0,,5,
+22,22174,municipio,174,Peralta de Alcofea,774,771,200,0,,3,
+22,22175,municipio,175,Peralta de Calasanz,651,648,200,0,,2,22589
+22,22176,municipio,176,Peraltilla,189,184,200,0,,1,
+22,22177,municipio,177,Perarrúa,251,245,200,0,,1,22436
+22,22178,municipio,178,Pertusa,224,222,200,0,,1,
+22,22181,municipio,181,Piracés,104,104,200,0,,1,
+22,22182,municipio,182,Plan,353,348,200,0,,2,
+22,22184,municipio,184,Poleñino,237,236,200,0,,1,
+22,22186,municipio,186,Pozán de Vero,256,255,200,0,,1,
+22,22187,municipio,187,La Puebla de Castro,768,754,200,0,,1,
+22,22188,municipio,188,Puente de Montañana,278,123,200,0,,1,
+22,22189,municipio,189,Puértolas,281,259,200,0,,2,22364;22375
+22,22190,municipio,190,El Pueyo de Araguás,150,126,200,0,,1,22330;22363
+22,22193,municipio,193,Pueyo de Santa Cruz,278,277,200,0,,1,
+22,22195,municipio,195,Quicena,181,161,200,0,,1,22192
+22,22197,municipio,197,Robres,525,521,200,0,,1,22251
+22,22199,municipio,199,Sabiñánigo,3069,2925,200,0,,14,22625
+22,22200,municipio,200,Sahún,348,340,200,0,,3,
+22,22201,municipio,201,Salas Altas,314,312,200,0,,1,
+22,22202,municipio,202,Salas Bajas,198,198,200,0,,1,
+22,22203,municipio,203,Salillas,152,152,200,0,,1,
+22,22204,municipio,204,Sallent de Gállego,1130,1021,200,0,,4,
+22,22205,municipio,205,San Esteban de Litera,852,833,200,0,,1,22400;22500
+22,22206,municipio,206,Sangarrén,258,255,200,0,,1,
+22,22207,municipio,207,San Juan de Plan,128,127,200,0,,1,
+22,22208,municipio,208,Santa Cilia,286,281,200,0,,2,
+22,22209,municipio,209,Santa Cruz de la Serós,213,211,200,0,,2,
+22,22212,municipio,212,Santaliestra y San Quílez,128,126,200,0,,1,
+22,22213,municipio,213,Sariñena,2761,2674,200,0,,4,22210;22212
+22,22214,municipio,214,Secastilla,223,222,200,0,,2,
+22,22215,municipio,215,Seira,186,186,200,0,,2,
+22,22217,municipio,217,Sena,673,670,200,0,,1,22231
+22,22218,municipio,218,Senés de Alcubierre,76,75,200,0,,1,
+22,22220,municipio,220,Sesa,256,255,200,0,,1,
+22,22221,municipio,221,Sesué,182,176,200,0,,1,
+22,22222,municipio,222,Siétamo,768,766,200,0,,3,22192
+22,22223,municipio,223,Sopeira,258,256,200,0,,1,
+22,22225,municipio,225,Tamarite de Litera,1909,1891,200,0,,3,22512;22540;22560
+22,22226,municipio,226,Tardienta,667,663,200,0,,1,22254
+22,22227,municipio,227,Tella-Sin,315,271,200,0,,3,
+22,22228,municipio,228,Tierz,394,366,200,0,,1,22191
+22,22229,municipio,229,Tolva,298,293,200,0,,1,
+22,22230,municipio,230,Torla-Ordesa,426,425,200,0,,3,
+22,22232,municipio,232,Torralba de Aragón,159,155,200,0,,1,22253;22255
+22,22233,municipio,233,Torre la Ribera,122,116,200,0,,3,
+22,22234,municipio,234,Torrente de Cinca,684,679,200,0,,1,
+22,22235,municipio,235,Torres de Alcanadre,164,159,200,0,,1,22210
+22,22236,municipio,236,Torres de Barbués,234,233,200,0,,1,
+22,22239,municipio,239,Tramaced,111,109,200,0,,1,22260
+22,22242,municipio,242,Valfarta,114,113,200,0,,1,
+22,22243,municipio,243,Valle de Bardají,48,45,200,0,,1,
+22,22244,municipio,244,Valle de Lierp,87,84,200,0,,1,
+22,22245,municipio,245,Velilla de Cinca,444,442,200,0,,1,
+22,22246,municipio,246,Beranuy,198,194,200,0,,2,22472
+22,22247,municipio,247,Viacamp y Litera,100,99,200,0,,2,
+22,22248,municipio,248,Vicién,139,139,200,0,,1,
+22,22249,municipio,249,Villanova,154,112,200,0,,1,
+22,22250,municipio,250,Villanúa,701,679,200,0,,1,22860
+22,22251,municipio,251,Villanueva de Sigena,400,399,200,0,,1,
+22,22252,municipio,252,Yebra de Basa,220,219,200,0,,2,
+22,22253,municipio,253,Yésero,204,203,200,0,,1,
+22,22254,municipio,254,Zaidín,1051,1049,200,0,,1,
+22,22901,municipio,901,Valle de Hecho,986,982,200,0,,4,22750
+22,22902,municipio,902,Puente la Reina de Jaca,351,337,200,0,,3,
+22,22903,municipio,903,San Miguel del Cinca,705,691,200,0,,3,22410
+22,22904,municipio,904,La Sotonera,1505,1504,200,0,,4,
+22,22905,municipio,905,Lupiñén-Ortilla,557,554,200,0,,1,
+22,22906,municipio,906,Santa María de Dulcis,204,203,200,0,,2,
+22,22907,municipio,907,Aínsa-Sobrarbe,1322,1286,200,0,,7,22148;22338
+22,22908,municipio,908,Hoz y Costean,357,356,200,0,,2,
+22,22909,municipio,909,Vencillón,207,205,200,0,,1,
+22,53049,condominio,NA,NA,0,0,50,0,,0,

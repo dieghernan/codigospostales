@@ -1,0 +1,13 @@
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+[1] "Spanish_Spain.utf8"
+Linking to GEOS 3.14.1, GDAL 3.12.1, PROJ 9.7.1; sf_use_s2() is TRUE
+Test passed with 2 successes 🎊.
+Test passed with 3 successes 😀.
+Test passed with 778 successes 🎉.
+Test passed with 2 successes 😀.
+Test passed with 5 successes 🥇.
+PUBLICACION VERIFICADA

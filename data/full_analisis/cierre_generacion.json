@@ -1,0 +1,16 @@
+{
+  "fecha": "2026-10-26",
+  "provincias_y_ciudades_autonomas": 52,
+  "codigos_fuente": 10851,
+  "codigos_resultado": 10851,
+  "codigos_ausentes": [],
+  "registros_pendientes": 97,
+  "poligonos_pendientes": 3881,
+  "area_pendiente_km2": 28.004800263379277,
+  "comprobaciones_cierre_superadas": 1021,
+  "temporales_retirados": 106,
+  "bytes_liberados": 96256000,
+  "diagnosticos_archivados": 13,
+  "consolidado_sha256": "18bb573ab4045296160299180d800f310d800525844fed34fbaec56f2f4c3b0c",
+  "correccion_localizada": "publicacion_correcciones.json"
+}

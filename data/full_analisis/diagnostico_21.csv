@@ -1,0 +1,81 @@
+cpro,LAU_CODE,tipo_recinto,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_descartados
+21,21001,municipio,001,Alájar,816,809,200,0,,1,21207
+21,21002,municipio,002,Aljaraque,10382,10257,200,0,,3,21500
+21,21003,municipio,003,El Almendro,1287,953,200,0,,2,
+21,21004,municipio,004,Almonaster la Real,3287,3119,200,0,,6,21230
+21,21005,municipio,005,Almonte,16195,15820,200,0,,3,
+21,21006,municipio,006,Alosno,3769,3761,200,0,,2,21500;21550;21580
+21,21007,municipio,007,Aracena,6433,6362,200,0,,4,21668
+21,21008,municipio,008,Aroche,2140,2134,200,0,,2,
+21,21009,municipio,009,Arroyomolinos de León,1139,1132,200,0,,1,
+21,21010,municipio,010,Ayamonte,10352,9468,200,0,,3,21410;21590
+21,21011,municipio,011,Beas,3576,3487,200,0,,3,21620;21840
+21,21012,municipio,012,Berrocal,564,563,200,0,,1,
+21,21013,municipio,013,Bollullos Par del Condado,7423,7380,200,0,,2,21730
+21,21014,municipio,014,Bonares,3752,3726,200,0,,1,21840
+21,21015,municipio,015,Cabezas Rubias,587,496,200,0,,1,21570
+21,21016,municipio,016,Cala,1130,1103,200,0,,1,
+21,21017,municipio,017,Calañas,2214,2198,200,0,,3,
+21,21018,municipio,018,El Campillo,1885,1695,200,0,,2,21647;21660
+21,21019,municipio,019,Campofrío,809,803,200,0,,1,
+21,21020,municipio,020,Cañaveral de León,585,570,200,0,,1,21280
+21,21021,municipio,021,Cartaya,10704,10444,200,1,21100,3,
+21,21022,municipio,022,Castaño del Robledo,327,325,200,0,,1,
+21,21023,municipio,023,El Cerro de Andévalo,2199,2188,200,0,,3,
+21,21024,municipio,024,Corteconcepción,710,708,200,0,,1,
+21,21025,municipio,025,Cortegana,3657,3556,200,0,,3,
+21,21026,municipio,026,Cortelazor,527,521,200,0,,1,
+21,21027,municipio,027,Cumbres de Enmedio,132,127,200,0,,1,
+21,21028,municipio,028,Cumbres de San Bartolomé,634,618,200,0,,1,21380;21387
+21,21029,municipio,029,Cumbres Mayores,1649,1640,200,0,,1,21386;21387
+21,21030,municipio,030,Chucena,1509,1492,200,0,,1,21740
+21,21031,municipio,031,Encinasola,1697,1693,200,0,,1,
+21,21032,municipio,032,Escacena del Campo,1885,1562,200,0,,1,21880
+21,21033,municipio,033,Fuenteheridos,779,760,200,0,,1,
+21,21034,municipio,034,Galaroza,1377,1304,200,0,,1,
+21,21035,municipio,035,Gibraleón,5567,5399,200,0,,2,21005;21540
+21,21036,municipio,036,La Granada de Río-Tinto,234,229,200,0,,1,
+21,21037,municipio,037,El Granado,473,420,200,1,21593,2,
+21,21038,municipio,038,Higuera de la Sierra,1481,1479,200,0,,1,
+21,21039,municipio,039,Hinojales,422,421,200,0,,1,
+21,21040,municipio,040,Hinojos,2981,2943,200,0,,1,
+21,21041,municipio,041,Huelva,15538,15389,200,0,,7,
+21,21042,municipio,042,Isla Cristina,8405,7741,200,2,21440;21449,6,
+21,21043,municipio,043,Jabugo,1762,1510,200,0,,2,
+21,21044,municipio,044,Lepe,14375,13319,200,0,,2,21450
+21,21045,municipio,045,Linares de la Sierra,427,425,200,0,,1,
+21,21046,municipio,046,Lucena del Puerto,1123,1101,200,0,,1,21830
+21,21047,municipio,047,Manzanilla,1589,1571,200,0,,1,21860
+21,21048,municipio,048,Los Marines,530,518,200,0,,1,21200
+21,21049,municipio,049,Minas de Riotinto,2599,2215,200,0,,2,21650
+21,21050,municipio,050,Moguer,10146,9116,200,0,,2,21810
+21,21051,municipio,051,La Nava,350,339,200,0,,1,21239;21290
+21,21052,municipio,052,Nerva,4075,4068,200,0,,1,
+21,21053,municipio,053,Niebla,2589,2519,200,0,,1,21850
+21,21054,municipio,054,La Palma del Condado,5755,5594,200,0,,1,21710;21850
+21,21055,municipio,055,Palos de la Frontera,5209,4576,200,0,,3,21800
+21,21056,municipio,056,Paterna del Campo,2132,1346,200,0,,1,21870
+21,21057,municipio,057,Paymogo,943,937,200,0,,1,
+21,21058,municipio,058,Puebla de Guzmán,2214,2211,200,0,,2,
+21,21059,municipio,059,Puerto Moral,251,249,200,0,,1,
+21,21060,municipio,060,Punta Umbría,5741,4473,200,0,,2,
+21,21061,municipio,061,Rociana del Condado,4555,4520,200,0,,1,21830
+21,21062,municipio,062,Rosal de la Frontera,1466,1439,200,0,,1,
+21,21063,municipio,063,San Bartolomé de la Torre,2526,2499,200,0,,1,21540
+21,21064,municipio,064,San Juan del Puerto,3348,3258,200,1,21620,4,21500
+21,21065,municipio,065,Sanlúcar de Guadiana,480,310,200,0,,1,
+21,21066,municipio,066,San Silvestre de Guzmán,518,516,200,0,,1,21595
+21,21067,municipio,067,Santa Ana la Real,616,605,200,0,,1,21292;21342
+21,21068,municipio,068,Santa Bárbara de Casa,904,902,200,0,,1,21560
+21,21069,municipio,069,Santa Olalla del Cala,1778,1770,200,0,,1,
+21,21070,municipio,070,Trigueros,5319,5222,200,0,,1,21500;21609;21610;21639
+21,21071,municipio,071,Valdelarco,426,421,200,0,,1,
+21,21072,municipio,072,Valverde del Camino,8057,7962,200,0,,1,21309;21609;21647
+21,21073,municipio,073,Villablanca,1881,1859,200,0,,1,21400
+21,21074,municipio,074,Villalba del Alcor,2199,2193,200,1,21700,2,
+21,21075,municipio,075,Villanueva de las Cruces,398,387,200,0,,1,
+21,21076,municipio,076,Villanueva de los Castillejos,2252,1793,200,0,,1,21450;21593
+21,21077,municipio,077,Villarrasa,1401,1365,200,0,,1,21840
+21,21078,municipio,078,Zalamea la Real,2873,2865,200,0,,3,21650
+21,21079,municipio,079,Zufre,938,931,200,0,,1,
+21,21902,municipio,902,La Zarza-Perrunal,2156,1919,200,0,,2,21300;21350

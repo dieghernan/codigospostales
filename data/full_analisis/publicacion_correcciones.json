@@ -1,0 +1,57 @@
+{
+  "estado": "publicada_y_verificada",
+  "alcance": "monocodigo",
+  "recintos_corregidos": 34,
+  "recintos_adicionales": 27,
+  "cp_ampliados": 30,
+  "codigos_nacionales": 10851,
+  "comprobaciones_superadas": 1021,
+  "area_excluida_gibraltar_km2": 6.203289492664926,
+  "area_asignada_adicional_km2": 159.03598930884195,
+  "area_pendiente_propuesta_km2": 28.004800263379277,
+  "provincias_modificadas": [
+    "01",
+    "09",
+    "11",
+    "19",
+    "20",
+    "23",
+    "24",
+    "25",
+    "26",
+    "31",
+    "37"
+  ],
+  "comparacion": [
+    {
+      "indicador": "codigos_postales",
+      "antes": "10851",
+      "despues": "10851"
+    },
+    {
+      "indicador": "registros_pendientes",
+      "antes": "97",
+      "despues": "97"
+    },
+    {
+      "indicador": "poligonos_pendientes",
+      "antes": "3625",
+      "despues": "3881"
+    },
+    {
+      "indicador": "area_pendiente_km2",
+      "antes": "193.2440790648862",
+      "despues": "28.004800263379277"
+    }
+  ],
+  "consolidado_publicado_sha256": "5d7a417542caa25209431922dd9ae483ba814a45a23b0c9539685f93fcf5bd38",
+  "consolidado_propuesto_sha256": "18bb573ab4045296160299180d800f310d800525844fed34fbaec56f2f4c3b0c",
+  "fecha_publicacion": "2026-10-26T05:23:33.398750+01:00",
+  "base_administrativa": "data/full_analisis/base_admin_publicada.rds",
+  "comprobaciones_postpublicacion_superadas": 790,
+  "log_prepublicacion_sha256": "26b1a97921cdb9dea149b9213340e29751a2876ed67a0abb5ba7faad451502ec",
+  "log_postpublicacion_sha256": "0145c75e3b7b4f2feee37d3d9551a315148fd06014518cafb30580c061f4f7f9",
+  "evidencia": "data/evidencia_correcciones",
+  "manifiesto_evidencia": "data/evidencia_correcciones/manifest.json",
+  "respaldo_local": "Conservado fuera de Git en el directorio de corrección local."
+}

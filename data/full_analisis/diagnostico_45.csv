@@ -1,0 +1,205 @@
+cpro,LAU_CODE,tipo_recinto,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_descartados
+45,45001,municipio,001,Ajofrín,1639,1633,200,0,,1,45100
+45,45002,municipio,002,Alameda de la Sagra,1996,1973,200,0,,1,45250
+45,45003,municipio,003,Albarreal de Tajo,771,770,200,0,,1,
+45,45004,municipio,004,Alcabón,821,818,200,0,,1,
+45,45005,municipio,005,Alcañizo,606,605,200,0,,1,
+45,45006,municipio,006,Alcaudete de la Jara,2100,2090,200,0,,1,45651
+45,45007,municipio,007,Alcolea de Tajo,806,720,200,0,,1,45570
+45,45008,municipio,008,Aldea en Cabo,625,623,200,0,,1,
+45,45009,municipio,009,Aldeanueva de Barbarroya,1327,1324,200,0,,1,
+45,45010,municipio,010,Aldeanueva de San Bartolomé,1012,1011,200,0,,1,
+45,45011,municipio,011,Almendral de la Cañada,804,803,200,0,,1,45630
+45,45012,municipio,012,Almonacid de Toledo,1007,1006,200,0,,1,
+45,45013,municipio,013,Almorox,2495,2415,200,0,,1,45908;45910
+45,45014,municipio,014,Añover de Tajo,3213,3211,200,0,,1,45240
+45,45015,municipio,015,Arcicóllar,998,871,200,0,,1,
+45,45016,municipio,016,Argés,4112,4014,200,1,45160,2,
+45,45017,municipio,017,Azután,290,286,200,0,,1,
+45,45018,municipio,018,Barcience,1185,1182,200,0,,1,45500
+45,45019,municipio,019,Bargas,4981,4216,200,22,45003;45280,3,
+45,45020,municipio,020,Belvís de la Jara,1911,1907,200,0,,1,45686
+45,45021,municipio,021,Borox,2925,2826,200,0,,1,
+45,45022,municipio,022,Buenaventura,865,864,200,0,,1,
+45,45023,municipio,023,Burguillos de Toledo,3147,2874,200,0,,1,45006
+45,45024,municipio,024,Burujón,1256,1253,200,0,,1,
+45,45025,municipio,025,Cabañas de la Sagra,1604,1542,200,1,45591,3,45280;45590
+45,45026,municipio,026,Cabañas de Yepes,659,651,200,0,,1,
+45,45027,municipio,027,Cabezamesada,719,716,200,0,,1,
+45,45028,municipio,028,Calera y Chozas,3577,3526,200,0,,3,
+45,45029,municipio,029,Caleruela,719,718,200,0,,1,
+45,45030,municipio,030,Calzada de Oropesa,1300,1290,200,0,,1,45560
+45,45031,municipio,031,Camarena,2856,2684,200,0,,1,45183
+45,45032,municipio,032,Camarenilla,630,629,200,0,,1,
+45,45033,municipio,033,El Campillo de la Jara,1042,1042,200,0,,1,
+45,45034,municipio,034,Camuñas,1690,1682,200,0,,1,45710
+45,45035,municipio,035,Cardiel de los Montes,785,782,200,0,,1,
+45,45036,municipio,036,Carmena,880,876,200,0,,1,45516
+45,45037,municipio,037,El Carpio de Tajo,2004,2003,200,0,,1,
+45,45038,municipio,038,Carranque,4256,3371,200,1,45217,2,45215
+45,45039,municipio,039,Carriches,444,442,200,0,,1,45530
+45,45040,municipio,040,El Casar de Escalona,4083,4062,200,0,,1,45917
+45,45041,municipio,041,Casarrubios del Monte,4373,4131,200,0,,3,
+45,45042,municipio,042,Casasbuenas,371,302,200,0,,1,45114;45123
+45,45043,municipio,043,Castillo de Bayuela,1470,1439,200,0,,1,45640;45645;45646
+45,45045,municipio,045,Cazalegas,1935,1709,200,0,,1,
+45,45046,municipio,046,Cebolla,2061,2053,200,0,,1,45685
+45,45047,municipio,047,Cedillo del Condado,2055,1899,200,0,,1,45200
+45,45048,municipio,048,Los Cerralbos,610,608,200,0,,1,
+45,45049,municipio,049,Cervera de los Montes,625,613,200,0,,1,
+45,45050,municipio,050,Ciruelos,570,569,200,0,,1,
+45,45051,municipio,051,Cobeja,1183,1179,200,0,,1,
+45,45052,municipio,052,Cobisa,2576,2246,200,34,45004,2,
+45,45053,municipio,053,Consuegra,6420,6388,200,0,,1,45470;45789
+45,45054,municipio,054,Corral de Almaguer,4814,4805,200,0,,1,
+45,45055,municipio,055,Cuerva,1282,1280,200,0,,1,
+45,45056,municipio,056,Chozas de Canales,2670,2669,200,0,,1,45215
+45,45057,municipio,057,Chueca,263,263,200,0,,1,
+45,45058,municipio,058,Domingo Pérez,746,673,200,0,,1,
+45,45059,municipio,059,Dosbarrios,1919,1883,200,0,,1,
+45,45060,municipio,060,Erustes,370,369,200,0,,1,
+45,45061,municipio,061,Escalona,6705,6594,200,0,,1,45900
+45,45062,municipio,062,Escalonilla,1389,1378,200,0,,1,45516;45518
+45,45063,municipio,063,Espinoso del Rey,1138,1130,200,0,,1,
+45,45064,municipio,064,Esquivias,3178,3155,200,0,,1,
+45,45065,municipio,065,La Estrella,976,975,200,0,,1,
+45,45066,municipio,066,Fuensalida,5814,5657,200,0,,1,45182;45512
+45,45067,municipio,067,Gálvez,2243,2240,200,0,,1,
+45,45068,municipio,068,Garciotum,430,428,200,0,,1,45644
+45,45069,municipio,069,Gerindote,1839,1601,200,0,,1,
+45,45070,municipio,070,Guadamur,1462,1456,200,0,,1,
+45,45071,municipio,071,La Guardia,2787,2781,200,0,,1,45311;45770
+45,45072,municipio,072,Las Herencias,1078,952,200,0,,2,
+45,45073,municipio,073,Herreruela de Oropesa,866,865,200,0,,1,
+45,45074,municipio,074,Hinojosa de San Vicente,924,921,200,0,,1,
+45,45075,municipio,075,Hontanar,254,246,200,0,,1,
+45,45076,municipio,076,Hormigos,2181,1975,200,0,,1,
+45,45077,municipio,077,Huecas,966,930,200,7,45510,2,45519
+45,45078,municipio,078,Huerta de Valdecarábanos,1592,1527,200,0,,1,
+45,45079,municipio,079,La Iglesuela del Tiétar,1126,1053,200,0,,1,
+45,45080,municipio,080,Illán de Vacas,50,50,200,0,,1,
+45,45081,municipio,081,Illescas,12016,10950,200,0,,2,45210;45215;45230
+45,45082,municipio,082,Lagartera,1377,1374,200,0,,1,45560
+45,45083,municipio,083,Layos,1103,967,200,0,,1,
+45,45084,municipio,084,Lillo,2873,2819,200,0,,1,45880
+45,45085,municipio,085,Lominchar,1355,1067,200,0,,1,45214
+45,45086,municipio,086,Lucillos,944,900,200,0,,1,
+45,45087,municipio,087,Madridejos,6820,6802,200,0,,1,
+45,45088,municipio,088,Magán,2057,1930,200,0,,1,
+45,45089,municipio,089,Malpica de Tajo,1664,1660,200,0,,3,45690
+45,45090,municipio,090,Manzaneque,525,516,200,0,,1,45400
+45,45091,municipio,091,Maqueda,659,638,200,0,,1,
+45,45092,municipio,092,Marjaliza,390,385,200,0,,1,45470
+45,45093,municipio,093,Marrupe,316,311,200,0,,1,
+45,45094,municipio,094,Mascaraque,629,598,200,0,,1,45400
+45,45095,municipio,095,La Mata,1081,1078,200,0,,1,
+45,45096,municipio,096,Mazarambroz,1201,1188,200,0,,2,45100
+45,45097,municipio,097,Mejorada,1222,1214,200,0,,1,
+45,45098,municipio,098,Menasalbas,2506,2496,200,0,,2,45164
+45,45099,municipio,099,Méntrida,4893,4646,200,0,,1,45909
+45,45100,municipio,100,Mesegar de Tajo,401,396,200,0,,1,45680
+45,45101,municipio,101,Miguel Esteban,3891,3890,200,0,,1,
+45,45102,municipio,102,Mocejón,2748,2695,200,0,,1,45590
+45,45103,municipio,103,Mohedas de la Jara,718,716,200,0,,1,
+45,45104,municipio,104,Montearagón,718,703,200,0,,1,
+45,45105,municipio,105,Montesclaros,654,653,200,0,,1,
+45,45106,municipio,106,Mora,5573,5553,200,0,,1,45430;45700
+45,45107,municipio,107,Nambroca,2971,2643,200,8,45006,3,45112
+45,45108,municipio,108,La Nava de Ricomalillo,965,963,200,0,,1,
+45,45109,municipio,109,Navahermosa,4265,4142,200,0,,2,
+45,45110,municipio,110,Navalcán,2778,2776,200,0,,1,45611
+45,45111,municipio,111,Navalmoralejo,179,176,200,0,,1,
+45,45112,municipio,112,Los Navalmorales,2779,2727,200,0,,2,
+45,45113,municipio,113,Los Navalucillos,3520,3424,200,0,,3,45159
+45,45114,municipio,114,Navamorcuende,1124,1106,200,0,,1,
+45,45115,municipio,115,Noblejas,3589,3443,200,1,45300,2,
+45,45116,municipio,116,Noez,1036,1031,200,0,,1,
+45,45117,municipio,117,Nombela,1506,1482,200,0,,1,45919
+45,45118,municipio,118,Novés,2868,2844,200,7,45500,2,45512;45525
+45,45119,municipio,119,Numancia de la Sagra,2856,2461,200,4,45290,2,45200;45210
+45,45120,municipio,120,Nuño Gómez,483,483,200,0,,1,
+45,45121,municipio,121,Ocaña,2553,2509,200,1,45340,2,45350
+45,45122,municipio,122,Olías del Rey,4825,4161,200,4,45593,2,45590;45592
+45,45123,municipio,123,Ontígola,3667,3301,200,1,45300,2,
+45,45124,municipio,124,Orgaz,2553,2450,200,0,,3,
+45,45125,municipio,125,Oropesa,2677,2627,200,0,,2,45567;45610
+45,45126,municipio,126,Otero,604,576,200,0,,1,
+45,45127,municipio,127,Palomeque,1172,1080,200,0,,1,45212;45215
+45,45128,municipio,128,Pantoja,1805,1740,200,0,,2,
+45,45129,municipio,129,Paredes de Escalona,506,504,200,0,,1,
+45,45130,municipio,130,Parrillas,937,861,200,0,,1,45612
+45,45131,municipio,131,Pelahustán,833,830,200,0,,1,45917
+45,45132,municipio,132,Pepino,2565,2298,200,0,,2,45600
+45,45133,municipio,133,Polán,2493,2473,200,0,,1,
+45,45134,municipio,134,Portillo de Toledo,1339,1092,200,0,,1,45510
+45,45135,municipio,135,La Puebla de Almoradiel,4066,4060,200,0,,1,45850
+45,45136,municipio,136,La Puebla de Montalbán,5013,4891,200,0,,1,
+45,45137,municipio,137,La Pueblanueva,2060,2020,200,0,,2,45654
+45,45138,municipio,138,El Puente del Arzobispo,1092,470,200,0,,1,45571
+45,45139,municipio,139,Puerto de San Vicente,573,572,200,0,,1,45578
+45,45140,municipio,140,Pulgar,1268,1265,200,0,,1,
+45,45141,municipio,141,Quero,1314,1312,200,0,,1,
+45,45142,municipio,142,Quintanar de la Orden,6873,6844,200,1,45820,2,
+45,45143,municipio,143,Quismondo,1462,1441,200,0,,1,
+45,45144,municipio,144,El Real de San Vicente,1380,1377,200,0,,1,
+45,45145,municipio,145,Recas,2316,2218,200,0,,1,
+45,45146,municipio,146,Retamoso de la Jara,311,308,200,0,,1,45653
+45,45147,municipio,147,Rielves,841,832,200,0,,1,
+45,45148,municipio,148,Robledo del Mazo,962,958,200,0,,5,
+45,45149,municipio,149,El Romeral,1218,1218,200,0,,1,
+45,45150,municipio,150,San Bartolomé de las Abiertas,858,855,200,0,,1,
+45,45151,municipio,151,San Martín de Montalbán,1147,1144,200,0,,1,
+45,45152,municipio,152,San Martín de Pusa,910,906,200,0,,1,45179
+45,45153,municipio,153,San Pablo de los Montes,2053,2050,200,0,,1,
+45,45154,municipio,154,San Román de los Montes,2903,2655,200,0,,1,
+45,45155,municipio,155,Santa Ana de Pusa,804,447,200,0,,1,
+45,45156,municipio,156,Santa Cruz de la Zarza,3498,3488,200,0,,1,
+45,45157,municipio,157,Santa Cruz del Retamar,4258,3760,200,0,,3,45512;45910
+45,45158,municipio,158,Santa Olalla,2711,2682,200,0,,1,45515;45531
+45,45159,municipio,159,Sartajada,217,217,200,0,,1,
+45,45160,municipio,160,Segurilla,1190,1187,200,0,,1,45622
+45,45161,municipio,161,Seseña,9073,8722,200,0,,2,45222
+45,45162,municipio,162,Sevilleja de la Jara,1951,1945,200,0,,3,
+45,45163,municipio,163,Sonseca,7238,6707,200,0,,3,45450
+45,45164,municipio,164,Sotillo de las Palomas,445,444,200,0,,1,
+45,45165,municipio,165,Talavera de la Reina,13814,13427,200,3,45638;45686,6,45683
+45,45166,municipio,166,Tembleque,2037,2029,200,0,,1,
+45,45167,municipio,167,El Toboso,1738,1730,200,0,,1,45830
+45,45168,municipio,168,Toledo,13039,11444,200,0,,9,45191;45593
+45,45169,municipio,169,Torralba de Oropesa,387,383,200,0,,1,
+45,45170,municipio,170,Torrecilla de la Jara,633,564,200,0,,1,45652
+45,45171,municipio,171,La Torre de Esteban Hambrán,1693,1657,200,0,,1,
+45,45172,municipio,172,Torrico,918,915,200,0,,1,
+45,45173,municipio,173,Torrijos,5143,4923,200,0,,2,
+45,45174,municipio,174,Totanés,385,378,200,0,,1,
+45,45175,municipio,175,Turleque,1039,1033,200,0,,1,45700
+45,45176,municipio,176,Ugena,2893,2500,200,2,28979;45200,3,
+45,45177,municipio,177,Urda,2753,2749,200,0,,1,
+45,45179,municipio,179,Valdeverdeja,1339,1338,200,0,,1,
+45,45180,municipio,180,Valmojado,3349,3345,200,0,,1,45950
+45,45181,municipio,181,Velada,2372,2338,200,0,,1,45611
+45,45182,municipio,182,Las Ventas con Peña Aguilera,1745,1740,200,0,,1,
+45,45183,municipio,183,Las Ventas de Retamosa,3583,3246,200,0,,2,
+45,45184,municipio,184,Las Ventas de San Julián,342,312,200,0,,1,
+45,45185,municipio,185,Villacañas,6542,6514,200,0,,1,
+45,45186,municipio,186,La Villa de Don Fadrique,3606,3606,200,0,,1,
+45,45187,municipio,187,Villafranca de los Caballeros,4033,3980,200,0,,1,45720
+45,45188,municipio,188,Villaluenga de la Sagra,3054,2894,200,0,,1,45529
+45,45189,municipio,189,Villamiel de Toledo,891,891,200,0,,1,
+45,45190,municipio,190,Villaminaya,498,497,200,0,,1,
+45,45191,municipio,191,Villamuelas,645,643,200,0,,1,
+45,45192,municipio,192,Villanueva de Alcardete,3352,3336,200,0,,1,45840
+45,45193,municipio,193,Villanueva de Bogas,832,829,200,0,,1,
+45,45194,municipio,194,Villarejo de Montalbán,157,157,200,0,,1,
+45,45195,municipio,195,Villarrubia de Santiago,2602,2591,200,0,,1,
+45,45196,municipio,196,Villaseca de la Sagra,1075,1055,200,0,,2,45291
+45,45197,municipio,197,Villasequilla,2080,2078,200,0,,1,45313
+45,45198,municipio,198,Villatobas,2300,2184,200,0,,1,
+45,45199,municipio,199,El Viso de San Juan,4488,3815,200,9,45200,2,45213;45216
+45,45200,municipio,200,Los Yébenes,3886,3863,200,0,,1,45479
+45,45201,municipio,201,Yeles,3112,2963,200,0,,1,
+45,45202,municipio,202,Yepes,3657,3600,200,0,,1,
+45,45203,municipio,203,Yuncler,1962,1855,200,0,,1,45210
+45,45204,municipio,204,Yunclillos,807,806,200,0,,1,
+45,45205,municipio,205,Yuncos,6732,5542,200,3,45230,3,45214;45529
+45,45901,municipio,901,Santo Domingo-Caudilla,1778,1773,200,0,,1,

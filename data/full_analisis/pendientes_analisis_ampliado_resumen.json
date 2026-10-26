@@ -1,0 +1,27 @@
+{
+  "fecha": "2026-10-26",
+  "recintos_estudiados": 46,
+  "fuentes_provinciales_revisadas": 13,
+  "puntos_fuente_interiores": 0,
+  "consultas_wms": 246,
+  "errores_wms": 0,
+  "clasificacion": {
+    "Un CP en muestras; revisar diferencia de contornos": 27,
+    "Varios CP confirmados en muestras": 8,
+    "Sin coincidencia de identificador administrativo": 4,
+    "Un CP con cobertura geométrica >=99 %": 7
+  },
+  "area_recintos_km2": 186.96351371874144,
+  "area_intersectada_wms_km2": 178.66156601057665,
+  "area_sin_interseccion_wms_km2": 8.30194770816478,
+  "codigos_observados_no_presentes_consolidado": [],
+  "fragmentos_limites_excluyendo_gibraltar": 3577,
+  "area_fragmentos_excluyendo_gibraltar_m2": 77275.85347980772,
+  "fragmentos_por_tamano": {
+    "mas_1000_m2": 7,
+    "100_a_1000_m2": 139,
+    "1_a_100_m2": 2173,
+    "menos_1_m2": 1258
+  },
+  "resultados_postales_modificados": false
+}

@@ -1,7 +1,98 @@
-COD_POSTAL,codauto,ine.ccaa.name,cpro,ine.prov.name,cmun,name,LAU_CODE
-NA,08,Castilla - La Mancha,02,Albacete,NA,NA,53003
-NA,08,Castilla - La Mancha,19,Guadalajara,NA,NA,53047
-NA,01,Andalucía,23,Jaén,NA,NA,53050
-NA,13,"Madrid, Comunidad de",28,Madrid,NA,NA,53058
-NA,13,"Madrid, Comunidad de",28,Madrid,NA,NA,53057
-NA,07,Castilla y León,40,Segovia,NA,NA,53074
+cpro,LAU_CODE,nombre,motivo
+01,53001,NA,Sin direcciones seleccionadas con código postal
+01,PROV_GAP_01,NA,Superficie provincial fuera de los recintos seleccionados
+02,PROV_GAP_02,NA,Superficie provincial fuera de los recintos seleccionados
+03,PROV_GAP_03,NA,Superficie provincial fuera de los recintos seleccionados
+04,PROV_GAP_04,NA,Superficie provincial fuera de los recintos seleccionados
+05,PROV_GAP_05,NA,Superficie provincial fuera de los recintos seleccionados
+06,PROV_GAP_06,NA,Superficie provincial fuera de los recintos seleccionados
+07,PROV_GAP_07,NA,Superficie provincial fuera de los recintos seleccionados
+08,PROV_GAP_08,NA,Superficie provincial fuera de los recintos seleccionados
+09,53005,NA,Sin direcciones seleccionadas con código postal
+09,53040,NA,Sin direcciones seleccionadas con código postal
+09,53041,NA,Sin direcciones seleccionadas con código postal
+09,53038,NA,Sin direcciones seleccionadas con código postal
+09,53039,NA,Sin direcciones seleccionadas con código postal
+09,53007,NA,Sin direcciones seleccionadas con código postal
+09,53006,NA,Sin direcciones seleccionadas con código postal
+09,53035,NA,Sin direcciones seleccionadas con código postal
+09,53034,NA,Sin direcciones seleccionadas con código postal
+09,53033,NA,Sin direcciones seleccionadas con código postal
+09,53019,NA,Sin direcciones seleccionadas con código postal
+09,53032,NA,Sin direcciones seleccionadas con código postal
+09,53018,NA,Sin direcciones seleccionadas con código postal
+09,53046,NA,Sin direcciones seleccionadas con código postal
+09,53014,NA,Sin direcciones seleccionadas con código postal
+09,53043,NA,Sin direcciones seleccionadas con código postal
+09,53023,NA,Sin direcciones seleccionadas con código postal
+09,53022,NA,Sin direcciones seleccionadas con código postal
+09,53017,NA,Sin direcciones seleccionadas con código postal
+09,53028,NA,Sin direcciones seleccionadas con código postal
+09,53015,NA,Sin direcciones seleccionadas con código postal
+09,53012,NA,Sin direcciones seleccionadas con código postal
+09,53013,NA,Sin direcciones seleccionadas con código postal
+09,53031,NA,Sin direcciones seleccionadas con código postal
+09,PROV_GAP_09,NA,Superficie provincial fuera de los recintos seleccionados
+10,PROV_GAP_10,NA,Superficie provincial fuera de los recintos seleccionados
+11,PROV_GAP_11,NA,Superficie provincial fuera de los recintos seleccionados
+12,PROV_GAP_12,NA,Superficie provincial fuera de los recintos seleccionados
+13,PROV_GAP_13,NA,Superficie provincial fuera de los recintos seleccionados
+14,PROV_GAP_14,NA,Superficie provincial fuera de los recintos seleccionados
+15,PROV_GAP_15,NA,Superficie provincial fuera de los recintos seleccionados
+16,PROV_GAP_16,NA,Superficie provincial fuera de los recintos seleccionados
+17,PROV_GAP_17,NA,Superficie provincial fuera de los recintos seleccionados
+18,PROV_GAP_18,NA,Superficie provincial fuera de los recintos seleccionados
+19,53047,NA,Sin direcciones seleccionadas con código postal
+19,PROV_GAP_19,NA,Superficie provincial fuera de los recintos seleccionados
+20,53048,NA,Sin direcciones seleccionadas con código postal
+20,PROV_GAP_20,NA,Superficie provincial fuera de los recintos seleccionados
+21,PROV_GAP_21,NA,Superficie provincial fuera de los recintos seleccionados
+22,53049,NA,Sin direcciones seleccionadas con código postal
+22,PROV_GAP_22,NA,Superficie provincial fuera de los recintos seleccionados
+23,53050,NA,Sin direcciones seleccionadas con código postal
+23,PROV_GAP_23,NA,Superficie provincial fuera de los recintos seleccionados
+24,53051,NA,Sin direcciones seleccionadas con código postal
+24,53053,NA,Sin direcciones seleccionadas con código postal
+24,53054,NA,Sin direcciones seleccionadas con código postal
+24,PROV_GAP_24,NA,Superficie provincial fuera de los recintos seleccionados
+25,53055,NA,Sin direcciones seleccionadas con código postal
+25,PROV_GAP_25,NA,Superficie provincial fuera de los recintos seleccionados
+26,53056,NA,Sin direcciones seleccionadas con código postal
+26,PROV_GAP_26,NA,Superficie provincial fuera de los recintos seleccionados
+27,PROV_GAP_27,NA,Superficie provincial fuera de los recintos seleccionados
+28,53058,NA,Sin direcciones seleccionadas con código postal
+28,PROV_GAP_28,NA,Superficie provincial fuera de los recintos seleccionados
+29,PROV_GAP_29,NA,Superficie provincial fuera de los recintos seleccionados
+30,PROV_GAP_30,NA,Superficie provincial fuera de los recintos seleccionados
+31,53060,NA,Sin direcciones seleccionadas con código postal
+31,53067,NA,Sin direcciones seleccionadas con código postal
+31,53061,NA,Sin direcciones seleccionadas con código postal
+31,53065,NA,Sin direcciones seleccionadas con código postal
+31,53070,NA,Sin direcciones seleccionadas con código postal
+31,53066,NA,Sin direcciones seleccionadas con código postal
+31,53064,NA,Sin direcciones seleccionadas con código postal
+31,53069,NA,Sin direcciones seleccionadas con código postal
+31,53062,NA,Sin direcciones seleccionadas con código postal
+31,PROV_GAP_31,NA,Superficie provincial fuera de los recintos seleccionados
+32,PROV_GAP_32,NA,Superficie provincial fuera de los recintos seleccionados
+33,PROV_GAP_33,NA,Superficie provincial fuera de los recintos seleccionados
+34,PROV_GAP_34,NA,Superficie provincial fuera de los recintos seleccionados
+35,PROV_GAP_35,NA,Superficie provincial fuera de los recintos seleccionados
+36,PROV_GAP_36,NA,Superficie provincial fuera de los recintos seleccionados
+37,53071,NA,Sin direcciones seleccionadas con código postal
+37,PROV_GAP_37,NA,Superficie provincial fuera de los recintos seleccionados
+38,PROV_GAP_38,NA,Superficie provincial fuera de los recintos seleccionados
+39,PROV_GAP_39,NA,Superficie provincial fuera de los recintos seleccionados
+40,PROV_GAP_40,NA,Superficie provincial fuera de los recintos seleccionados
+41,PROV_GAP_41,NA,Superficie provincial fuera de los recintos seleccionados
+42,PROV_GAP_42,NA,Superficie provincial fuera de los recintos seleccionados
+43,PROV_GAP_43,NA,Superficie provincial fuera de los recintos seleccionados
+44,53077,NA,Sin direcciones seleccionadas con código postal
+44,PROV_GAP_44,NA,Superficie provincial fuera de los recintos seleccionados
+45,PROV_GAP_45,NA,Superficie provincial fuera de los recintos seleccionados
+46,PROV_GAP_46,NA,Superficie provincial fuera de los recintos seleccionados
+47,PROV_GAP_47,NA,Superficie provincial fuera de los recintos seleccionados
+48,PROV_GAP_48,NA,Superficie provincial fuera de los recintos seleccionados
+49,PROV_GAP_49,NA,Superficie provincial fuera de los recintos seleccionados
+50,PROV_GAP_50,NA,Superficie provincial fuera de los recintos seleccionados
+52,PROV_GAP_52,NA,Superficie provincial fuera de los recintos seleccionados

@@ -1,0 +1,239 @@
+cpro,LAU_CODE,tipo_recinto,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_descartados
+16,16001,municipio,001,Abia de la Obispalía,403,396,200,1,16194,2,
+16,16002,municipio,002,El Acebrón,317,314,200,0,,1,16411;16413
+16,16003,municipio,003,Alarcón,405,396,200,0,,1,16118;16239
+16,16004,municipio,004,Albaladejo del Cuende,561,561,200,0,,1,
+16,16005,municipio,005,Albalate de las Nogueras,808,805,200,0,,1,
+16,16006,municipio,006,Albendea,469,467,200,0,,1,
+16,16007,municipio,007,La Alberca de Záncara,1708,1701,200,0,,1,
+16,16008,municipio,008,Alcalá de la Vega,685,681,200,0,,1,16311
+16,16009,municipio,009,Alcantud,417,416,200,0,,1,
+16,16010,municipio,010,Alcázar del Rey,441,438,200,0,,1,
+16,16011,municipio,011,Alcohujate,296,295,200,0,,1,
+16,16012,municipio,012,Alconchel de la Estrella,295,295,200,0,,1,
+16,16013,municipio,013,Algarra,111,110,200,0,,1,
+16,16014,municipio,014,Aliaguilla,1231,1229,200,0,,1,
+16,16015,municipio,015,La Almarcha,867,858,200,0,,1,
+16,16016,municipio,016,Almendros,510,507,200,0,,1,
+16,16017,municipio,017,Almodóvar del Pinar,613,607,200,1,16216,2,
+16,16018,municipio,018,Almonacid del Marquesado,635,634,200,0,,1,
+16,16019,municipio,019,Altarejos,981,979,200,0,,2,
+16,16020,municipio,020,Arandilla del Arroyo,163,160,200,0,,1,
+16,16022,municipio,022,Arcos de la Sierra,430,430,200,0,,1,
+16,16023,municipio,023,Chillarón de Cuenca,1195,1020,200,0,,3,
+16,16024,municipio,024,Arguisuelas,436,431,200,0,,1,16373
+16,16025,municipio,025,Arrancacepas,226,224,200,0,,1,16842
+16,16026,municipio,026,Atalaya del Cañavate,327,321,200,0,,1,16600
+16,16027,municipio,027,Barajas de Melo,2298,2054,200,0,,1,16461
+16,16029,municipio,029,Barchín del Hoyo,355,355,200,0,,1,
+16,16030,municipio,030,Bascuñana de San Pedro,136,135,200,0,,1,
+16,16031,municipio,031,Beamud,321,319,200,0,,1,
+16,16032,municipio,032,Belinchón,662,652,200,1,16400,2,
+16,16033,municipio,033,Belmonte,2236,2221,200,0,,1,
+16,16034,municipio,034,Belmontejo,481,478,200,0,,1,
+16,16035,municipio,035,Beteta,796,788,200,0,,3,
+16,16036,municipio,036,Boniches,467,466,200,0,,1,
+16,16038,municipio,038,Buciegas,283,282,200,0,,1,
+16,16039,municipio,039,Buenache de Alarcón,1040,1040,200,0,,1,
+16,16040,municipio,040,Buenache de la Sierra,259,259,200,0,,1,
+16,16041,municipio,041,Buendía,878,876,200,0,,1,
+16,16042,municipio,042,Campillo de Altobuey,2117,2115,200,0,,1,
+16,16043,municipio,043,Campillos-Paravientos,398,395,200,0,,1,
+16,16044,municipio,044,Campillos-Sierra,286,285,200,0,,1,
+16,16045,municipio,045,Canalejas del Arroyo,908,906,200,0,,1,16856
+16,16046,municipio,046,Cañada del Hoyo,512,504,200,0,,1,
+16,16047,municipio,047,Cañada Juncosa,407,400,200,0,,1,16730
+16,16048,municipio,048,Cañamares,961,958,200,0,,1,16891
+16,16049,municipio,049,El Cañavate,331,330,200,0,,1,
+16,16050,municipio,050,Cañaveras,741,741,200,0,,1,
+16,16051,municipio,051,Cañaveruelas,510,509,200,0,,1,
+16,16052,municipio,052,Cañete,1264,1262,200,0,,1,
+16,16053,municipio,053,Cañizares,850,843,200,0,,3,
+16,16055,municipio,055,Carboneras de Guadazaón,1467,1463,200,0,,1,16390
+16,16056,municipio,056,Cardenete,1015,1012,200,0,,1,
+16,16057,municipio,057,Carrascosa,311,310,200,0,,2,
+16,16058,municipio,058,Carrascosa de Haro,232,232,200,0,,1,
+16,16060,municipio,060,Casas de Benítez,1099,657,200,0,,1,16700
+16,16061,municipio,061,Casas de Fernando Alonso,1263,1263,200,0,,1,
+16,16062,municipio,062,Casas de Garcimolina,231,231,200,0,,1,
+16,16063,municipio,063,Casas de Guijarro,203,202,200,0,,1,
+16,16064,municipio,064,Casas de Haro,1144,1138,200,0,,1,16612
+16,16065,municipio,065,Casas de los Pinos,520,513,200,0,,1,16600
+16,16066,municipio,066,Casasimarro,3128,3123,200,0,,1,
+16,16067,municipio,067,Castejón,608,607,200,0,,1,
+16,16068,municipio,068,Castillejo de Iniesta,300,297,200,0,,1,
+16,16070,municipio,070,Castillejo-Sierra,206,205,200,0,,1,
+16,16071,municipio,071,Castillo-Albaráñez,121,120,200,0,,1,
+16,16072,municipio,072,Castillo de Garcimuñoz,537,530,200,0,,2,16100
+16,16073,municipio,073,Cervera del Llano,614,609,200,0,,1,
+16,16074,municipio,074,La Cierva,227,225,200,0,,1,
+16,16078,municipio,078,Cuenca,10745,10581,200,1,16195,9,16152;16190
+16,16079,municipio,079,Cueva del Hierro,125,124,200,0,,1,
+16,16081,municipio,081,Chumillas,136,136,200,0,,1,
+16,16082,municipio,082,Enguídanos,1210,1206,200,0,,1,16371
+16,16083,municipio,083,Fresneda de Altarejos,269,263,200,0,,1,16122;16780
+16,16084,municipio,084,Fresneda de la Sierra,264,264,200,0,,1,
+16,16085,municipio,085,La Frontera,628,625,200,0,,1,
+16,16086,municipio,086,Fuente de Pedro Naharro,1495,1495,200,0,,1,
+16,16087,municipio,087,Fuentelespino de Haro,433,430,200,0,,1,16432
+16,16088,municipio,088,Fuentelespino de Moya,403,403,200,0,,1,
+16,16089,municipio,089,Fuentes,475,473,200,0,,1,
+16,16091,municipio,091,Fuertescusa,327,325,200,0,,1,
+16,16092,municipio,092,Gabaldón,302,302,200,0,,1,
+16,16093,municipio,093,Garaballa,420,418,200,0,,1,
+16,16094,municipio,094,Gascueña,594,594,200,0,,1,
+16,16095,municipio,095,Graja de Campalbo,245,244,200,0,,1,
+16,16096,municipio,096,Graja de Iniesta,400,395,200,0,,1,16269
+16,16097,municipio,097,Henarejos,689,689,200,0,,1,
+16,16098,municipio,098,El Herrumblar,833,831,200,0,,1,
+16,16099,municipio,099,La Hinojosa,486,482,200,0,,1,
+16,16100,municipio,100,Los Hinojosos,1210,1206,200,0,,1,
+16,16101,municipio,101,El Hito,355,355,200,0,,1,
+16,16102,municipio,102,Honrubia,1486,1485,200,0,,1,
+16,16103,municipio,103,Hontanaya,562,561,200,0,,1,
+16,16104,municipio,104,Hontecillas,302,302,200,0,,1,
+16,16106,municipio,106,Horcajo de Santiago,3387,3371,200,0,,1,
+16,16107,municipio,107,Huélamo,337,334,200,0,,1,
+16,16108,municipio,108,Huelves,236,236,200,0,,1,
+16,16109,municipio,109,Huérguina,193,193,200,0,,1,
+16,16110,municipio,110,Huerta de la Obispalía,304,302,200,0,,1,
+16,16111,municipio,111,Huerta del Marquesado,464,461,200,0,,1,
+16,16112,municipio,112,Huete,3938,3933,200,0,,7,16522
+16,16113,municipio,113,Iniesta,3076,3067,200,0,,3,16210
+16,16115,municipio,115,Laguna del Marquesado,239,238,200,0,,1,16152
+16,16116,municipio,116,Lagunaseca,299,298,200,0,,1,
+16,16117,municipio,117,Landete,1741,1734,200,0,,2,
+16,16118,municipio,118,Ledaña,1748,1737,200,0,,1,16238
+16,16119,municipio,119,Leganiel,611,599,200,0,,1,
+16,16121,municipio,121,Las Majadas,539,539,200,0,,1,
+16,16122,municipio,122,Mariana,536,535,200,0,,1,
+16,16123,municipio,123,Masegosa,371,369,200,0,,1,
+16,16124,municipio,124,Las Mesas,1911,1902,200,0,,1,
+16,16125,municipio,125,Minglanilla,2262,2252,200,0,,1,16269
+16,16126,municipio,126,Mira,1150,1143,200,0,,1,16372
+16,16128,municipio,128,Monreal del Llano,98,97,200,0,,1,
+16,16129,municipio,129,Montalbanejo,334,334,200,0,,1,
+16,16130,municipio,130,Montalbo,1269,1263,200,0,,1,
+16,16131,municipio,131,Monteagudo de las Salinas,252,250,200,0,,1,
+16,16132,municipio,132,Mota de Altarejos,147,146,200,0,,1,
+16,16133,municipio,133,Mota del Cuervo,4929,4925,200,0,,1,
+16,16134,municipio,134,Motilla del Palancar,3942,3926,200,1,16240,2,
+16,16135,municipio,135,Moya,943,940,200,0,,2,16336;16339
+16,16137,municipio,137,Narboneta,295,294,200,0,,1,
+16,16139,municipio,139,Olivares de Júcar,974,971,200,0,,1,16111
+16,16140,municipio,140,Olmeda de la Cuesta,273,270,200,0,,1,16851
+16,16141,municipio,141,Olmeda del Rey,534,531,200,0,,1,16120
+16,16142,municipio,142,Olmedilla de Alarcón,246,245,200,0,,1,
+16,16143,municipio,143,Olmedilla de Eliz,221,220,200,0,,1,
+16,16145,municipio,145,Osa de la Vega,740,740,200,0,,1,
+16,16146,municipio,146,Pajarón,286,286,200,0,,1,
+16,16147,municipio,147,Pajaroncillo,225,224,200,0,,1,
+16,16148,municipio,148,Palomares del Campo,1165,1162,200,0,,1,
+16,16149,municipio,149,Palomera,354,352,200,0,,1,
+16,16150,municipio,150,Paracuellos,400,399,200,0,,1,
+16,16151,municipio,151,Paredes,99,98,200,0,,1,
+16,16152,municipio,152,La Parra de las Vegas,245,242,200,0,,1,16122;16781
+16,16153,municipio,153,El Pedernoso,1204,1203,200,0,,1,
+16,16154,municipio,154,Las Pedroñeras,4897,4890,200,1,02600,2,16638
+16,16155,municipio,155,El Peral,667,661,200,0,,1,
+16,16156,municipio,156,La Peraleja,605,604,200,0,,1,
+16,16157,municipio,157,La Pesquera,488,487,200,0,,1,
+16,16158,municipio,158,El Picazo,1044,804,200,0,,1,
+16,16159,municipio,159,Pinarejo,446,446,200,0,,1,
+16,16160,municipio,160,Pineda de Gigüela,471,468,200,0,,1,
+16,16161,municipio,161,Piqueras del Castillo,185,185,200,0,,1,
+16,16162,municipio,162,Portalrubio de Guadamejud,391,391,200,0,,1,
+16,16163,municipio,163,Portilla,229,228,200,0,,1,
+16,16165,municipio,165,Poyatos,286,286,200,1,16146,2,
+16,16166,municipio,166,Pozoamargo,478,445,200,0,,1,16611
+16,16167,municipio,167,Pozorrubio de Santiago,708,707,200,0,,1,16415
+16,16169,municipio,169,El Pozuelo,232,232,200,0,,1,
+16,16170,municipio,170,Priego,1443,1438,200,0,,1,
+16,16171,municipio,171,El Provencio,2498,2498,200,1,02600,2,
+16,16172,municipio,172,Puebla de Almenara,660,659,200,0,,1,
+16,16173,municipio,173,El Valle de Altomira,1448,1442,200,0,,2,
+16,16174,municipio,174,Puebla del Salvador,452,446,200,0,,1,
+16,16175,municipio,175,Quintanar del Rey,4684,4675,200,0,,1,16230
+16,16176,municipio,176,Rada de Haro,141,140,200,0,,1,
+16,16177,municipio,177,Reíllo,418,417,200,0,,1,
+16,16181,municipio,181,Rozalén del Monte,254,253,200,0,,1,
+16,16185,municipio,185,Saceda-Trasierra,279,276,200,0,,1,
+16,16186,municipio,186,Saelices,946,946,200,0,,1,
+16,16187,municipio,187,Salinas del Manzano,345,345,200,0,,1,
+16,16188,municipio,188,Salmeroncillos,316,315,200,0,,1,
+16,16189,municipio,189,Salvacañete,548,546,200,0,,1,
+16,16190,municipio,190,San Clemente,4271,4255,200,1,02600,2,16670;16709
+16,16191,municipio,191,San Lorenzo de la Parrilla,1468,1466,200,0,,1,
+16,16192,municipio,192,San Martín de Boniches,238,236,200,0,,1,16311
+16,16193,municipio,193,San Pedro Palmiches,419,419,200,0,,1,
+16,16194,municipio,194,Santa Cruz de Moya,1300,1295,200,0,,2,
+16,16195,municipio,195,Santa María del Campo Rus,989,988,200,0,,1,16622
+16,16196,municipio,196,Santa María de los Llanos,959,914,200,0,,1,16638
+16,16197,municipio,197,Santa María del Val,243,241,200,0,,1,
+16,16198,municipio,198,Sisante,1986,1761,200,0,,1,16707;16710
+16,16199,municipio,199,Solera de Gabaldón,115,112,200,0,,1,
+16,16202,municipio,202,Talayuelas,1968,1965,200,0,,2,
+16,16203,municipio,203,Tarancón,5314,5293,200,0,,1,
+16,16204,municipio,204,Tébar,776,772,200,0,,1,
+16,16205,municipio,205,Tejadillos,469,469,200,0,,1,
+16,16206,municipio,206,Tinajas,786,785,200,0,,1,
+16,16209,municipio,209,Torralba,494,493,200,0,,1,16843
+16,16211,municipio,211,Torrejoncillo del Rey,2155,2150,200,0,,3,
+16,16212,municipio,212,Torrubia del Campo,532,529,200,0,,1,
+16,16213,municipio,213,Torrubia del Castillo,157,156,200,0,,1,
+16,16215,municipio,215,Tragacete,541,539,200,0,,1,
+16,16216,municipio,216,Tresjuncos,598,596,200,0,,1,
+16,16217,municipio,217,Tribaldos,347,347,200,0,,1,
+16,16218,municipio,218,Uclés,577,573,200,0,,1,
+16,16219,municipio,219,Uña,321,258,200,0,,1,
+16,16224,municipio,224,Valdemeca,582,581,200,0,,1,
+16,16225,municipio,225,Valdemorillo de la Sierra,248,244,200,0,,1,16316
+16,16227,municipio,227,Valdemoro-Sierra,662,661,200,0,,1,
+16,16228,municipio,228,Valdeolivas,661,661,200,0,,1,
+16,16231,municipio,231,Valhermoso de la Fuente,199,198,200,0,,1,
+16,16234,municipio,234,Valsalobre,281,280,200,0,,1,16870
+16,16236,municipio,236,Valverde de Júcar,1895,1891,200,0,,1,16120;16739
+16,16237,municipio,237,Valverdejo,220,219,200,0,,1,
+16,16238,municipio,238,Vara de Rey,1083,1078,200,0,,1,16600
+16,16239,municipio,239,Vega del Codorno,504,500,200,0,,2,
+16,16240,municipio,240,Vellisca,529,528,200,0,,1,
+16,16242,municipio,242,Villaconejos de Trabaque,940,937,200,0,,1,
+16,16243,municipio,243,Villaescusa de Haro,804,794,200,0,,2,
+16,16244,municipio,244,Villagarcía del Llano,1078,1039,200,0,,2,16234
+16,16245,municipio,245,Villalba de la Sierra,910,907,200,0,,1,
+16,16246,municipio,246,Villalba del Rey,1367,1364,200,0,,1,
+16,16247,municipio,247,Villalgordo del Marquesado,283,283,200,0,,1,
+16,16248,municipio,248,Villalpardo,1220,1220,200,0,,1,
+16,16249,municipio,249,Villamayor de Santiago,3024,3019,200,0,,1,
+16,16250,municipio,250,Villanueva de Guadamejud,446,446,200,0,,1,
+16,16251,municipio,251,Villanueva de la Jara,2370,2247,200,0,,3,16239
+16,16253,municipio,253,Villar de Cañas,1660,1609,200,0,,1,16442
+16,16254,municipio,254,Villar de Domingo García,639,637,200,0,,2,
+16,16255,municipio,255,Villar de la Encina,377,374,200,0,,1,16647;16649
+16,16258,municipio,258,Villar del Humo,881,880,200,0,,1,
+16,16259,municipio,259,Villar del Infantado,270,267,200,0,,1,
+16,16263,municipio,263,Villar de Olalla,1809,1797,200,0,,2,16194
+16,16264,municipio,264,Villarejo de Fuentes,943,939,200,0,,1,16647
+16,16265,municipio,265,Villarejo de la Peñuela,133,131,200,0,,1,
+16,16266,municipio,266,Villarejo-Periesteban,818,817,200,0,,1,16442
+16,16269,municipio,269,Villares del Saz,1240,1232,200,0,,1,16433;16771
+16,16270,municipio,270,Villarrubio,390,385,200,0,,1,
+16,16271,municipio,271,Villarta,1064,1059,200,0,,1,
+16,16272,municipio,272,Villas de la Ventosa,1824,1824,200,0,,1,
+16,16273,municipio,273,Villaverde y Pasaconsol,612,612,200,0,,1,
+16,16274,municipio,274,Víllora,564,561,200,0,,1,
+16,16275,municipio,275,Vindel,115,115,200,0,,1,
+16,16276,municipio,276,Yémeda,118,107,200,0,,1,16372
+16,16277,municipio,277,Zafra de Záncara,668,656,200,0,,1,16442
+16,16278,municipio,278,Zafrilla,298,297,200,0,,1,
+16,16279,municipio,279,Zarza de Tajo,716,714,200,0,,1,
+16,16280,municipio,280,Zarzuela,949,949,200,0,,1,
+16,16901,municipio,901,Campos del Paraíso,2326,2320,200,0,,2,16161;16162;16464
+16,16902,municipio,902,Valdetórtola,405,396,200,0,,1,16123
+16,16903,municipio,903,Las Valeras,1664,1659,200,0,,2,
+16,16904,municipio,904,Fuentenava de Jábaga,1741,1537,200,0,,3,
+16,16905,municipio,905,Arcas,1540,1522,200,1,16193,2,
+16,16906,municipio,906,Los Valdecolmenas,455,454,200,0,,1,
+16,16908,municipio,908,Pozorrubielos de la Mancha,604,600,200,0,,1,16211
+16,16909,municipio,909,Sotorribas,2297,2278,200,0,,3,
+16,16910,municipio,910,Villar y Velasco,500,499,200,0,,1,

@@ -1,0 +1,331 @@
+[
+  {
+    "LAU_CODE": "53048",
+    "longitud": -2.073635345940709,
+    "latitud": 42.99980835886685,
+    "fecha": "2026-10-26",
+    "consulta": "https://www.cartociudad.es/wms-inspire/direcciones-ccpp?service=WMS&version=1.3.0&request=GetFeatureInfo&layers=codigo-postal&query_layers=codigo-postal&styles=&crs=CRS%3A84&bbox=-2.0746353459407088%2C42.99880835886685%2C-2.072635345940709%2C43.00080835886685&width=101&height=101&i=50&j=50&format=image%2Fpng&info_format=application%2Fjson&feature_count=10",
+    "resultados": [
+      {
+        "id": "codigo-postal.530480000001",
+        "properties": {
+          "alta_db": "2026-01-13T13:14:54Z",
+          "cod_postal": "20268",
+          "ine_mun": "53048",
+          "fecha_alta": 20260112,
+          "fecha_baja": -998,
+          "estado": 2,
+          "bbox": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -2.12506845,
+                  42.97061681
+                ],
+                [
+                  -2.12506845,
+                  43.03128735
+                ],
+                [
+                  -2.02691288,
+                  43.03128735
+                ],
+                [
+                  -2.02691288,
+                  42.97061681
+                ],
+                [
+                  -2.12506845,
+                  42.97061681
+                ]
+              ]
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "LAU_CODE": "53001",
+    "longitud": -2.8638492245954446,
+    "latitud": 42.877706815884906,
+    "fecha": "2026-10-26",
+    "consulta": "https://www.cartociudad.es/wms-inspire/direcciones-ccpp?service=WMS&version=1.3.0&request=GetFeatureInfo&layers=codigo-postal&query_layers=codigo-postal&styles=&crs=CRS%3A84&bbox=-2.8648492245954444%2C42.87670681588491%2C-2.8628492245954447%2C42.878706815884904&width=101&height=101&i=50&j=50&format=image%2Fpng&info_format=application%2Fjson&feature_count=10",
+    "resultados": [
+      {
+        "id": "codigo-postal.530010000001",
+        "properties": {
+          "alta_db": "2026-01-13T13:14:58Z",
+          "cod_postal": "01439",
+          "ine_mun": "53001",
+          "fecha_alta": 20260112,
+          "fecha_baja": -998,
+          "estado": 2,
+          "bbox": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -2.88566115,
+                  42.83956566
+                ],
+                [
+                  -2.88566115,
+                  42.91578127
+                ],
+                [
+                  -2.8281079,
+                  42.91578127
+                ],
+                [
+                  -2.8281079,
+                  42.83956566
+                ],
+                [
+                  -2.88566115,
+                  42.83956566
+                ]
+              ]
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "LAU_CODE": "53056",
+    "longitud": -2.5940475013401407,
+    "latitud": 42.3220120819669,
+    "fecha": "2026-10-26",
+    "consulta": "https://www.cartociudad.es/wms-inspire/direcciones-ccpp?service=WMS&version=1.3.0&request=GetFeatureInfo&layers=codigo-postal&query_layers=codigo-postal&styles=&crs=CRS%3A84&bbox=-2.5950475013401406%2C42.321012081966906%2C-2.593047501340141%2C42.3230120819669&width=101&height=101&i=50&j=50&format=image%2Fpng&info_format=application%2Fjson&feature_count=10",
+    "resultados": [
+      {
+        "id": "codigo-postal.530560000001",
+        "properties": {
+          "alta_db": "2026-01-13T13:14:56Z",
+          "cod_postal": "26121",
+          "ine_mun": "53056",
+          "fecha_alta": 20260112,
+          "fecha_baja": -998,
+          "estado": 2,
+          "bbox": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -2.61845961,
+                  42.28326975
+                ],
+                [
+                  -2.61845961,
+                  42.34667151
+                ],
+                [
+                  -2.54644842,
+                  42.34667151
+                ],
+                [
+                  -2.54644842,
+                  42.28326975
+                ],
+                [
+                  -2.61845961,
+                  42.28326975
+                ]
+              ]
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "LAU_CODE": "53013",
+    "longitud": -3.2693687173966812,
+    "latitud": 42.14152943820922,
+    "fecha": "2026-10-26",
+    "consulta": "https://www.cartociudad.es/wms-inspire/direcciones-ccpp?service=WMS&version=1.3.0&request=GetFeatureInfo&layers=codigo-postal&query_layers=codigo-postal&styles=&crs=CRS%3A84&bbox=-3.270368717396681%2C42.14052943820922%2C-3.2683687173966813%2C42.142529438209216&width=101&height=101&i=50&j=50&format=image%2Fpng&info_format=application%2Fjson&feature_count=10",
+    "resultados": [
+      {
+        "id": "codigo-postal.530130000001",
+        "properties": {
+          "alta_db": "2026-01-13T13:14:41Z",
+          "cod_postal": "09614",
+          "ine_mun": "53013",
+          "fecha_alta": 20260112,
+          "fecha_baja": -998,
+          "estado": 2,
+          "bbox": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -3.28337746,
+                  42.11384798
+                ],
+                [
+                  -3.28337746,
+                  42.1738451
+                ],
+                [
+                  -3.24166731,
+                  42.1738451
+                ],
+                [
+                  -3.24166731,
+                  42.11384798
+                ],
+                [
+                  -3.28337746,
+                  42.11384798
+                ]
+              ]
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "LAU_CODE": "53049",
+    "longitud": -0.6595581222744404,
+    "latitud": 42.83932656093316,
+    "fecha": "2026-10-26",
+    "consulta": "https://www.cartociudad.es/wms-inspire/direcciones-ccpp?service=WMS&version=1.3.0&request=GetFeatureInfo&layers=codigo-postal&query_layers=codigo-postal&styles=&crs=CRS%3A84&bbox=-0.6605581222744404%2C42.83832656093316%2C-0.6585581222744404%2C42.84032656093316&width=101&height=101&i=50&j=50&format=image%2Fpng&info_format=application%2Fjson&feature_count=10",
+    "resultados": [
+      {
+        "id": "codigo-postal.530490000001",
+        "properties": {
+          "alta_db": "2026-01-13T13:14:26Z",
+          "cod_postal": "22728",
+          "ine_mun": "53049",
+          "fecha_alta": 20260112,
+          "fecha_baja": -998,
+          "estado": 2,
+          "bbox": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -0.7031726,
+                  42.82681001
+                ],
+                [
+                  -0.7031726,
+                  42.86073458
+                ],
+                [
+                  -0.63582447,
+                  42.86073458
+                ],
+                [
+                  -0.63582447,
+                  42.82681001
+                ],
+                [
+                  -0.7031726,
+                  42.82681001
+                ]
+              ]
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "LAU_CODE": "53067",
+    "longitud": -1.1856068913523596,
+    "latitud": 42.87259834900407,
+    "fecha": "2026-10-26",
+    "consulta": "https://www.cartociudad.es/wms-inspire/direcciones-ccpp?service=WMS&version=1.3.0&request=GetFeatureInfo&layers=codigo-postal&query_layers=codigo-postal&styles=&crs=CRS%3A84&bbox=-1.1866068913523595%2C42.871598349004074%2C-1.1846068913523597%2C42.87359834900407&width=101&height=101&i=50&j=50&format=image%2Fpng&info_format=application%2Fjson&feature_count=10",
+    "resultados": [
+      {
+        "id": "codigo-postal.530670000001",
+        "properties": {
+          "alta_db": "2026-01-13T13:14:54Z",
+          "cod_postal": "31691",
+          "ine_mun": "53067",
+          "fecha_alta": 20260112,
+          "fecha_baja": -998,
+          "estado": 2,
+          "bbox": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -1.20201172,
+                  42.84566308
+                ],
+                [
+                  -1.20201172,
+                  42.88679382
+                ],
+                [
+                  -1.16576986,
+                  42.88679382
+                ],
+                [
+                  -1.16576986,
+                  42.84566308
+                ],
+                [
+                  -1.20201172,
+                  42.84566308
+                ]
+              ]
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "LAU_CODE": "53050",
+    "longitud": -2.754437927424085,
+    "latitud": 38.5171018719404,
+    "fecha": "2026-10-26",
+    "consulta": "https://www.cartociudad.es/wms-inspire/direcciones-ccpp?service=WMS&version=1.3.0&request=GetFeatureInfo&layers=codigo-postal&query_layers=codigo-postal&styles=&crs=CRS%3A84&bbox=-2.7554379274240848%2C38.5161018719404%2C-2.753437927424085%2C38.518101871940395&width=101&height=101&i=50&j=50&format=image%2Fpng&info_format=application%2Fjson&feature_count=10",
+    "resultados": [
+      {
+        "id": "codigo-postal.530500000001",
+        "properties": {
+          "alta_db": "2026-01-13T13:14:25Z",
+          "cod_postal": "23393",
+          "ine_mun": "53050",
+          "fecha_alta": 20260112,
+          "fecha_baja": -998,
+          "estado": 2,
+          "bbox": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -2.780017,
+                  38.50668482
+                ],
+                [
+                  -2.780017,
+                  38.53301381
+                ],
+                [
+                  -2.72810055,
+                  38.53301381
+                ],
+                [
+                  -2.72810055,
+                  38.50668482
+                ],
+                [
+                  -2.780017,
+                  38.50668482
+                ]
+              ]
+            ]
+          }
+        }
+      }
+    ]
+  }
+]

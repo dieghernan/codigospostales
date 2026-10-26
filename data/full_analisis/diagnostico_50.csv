@@ -1,0 +1,294 @@
+cpro,LAU_CODE,tipo_recinto,cmun,municipio,direcciones,seleccionadas,margen,direcciones_recuperadas,codigos_recuperados,codigos,codigos_descartados
+50,50001,municipio,001,Abanto,288,288,200,0,,1,
+50,50002,municipio,002,Acered,385,383,200,0,,1,
+50,50003,municipio,003,Agón,184,101,200,0,,1,50561
+50,50004,municipio,004,Aguarón,851,848,200,0,,1,50326
+50,50005,municipio,005,Aguilón,517,516,200,0,,1,
+50,50006,municipio,006,Ainzón,716,715,200,0,,1,
+50,50007,municipio,007,Aladrén,211,211,200,0,,1,
+50,50008,municipio,008,Alagón,2207,2191,200,0,,1,50639;50692
+50,50009,municipio,009,Alarba,222,222,200,0,,1,
+50,50010,municipio,010,Alberite de San Juan,115,112,200,0,,1,
+50,50011,municipio,011,Albeta,191,188,200,1,50540,2,
+50,50012,municipio,012,Alborge,196,194,200,0,,1,
+50,50013,municipio,013,Alcalá de Ebro,266,264,200,0,,1,
+50,50014,municipio,014,Alcalá de Moncayo,282,279,200,0,,1,50590
+50,50015,municipio,015,Alconchel de Ariza,468,467,200,0,,1,
+50,50016,municipio,016,Aldehuela de Liestos,156,156,200,0,,1,
+50,50017,municipio,017,Alfajarín,1409,1139,200,25,50174,2,50171;50195
+50,50018,municipio,018,Alfamén,1072,1071,200,0,,1,50400
+50,50019,municipio,019,Alforque,178,177,200,0,,1,
+50,50020,municipio,020,Alhama de Aragón,851,841,200,0,,1,
+50,50021,municipio,021,Almochuel,69,68,200,0,,1,
+50,50022,municipio,022,La Almolda,584,577,200,0,,1,
+50,50023,municipio,023,Almonacid de la Cuba,473,471,200,0,,1,
+50,50024,municipio,024,Almonacid de la Sierra,1146,1146,200,0,,1,
+50,50025,municipio,025,La Almunia de Doña Godina,2476,2469,200,0,,1,
+50,50026,municipio,026,Alpartir,505,504,200,0,,1,
+50,50027,municipio,027,Ambel,419,419,200,0,,1,
+50,50028,municipio,028,Anento,198,197,200,0,,1,
+50,50029,municipio,029,Aniñón,804,802,200,0,,1,50312
+50,50030,municipio,030,Añón de Moncayo,684,684,200,0,,1,
+50,50031,municipio,031,Aranda de Moncayo,584,583,200,0,,1,
+50,50032,municipio,032,Arándiga,681,678,200,0,,1,50269
+50,50033,municipio,033,Ardisa,176,172,200,0,,1,
+50,50034,municipio,034,Ariza,1126,1126,200,0,,1,
+50,50035,municipio,035,Artieda,133,133,200,0,,1,
+50,50036,municipio,036,Asín,177,175,200,0,,1,
+50,50037,municipio,037,Atea,589,586,200,0,,1,
+50,50038,municipio,038,Ateca,1286,1282,200,0,,1,
+50,50039,municipio,039,Azuara,1217,1215,200,0,,1,50134
+50,50040,municipio,040,Badules,184,183,200,0,,1,50490
+50,50041,municipio,041,Bagüés,73,73,200,0,,1,
+50,50042,municipio,042,Balconchán,99,96,200,0,,1,
+50,50043,municipio,043,Bárboles,306,230,200,0,,1,
+50,50044,municipio,044,Bardallur,374,360,200,0,,1,
+50,50045,municipio,045,Belchite,1012,1004,200,0,,1,
+50,50046,municipio,046,Belmonte de Gracián,346,346,200,0,,1,
+50,50047,municipio,047,Berdejo,165,163,200,0,,1,
+50,50048,municipio,048,Berrueco,98,98,200,0,,1,
+50,50050,municipio,050,Bijuesca,349,347,200,0,,1,
+50,50051,municipio,051,Biota,908,906,200,0,,1,
+50,50052,municipio,052,Bisimbre,121,116,200,0,,1,
+50,50053,municipio,053,Boquiñeni,668,661,200,0,,1,50640
+50,50054,municipio,054,Bordalba,287,286,200,0,,1,
+50,50055,municipio,055,Borja,2365,2239,200,17,50549,3,
+50,50056,municipio,056,Botorrita,422,415,200,0,,1,
+50,50057,municipio,057,Brea de Aragón,889,885,200,0,,1,
+50,50058,municipio,058,Bubierca,320,317,200,0,,1,
+50,50059,municipio,059,Bujaraloz,746,741,200,0,,1,50178
+50,50060,municipio,060,Bulbuente,293,291,200,0,,1,
+50,50061,municipio,061,Bureta,255,255,200,0,,1,
+50,50062,municipio,062,El Burgo de Ebro,1376,1325,200,0,,1,50720
+50,50063,municipio,063,El Buste,176,13,200,0,,1,
+50,50064,municipio,064,Cabañas de Ebro,322,319,200,0,,1,50630
+50,50065,municipio,065,Cabolafuente,293,293,200,0,,1,
+50,50066,municipio,066,Cadrete,1981,1542,200,8,50022,2,
+50,50067,municipio,067,Calatayud,4143,4057,200,0,,3,
+50,50068,municipio,068,Calatorao,1645,1631,200,0,,1,50100
+50,50069,municipio,069,Calcena,176,175,200,0,,1,
+50,50070,municipio,070,Calmarza,244,243,200,0,,1,
+50,50071,municipio,071,Campillo de Aragón,312,310,200,0,,1,50237
+50,50072,municipio,072,Carenas,621,574,200,0,,1,50210
+50,50073,municipio,073,Cariñena,1322,1310,200,0,,2,
+50,50074,municipio,074,Caspe,4263,4244,200,0,,2,
+50,50075,municipio,075,Castejón de Alarba,206,206,200,0,,1,
+50,50076,municipio,076,Castejón de las Armas,243,237,200,0,,1,50200
+50,50077,municipio,077,Castejón de Valdejasa,430,425,200,0,,1,
+50,50078,municipio,078,Castiliscar,407,405,200,0,,1,
+50,50079,municipio,079,Cervera de la Cañada,494,489,200,0,,1,50310
+50,50080,municipio,080,Cerveruela,247,245,200,0,,1,
+50,50081,municipio,081,Cetina,975,972,200,0,,1,50239
+50,50082,municipio,082,Cimballa,351,348,200,0,,1,
+50,50083,municipio,083,Cinco Olivas,207,207,200,0,,1,
+50,50084,municipio,084,Clarés de Ribota,324,320,200,0,,1,50316
+50,50085,municipio,085,Codo,375,373,200,0,,1,
+50,50086,municipio,086,Codos,571,570,200,0,,1,
+50,50087,municipio,087,Contamina,139,136,200,0,,1,50292
+50,50088,municipio,088,Cosuenda,621,619,200,0,,1,
+50,50089,municipio,089,Cuarte de Huerva,2124,1312,200,3,50022,2,50012;50420
+50,50090,municipio,090,Cubel,360,358,200,0,,1,50347
+50,50091,municipio,091,Las Cuerlas,239,238,200,0,,1,
+50,50092,municipio,092,Chiprana,590,588,200,0,,1,50700
+50,50093,municipio,093,Chodes,223,222,200,0,,1,
+50,50094,municipio,094,Daroca,1641,1639,200,0,,1,
+50,50095,municipio,095,Ejea de los Caballeros,6456,6428,200,0,,4,50612;50695
+50,50096,municipio,096,Embid de Ariza,235,235,200,0,,1,
+50,50098,municipio,098,Encinacorba,352,352,200,0,,1,
+50,50099,municipio,099,Épila,2753,2738,200,0,,1,50295
+50,50100,municipio,100,Erla,420,419,200,0,,1,
+50,50101,municipio,101,Escatrón,1530,1529,200,0,,1,
+50,50102,municipio,102,Fabara,1049,1047,200,0,,1,50794
+50,50104,municipio,104,Farlete,393,393,200,0,,1,
+50,50105,municipio,105,Fayón,436,434,200,0,,1,
+50,50106,municipio,106,Los Fayos,243,38,200,0,,1,
+50,50107,municipio,107,Figueruelas,662,596,200,0,,1,
+50,50108,municipio,108,Fombuena,142,140,200,0,,1,
+50,50109,municipio,109,El Frago,217,216,200,0,,1,
+50,50110,municipio,110,El Frasno,897,894,200,0,,3,
+50,50111,municipio,111,Fréscano,241,241,200,0,,1,
+50,50113,municipio,113,Fuendejalón,778,778,200,0,,1,
+50,50114,municipio,114,Fuendetodos,233,231,200,0,,1,
+50,50115,municipio,115,Fuentes de Ebro,1989,1985,200,0,,2,50750
+50,50116,municipio,116,Fuentes de Jiloca,456,456,200,0,,1,
+50,50117,municipio,117,Gallocanta,298,293,200,0,,1,
+50,50118,municipio,118,Gallur,1588,1558,200,0,,1,
+50,50119,municipio,119,Gelsa,887,864,200,0,,1,
+50,50120,municipio,120,Godojos,211,211,200,0,,1,
+50,50121,municipio,121,Gotor,413,413,200,0,,1,
+50,50122,municipio,122,Grisel,200,197,200,0,,1,
+50,50123,municipio,123,Grisén,382,362,200,3,50639,2,
+50,50124,municipio,124,Herrera de los Navarros,1174,1172,200,0,,1,
+50,50125,municipio,125,Ibdes,711,710,200,0,,1,
+50,50126,municipio,126,Illueca,870,868,200,0,,1,
+50,50128,municipio,128,Isuerre,98,98,200,0,,1,
+50,50129,municipio,129,Jaraba,514,511,200,0,,1,50236
+50,50130,municipio,130,Jarque de Moncayo,824,817,200,0,,1,
+50,50131,municipio,131,Jaulín,346,342,200,0,,1,
+50,50132,municipio,132,La Joyosa,672,432,200,0,,1,
+50,50133,municipio,133,Lagata,248,248,200,0,,1,
+50,50134,municipio,134,Langa del Castillo,393,393,200,0,,1,
+50,50135,municipio,135,Layana,145,145,200,0,,1,
+50,50136,municipio,136,Lécera,882,880,200,0,,1,
+50,50137,municipio,137,Leciñena,910,904,200,0,,1,
+50,50138,municipio,138,Lechón,91,88,200,0,,1,
+50,50139,municipio,139,Letux,554,551,200,0,,1,
+50,50140,municipio,140,Litago,434,433,200,0,,1,
+50,50141,municipio,141,Lituénigo,320,320,200,0,,1,
+50,50142,municipio,142,Lobera de Onsella,182,181,200,0,,1,
+50,50143,municipio,143,Longares,664,664,200,0,,1,
+50,50144,municipio,144,Longás,118,118,200,0,,1,
+50,50146,municipio,146,Lucena de Jalón,346,344,200,0,,1,
+50,50147,municipio,147,Luceni,682,677,200,0,,1,
+50,50148,municipio,148,Luesia,477,477,200,0,,1,
+50,50149,municipio,149,Luesma,198,197,200,0,,1,
+50,50150,municipio,150,Lumpiaque,811,725,200,0,,1,
+50,50151,municipio,151,Luna,869,867,200,0,,2,50611
+50,50152,municipio,152,Maella,1554,1554,200,0,,1,
+50,50153,municipio,153,Magallón,892,875,200,0,,1,50529
+50,50154,municipio,154,Mainar,208,205,200,0,,1,
+50,50155,municipio,155,Malanquilla,324,315,200,0,,1,50316
+50,50156,municipio,156,Maleján,241,174,50,3,50540,2,
+50,50157,municipio,157,Malón,474,473,200,0,,2,
+50,50159,municipio,159,Maluenda,726,719,200,0,,1,50343
+50,50160,municipio,160,Mallén,1928,1917,200,0,,1,
+50,50161,municipio,161,Manchones,302,299,200,0,,1,
+50,50162,municipio,162,Mara,335,335,200,0,,1,
+50,50163,municipio,163,María de Huerva,1412,1219,200,0,,2,50420;50441
+50,50164,municipio,164,Mediana de Aragón,370,357,200,0,,1,
+50,50165,municipio,165,Mequinenza,1380,1369,200,0,,1,50794
+50,50166,municipio,166,Mesones de Isuela,519,518,200,0,,1,
+50,50167,municipio,167,Mezalocha,284,284,200,0,,1,
+50,50168,municipio,168,Mianos,64,64,200,0,,1,
+50,50169,municipio,169,Miedes de Aragón,523,523,200,0,,1,
+50,50170,municipio,170,Monegrillo,397,396,200,0,,1,
+50,50171,municipio,171,Moneva,295,294,200,0,,1,50140
+50,50172,municipio,172,Monreal de Ariza,409,406,200,0,,2,
+50,50173,municipio,173,Monterde,480,478,200,0,,1,50214
+50,50174,municipio,174,Montón,210,209,200,0,,1,50390
+50,50175,municipio,175,Morata de Jalón,1278,1266,200,0,,1,
+50,50176,municipio,176,Morata de Jiloca,485,482,200,0,,2,
+50,50177,municipio,177,Morés,720,720,200,0,,2,
+50,50178,municipio,178,Moros,687,685,200,0,,1,
+50,50179,municipio,179,Moyuela,551,550,200,0,,1,
+50,50180,municipio,180,Mozota,214,207,200,0,,1,
+50,50181,municipio,181,Muel,1073,1051,200,0,,1,50196
+50,50182,municipio,182,La Muela,2468,2280,200,1,50197,3,50430;50440
+50,50183,municipio,183,Munébrega,524,520,200,0,,1,
+50,50184,municipio,184,Murero,266,264,200,0,,1,
+50,50185,municipio,185,Murillo de Gállego,388,363,200,0,,2,
+50,50186,municipio,186,Navardún,159,155,200,0,,2,50680
+50,50187,municipio,187,Nigüella,220,220,200,0,,1,
+50,50188,municipio,188,Nombrevilla,120,117,200,0,,1,50491
+50,50189,municipio,189,Nonaspe,1128,1121,200,0,,1,
+50,50190,municipio,190,Novallas,711,708,200,0,,1,
+50,50191,municipio,191,Novillas,467,467,200,0,,1,
+50,50192,municipio,192,Nuévalos,458,452,200,0,,2,
+50,50193,municipio,193,Nuez de Ebro,719,596,200,0,,1,50172
+50,50194,municipio,194,Olvés,269,269,200,0,,1,
+50,50195,municipio,195,Orcajo,217,216,200,0,,1,50360
+50,50196,municipio,196,Orera,172,171,200,0,,1,
+50,50197,municipio,197,Orés,272,272,200,0,,1,
+50,50198,municipio,198,Oseja,131,129,200,0,,1,
+50,50199,municipio,199,Osera de Ebro,442,415,200,0,,1,50174
+50,50200,municipio,200,Paniza,675,667,200,0,,1,
+50,50201,municipio,201,Paracuellos de Jiloca,575,559,200,6,50300,2,
+50,50202,municipio,202,Paracuellos de la Ribera,364,361,200,0,,1,50322
+50,50203,municipio,203,Pastriz,603,560,200,0,,1,50171;50194
+50,50204,municipio,204,Pedrola,1700,1509,200,1,50640,2,50296;50297;50529
+50,50205,municipio,205,Las Pedrosas,161,161,200,0,,1,
+50,50206,municipio,206,Perdiguera,506,501,200,0,,1,
+50,50207,municipio,207,Piedratajada,166,165,200,0,,1,
+50,50208,municipio,208,Pina de Ebro,1381,1345,200,0,,1,50178;50786
+50,50209,municipio,209,Pinseque,2356,1951,200,1,50692,2,50620
+50,50210,municipio,210,Los Pintanos,218,215,200,0,,1,
+50,50211,municipio,211,Plasencia de Jalón,358,333,200,0,,1,
+50,50212,municipio,212,Pleitas,69,68,200,0,,1,
+50,50213,municipio,213,Plenas,419,418,200,0,,1,
+50,50214,municipio,214,Pomer,209,208,200,0,,1,
+50,50215,municipio,215,Pozuel de Ariza,261,260,200,0,,1,
+50,50216,municipio,216,Pozuelo de Aragón,372,356,200,0,,1,
+50,50217,municipio,217,Pradilla de Ebro,529,504,200,0,,1,
+50,50218,municipio,218,Puebla de Albortón,226,222,200,0,,1,50138
+50,50219,municipio,219,La Puebla de Alfindén,2463,2182,200,0,,1,50172
+50,50220,municipio,220,Puendeluna,155,56,200,0,,1,
+50,50221,municipio,221,Purujosa,191,191,200,0,,1,
+50,50222,municipio,222,Quinto,1284,1279,200,0,,2,
+50,50223,municipio,223,Remolinos,740,669,200,0,,1,50691
+50,50224,municipio,224,Retascón,151,148,200,0,,1,
+50,50225,municipio,225,Ricla,1657,1624,200,0,,1,50280
+50,50227,municipio,227,Romanos,183,182,200,0,,1,
+50,50228,municipio,228,Rueda de Jalón,370,357,200,0,,1,50296
+50,50229,municipio,229,Ruesca,97,97,200,0,,1,
+50,50230,municipio,230,Sádaba,1086,1084,200,0,,2,
+50,50231,municipio,231,Salillas de Jalón,406,181,200,0,,1,
+50,50232,municipio,232,Salvatierra de Esca,404,402,200,0,,1,
+50,50233,municipio,233,Samper del Salz,193,191,200,0,,1,
+50,50234,municipio,234,San Martín de la Virgen de Moncayo,467,440,200,0,,1,
+50,50235,municipio,235,San Mateo de Gállego,1900,1582,200,0,,1,
+50,50236,municipio,236,Santa Cruz de Grío,315,312,200,0,,1,50323
+50,50237,municipio,237,Santa Cruz de Moncayo,174,174,200,0,,1,
+50,50238,municipio,238,Santa Eulalia de Gállego,241,241,200,0,,1,
+50,50239,municipio,239,Santed,158,158,200,0,,1,
+50,50240,municipio,240,Sástago,1082,1056,200,0,,1,50781
+50,50241,municipio,241,Sabiñán,563,422,200,0,,1,
+50,50242,municipio,242,Sediles,229,228,200,0,,1,
+50,50243,municipio,243,Sestrica,699,695,200,0,,2,
+50,50244,municipio,244,Sierra de Luna,371,370,200,0,,1,
+50,50245,municipio,245,Sigüés,326,320,200,0,,2,
+50,50246,municipio,246,Sisamón,379,376,200,0,,1,
+50,50247,municipio,247,Sobradiel,555,486,200,0,,2,
+50,50248,municipio,248,Sos del Rey Católico,806,795,200,0,,3,
+50,50249,municipio,249,Tabuenca,654,653,200,0,,1,50570
+50,50250,municipio,250,Talamantes,218,217,200,0,,1,
+50,50251,municipio,251,Tarazona,3275,3124,200,0,,4,50584
+50,50252,municipio,252,Tauste,2930,2919,200,0,,2,50668
+50,50253,municipio,253,Terrer,650,645,200,0,,1,50219
+50,50254,municipio,254,Tierga,411,410,200,0,,1,
+50,50255,municipio,255,Tobed,439,437,200,0,,1,
+50,50256,municipio,256,Torralba de los Frailes,342,342,200,0,,1,
+50,50257,municipio,257,Torralba de Ribota,299,298,200,0,,1,50300
+50,50258,municipio,258,Torralbilla,233,233,200,0,,1,
+50,50259,municipio,259,Torrehermosa,199,198,200,0,,1,
+50,50260,municipio,260,Torrelapaja,150,149,200,0,,1,
+50,50261,municipio,261,Torrellas,457,436,200,0,,1,
+50,50262,municipio,262,Torres de Berrellén,894,821,200,0,,1,50692
+50,50263,municipio,263,Torrijo de la Cañada,662,660,200,0,,1,
+50,50264,municipio,264,Tosos,391,388,200,0,,1,
+50,50265,municipio,265,Trasmoz,196,194,200,0,,1,
+50,50266,municipio,266,Trasobares,539,538,200,0,,1,
+50,50267,municipio,267,Uncastillo,841,839,200,0,,1,
+50,50268,municipio,268,Undués de Lerda,166,166,200,0,,1,
+50,50269,municipio,269,Urrea de Jalón,428,423,200,0,,1,
+50,50270,municipio,270,Urriés,180,175,200,0,,1,
+50,50271,municipio,271,Used,624,622,200,0,,1,
+50,50272,municipio,272,Utebo,2591,2140,200,39,50190;50620,3,
+50,50273,municipio,273,Valdehorna,143,143,200,0,,1,
+50,50274,municipio,274,Val de San Martín,169,166,200,0,,1,
+50,50275,municipio,275,Valmadrid,123,122,200,0,,1,
+50,50276,municipio,276,Valpalmas,233,233,200,0,,1,
+50,50277,municipio,277,Valtorres,265,98,200,0,,1,
+50,50278,municipio,278,Velilla de Ebro,327,326,200,0,,1,
+50,50279,municipio,279,Velilla de Jiloca,280,275,200,0,,1,
+50,50280,municipio,280,Vera de Moncayo,502,500,200,0,,1,
+50,50281,municipio,281,Vierlas,123,23,200,0,,1,
+50,50282,municipio,282,La Vilueña,173,2,200,0,,1,
+50,50283,municipio,283,Villadoz,190,190,200,0,,1,
+50,50284,municipio,284,Villafeliche,471,470,200,0,,1,
+50,50285,municipio,285,Villafranca de Ebro,626,473,200,0,,1,50175
+50,50286,municipio,286,Villalba de Perejil,259,259,200,0,,2,
+50,50287,municipio,287,Villalengua,564,563,200,0,,1,
+50,50288,municipio,288,Villanueva de Gállego,1856,1829,200,0,,1,50193
+50,50289,municipio,289,Villanueva de Jiloca,265,265,200,0,,1,
+50,50290,municipio,290,Villanueva de Huerva,630,627,200,0,,1,
+50,50291,municipio,291,Villar de los Navarros,434,434,200,0,,1,
+50,50292,municipio,292,Villarreal de Huerva,274,274,200,0,,1,
+50,50293,municipio,293,Villarroya de la Sierra,888,887,200,0,,1,50314
+50,50294,municipio,294,Villarroya del Campo,166,165,200,0,,1,
+50,50295,municipio,295,Vistabella,292,292,200,0,,1,
+50,50296,municipio,296,La Zaida,459,424,200,0,,1,
+50,50297,municipio,297,Zaragoza,43673,40665,200,12,50298;50730;50830,42,50196;50420;50800
+50,50298,municipio,298,Zuera,3728,3485,200,0,,3,50840
+50,50901,municipio,901,Biel,567,567,200,0,,1,
+50,50902,municipio,902,Marracos,128,122,200,0,,1,
+50,50903,municipio,903,Villamayor de Gállego,1604,1413,200,3,50016,3,
