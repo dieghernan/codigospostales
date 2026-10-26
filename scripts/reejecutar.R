@@ -30,6 +30,7 @@ local({
   on.exit(unlink(bloqueo, recursive = TRUE), add = TRUE)
   manifiesto_path <- file.path(raiz, "manifiesto.csv")
   if (!file.exists(manifiesto_path)) {
+    source("scripts/recintos.R", local = TRUE, encoding = "UTF-8")
     equivalencias <- c(
       A_CORUNA = "15",
       ALAVA = "01",
@@ -125,24 +126,10 @@ local({
       )
     )
     manifiesto <- manifiesto[order(manifiesto$cpro), ]
-    municipios <- mapSpain::esp_get_munic_siane(moveCAN = FALSE)
+    municipios <- mapSpain::esp_get_munic_siane(moveCAN = FALSE, rawcols = TRUE)
     provincias <- mapSpain::esp_get_prov_siane(moveCAN = FALSE) |>
       st_make_valid()
-    condominios <- municipios |>
-      filter(is.na(name)) |>
-      st_transform(25830) |>
-      st_make_valid()
-    asignacion <- st_intersects(
-      st_point_on_surface(st_geometry(condominios)),
-      st_transform(provincias, 25830)
-    )
-    if (any(lengths(asignacion) != 1L)) {
-      stop("Hay condominios sin provincia única para su punto interior.")
-    }
-    asignacion <- data.frame(
-      LAU_CODE = condominios$LAU_CODE,
-      cpro = provincias$cpro[unlist(asignacion)]
-    )
+    asignacion <- asignar_provincias_condominios(municipios, provincias)
     readr::write_csv(
       asignacion,
       file.path(raiz, "analisis/asignacion_condominios.csv")
@@ -161,7 +148,7 @@ local({
       function(cp) sum(asignacion$cpro == cp),
       integer(1)
     )
-    for (f in c("cp_prov.R", "ggplot.R", "reejecutar.R")) {
+    for (f in c("cp_prov.R", "ggplot.R", "reejecutar.R", "recintos.R")) {
       file.copy(
         file.path("scripts", f),
         file.path(raiz, "scripts", f),
@@ -174,6 +161,10 @@ local({
     )
     manifiesto$admin_sha256 <- digest::digest(
       file = file.path(raiz, "base_admin.rds"),
+      algo = "sha256"
+    )
+    manifiesto$recintos_sha256 <- digest::digest(
+      file = file.path(raiz, "scripts/recintos.R"),
       algo = "sha256"
     )
     readr::write_csv(manifiesto, manifiesto_path)
@@ -196,7 +187,21 @@ local({
   ) {
     stop("Ha cambiado la copia congelada del método.")
   }
+  if ("recintos_sha256" %in% names(manifiesto)) {
+    if (
+      !identical(
+        unique(manifiesto$recintos_sha256),
+        digest::digest(
+          file = file.path(raiz, "scripts/recintos.R"),
+          algo = "sha256"
+        )
+      )
+    ) {
+      stop("Ha cambiado la copia congelada de las funciones de recintos.")
+    }
+  }
   Sys.setenv(
+    CP_METODO_DIR = file.path(raiz, "scripts"),
     CP_OUTPUT_DIR = file.path(raiz, "provs"),
     CP_ANALISIS_DIR = file.path(raiz, "analisis"),
     CP_BASE_ADMIN_RDS = file.path(raiz, "base_admin.rds"),

@@ -5,6 +5,7 @@ if (.Platform$OS.type == "windows") {
 for (archivo in c(
   "provincias.R",
   "solapes_recintos.R",
+  "recintos.R",
   "correcciones_pendientes.R",
   "regeneracion.R"
 )) {

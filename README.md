@@ -22,9 +22,11 @@ El procedimiento se basa en los siguientes trabajos:
 La implementación de este repositorio adapta esos métodos a un flujo por
 provincias:
 
-1.  Obtiene los límites municipales y provinciales e incorpora los condominios
-    mediante un punto interior calculado con `st_point_on_surface()`. Lee los
-    portales y puntos kilométricos de CartoCiudad con código postal.
+1.  Obtiene los límites municipales con `rawcols = TRUE` y los provinciales.
+    Identifica los condominios por `t_ua = 4` y utiliza su `id_prov`, contrastado
+    con un punto interior calculado con `st_point_on_surface()`. Si ambos
+    criterios discrepan, detiene el cálculo. Lee los portales y puntos
+    kilométricos de CartoCiudad con código postal.
 2.  Selecciona las direcciones dentro de cada municipio, aplicando un margen
     interior de 200 metros para reducir problemas cerca de los límites. Si no
     quedan direcciones, reduce el margen a 50 metros. Recupera los códigos que
@@ -91,6 +93,13 @@ margen utilizado y los códigos postales recuperados o excluidos por ese margen.
 El prefijo provincial del código postal no se utiliza como filtro. Los casos con
 coordenadas compartidas por distintos códigos postales detienen el proceso para
 evitar una asignación ambigua.
+
+Los diagnósticos nuevos conservan también `id_prov` y `t_ua` de la fuente.
+Las bases congeladas anteriores que no contienen esos campos siguen siendo
+compatibles: se identifican los condominios por la ausencia de nombre y se
+asignan mediante el punto interior. En ese caso, los campos originales quedan
+vacíos; no se completan con datos de otra versión. Los diagnósticos publicados
+anteriores no se han regenerado por este cambio.
 
 El cálculo utiliza ETRS89 / UTM 29N en A Coruña, Badajoz, Cáceres, Huelva,
 Lugo, Ourense, Pontevedra y Salamanca. Utiliza ETRS89 / UTM 31N en Baleares,
@@ -178,6 +187,7 @@ un punto interior calculado con `st_point_on_surface()`.
 | Ruta | Contenido |
 |----|----|
 | `scripts/cp_prov.R` | Generación de la cartografía de una provincia. |
+| `scripts/recintos.R` | Identificación de condominios y contraste de su provincia original con el punto interior. |
 | `scripts/ggplot.R` | Unión de resultados, mapa de avance y exportación de superficies pendientes. |
 | `scripts/reejecutar.R` | Reejecución por lotes con respaldo, validación y publicación. |
 | `tests/regeneracion.R` | Comprobaciones de geometría, cobertura y consolidación. |

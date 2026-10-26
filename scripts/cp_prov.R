@@ -40,6 +40,11 @@ local({
   library(sf)
   library(dplyr)
   library(mapSpain)
+  source(
+    file.path(Sys.getenv("CP_METODO_DIR", "scripts"), "recintos.R"),
+    local = TRUE,
+    encoding = "UTF-8"
+  )
 
   provincia <- Sys.getenv("CP_PROVINCIA", "CADIZ")
   cpro <- Sys.getenv("CP_CPRO", "")
@@ -129,42 +134,37 @@ local({
 
   base_admin <- Sys.getenv("CP_BASE_ADMIN_RDS", "")
   base_admin <- if (nzchar(base_admin)) readRDS(base_admin) else NULL
-  munis_init <- (if (is.null(base_admin)) {
-    esp_get_munic_siane(region = cpro, moveCAN = FALSE)
-  } else {
-    base_admin$municipios[base_admin$municipios$cpro == cpro, ]
-  }) |>
+  todos_municipios <- normalizar_campos_recintos(
+    if (is.null(base_admin)) {
+      esp_get_munic_siane(moveCAN = FALSE, rawcols = TRUE)
+    } else {
+      base_admin$municipios
+    }
+  )
+  munis_init <- todos_municipios[
+    todos_municipios$cpro == cpro & !es_condominio(todos_municipios),
+  ] |>
     st_transform(epsg) |>
     st_make_valid()
 
-  # Necesitamos incluir mancomunidades. Esto se debe a que hay recintos en
-  # el pais que no están asociados administrativamente a una provincia, aunque
-  # geográficamente si que están dentro de ella.
-
-  prov <- (if (is.null(base_admin)) {
-    esp_get_prov_siane(prov = cpro, moveCAN = FALSE)
+  todas_provincias <- if (is.null(base_admin)) {
+    esp_get_prov_siane(moveCAN = FALSE)
   } else {
-    base_admin$provincias[base_admin$provincias$cpro == cpro, ]
-  }) |>
+    base_admin$provincias
+  }
+  prov <- todas_provincias[todas_provincias$cpro == cpro, ] |>
     st_transform(epsg)
 
-  munis_no_cpro <- (if (is.null(base_admin)) {
-    esp_get_munic_siane(moveCAN = FALSE)
-  } else {
-    base_admin$municipios
-  }) |>
-    filter(is.na(name)) |>
+  asignacion_condominios <- asignar_provincias_condominios(
+    todos_municipios,
+    todas_provincias
+  )
+  extra_munis <- todos_municipios[
+    todos_municipios$LAU_CODE %in%
+      asignacion_condominios$LAU_CODE[asignacion_condominios$cpro == cpro],
+  ] |>
     st_transform(epsg) |>
     st_make_valid()
-
-  # Un punto interior evita que un recinto cóncavo se asigne por un punto exterior.
-  extra_munis_bool <- munis_no_cpro |>
-    st_geometry() |>
-    st_point_on_surface() |>
-    st_intersects(prov, sparse = FALSE) |>
-    as.vector()
-
-  extra_munis <- munis_no_cpro[extra_munis_bool, ]
 
   if (nrow(extra_munis) > 0) {
     munis <- munis_init |> bind_rows(extra_munis)
@@ -231,7 +231,13 @@ local({
     diagnosticos[[i]] <- data.frame(
       cpro = cpro,
       LAU_CODE = municipio$LAU_CODE,
-      tipo_recinto = if (is.na(municipio$name)) "condominio" else "municipio",
+      tipo_recinto = if (es_condominio(municipio)) {
+        "condominio"
+      } else {
+        "municipio"
+      },
+      id_prov = municipio$id_prov,
+      t_ua = municipio$t_ua,
       cmun = municipio$cmun,
       municipio = municipio$name,
       direcciones = length(indices[[i]]),
