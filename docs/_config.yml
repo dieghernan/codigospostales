@@ -58,7 +58,7 @@ publisher:
 fa_version: "6"
 
 chulapa-skin:
-  skin: litera
+  skin: journal
   highlight: github
 
 webmentions:
@@ -67,7 +67,7 @@ webmentions:
 
 navbar:
   brand:
-    title: '<i class="fas fa-home" style="color: white"></i><span class="d-none">Home</span>'
+    title: '<i class="fas fa-home" style="color: black"></i><span class="d-none">Home</span>'
 
   nav:
     - title: Visor

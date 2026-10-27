@@ -75,8 +75,8 @@ provs <- st_read(
   st_transform(st_crs(all))
 
 p <- ggplot(provs) +
-  geom_sf(size = 0.1, fill = "#dddddd", color = "black") +
-  geom_sf(data = codigos, fill = "#02b875", color = NA) +
+  geom_sf(size = 0.1, fill = "#dee2e6", color = "black") +
+  geom_sf(data = codigos, fill = "#22b24c", color = NA) +
   theme_minimal() +
   theme(
     plot.title = element_text(face = "bold")

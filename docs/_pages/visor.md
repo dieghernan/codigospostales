@@ -6,6 +6,14 @@ show_author: false
 map_embed: true
 ---
 
+El visor utiliza la versión simplificada, transformada a WGS84 (EPSG:4326),
+con seis decimales en las coordenadas. No incluye los recintos pendientes y
+no está destinado a mediciones precisas. Las delimitaciones son estimadas,
+no límites postales oficiales. Consulta las
+[fuentes y la metodología]({{ '/' | relative_url }}#metodología-y-fuentes)
+y los [ejemplos de uso]({{ '/ejemplos/' | relative_url }}).
+{: .alert .alert-light .p-3 .mx-2 .mb-3}
+
 Explora las delimitaciones estimadas por prefijo postal. Abre el control de
 capas para elegir entre IGNBase Gris, IGNBase y la ortofotografía PNOA, y activar o desactivar
 los polígonos del proyecto y el WMS de códigos postales de CartoCiudad.
@@ -39,12 +47,7 @@ prefijo sin descargar el conjunto nacional completo. Los dominios disponibles
 corresponden a los códigos presentes en los datos publicados. El filtro
 selecciona códigos completos, sin recortarlos a una provincia.
 
-El visor utiliza la versión simplificada, transformada a WGS84 (EPSG:4326),
-con seis decimales en las coordenadas. No incluye los recintos pendientes y
-no está destinado a mediciones precisas. Las delimitaciones son estimadas,
-no límites postales oficiales. Consulta las
-[fuentes y la metodología]({{ '/' | relative_url }}#metodología-y-fuentes)
-y los [ejemplos de uso]({{ '/ejemplos/' | relative_url }}).
+
 
 Cartografía de fondo y WMS mediante
 [Leaflet-providersESP](https://dieghernan.github.io/leaflet-providersESP/).
