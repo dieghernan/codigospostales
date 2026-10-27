@@ -1,0 +1,5 @@
+#postal-map { height: 65vh; min-height: 360px; max-height: 700px; width: 100%; border: 1px solid #a8c4cb; background: #f7f4ed; }
+#postal-prefix { max-width: 20rem; }
+#postal-map .leaflet-control-layers { max-width: min(260px, 65vw); }
+#postal-map .leaflet-control-layers label { margin-bottom: .35rem; }
+#postal-map .leaflet-control-attribution { max-width: 100%; }

@@ -1,18 +1,44 @@
-# Códigos Postales de España
+# Códigos postales de España
 
 El producto final es `data/codigos_postales.gpkg`, con la capa
-`codigos_postales`: una fila por código postal y sus superficies disueltas,
+`codigos_postales`: una fila por código postal (CP) y sus superficies disueltas,
 incluidas las que pertenecen a distintas provincias. Un código puede tener
-varias superficies separadas. El municipio no forma parte del producto final.
+varias superficies separadas. La capa postal no incluye el municipio;
+los recintos sin asignar se conservan en la capa `pendientes`.
 
 Son delimitaciones estimadas a partir de direcciones de CartoCiudad y recintos
 administrativos, no límites postales oficiales. El consolidado cubre únicamente
 las provincias generadas que estén presentes en `data/provs/`.
 
+## Antecedentes
+
+Disponer de polígonos de códigos postales permite relacionar direcciones y
+estadísticas con áreas geográficas. Sin embargo, la consulta de un código
+postal y la descarga de sus límites son servicios distintos.
+
+Según [Goerlich (2022)](https://www.ivie.es/downloads/docs/wpivie/wpivie-2022-03.pdf),
+hacia 2016 los polígonos de códigos postales de Correos se podían descargar
+desde CartoCiudad a través del CNIG. Esa capa dejó de ofrecerse para descarga
+a principios de 2017, tras un cambio en la política de datos de Correos.
+
+Actualmente, [Correos comercializa la capa cartográfica](https://www.correos.es/es/es/empresas/marketing/identifica-a-tus-clientes-potenciales/base-de-datos-de-codigos-postales)
+mediante una licencia de pago. CartoCiudad mantiene un
+[WMS de códigos postales](https://www.cartociudad.es/web/portal/directorio-de-servicios/visualizacion)
+para visualización, pero indica que esos polígonos no están disponibles para
+descarga.
+
+Este proyecto busca ofrecer una estimación reproducible a partir de las
+direcciones abiertas de CartoCiudad y de límites administrativos. Cada
+dirección aporta una posición y un código postal: una teselación de Voronoi
+divide el espacio en áreas de proximidad a esas posiciones. Al recortarlas a
+los recintos administrativos y unir las áreas con el mismo código se obtiene
+una delimitación postal estimada. La proximidad es una aproximación geométrica
+y no reproduce necesariamente las decisiones de reparto de Correos.
+
 ## Metodología
 
 El proyecto se basa en
-[«Elaboración de un mapa de Códigos Postales de España con recursos libres»,
+[«Elaboración de un mapa de códigos postales de España con recursos libres»,
 de Francisco Goerlich](https://www.uv.es/goerlich/Ivie/CodPost.html), y en
 [«Así hice el mapa de los códigos postales de España con SIG y datos abiertos»,
 de José Ignacio Sánchez, en NoSoloSIG](https://www.nosolosig.com/articulos/asi-hice-el-mapa-de-los-codigos-postales-de-espana-con-sig-y-datos-abiertos).
@@ -40,10 +66,16 @@ Los GeoPackage publicados se almacenan con Git LFS. Instala
 los datos. Sin LFS puedes obtener archivos de referencia en lugar de los
 GeoPackage completos. Las descargas de `data/cartociudad/` siguen ignoradas.
 
+También puedes descargar directamente el
+[GeoPackage completo](https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales.gpkg)
+o la [versión simplificada](https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales_simplificado.gpkg),
+sin clonar el repositorio. Los [ejemplos en R y Python](docs/_pages/ejemplos.md)
+explican cómo leer solo los códigos que empiezan por un prefijo concreto.
+
 ## Generación
 
-Desde la raíz del proyecto, con los paquetes `sf`, `dplyr`, `ggplot2`,
-`mapSpain` y `readr` instalados:
+Desde la raíz del proyecto, con los paquetes **sf**, **dplyr**, **ggplot2**,
+**mapSpain** y **readr** instalados:
 
 ```r
 Sys.setenv(CP_PROVINCIA = "SEGOVIA")
@@ -52,8 +84,10 @@ source("scripts/cp_prov.R")
 
 Las entradas se guardan en `data/cartociudad/`, ignorada por Git:
 `LAU2boundaries4Spain.gpkg`, de
-[Goerlich](https://zenodo.org/records/15345101), y el ZIP provincial de
+[Goerlich y Pérez Vázquez (2025)](https://zenodo.org/records/15345101), y el ZIP provincial de
 CartoCiudad, por ejemplo `CARTOCIUDAD_CALLEJERO_SEGOVIA.zip`.
+Del GeoPackage administrativo se utilizan las capas `Municipios2024`,
+`Condominios` y `Provincias`.
 
 El script procesa cada componente del recinto administrativo. Selecciona
 direcciones dentro de un margen interior de 200 m, con un segundo intento de
@@ -69,7 +103,7 @@ Los cálculos usan el huso UTM del punto interior representativo de la provincia
 ETRS89 / UTM 29, 30 o 31 en la península y Baleares, y REGCAN95 / UTM 28 en
 Canarias. Se utiliza `st_point_on_surface()` para que ese punto quede dentro
 del recinto. Los recintos administrativos y el fondo provincial proceden del
-mismo archivo de Goerlich.
+mismo archivo de Goerlich y Pérez Vázquez.
 La lectura SQL selecciona únicamente la provincia solicitada y los campos
 necesarios, sin cargar todos los municipios de España en memoria.
 
@@ -84,9 +118,9 @@ restringir los códigos por su prefijo provincial. Así actualiza el producto
 final `data/codigos_postales.gpkg`. Los registros sin CP quedan excluidos del
 consolidado postal y se conservan con geometría en la capa `pendientes` del
 mismo GeoPackage, con provincia de origen y área en metros cuadrados, medida
-en la proyección del resultado provincial. Sus
-atributos se exportan a `data/full_analisis/missing.csv`. Las nuevas ejecuciones
-provinciales también guardan una capa `pendientes` antes de disolver por CP;
+en la proyección del resultado provincial. Sus atributos se exportan a
+`data/full_analisis/missing.csv`. Las nuevas ejecuciones provinciales también
+guardan una capa `pendientes` antes de disolver por CP;
 para resultados antiguos se recupera la geometría sin CP disponible.
 
 Ambas capas del producto final contienen únicamente geometrías
@@ -110,7 +144,7 @@ source("scripts/consolidado.R")
 
 ## Versión simplificada
 
-Para generar una copia destinada a visualización, con `rmapshaper` instalado:
+Para generar una copia destinada a visualización, con **rmapshaper** instalado:
 
 ```r
 source("scripts/simplificado.R")
@@ -135,12 +169,11 @@ La revisión se ejecuta solo a requerimiento, fuera de la generación habitual:
 source("scripts/pendientes_wms.R")
 ```
 
-Requiere además `httr2` y `jsonlite`. Selecciona los 50 recintos pendientes de
-mayor superficie, omitiendo los que quedaron sin asignar en revisiones
+Requiere además **httr2** y **jsonlite**. Selecciona los 50 recintos pendientes
+de mayor superficie, omitiendo los que quedaron sin asignar en revisiones
 anteriores (identificados por provincia, municipio y superficie). Genera los
 centros de una malla de 3 × 3 celdas sobre la caja de cada recinto y consulta
-únicamente los puntos estrictamente interiores
-en la capa `codigo-postal` del
+únicamente los puntos estrictamente interiores en la capa `codigo-postal` del
 [WMS de CartoCiudad](https://www.cartociudad.es/web/portal/directorio-de-servicios/visualizacion).
 Asigna el recinto completo solo si todos los puntos conservados tienen
 respuesta y devuelven un único CP común. Los recintos sin puntos interiores,
@@ -155,4 +188,58 @@ existan otros CP entre los puntos consultados o en componentes no muestreados.
 
 ## Grado de avance
 
-![](data/avance.png)
+![Mapa del grado de avance de las delimitaciones postales.](data/avance.png)
+
+## Sitio web y visor
+
+La web del proyecto se encuentra en `docs/` y utiliza Jekyll con Chulapa y la
+skin Litera. Para previsualizarla con Ruby y Bundler instalados:
+
+```sh
+cd docs
+bundle install
+bundle exec jekyll serve
+```
+
+Abre `http://localhost:4000/codigospostales/`. Para compilar sin iniciar un
+servidor, ejecuta `bundle exec jekyll build` desde `docs/`.
+
+El visor utiliza Leaflet y Leaflet-providersESP, con IGNBase y PNOA como fondos
+alternativos y capas activables de CartoCiudad y de las delimitaciones
+estimadas. Inicialmente muestra IGNBase con ambas capas activadas; el control
+de capas está plegado y el zoom con la rueda está habilitado. La vista inicial
+muestra el prefijo `08` (Barcelona). Carga los
+códigos por sus dos primeros dígitos, conservando los ceros iniciales. Este
+filtro selecciona códigos completos y no recorta las geometrías a una
+provincia. El WMS de CartoCiudad se muestra a partir del zoom 14.
+
+Después de actualizar la versión simplificada, regenera los datos del visor
+desde la raíz del repositorio, con **sf** y **jsonlite** instalados:
+
+```r
+source("scripts/visor_datos.R")
+```
+
+Este script exporta los códigos a `docs/assets/data/`, en GeoJSON WGS84
+(EPSG:4326) por prefijo, con seis decimales, sin modificar el GeoPackage.
+El visor no incluye los recintos pendientes. La imagen estática se regenera con
+`source("scripts/ejemplo_prefijo.R")`.
+El ejemplo equivalente de Python se ejecuta con
+`python scripts/ejemplo_prefijo.py`, tras instalar las dependencias de
+`scripts/requirements-ejemplos.txt`. Los scripts guardan sus mapas en
+`docs/assets/img/`, con las fuentes y la autoría incluidas. El código y las
+versiones comprobadas se describen en los [ejemplos](docs/_pages/ejemplos.md).
+
+El flujo `.github/workflows/build-chulapa-gh-pages.yml` compila la web una vez
+y utiliza el mismo artefacto para desplegar en GitHub Pages y actualizar la
+rama `gh-pages`. Antes del primer despliegue hay que seleccionar **GitHub
+Actions** como origen en la configuración de Pages del repositorio.
+
+## Uso de inteligencia artificial
+
+Se ha utilizado **OpenAI Codex** como apoyo en el desarrollo del código,
+la redacción y revisión de la documentación y la preparación del sitio web.
+El banner del proyecto se ha generado con IA a través de Codex. Estas
+herramientas no son la fuente de los datos geográficos: se utilizan las
+direcciones de CartoCiudad y los límites administrativos de Goerlich y
+Pérez Vázquez, referenciados en este documento.

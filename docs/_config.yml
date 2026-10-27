@@ -1,0 +1,136 @@
+# Sitio del proyecto. Compilar con docs/ como directorio de trabajo.
+remote_theme: dieghernan/chulapa
+repository: dieghernan/codigospostales
+url: https://dieghernan.github.io
+baseurl: /codigospostales
+
+locale: es-ES
+og_locale: es_ES
+timezone: Europe/Madrid
+title: Códigos postales de España
+subtitle: Delimitaciones estimadas a partir de datos abiertos
+description: >-
+  Delimitaciones estimadas de los códigos postales de España a partir de
+  datos abiertos de CartoCiudad, disponibles en GeoPackage y generadas con R.
+
+og_image: /assets/img/github-preview.jpg
+og_image_alt: Códigos postales de España, con un mosaico de áreas postales.
+og_image_width: 1280
+og_image_height: 640
+og_image_type: image/jpeg
+twitter_site: dhernangomez
+
+author:
+  name: Diego Hernangómez
+  url: https://dieghernan.github.io/
+  avatar: https://dieghernan.github.io/assets/img/site/avatar.png
+  location: Madrid, Spain
+  links:
+    - url: https://dieghernan.github.io/
+      icon: fas fa-blog
+      label: Web personal
+    - url: https://github.com/dieghernan
+      icon: fab fa-github
+      label: GitHub
+    - url: https://orcid.org/0000-0001-8457-4658
+      icon: fa-brands fa-orcid
+      label: ORCID
+    - url: https://fosstodon.org/@dhernangomez
+      icon: fa-brands fa-mastodon
+      label: Mastodon
+    - url: https://bsky.app/profile/dieghernan.bsky.social
+      icon: fa-brands fa-square-bluesky
+      label: Bluesky
+    - url: https://x.com/dhernangomez
+      icon: fab fa-square-x-twitter
+      label: Twitter/X
+    - url: https://stackoverflow.com/users/7877917/dieghernan
+      icon: fab fa-stack-overflow
+      label: Stack Overflow
+
+publisher:
+  type: Person
+  name: Diego Hernangómez
+  url: https://dieghernan.github.io/
+  image: https://dieghernan.github.io/assets/img/site/avatar.png
+
+fa_version: "6"
+
+chulapa-skin:
+  skin: litera
+  highlight: github
+
+webmentions:
+  endpoint: https://webmention.io/dieghernan.github.io/webmention
+  pingback: https://webmention.io/dieghernan.github.io/xmlrpc
+
+navbar:
+  brand:
+    title: Códigos postales de España
+    img: /assets/img/favicon-192.png
+  nav:
+    - title: Visor
+      url: /visor/
+    - title: Ejemplos
+      url: /ejemplos/
+    - title: GitHub
+      url: https://github.com/dieghernan/codigospostales
+
+footer:
+  links:
+    - label: Diego Hernangómez
+      icon: fas fa-blog
+      url: https://dieghernan.github.io/
+    - label: GitHub
+      icon: fab fa-github
+      url: https://github.com/dieghernan/codigospostales
+    - label: ORCID
+      icon: fa-brands fa-orcid
+      url: https://orcid.org/0000-0001-8457-4658
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: project
+      header_type: base
+      show_author: true
+      show_date: false
+      show_sociallinks: true
+      show_webmentions: true
+      include_on_search: false
+      include_on_feed: false
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-github-metadata
+  - jekyll-include-cache
+  - jekyll-sitemap
+
+include:
+  - _pages
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - .bundle
+  - assets/img/github-preview-source.png
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  toc_levels: 2..4
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  blanklines: true
+
+strict_front_matter: true

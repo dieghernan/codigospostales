@@ -1,0 +1,13 @@
+---
+layout: default
+---
+{% unless page.show_author %}
+<div class="h-card p-author d-none">
+  <a class="p-name u-url u-uid" rel="me" href="{{ site.author.url | escape }}">{{ site.author.name | escape }}</a>
+  <img class="u-photo" src="{{ site.author.avatar | escape }}" alt="{{ site.author.name | escape }}">
+  {% for profile in site.author.links %}
+  <a class="u-url" rel="me" href="{{ profile.url | escape }}">{{ profile.label | escape }}</a>
+  {% endfor %}
+</div>
+{% endunless %}
+{{ content }}
