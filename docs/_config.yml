@@ -22,7 +22,7 @@ twitter_site: dhernangomez
 gtag_id: G-YJD3C3D1M1
 
 author:
-  name: Diego Hernangómez
+  name: dieghernan
   url: https://dieghernan.github.io/
   avatar: https://dieghernan.github.io/assets/img/site/avatar.png
   location: Madrid, Spain
@@ -51,7 +51,7 @@ author:
 
 publisher:
   type: Person
-  name: Diego Hernangómez
+  name: dieghernan
   url: https://dieghernan.github.io/
   image: https://dieghernan.github.io/assets/img/site/avatar.png
 
@@ -79,7 +79,7 @@ navbar:
 
 footer:
   links:
-    - label: Diego Hernangómez
+    - label: dieghernan
       icon: fas fa-blog
       url: https://dieghernan.github.io/
     - label: GitHub

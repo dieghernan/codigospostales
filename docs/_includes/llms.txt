@@ -1,6 +1,6 @@
 # Códigos postales de España
 
-> Delimitaciones estimadas de los códigos postales de España generadas con R a partir de datos abiertos de CartoCiudad y límites administrativos. Autor: dieghernan (Diego Hernangómez).
+> Delimitaciones estimadas de los códigos postales de España generadas con R a partir de datos abiertos de CartoCiudad y límites administrativos. Autor: dieghernan.
 
 Este proyecto distribuye datos geográficos, no un paquete de R o Python.
 Las delimitaciones no son límites postales oficiales de Correos y no se debe
