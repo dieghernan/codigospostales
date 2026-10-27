@@ -33,7 +33,7 @@
     'CartoCiudad · CP (zoom ≥ 14)': cartociudad,
     'Límites administrativos · IGN': limites,
     'Códigos postales estimados': postal
-  }, { collapsed: false }).addTo(map);
+  }, { collapsed: true }).addTo(map);
   L.control.scale({ imperial: false }).addTo(map);
 
   let request;
