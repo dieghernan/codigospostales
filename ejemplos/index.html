@@ -206,13 +206,15 @@
 				</div>
 </aside>
 			<article id="maincontent" class="col-lg-8 mt-3">
-			<div class="e-content">
-<p>Los datos se distribuyen como archivos GeoPackage y se pueden utilizar desde R
+			<div class="e-content"><p>Los datos se distribuyen como archivos GeoPackage y se pueden utilizar desde R
 o Python. No es necesario instalar un paquete propio del proyecto.</p>
 <p>Estos ejemplos utilizan la versión simplificada y seleccionan los códigos
 postales que empiezan por <code class="language-plaintext highlighter-rouge">28</code> (<code class="language-plaintext highlighter-rouge">28xxx</code>). El filtro se ejecuta al leer el
 archivo, sin cargar toda la capa en memoria. Selecciona códigos completos por
-su prefijo; no recorta sus geometrías al límite de una provincia.</p>
+su prefijo; no recorta sus geometrías al límite de una provincia. Prefijo
+postal y provincia son criterios distintos: un mismo código postal puede
+abarcar varias provincias. Una selección por provincia requiere un criterio
+espacial sobre sus límites administrativos.</p>
 <p>Los códigos postales tienen cinco dígitos y se conservan como texto para
 mantener los ceros iniciales. Para otro dominio, cambia <code class="language-plaintext highlighter-rouge">'28%'</code> por el prefijo
 deseado seguido de <code class="language-plaintext highlighter-rouge">%</code>, por ejemplo <code class="language-plaintext highlighter-rouge">'080%'</code> para <code class="language-plaintext highlighter-rouge">080xx</code>.</p>

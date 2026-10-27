@@ -148,7 +148,6 @@
 <meta name="fediverse:creator" content="@dhernangomez@fosstodon.org">
 <link rel="author" href="https://dieghernan.github.io/">
 <link rel="describedby" type="text/plain" title="Información para asistentes de IA" href="https://dieghernan.github.io/codigospostales/llms.txt">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="/codigospostales/assets/css/visor.css">
 <link rel="webmention" href="https://webmention.io/dieghernan.github.io/webmention">
 <link rel="pingback" href="https://webmention.io/dieghernan.github.io/xmlrpc">
@@ -197,32 +196,27 @@
 		<div class="row pt-2">
 			<div class="col-lg-2 mt-lg-3 small"></div>
 			<article id="maincontent" class="col-lg-8 mt-3">
-			<div class="e-content">
-<div class="h-card p-author d-none">
-  <a class="p-name u-url u-uid" rel="me" href="https://dieghernan.github.io/">Diego Hernangómez</a>
-  <img class="u-photo" src="https://dieghernan.github.io/assets/img/site/avatar.png" alt="Diego Hernangómez">
-  <a class="u-url" rel="me" href="https://dieghernan.github.io/">Web personal</a>
-  <a class="u-url" rel="me" href="https://github.com/dieghernan">GitHub</a>
-  <a class="u-url" rel="me" href="https://orcid.org/0000-0001-8457-4658">ORCID</a>
-  <a class="u-url" rel="me" href="https://fosstodon.org/@dhernangomez">Mastodon</a>
-  <a class="u-url" rel="me" href="https://bsky.app/profile/dieghernan.bsky.social">Bluesky</a>
-  <a class="u-url" rel="me" href="https://x.com/dhernangomez">Twitter/X</a>
-  <a class="u-url" rel="me" href="https://stackoverflow.com/users/7877917/dieghernan">Stack Overflow</a>
-</div>
-<p>Explora las delimitaciones estimadas por prefijo postal. Abre el control de
-capas para elegir entre IGNBase y la ortofotografía PNOA, y activar o desactivar
+			<div class="e-content"><p>Explora las delimitaciones estimadas por prefijo postal. Abre el control de
+capas para elegir entre IGNBase Gris, IGNBase y la ortofotografía PNOA, y activar o desactivar
 los polígonos del proyecto y el WMS de códigos postales de CartoCiudad.
-El fondo inicial es IGNBase y ambas capas están activadas.
-La vista inicial muestra los códigos con prefijo <code class="language-plaintext highlighter-rouge">08</code>, asociados a Barcelona.
+El fondo inicial es IGNBase Gris y ambas capas están activadas.
+El overlay <strong>Límites administrativos · IGN</strong> está disponible sin activar;
+permite comparar los códigos postales con los límites administrativos.
+La vista inicial muestra los códigos con prefijo <code class="language-plaintext highlighter-rouge">08</code>.
 <strong>CartoCiudad se muestra a partir del zoom 14</strong>; acerca el mapa con los botones
 o la rueda del ratón para compararlo con las estimaciones.</p>
-<p><label for="postal-prefix">Prefijo postal (dos primeros dígitos)</label>
-<select id="postal-prefix" class="form-control mb-3" disabled="" aria-describedby="map-status">
-  <option value="08">08xxx</option>
-</select></p>
-<p id="map-status" role="status" aria-live="polite">Cargando el visor…</p>
-<div id="postal-map" role="region" aria-label="Mapa de códigos postales" tabindex="0" data-source="/codigospostales/assets/data/"></div>
-<noscript><p>Activa JavaScript para utilizar el visor.</p></noscript>
+<p><strong>Prefijo postal y provincia son criterios
+distintos.</strong> El selector filtra por los dos primeros dígitos del código
+postal, sin recortar las geometrías a límites provinciales. Un mismo código
+postal puede abarcar varias provincias.</p>
+<p><a class="btn btn-primary" href="/codigospostales/visor/mapa/" target="_blank" rel="noopener">Abrir el visor a toda ventana ↗</a></p>
+<iframe class="postal-map-frame" src="/codigospostales/visor/mapa/" title="Visor interactivo de códigos postales por prefijo" loading="lazy" allowfullscreen=""></iframe>
+<p>Puedes abrir el visor a toda ventana o incrustarlo en otra página con un
+<code class="language-plaintext highlighter-rouge">iframe</code>:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://dieghernan.github.io/codigospostales/visor/mapa/"</span>
+  <span class="na">title=</span><span class="s">"Códigos postales de España por prefijo"</span>
+  <span class="na">width=</span><span class="s">"100%"</span> <span class="na">height=</span><span class="s">"650"</span> <span class="na">allowfullscreen</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+</code></pre></div></div>
 <p>Haz clic en un polígono para consultar su código postal. Puedes cambiar el
 prefijo sin descargar el conjunto nacional completo. Los dominios disponibles
 corresponden a los códigos presentes en los datos publicados. El filtro
@@ -282,8 +276,16 @@ y los <a href="/codigospostales/ejemplos/">ejemplos de uso</a>.</p>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 	<script src="/codigospostales/assets/js/chulapa_script.js"></script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.3.3/dist/leaflet-providersESP.min.js"></script>
-<script src="/codigospostales/assets/js/visor.js"></script>
+<div class="h-card p-author" hidden>
+  <a class="p-name u-url u-uid" rel="me" href="https://dieghernan.github.io/">Diego Hernangómez</a>
+  <img class="u-photo" src="https://dieghernan.github.io/assets/img/site/avatar.png" alt="Diego Hernangómez">
+  <a class="u-url" rel="me" href="https://dieghernan.github.io/">Web personal</a>
+  <a class="u-url" rel="me" href="https://github.com/dieghernan">GitHub</a>
+  <a class="u-url" rel="me" href="https://orcid.org/0000-0001-8457-4658">ORCID</a>
+  <a class="u-url" rel="me" href="https://fosstodon.org/@dhernangomez">Mastodon</a>
+  <a class="u-url" rel="me" href="https://bsky.app/profile/dieghernan.bsky.social">Bluesky</a>
+  <a class="u-url" rel="me" href="https://x.com/dhernangomez">Twitter/X</a>
+  <a class="u-url" rel="me" href="https://stackoverflow.com/users/7877917/dieghernan">Stack Overflow</a>
+</div>
 	</body>
 </html>

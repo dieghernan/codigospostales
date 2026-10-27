@@ -12,7 +12,7 @@ direcciones puede excluir códigos presentes en las fuentes originales.
 
 - [Página del proyecto](https://dieghernan.github.io/codigospostales/): antecedentes, metodología, limitaciones, licencia y referencias.
 - [Ejemplos reproducibles en R y Python](https://dieghernan.github.io/codigospostales/ejemplos/): lectura SQL por prefijo y generación de mapas.
-- [Visor Leaflet](https://dieghernan.github.io/codigospostales/visor/): datos simplificados por prefijo, con IGNBase, PNOA y el WMS de CartoCiudad. Vista inicial: prefijo 08.
+- [Visor Leaflet](https://dieghernan.github.io/codigospostales/visor/): datos simplificados por prefijo, con IGNBase Gris (predeterminado), IGNBase, PNOA y el WMS de CartoCiudad. Vista inicial: prefijo 08.
 - [README y código fuente](https://github.com/dieghernan/codigospostales): generación provincial, consolidación, simplificación y revisión opcional de pendientes con WMS.
 
 ## Datos
@@ -24,7 +24,8 @@ Ambos archivos tienen las capas `codigos_postales` y `pendientes`, con
 geometrías MULTIPOLYGON en EPSG:25830. La capa postal contiene `COD_POSTAL`
 como texto de cinco dígitos, conservando ceros iniciales. Un mismo código
 puede tener superficies separadas y abarcar varias provincias; filtrar por
-prefijo no equivale a recortar por provincia. La capa postal no incluye el
+prefijo no equivale a seleccionar por provincia ni a recortar por sus límites
+administrativos. La capa postal no incluye el
 municipio. Los recintos sin CP se conservan en `pendientes`; en la copia
 simplificada, `AREA_M2` mantiene la superficie medida en la versión completa.
 Los GeoPackage del repositorio se almacenan mediante Git LFS.
