@@ -108,6 +108,51 @@ Para reconstruir únicamente el consolidado y el mapa, sin regenerar provincias:
 source("scripts/consolidado.R")
 ```
 
+## Versión simplificada
+
+Para generar una copia destinada a visualización, con `rmapshaper` instalado:
+
+```r
+source("scripts/simplificado.R")
+```
+
+Escribe `data/codigos_postales_simplificado.gpkg` con las mismas dos capas y
+atributos. Simplifica ambas capas juntas con `keep = 0.3`,
+`keep_shapes = TRUE` y `explode = TRUE`, y después vuelve
+a agrupar por registro. Comprueba que se conservan todos los CP y pendientes,
+sin geometrías vacías y con salida válida `MULTIPOLYGON`. Las reparaciones
+pueden unir o separar componentes. No modifica el consolidado completo ni se
+ejecuta automáticamente al generar provincias. El campo `AREA_M2` de los
+pendientes conserva el área de la versión completa; la copia simplificada no
+debe usarse para mediciones precisas. Los vértices protegidos por la topología
+y la conservación de piezas pueden hacer que la proporción final supere el 30 %.
+
+## Revisión de pendientes con WMS
+
+La revisión se ejecuta solo a requerimiento, fuera de la generación habitual:
+
+```r
+source("scripts/pendientes_wms.R")
+```
+
+Requiere además `httr2` y `jsonlite`. Selecciona los 50 recintos pendientes de
+mayor superficie, omitiendo los que quedaron sin asignar en revisiones
+anteriores (identificados por provincia, municipio y superficie). Genera los
+centros de una malla de 3 × 3 celdas sobre la caja de cada recinto y consulta
+únicamente los puntos estrictamente interiores
+en la capa `codigo-postal` del
+[WMS de CartoCiudad](https://www.cartociudad.es/web/portal/directorio-de-servicios/visualizacion).
+Asigna el recinto completo solo si todos los puntos conservados tienen
+respuesta y devuelven un único CP común. Los recintos sin puntos interiores,
+con respuestas vacías o errores, o con varios CP se mantienen pendientes.
+
+Cada revisión conserva sus coordenadas EPSG:25830, respuestas, fechas y
+decisiones en una carpeta `data/full_analisis/wms_FECHA_HORA/`. Las asignaciones
+se incorporan a los resultados provinciales y después se reconstruye el
+consolidado. Regenerar una provincia desde las direcciones sustituye estas
+correcciones y requiere una nueva revisión. El muestreo no garantiza que no
+existan otros CP entre los puntos consultados o en componentes no muestreados.
+
 ## Grado de avance
 
 ![](data/avance.png)

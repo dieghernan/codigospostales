@@ -1,0 +1,51 @@
+ID_REVISION,PROVINCIA,CodMuni,Municipio,AREA_M2,PUNTOS,CP_ASIGNADO,VALORES,ESTADO
+1,05,05132,Mombeltrán,1534052.0973621458,5,05491,05491,asignable
+2,36,36057,Vigo,1456273.9154555718,4,,,incompleto
+3,20,20907,Gaztelu,1423128.4643565267,5,,20491;31891,varios_cp
+4,31,53066,Facería de Montejurra,1404811.7907403484,5,31241,31241,asignable
+5,07,07040,Palma,1386577.5829650406,5,07001,07001,asignable
+6,24,24051,Cea,1375646.6441868339,5,24172,24172,asignable
+7,35,35024,Teguise,1353577.9807369644,6,,,incompleto
+8,09,53031,Valle de las Venadas,1277184.6972936913,3,09660,09660,asignable
+9,34,34222,Villameriel,1084438.5066495985,5,34407,34407,asignable
+10,07,07048,Sant Josep de sa Talaia,1056124.6562044236,3,,,incompleto
+11,09,53019,Soncarazo,1041100.0331856459,1,09611,09611,asignable
+12,09,09219,Miranda de Ebro,990127.895881515,4,09293,09293,asignable
+13,34,34114,Olmos de Ojeda,984183.2779514268,4,34485,34485,asignable
+14,30,30035,San Javier,929655.9369861018,6,30720,30720,asignable
+15,37,53071,Coto Mancomunado,919980.8694875017,5,37428,37428,asignable
+16,19,19086,Cifuentes,904712.0486612394,5,19420,19420,asignable
+17,09,53032,"Comunidad de Palacios de la Sierra, Vilviestre del Pinar y San Leonardo de Yagüe",897097.2111994475,4,42140,42140,asignable
+18,31,53061,Mancomunidad de Beunza y Juarbe,891268.2103234362,5,31867,31867,asignable
+19,25,25140,Montferrer i Castellbò,862656.7204783987,5,25795,25795,asignable
+20,50,50252,Tauste,840945.4976771474,2,50660,50660,asignable
+21,31,53065,Facería de Aldape,840671.6395533439,5,31840,31840,asignable
+22,31,53062,Comunidad de Barbarín y Olejúa,783883.3530010581,6,31243,31243,asignable
+23,16,16113,Iniesta,722536.8030317863,7,16260,16260,asignable
+24,09,53039,Comunidad de Tardajos y Las Quintanillas,721229.1383600011,6,09131,09131,asignable
+25,20,20907,Gaztelu,717814.1908945721,4,,20490;20491,varios_cp
+26,09,53033,Comunidad de Quintanaortuño y Merindad de Río Ubierna,707393.6879728814,2,09140,09140,asignable
+27,24,53054,Mancomunidad de Villagatón y Quintana del Castillo,695101.7648199373,4,24397,24397,asignable
+28,09,53034,Comunidad de Quintanar de la Sierra y Vilviestre del Pinar,670064.4996387307,6,09690,09690,asignable
+29,24,53051,Comunidad de Castrotierra de la Valduerna,651422.9359432437,9,24730,24730,asignable
+30,28,53058,El Redegüelo,650675.7210187186,3,28412,28412,asignable
+31,09,53043,Comunidad de Villoruebo y Torrelara,647085.1903922167,4,09646,09646,asignable
+32,07,07048,Sant Josep de sa Talaia,644632.5149517122,5,,,incompleto
+33,19,19044,Atienza,639637.5077621043,5,19245,19245,asignable
+34,09,53023,Comunidad de Cilleruelo de Arriba y Pineda Trasmonte,629458.748034535,4,09349,09349,asignable
+35,09,53040,Comunidad de Tardajos y Rabé de las Calzadas,612692.790931847,6,09130,09130,asignable
+36,09,53035,Comunidad de Revilla del Campo y Torrelara,611064.4994263668,4,09194,09194,asignable
+37,28,28023,"Boalo, El",603840.9895955473,5,28411,28411,asignable
+38,07,07032,Maó,595752.9835702674,4,,,incompleto
+39,15,15043,Malpica de Bergantiños,564825.801950695,6,15113,15113,asignable
+40,09,53012,"Comunidad de 09076, 09578, 09606 y 09822",558728.3188946173,4,09613,09613,asignable
+41,08,08127,Monistrol de Montserrat,528592.1645986884,6,,08296;08298,varios_cp
+42,09,53028,"Ledanía de Hacinas, Salas de los Infantes y Villanueva de Carazo",524222.79434899986,4,09613,09613,asignable
+43,43,43103,Perafort,513754.72639999166,5,43155,43155,asignable
+44,07,07024,Formentera,494871.69919077866,3,,,incompleto
+45,09,09431,Villafranca Montes de Oca,480676.71213445626,3,09258,09258,asignable
+46,36,36060,Vilagarcía de Arousa,480035.00756355375,6,,,incompleto
+47,44,44009,Albarracín,450517.4788010344,3,44310,44310,asignable
+48,09,53046,"Comunidad de Merindad de Río Ubierna, Quintanilla Vivar y Sotragero",434746.7452894058,4,09140,09140,asignable
+49,44,53077,El Franco,424229.3794915583,5,44742,44742,asignable
+50,01,01008,Arratzua-Ubarrundia,422270.6933389418,7,01520,01520,asignable

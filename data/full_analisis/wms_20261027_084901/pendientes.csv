@@ -1,0 +1,51 @@
+ID_REVISION,PROVINCIA,CodMuni,Municipio,AREA_M2,PUNTOS,CP_ASIGNADO,VALORES,ESTADO
+1,43,43043,"Catllar, El",405281.75998603506,5,43764,43764,asignable
+2,24,53053,Comunidad de Soto de la Vega y Villazala,397895.2941658188,4,24763,24763,asignable
+3,31,53070,Facería de Ayarza,387524.87779745087,6,,31242;31243,varios_cp
+4,09,53022,Dehesa de San Felices,386169.6170745436,7,09691,09691,asignable
+5,09,53005,Comunidad de Los Ausines y Revilla del Campo,348316.1634974899,4,09647,09647,asignable
+6,16,16035,Beteta,330350.342529729,1,19462,19462,asignable
+7,07,07052,Sant Lluís,309193.50633965654,5,07713,07713,asignable
+8,36,36041,Poio,287810.08840787224,6,,,incompleto
+9,09,53018,Comunidad de Canicosa de la Sierra y Casarejos,276677.5397165045,5,09692,09692,asignable
+10,30,30035,San Javier,263333.02318274626,5,30720,30720,asignable
+11,09,53006,Comunidad de Barbadillo de Herreros y Vallejimeno (E.L.M.),256188.12868333003,7,09614,09614,asignable
+12,09,09330,Salas de los Infantes,253245.67803359032,6,09613,09613,asignable
+13,36,36004,Bueu,246737.534807364,6,,,incompleto
+14,09,53017,Comunidad de Canicosa de la Sierra y Vilviestre del Pinar,237825.73771546874,5,09692,09692,asignable
+15,31,53069,Facero de Ujué y Lerga,232337.7339618355,6,31494,31494,asignable
+16,31,53064,Facería de Ezcabarte y otros,228850.65033623204,6,31194,31194,asignable
+17,20,20071,Tolosa,226422.06258154474,3,20400,20400,asignable
+18,30,30035,San Javier,221042.52514685458,2,30380,30380,asignable
+19,43,43103,Perafort,205557.52307890635,4,43155,43155,asignable
+20,07,07048,Sant Josep de sa Talaia,195468.66546398588,7,,,incompleto
+21,17,17199,Torroella de Montgrí,191254.08420022705,4,,,incompleto
+22,01,01031,Laguardia,191118.385956347,6,,01300;01308,varios_cp
+23,15,15043,Malpica de Bergantiños,183183.50831296016,7,,,incompleto
+24,07,07048,Sant Josep de sa Talaia,173193.09394962643,4,,,incompleto
+25,07,07048,Sant Josep de sa Talaia,171065.19052581256,6,,,incompleto
+26,27,27064,"Vicedo, O",170536.4948973896,5,,,incompleto
+27,30,30035,San Javier,167964.62617411744,7,30720,30720,asignable
+28,39,39061,Ribamontán al Mar,163775.27827259433,7,,,incompleto
+29,11,11016,Chipiona,138903.70272731408,6,,,incompleto
+30,12,12040,Castelló de la Plana,137061.63031390344,5,,;12100,incompleto
+31,44,44009,Albarracín,134573.7000010293,5,44123,44123,asignable
+32,35,35004,Arrecife,123486.36620173138,2,,,incompleto
+33,07,07042,Pollença,116808.43386070029,6,,,incompleto
+34,36,36022,"Grove, O",116146.67774792085,3,,,incompleto
+35,11,11031,San Fernando,115573.38123339228,0,,,sin_puntos
+36,43,43103,Perafort,112760.13141444698,7,43155,43155,asignable
+37,07,07040,Palma,106728.94792233687,7,,,incompleto
+38,09,53015,Comunidad de Bascuñana y Viloria de Rioja,106399.03989127465,5,09259,09259,asignable
+39,36,36035,Nigrán,104319.78834295273,7,,,incompleto
+40,27,27025,Xove,104232.05152267823,6,,,incompleto
+41,05,05139,Muñogrande,104029.69513902254,6,05309,05309,asignable
+42,30,30035,San Javier,97814.9301294284,3,,,incompleto
+43,15,15073,Ribeira,95697.77226131666,6,,,incompleto
+44,15,15043,Malpica de Bergantiños,91830.88634003245,7,,,incompleto
+45,07,07011,Calvià,88748.95070718136,1,,,incompleto
+46,07,07037,"Mercadal, Es",86656.61802175269,5,,,incompleto
+47,03,03082,Xàbia/Jávea,84748.01102487493,8,,,incompleto
+48,30,30026,Mazarrón,83241.1720702931,6,,,incompleto
+49,09,53015,Comunidad de Bascuñana y Viloria de Rioja,79002.43775684631,6,09259,09259,asignable
+50,03,03031,Benidorm,78553.95877305075,7,,,incompleto
