@@ -1,0 +1,39 @@
+{
+  "name": "Códigos postales de España",
+  "short_name": "Cód. Postales",
+  "description": "Delimitaciones estimadas de los códigos postales de España a partir de datos abiertos de CartoCiudad, disponibles en GeoPackage.",
+  "id": "/codigospostales/",
+  "start_url": "/codigospostales/",
+  "scope": "/codigospostales/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#eb6864",
+  "lang": "es-ES",
+  "icons": [
+    {
+      "src": "/codigospostales/assets/img/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/codigospostales/assets/img/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/codigospostales/assets/img/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/codigospostales/assets/img/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
