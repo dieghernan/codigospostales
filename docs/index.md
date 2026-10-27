@@ -2,7 +2,7 @@
 layout: default
 title: Códigos postales de España
 subtitle: Delimitaciones estimadas a partir de datos abiertos
-header_type: base
+header_type: hero
 excerpt: Áreas postales generadas con R a partir de direcciones de CartoCiudad y recintos administrativos, disponibles en GeoPackage.
 ---
 

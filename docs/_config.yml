@@ -67,8 +67,8 @@ webmentions:
 
 navbar:
   brand:
-    title: Códigos postales
-    img: /assets/img/favicon-192.png
+    title: '<i class="fas fa-home" style="color: white"></i><span class="d-none">Home</span>'
+
   nav:
     - title: Visor
       url: /visor/
