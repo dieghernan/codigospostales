@@ -150,11 +150,9 @@ Correos. (s. f.). *Base de datos de códigos postales y capa cartográfica*.
 
 <div id="ref-goerlich-cp" class="csl-entry" markdown="1">
 
-Goerlich, F. J. (2022). *Elaboración de un mapa de códigos postales de España
-con recursos libres. Cómo evitar pagar a Correos 6.000 € por información de
-referencia*. Working Papers Ivie, 2022-03. Instituto Valenciano de
-Investigaciones Económicas.
-[Documento de trabajo](https://doi.org/10.12842/WPIVIE_0322).
+Goerlich, F. J. (2022). *Elaboración de un mapa de códigos postales de España 
+con recursos libres. Cómo evitar pagar por disponer de información de referencia*. Working Papers Ivie, n.º 2022-3. València: Ivie.
+[doi:10.12842/WPIVIE_0322](https://doi.org/10.12842/WPIVIE_0322).
 [Versión online actualizada](https://www.uv.es/goerlich/Ivie/CodPost.html).
 
 </div>

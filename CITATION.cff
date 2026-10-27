@@ -18,6 +18,11 @@ date-released: 2026-10-27
 preferred-citation:
   type: data
   title: Códigos postales de España
+  abstract: >-
+    Estimated postal code boundaries for Spain derived from open CartoCiudad
+    address data and administrative boundaries. The dataset is generated using
+    Voronoi tessellation and administrative clipping and does not represent
+    official postal boundaries.
   authors:
   - family-names: Hernangómez
     given-names: Diego
@@ -30,17 +35,16 @@ url: https://dieghernan.github.io/codigospostales/
 references:
 - type: report
   title: >-
-    Elaboración de un mapa de códigos postales de España con recursos libres:
+    Elaboración de un mapa de códigos postales de España con recursos libres. 
     Cómo evitar pagar por disponer de información de referencia
   authors:
   - family-names: Goerlich
     given-names: Francisco José
   year: '2022'
+  collection-title: Working Papers Ivie
+  number: '2022-03'
   institution:
     name: Instituto Valenciano de Investigaciones Económicas
-  collection-title: Working Papers Ivie
-  collection-type: report
-  number: WP-Ivie 2022-03
   doi: 10.12842/WPIVIE_0322
   url: https://www.uv.es/goerlich/Ivie/CodPost.html
 - type: data

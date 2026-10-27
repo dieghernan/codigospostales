@@ -16,7 +16,7 @@ Disponer de polígonos de códigos postales permite relacionar direcciones y
 estadísticas con áreas geográficas. Sin embargo, la consulta de un código
 postal y la descarga de sus límites son servicios distintos.
 
-Según [Goerlich (2022)](https://www.ivie.es/downloads/docs/wpivie/wpivie-2022-03.pdf),
+Según [Goerlich (2022)](https://doi.org/10.12842/WPIVIE_0322),
 hacia 2016 los polígonos de códigos postales de Correos se podían descargar
 desde CartoCiudad a través del CNIG. Esa capa dejó de ofrecerse para descarga
 a principios de 2017, tras un cambio en la política de datos de Correos.
