@@ -1,0 +1,43 @@
+# Códigos postales de España
+
+> Delimitaciones estimadas de los códigos postales de España generadas con R a partir de datos abiertos de CartoCiudad y límites administrativos. Autor: dieghernan (Diego Hernangómez).
+
+Este proyecto distribuye datos geográficos, no un paquete de R o Python.
+Las delimitaciones no son límites postales oficiales de Correos y no se debe
+presentar la estimación como cartografía oficial. La cobertura corresponde a
+los resultados provinciales incluidos en el consolidado; el filtrado de
+direcciones puede excluir códigos presentes en las fuentes originales.
+
+## Documentación
+
+- [Página del proyecto](https://dieghernan.github.io/codigospostales/): antecedentes, metodología, limitaciones, licencia y referencias.
+- [Ejemplos reproducibles en R y Python](https://dieghernan.github.io/codigospostales/ejemplos/): lectura SQL por prefijo y generación de mapas.
+- [Visor Leaflet](https://dieghernan.github.io/codigospostales/visor/): datos simplificados por prefijo, con IGNBase, PNOA y el WMS de CartoCiudad. Vista inicial: prefijo 08.
+- [README y código fuente](https://github.com/dieghernan/codigospostales): generación provincial, consolidación, simplificación y revisión opcional de pendientes con WMS.
+
+## Datos
+
+- [GeoPackage completo](https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales.gpkg): geometría completa.
+- [GeoPackage simplificado](https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales_simplificado.gpkg): copia para visualización, no para mediciones precisas.
+
+Ambos archivos tienen las capas `codigos_postales` y `pendientes`, con
+geometrías MULTIPOLYGON en EPSG:25830. La capa postal contiene `COD_POSTAL`
+como texto de cinco dígitos, conservando ceros iniciales. Un mismo código
+puede tener superficies separadas y abarcar varias provincias; filtrar por
+prefijo no equivale a recortar por provincia. La capa postal no incluye el
+municipio. Los recintos sin CP se conservan en `pendientes`; en la copia
+simplificada, `AREA_M2` mantiene la superficie medida en la versión completa.
+Los GeoPackage del repositorio se almacenan mediante Git LFS.
+
+## Fuentes y atribución
+
+- [CartoCiudad (IGN/CNIG)](https://www.cartociudad.es/web/portal/): direcciones de partida.
+- [Goerlich y Pérez Vázquez (2025), LAU2boundaries4Spain, v2](https://doi.org/10.5281/zenodo.15345101): límites administrativos; capas Municipios2024, Condominios y Provincias.
+- [Goerlich (2022)](https://www.ivie.es/downloads/docs/wpivie/wpivie-2022-03.pdf): referencia metodológica para estimar áreas postales con Voronoi y límites administrativos.
+- [Sánchez (2020), NoSoloSIG](https://www.nosolosig.com/articulos/asi-hice-el-mapa-de-los-codigos-postales-de-espana-con-sig-y-datos-abiertos): referencia metodológica.
+- [Licencia del proyecto: CC BY 4.0](https://github.com/dieghernan/codigospostales/blob/main/LICENSE).
+- [Autor: dieghernan](https://dieghernan.github.io/).
+
+Se ha utilizado OpenAI Codex como apoyo al desarrollo, la documentación y el
+sitio web. Los datos proceden de las fuentes geográficas citadas.
+
