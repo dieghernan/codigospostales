@@ -43,7 +43,9 @@ consultar_cp_wms <- function(punto) {
     req_retry(max_tries = 3)
   tryCatch(
     {
-      cuerpo <- peticion |> req_perform() |> resp_body_string()
+      cuerpo <- peticion |>
+        req_perform() |>
+        resp_body_string()
       datos <- fromJSON(cuerpo, simplifyVector = FALSE)
       if (!identical(datos$type, "FeatureCollection")) {
         stop("Respuesta WMS inesperada.")

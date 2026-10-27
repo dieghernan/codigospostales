@@ -34,7 +34,7 @@ if (length(cpro) != 1L || is.na(cpro)) {
 munis_all <- read_sf(
   "data/cartociudad/LAU2boundaries4Spain.gpkg",
   query = sprintf(
-    'SELECT CodProv, CodMuni, Municipio, geom FROM Municipios2024 WHERE CodProv = \'%s\'',
+    "SELECT CodProv, CodMuni, Municipio, geom FROM Municipios2024 WHERE CodProv = '%s'",
     cpro
   )
 )
@@ -42,7 +42,7 @@ munis_all <- read_sf(
 condiminios <- read_sf(
   "data/cartociudad/LAU2boundaries4Spain.gpkg",
   query = sprintf(
-    'SELECT CodProv, CodMuni, Municipio, geom FROM Condominios WHERE CodProv = \'%s\'',
+    "SELECT CodProv, CodMuni, Municipio, geom FROM Condominios WHERE CodProv = '%s'",
     cpro
   )
 )
@@ -50,7 +50,7 @@ condiminios <- read_sf(
 provincias <- read_sf(
   "data/cartociudad/LAU2boundaries4Spain.gpkg",
   query = sprintf(
-    'SELECT CodProv, Provincia, geom FROM Provincias WHERE CodProv = \'%s\'',
+    "SELECT CodProv, Provincia, geom FROM Provincias WHERE CodProv = '%s'",
     cpro
   )
 )
