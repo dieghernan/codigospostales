@@ -154,8 +154,8 @@ Goerlich, F. J. (2022). *Elaboración de un mapa de códigos postales de España
 con recursos libres. Cómo evitar pagar a Correos 6.000 € por información de
 referencia*. Working Papers Ivie, 2022-03. Instituto Valenciano de
 Investigaciones Económicas.
-[Materiales del trabajo](https://www.uv.es/goerlich/Ivie/CodPost.html).
-[Documento de trabajo](https://www.ivie.es/downloads/docs/wpivie/wpivie-2022-03.pdf).
+[Documento de trabajo](https://doi.org/10.12842/WPIVIE_0322).
+[Versión online actualizada](https://www.uv.es/goerlich/Ivie/CodPost.html).
 
 </div>
 

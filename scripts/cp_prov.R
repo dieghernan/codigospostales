@@ -106,7 +106,6 @@ unzip(
 
 file <- list.files(temp, pattern = "gpkg$", full.names = TRUE)
 
-st_layers(file)
 cp <- st_read(
   file,
   query = "SELECT poblacion, cod_postal, geom from portalpk_publi",
@@ -138,8 +137,7 @@ munis <- munis |>
 finalcp <- list()
 
 
-i <- 1
-
+# i <- 1
 message("Recintos totales: ", nrow(munis))
 
 for (i in seq_len(nrow(munis))) {
