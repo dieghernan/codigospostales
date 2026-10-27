@@ -8,10 +8,18 @@
     return;
   }
 
-  const map = L.map(container, { preferCanvas: true, scrollWheelZoom: true }).setView([40.4, -3.7], 8);
-  const base = L.tileLayer.providerESP('IGNBase').addTo(map);
+  // Evita que el zoom mínimo del WMS cambie la vista al sustituir el fondo.
+  const map = L.map(container, {
+    preferCanvas: true,
+    scrollWheelZoom: true,
+    minZoom: 0,
+    maxZoom: 18
+  }).setView([40.4, -3.7], 8);
+  const gris = L.tileLayer.providerESP('IGNBase.Gris').addTo(map);
+  const base = L.tileLayer.providerESP('IGNBase');
   const pnoa = L.tileLayer.providerESP('PNOA');
   const cartociudad = L.tileLayer.providerESP('Cartociudad.CodigosPostales').addTo(map);
+  const limites = L.tileLayer.providerESP('UnidadesAdm.Limites');
   const postal = L.geoJSON(null, {
     style: { color: '#203b50', weight: 1.5, fillColor: '#2e8b57', fillOpacity: 0.25 },
     onEachFeature(feature, layer) {
@@ -21,10 +29,11 @@
     },
     attribution: 'Elaboración: <a href="https://dieghernan.github.io/">dieghernan</a> · CartoCiudad (IGN/CNIG) · Goerlich y Pérez Vázquez (2025)'
   }).addTo(map);
-  L.control.layers({ IGNBase: base, PNOA: pnoa }, {
+  L.control.layers({ 'IGNBase Gris': gris, IGNBase: base, PNOA: pnoa }, {
     'CartoCiudad · CP (zoom ≥ 14)': cartociudad,
+    'Límites administrativos · IGN': limites,
     'Códigos postales estimados': postal
-  }, { collapsed: true }).addTo(map);
+  }, { collapsed: false }).addTo(map);
   L.control.scale({ imperial: false }).addTo(map);
 
   let request;
@@ -62,7 +71,22 @@
       if (!response.ok) throw new Error('No se ha podido cargar el catálogo');
       const prefixes = await response.json();
       if (!Array.isArray(prefixes) || !prefixes.length || !prefixes.every(p => /^\d{2}$/.test(p))) throw new Error('Catálogo no válido');
-      select.replaceChildren(...prefixes.map(prefix => new Option(`${prefix}xxx`, prefix)));
+      // Nombres de referencia del prefijo, no límites del filtro postal.
+      const names = [
+        'Álava', 'Albacete', 'Alicante', 'Almería', 'Ávila', 'Badajoz',
+        'Illes Balears', 'Barcelona', 'Burgos', 'Cáceres', 'Cádiz', 'Castellón',
+        'Ciudad Real', 'Córdoba', 'A Coruña', 'Cuenca', 'Girona', 'Granada',
+        'Guadalajara', 'Gipuzkoa', 'Huelva', 'Huesca', 'Jaén', 'León', 'Lleida',
+        'La Rioja', 'Lugo', 'Madrid', 'Málaga', 'Murcia', 'Navarra', 'Ourense',
+        'Asturias', 'Palencia', 'Las Palmas', 'Pontevedra', 'Salamanca',
+        'Santa Cruz de Tenerife', 'Cantabria', 'Segovia', 'Sevilla', 'Soria',
+        'Tarragona', 'Teruel', 'Toledo', 'Valencia', 'Valladolid', 'Bizkaia',
+        'Zamora', 'Zaragoza', 'Ceuta', 'Melilla'
+      ];
+      select.replaceChildren(...prefixes.map(prefix => {
+        const name = names[Number(prefix) - 1];
+        return new Option(name ? `${prefix}xxx (${name})` : `${prefix}xxx`, prefix);
+      }));
       select.value = prefixes.includes('08') ? '08' : prefixes[0];
       select.disabled = false;
       await loadPrefix();

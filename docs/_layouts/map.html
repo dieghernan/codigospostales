@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+{% include head.html theme_script=true %}
+<body class="postal-map-page">
+<main class="postal-map-app">
+  <nav class="postal-map-toolbar" aria-label="Navegación del visor">
+    <a href="{{ '/visor/' | relative_url }}" target="_top">Documentación</a>
+    <span>Límites estimados · no oficiales</span>
+  </nav>
+  {{ content }}
+</main>
+{% include custom/custom_bottomscripts.html %}
+</body>
+</html>

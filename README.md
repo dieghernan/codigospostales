@@ -114,7 +114,7 @@ el archivo de entrada. No se aplican tolerancias para cerrar huecos.
 Cada ejecución guarda el resultado intermedio en `data/provs/CP_XX.gpkg` y
 ejecuta `scripts/consolidado.R`. Este reúne todos los resultados provinciales,
 los transforma a EPSG:25830 y disuelve las superficies por `COD_POSTAL`, sin
-restringir los códigos por su prefijo provincial. Así actualiza el producto
+restringir los códigos por su prefijo postal. Así actualiza el producto
 final `data/codigos_postales.gpkg`. Los registros sin CP quedan excluidos del
 consolidado postal y se conservan con geometría en la capa `pendientes` del
 mismo GeoPackage, con provincia de origen y área en metros cuadrados, medida
@@ -204,14 +204,24 @@ bundle exec jekyll serve
 Abre `http://localhost:4000/codigospostales/`. Para compilar sin iniciar un
 servidor, ejecuta `bundle exec jekyll build` desde `docs/`.
 
-El visor utiliza Leaflet y Leaflet-providersESP, con IGNBase y PNOA como fondos
+El visor utiliza Leaflet y Leaflet-providersESP, con IGNBase Gris, IGNBase y PNOA como fondos
 alternativos y capas activables de CartoCiudad y de las delimitaciones
-estimadas. Inicialmente muestra IGNBase con ambas capas activadas; el control
-de capas está plegado y el zoom con la rueda está habilitado. La vista inicial
-muestra el prefijo `08` (Barcelona). Carga los
+estimadas. Inicialmente muestra IGNBase Gris con ambas capas activadas; el control
+de capas está desplegado y el zoom con la rueda está habilitado. La vista inicial
+muestra el prefijo postal `08`. Carga los
 códigos por sus dos primeros dígitos, conservando los ceros iniciales. Este
 filtro selecciona códigos completos y no recorta las geometrías a una
-provincia. El WMS de CartoCiudad se muestra a partir del zoom 14.
+provincia. Prefijo postal y provincia son criterios distintos: un mismo código
+postal puede abarcar varias provincias. Para seleccionar datos por provincia
+se necesita un criterio espacial sobre sus límites administrativos.
+El WMS de CartoCiudad se muestra a partir del zoom 14.
+El overlay de límites administrativos del IGN está desactivado inicialmente
+y se puede activar desde el control de capas para comparar ambos criterios.
+
+El mapa se integra mediante un `iframe`. La
+[vista a toda ventana](https://dieghernan.github.io/codigospostales/visor/mapa/)
+conserva el selector de prefijos, los controles de capas y las atribuciones,
+y se puede incrustar en otras páginas.
 
 Después de actualizar la versión simplificada, regenera los datos del visor
 desde la raíz del repositorio, con **sf** y **jsonlite** instalados:

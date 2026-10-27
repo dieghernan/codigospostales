@@ -11,5 +11,8 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="{{ '/assets/css/visor.css' | relative_url }}">
 {% endif %}
+{% if page.map_embed %}
+<link rel="stylesheet" href="{{ '/assets/css/visor.css' | relative_url }}">
+{% endif %}
 <link rel="webmention" href="https://webmention.io/dieghernan.github.io/webmention">
 <link rel="pingback" href="https://webmention.io/dieghernan.github.io/xmlrpc">

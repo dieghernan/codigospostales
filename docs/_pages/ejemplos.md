@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: default
 title: Ejemplos de uso
 permalink: /ejemplos/
 ---
@@ -10,7 +10,10 @@ o Python. No es necesario instalar un paquete propio del proyecto.
 Estos ejemplos utilizan la versión simplificada y seleccionan los códigos
 postales que empiezan por `28` (`28xxx`). El filtro se ejecuta al leer el
 archivo, sin cargar toda la capa en memoria. Selecciona códigos completos por
-su prefijo; no recorta sus geometrías al límite de una provincia.
+su prefijo; no recorta sus geometrías al límite de una provincia. Prefijo
+postal y provincia son criterios distintos: un mismo código postal puede
+abarcar varias provincias. Una selección por provincia requiere un criterio
+espacial sobre sus límites administrativos.
 
 Los códigos postales tienen cinco dígitos y se conservan como texto para
 mantener los ceros iniciales. Para otro dominio, cambia `'28%'` por el prefijo

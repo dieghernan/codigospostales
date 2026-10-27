@@ -93,7 +93,7 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: project
+      layout: default
       header_type: base
       show_author: true
       show_date: false
@@ -128,7 +128,15 @@ kramdown:
   toc_levels: 2..4
 
 sass:
+  sass_dir: _sass
   style: compressed
+  quiet_deps: true
+  silence_deprecations:
+  - import
+  - global-builtin
+  - color-functions
+  - abs-percent
+  - function-units
 
 compress_html:
   clippings: all
