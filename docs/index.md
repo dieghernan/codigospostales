@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Códigos postales de España
-subtitle: Delimitaciones estimadas a partir de datos abiertos
+subtitle: Delimitaciones estimadas con datos abiertos
 header_type: hero
-excerpt: Áreas postales generadas con R a partir de direcciones de CartoCiudad y recintos administrativos, disponibles en GeoPackage.
+excerpt: Áreas postales estimadas a partir de CartoCiudad y límites administrativos. Disponible en GeoPackage (R y Python).
 ---
 
 Este proyecto ofrece delimitaciones estimadas de los códigos postales de España

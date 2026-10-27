@@ -8,10 +8,10 @@ locale: es-ES
 og_locale: es_ES
 timezone: Europe/Madrid
 title: Códigos postales de España
-subtitle: Delimitaciones estimadas a partir de datos abiertos
+subtitle: Delimitaciones estimadas con datos abiertos
 description: >-
-  Delimitaciones estimadas de los códigos postales de España a partir de
-  datos abiertos de CartoCiudad, disponibles en GeoPackage y generadas con R.
+  Delimitaciones estimadas de códigos postales de España a partir de
+  CartoCiudad y límites administrativos. GeoPackage generado con R.
 
 og_image: /assets/img/github-preview.jpg
 og_image_alt: Códigos postales de España, con un mosaico de áreas postales.
