@@ -193,7 +193,7 @@ existan otros CP entre los puntos consultados o en componentes no muestreados.
 ## Sitio web y visor
 
 La web del proyecto se encuentra en `docs/` y utiliza Jekyll con Chulapa y la
-skin Litera. Para previsualizarla con Ruby y Bundler instalados:
+skin Journal. Para previsualizarla con Ruby y Bundler instalados:
 
 ```sh
 cd docs
