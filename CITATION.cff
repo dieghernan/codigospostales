@@ -29,8 +29,10 @@ preferred-citation:
     orcid: https://orcid.org/0000-0001-8457-4658
   year: '2026'
   version: 1.0.0
+  doi: 10.5281/zenodo.23698418
   url: https://dieghernan.github.io/codigospostales/
 repository-code: https://github.com/dieghernan/codigospostales
+doi: 10.5281/zenodo.23698418
 url: https://dieghernan.github.io/codigospostales/
 references:
 - type: report
