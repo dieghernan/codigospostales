@@ -15,7 +15,7 @@
         "@type": "WebPage",
         "@id": "https://dieghernan.github.io/codigospostales/visor/",
         "name": "Visor de códigos postales",
-        "description": "Explora las delimitaciones estimadas por prefijo postal. Abre el control de",
+        "description": "El visor utiliza la versión simplificada, transformada a WGS84 (EPSG:4326),",
         "headline": "Visor de códigos postales",
         "image": "https://dieghernan.github.io/codigospostales/assets/img/github-preview.jpg",
         "author": {
@@ -93,7 +93,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Diego Hernangómez" >
     <meta name="copyright" content="Diego Hernangómez" >
-    <meta name="description" content="Explora las delimitaciones estimadas por prefijo postal. Abre el control de">
+    <meta name="description" content="El visor utiliza la versión simplificada, transformada a WGS84 (EPSG:4326),">
     <meta name="thumbnail" content="https://dieghernan.github.io/codigospostales/assets/img/github-preview.jpg" >
     <meta name="robots" content="index, follow">
     <!-- OpenGraph -->
@@ -101,7 +101,7 @@
     <meta property="og:site_name" content="Códigos postales de España" >
     <meta property="og:url" content="https://dieghernan.github.io/codigospostales/visor/" >
     <meta property="og:type" content="website" >
-    <meta property="og:description" content="Explora las delimitaciones estimadas por prefijo postal. Abre el control de" >
+    <meta property="og:description" content="El visor utiliza la versión simplificada, transformada a WGS84 (EPSG:4326)," >
     <meta property="og:locale" content="es_ES">
     <meta property="og:image" content="https://dieghernan.github.io/codigospostales/assets/img/github-preview.jpg" >
     <meta property="og:image:alt" content="Códigos postales de España, con un mosaico de áreas postales." >
@@ -110,7 +110,7 @@
     <meta property="og:image:type" content="image/jpeg" >
     <!-- Twitter/X Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="Explora las delimitaciones estimadas por prefijo postal. Abre el control de">
+    <meta name="twitter:description" content="El visor utiliza la versión simplificada, transformada a WGS84 (EPSG:4326),">
     <meta name="twitter:site" content="@dhernangomez" >
     <meta name="twitter:creator" content="@dhernangomez" >
     <!-- start custom head snippets -->
@@ -144,7 +144,7 @@
 <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="/codigospostales/assets/img/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/codigospostales/assets/img/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/codigospostales/assets/img/apple-touch-icon.png">
-<meta name="theme-color" content="#203b50">
+<meta name="theme-color" content="#eb6864">
 <meta name="fediverse:creator" content="@dhernangomez@fosstodon.org">
 <link rel="author" href="https://dieghernan.github.io/">
 <link rel="describedby" type="text/plain" title="Información para asistentes de IA" href="https://dieghernan.github.io/codigospostales/llms.txt">
@@ -156,7 +156,7 @@
 	<a class="sr-only sr-only-focusable chulapa-skip-link" href="#chulapa-content">Skip to content</a>
 	<nav class="navbar navbar-expand-md sticky-top navbar-chulapa" aria-label="primary-navigation">
 	<div class="container-fluid mx-md-2">
-			<a class="navbar-brand font-weight-bold" href="https://dieghernan.github.io/codigospostales/"><i class="fas fa-home" style="color: white"></i><span class="d-none">Home</span></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+			<a class="navbar-brand font-weight-bold" href="https://dieghernan.github.io/codigospostales/"><i class="fas fa-home" style="color: black"></i><span class="d-none">Home</span></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarToggler">
@@ -196,7 +196,13 @@
 		<div class="row pt-2">
 			<div class="col-lg-2 mt-lg-3 small"></div>
 			<article id="maincontent" class="col-lg-8 mt-3">
-			<div class="e-content"><p>Explora las delimitaciones estimadas por prefijo postal. Abre el control de
+			<div class="e-content"><p class="alert alert-light p-3 mx-2 mb-3">El visor utiliza la versión simplificada, transformada a WGS84 (EPSG:4326),
+con seis decimales en las coordenadas. No incluye los recintos pendientes y
+no está destinado a mediciones precisas. Las delimitaciones son estimadas,
+no límites postales oficiales. Consulta las
+<a href="/codigospostales/#metodología-y-fuentes">fuentes y la metodología</a>
+y los <a href="/codigospostales/ejemplos/">ejemplos de uso</a>.</p>
+<p>Explora las delimitaciones estimadas por prefijo postal. Abre el control de
 capas para elegir entre IGNBase Gris, IGNBase y la ortofotografía PNOA, y activar o desactivar
 los polígonos del proyecto y el WMS de códigos postales de CartoCiudad.
 El fondo inicial es IGNBase Gris y ambas capas están activadas.
@@ -221,12 +227,6 @@ postal puede abarcar varias provincias.</p>
 prefijo sin descargar el conjunto nacional completo. Los dominios disponibles
 corresponden a los códigos presentes en los datos publicados. El filtro
 selecciona códigos completos, sin recortarlos a una provincia.</p>
-<p>El visor utiliza la versión simplificada, transformada a WGS84 (EPSG:4326),
-con seis decimales en las coordenadas. No incluye los recintos pendientes y
-no está destinado a mediciones precisas. Las delimitaciones son estimadas,
-no límites postales oficiales. Consulta las
-<a href="/codigospostales/#metodología-y-fuentes">fuentes y la metodología</a>
-y los <a href="/codigospostales/ejemplos/">ejemplos de uso</a>.</p>
 <p>Cartografía de fondo y WMS mediante
 <a href="https://dieghernan.github.io/leaflet-providersESP/">Leaflet-providersESP</a>.</p>
 </div>
@@ -264,7 +264,7 @@ y los <a href="/codigospostales/ejemplos/">ejemplos de uso</a>.</p>
           </nav>
           <p class="mt-2 mb-3">&copy; 2026 Diego Hernangómez</p>
           <!-- Do not remove this in order to give attributions -->
-          <p class="chulapa-footer-brand">Powered by <a href="https://dieghernan.github.io/chulapa"> <span class="chulapa">Chulapa</span> Jekyll Theme</a><br><b>Litera</b> skin by <a href="https://bootswatch.com/">Bootswatch</a></p>
+          <p class="chulapa-footer-brand">Powered by <a href="https://dieghernan.github.io/chulapa"> <span class="chulapa">Chulapa</span> Jekyll Theme</a><br><b>Journal</b> skin by <a href="https://bootswatch.com/">Bootswatch</a></p>
           <!-- End attributions -->
         </div>
       </div>

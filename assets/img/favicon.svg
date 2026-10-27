@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <title>Códigos postales de España</title>
-  <rect width="64" height="64" rx="12" fill="#203b50"/>
-  <g stroke="#203b50" stroke-width="3" stroke-linejoin="round">
-    <path d="M8 8h23l-6 17-17 7Z" fill="#f7f4ed"/>
-    <path d="M31 8h25v22l-14-5-17 0Z" fill="#a8c4cb"/>
-    <path d="m8 32 17-7 17 0 3 18-17 13H8Z" fill="#f7f4ed"/>
-    <path d="m42 25 14 5v26H28l17-13Z" fill="#c99437"/>
+  <rect width="64" height="64" rx="12" fill="#222222"/>
+  <g stroke="#222222" stroke-width="3" stroke-linejoin="round">
+    <path d="M8 8h23l-6 17-17 7Z" fill="#f8f9fa"/>
+    <path d="M31 8h25v22l-14-5-17 0Z" fill="#aaaaaa"/>
+    <path d="m8 32 17-7 17 0 3 18-17 13H8Z" fill="#f8f9fa"/>
+    <path d="m42 25 14 5v26H28l17-13Z" fill="#eb6864"/>
   </g>
 </svg>
