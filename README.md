@@ -243,11 +243,3 @@ El banner del proyecto se ha generado con IA a través de Codex. Estas
 herramientas no son la fuente de los datos geográficos: se utilizan las
 direcciones de CartoCiudad y los límites administrativos de Goerlich y
 Pérez Vázquez, referenciados en este documento.
-
-## Umami analytics
-
-The site uses the same Umami Cloud website ID as the author's personal site.
-Project visits appear in that shared dashboard and can be filtered by their URL
-path. The deferred tracker runs only on `dieghernan.github.io`, excluding local
-previews. It is included in the site's custom head without additional theme
-configuration.
