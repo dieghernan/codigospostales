@@ -1,0 +1,2 @@
+data/codigos_postales.gpkg filter=lfs diff=lfs merge=lfs -text
+data/provs/*.gpkg filter=lfs diff=lfs merge=lfs -text

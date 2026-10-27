@@ -32,6 +32,14 @@ la coincidencia con los límites postales oficiales ni la inclusión de todos
 los CP presentes en las direcciones originales, pues el filtrado por márgenes
 puede excluirlos.
 
+## Descarga del repositorio
+
+Los GeoPackage publicados se almacenan con Git LFS. Instala
+[Git LFS](https://git-lfs.com/) antes de clonar el repositorio y ejecuta
+`git lfs install`. Si ya tienes una copia, ejecuta `git lfs pull` para descargar
+los datos. Sin LFS puedes obtener archivos de referencia en lugar de los
+GeoPackage completos. Las descargas de `data/cartociudad/` siguen ignoradas.
+
 ## Generación
 
 Desde la raíz del proyecto, con los paquetes `sf`, `dplyr`, `ggplot2`,
