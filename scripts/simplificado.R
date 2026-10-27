@@ -20,7 +20,7 @@ conjunto <- bind_rows(
 vertices_antes <- nrow(st_coordinates(conjunto))
 simplificado <- ms_simplify(
   conjunto,
-  keep = 0.3,
+  keep = 0.2,
   keep_shapes = TRUE,
   explode = TRUE,
   snap = TRUE,

@@ -117,7 +117,7 @@ source("scripts/simplificado.R")
 ```
 
 Escribe `data/codigos_postales_simplificado.gpkg` con las mismas dos capas y
-atributos. Simplifica ambas capas juntas con `keep = 0.3`,
+atributos. Simplifica ambas capas juntas con `keep = 0.2`,
 `keep_shapes = TRUE` y `explode = TRUE`, y después vuelve
 a agrupar por registro. Comprueba que se conservan todos los CP y pendientes,
 sin geometrías vacías y con salida válida `MULTIPOLYGON`. Las reparaciones
@@ -125,7 +125,7 @@ pueden unir o separar componentes. No modifica el consolidado completo ni se
 ejecuta automáticamente al generar provincias. El campo `AREA_M2` de los
 pendientes conserva el área de la versión completa; la copia simplificada no
 debe usarse para mediciones precisas. Los vértices protegidos por la topología
-y la conservación de piezas pueden hacer que la proporción final supere el 30 %.
+y la conservación de piezas pueden hacer que la proporción final supere el 20 %.
 
 ## Revisión de pendientes con WMS
 
