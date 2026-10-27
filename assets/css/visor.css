@@ -10,6 +10,6 @@
 .postal-map-controls { display: flex; align-items: center; flex-wrap: wrap; gap: .2rem .5rem; padding: .3rem .6rem; font-size: .8rem; line-height: 1.3; }
 .postal-map-controls label { margin: 0; }
 .postal-map-controls #postal-prefix { display: inline-block; width: 16rem; max-width: 100%; height: 1.8rem; padding: .1rem .3rem; font-size: .8rem; line-height: 1.3; }
-.postal-map-controls p { margin: 0; font-size: .75rem; }
+.postal-map-controls p { margin: 0; font-family: inherit; font-size: .75rem; }
 .postal-map-controls #postal-prefix-help { flex-basis: 100%; order: 1; }
 .postal-map-app #postal-map { flex: 1; min-height: 240px; max-height: none; height: auto; margin: 0; }
