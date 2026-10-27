@@ -214,7 +214,7 @@ filtro selecciona códigos completos y no recorta las geometrías a una
 provincia. Prefijo postal y provincia son criterios distintos: un mismo código
 postal puede abarcar varias provincias. Para seleccionar datos por provincia
 se necesita un criterio espacial sobre sus límites administrativos.
-El WMS de CartoCiudad se muestra a partir del zoom 14.
+El WMS de CartoCiudad se muestra a partir del zoom 11.
 El overlay de límites administrativos del IGN está desactivado inicialmente
 y se puede activar desde el control de capas para comparar ambos criterios.
 

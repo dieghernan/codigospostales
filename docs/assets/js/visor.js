@@ -18,7 +18,19 @@
   const gris = L.tileLayer.providerESP('IGNBase.Gris').addTo(map);
   const base = L.tileLayer.providerESP('IGNBase');
   const pnoa = L.tileLayer.providerESP('PNOA');
-  const cartociudad = L.tileLayer.providerESP('Cartociudad.CodigosPostales').addTo(map);
+  // TODO: Remove this override once the incorrect minZoom in
+  // leaflet-providersESP Cartociudad.CodigosPostales is fixed.
+  const cartociudad = L.tileLayer.wms(
+    'https://www.cartociudad.es/wms-inspire/direcciones-ccpp',
+    {
+      layers: 'codigo-postal',
+      styles: 'codigopostal',
+      format: 'image/png',
+      transparent: true,
+      version: '1.3.0',
+      minZoom: 11
+    }
+  ).addTo(map);
   const limites = L.tileLayer.providerESP('UnidadesAdm.Limites');
   const postal = L.geoJSON(null, {
     style: { color: '#203b50', weight: 1.5, fillColor: '#2e8b57', fillOpacity: 0.25 },
@@ -30,7 +42,7 @@
     attribution: 'Elaboración: <a href="https://dieghernan.github.io/">dieghernan</a> · CartoCiudad (IGN/CNIG) · Goerlich y Pérez Vázquez (2025)'
   }).addTo(map);
   L.control.layers({ 'IGNBase Gris': gris, IGNBase: base, PNOA: pnoa }, {
-    'CartoCiudad · CP (zoom ≥ 14)': cartociudad,
+    'CartoCiudad · CP (zoom ≥ 11)': cartociudad,
     'Límites administrativos · IGN': limites,
     'Códigos postales estimados': postal
   }, { collapsed: true }).addTo(map);

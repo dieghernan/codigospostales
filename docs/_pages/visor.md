@@ -13,7 +13,7 @@ El fondo inicial es IGNBase Gris y ambas capas están activadas.
 El overlay **Límites administrativos · IGN** está disponible sin activar;
 permite comparar los códigos postales con los límites administrativos.
 La vista inicial muestra los códigos con prefijo `08`.
-**CartoCiudad se muestra a partir del zoom 14**; acerca el mapa con los botones
+**CartoCiudad se muestra a partir del zoom 11**; acerca el mapa con los botones
 o la rueda del ratón para compararlo con las estimaciones.
 
 **Prefijo postal y provincia son criterios

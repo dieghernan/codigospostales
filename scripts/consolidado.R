@@ -75,11 +75,16 @@ provs <- st_read(
   st_transform(st_crs(all))
 
 p <- ggplot(provs) +
-  geom_sf(size = 0.01) +
-  geom_sf(data = codigos, fill = "blue", size = 0.01) +
-  theme_void() +
-  theme(plot.title = element_text(hjust = .5)) +
-  labs(title = "Grado de avance")
+  geom_sf(size = 0.1, fill = "#dddddd", color = "black") +
+  geom_sf(data = codigos, fill = "#02b875", color = NA) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold")
+  ) +
+  labs(
+    title = "C\u00f3digos Postales",
+    subtitle = "Cobertura actual"
+  )
 
 ggsave("data/avance.png", p, dpi = 300)
 
