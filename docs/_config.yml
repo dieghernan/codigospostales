@@ -67,7 +67,7 @@ webmentions:
 
 navbar:
   brand:
-    title: Códigos postales de España
+    title: Códigos postales
     img: /assets/img/favicon-192.png
   nav:
     - title: Visor
