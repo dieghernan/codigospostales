@@ -75,6 +75,34 @@
       ' · CartoCiudad (IGN/CNIG) · Goerlich y Pérez Vázquez (2025)'
   }).addTo(map);
 
+  // Mostrar el acceso a toda ventana cuando el visor esté incrustado.
+  if (window.self !== window.top) {
+    const fullWindowControl = L.control({ position: 'topright' });
+
+    fullWindowControl.onAdd = function () {
+      const control = L.DomUtil.create(
+        'div',
+        'leaflet-bar postal-full-window'
+      );
+
+      const link = L.DomUtil.create('a', '', control);
+
+      // La URL del documento actual corresponde a /visor/mapa/.
+      link.href = window.location.href;
+      link.target = '_top';
+      link.title = 'Abrir el mapa a toda ventana';
+      link.setAttribute('aria-label', 'Abrir el mapa a toda ventana');
+      link.textContent = '⛶';
+
+      L.DomEvent.disableClickPropagation(control);
+      L.DomEvent.disableScrollPropagation(control);
+
+      return control;
+    };
+
+    fullWindowControl.addTo(map);
+  }
+
   L.control.layers(
     {
       'IGNBase Gris': gris,
