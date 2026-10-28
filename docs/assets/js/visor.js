@@ -49,6 +49,25 @@
       const label = document.createElement('strong');
       label.textContent = `Código postal ${feature.properties.COD_POSTAL}`;
       layer.bindPopup(label);
+
+      layer.on({
+        mouseover(event) {
+          const polygon = event.target;
+
+          polygon.setStyle({
+            color: '#b52f2b',
+            weight: 3,
+            fillColor: '#eb6864',
+            fillOpacity: 0.5
+          });
+
+          polygon.bringToFront();
+        },
+
+        mouseout(event) {
+          postal.resetStyle(event.target);
+        }
+      });
     },
 
     attribution:
