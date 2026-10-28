@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Visor de códigos postales
+subtitle: Explora las delimitaciones estimadas por prefijo sobre mapas del IGN
 permalink: /visor/
 show_author: false
 map_embed: true
