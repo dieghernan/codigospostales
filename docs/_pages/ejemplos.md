@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Ejemplos de uso
+subtitle: Lectura y mapas de códigos postales con R y Python
 permalink: /ejemplos/
 ---
 
