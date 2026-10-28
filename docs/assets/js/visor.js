@@ -209,9 +209,13 @@
         location.postalCode || candidate.postalCode || ''
       );
 
+      const province = String(
+        location.provinceCode || candidate.provinceCode || ''
+      );
+
       const prefix = /^\d{5}$/.test(code)
         ? code.slice(0, 2)
-        : null;
+        : (/^\d{2}$/.test(province) ? province : null);
 
       let loaded = true;
 
@@ -248,11 +252,15 @@
 
       addressResults.hidden = true;
 
-      addressStatus.textContent =
-        'Dirección localizada.' +
-        (!prefix || !loaded
-          ? ' No se han cargado las áreas postales de esta dirección; comprueba el selector de prefijo.'
-          : '');
+      addressStatus.textContent = 'Dirección localizada.';
+
+      if (!prefix || !loaded) {
+        addressStatus.textContent +=
+          ' No se han cargado las áreas postales de esta dirección; comprueba el selector de prefijo.';
+      } else if (!/^\d{5}$/.test(code)) {
+        addressStatus.textContent +=
+          ` CartoCiudad no devuelve un código postal; se muestran como referencia los polígonos del prefijo ${prefix}, a partir de la provincia.`;
+      }
     } catch {
       if (selection === addressSelection) {
         addressStatus.textContent =
