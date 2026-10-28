@@ -19,6 +19,7 @@ y no muestra los recintos pendientes de asignación.
 <summary>Cómo utilizar el mapa y sus capas</summary>
 
 - Introduce un **CP de cinco dígitos** para destacar su área o busca una dirección.
+- El marcador de una dirección se retira al iniciar otra búsqueda de dirección, buscar un CP o cambiar el prefijo.
 - El selector de prefijo carga códigos completos por sus dos primeros dígitos: **no recorta por provincia**.
 - Pulsa un área para consultar su CP. Los colores y líneas se explican en la leyenda.
 - Abre **Capas** para cambiar entre IGNBase Gris, IGNBase y PNOA, o activar los límites administrativos del IGN.

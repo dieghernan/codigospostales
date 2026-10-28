@@ -2,6 +2,19 @@ const { test, expect } = require('@playwright/test');
 const base = process.env.SITE_BASEURL ?? '/codigospostales';
 const mapPath = `${base}/visor/mapa/`;
 
+async function locateMadridAddress(page) {
+  await page.route('**/geocoder/candidates?*', route => route.fulfill({
+    json: [{ address: 'CALLE MAYOR 1, Madrid', postalCode: '28013', lat: 40.415, lng: -3.707 }]
+  }));
+  await page.goto(mapPath);
+  await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready', { timeout: 45000 });
+  await page.getByRole('tab', { name: 'Dirección', exact: true }).click();
+  await page.getByRole('searchbox', { name: 'Dirección', exact: true }).fill('Calle Mayor 1, Madrid');
+  await page.getByRole('button', { name: 'Buscar', exact: true }).click();
+  await page.getByRole('button', { name: 'CALLE MAYOR 1, Madrid · 28013', exact: true }).click();
+  await expect(page.locator('#address-status')).toContainText('Dirección localizada.');
+}
+
 test('loads areas, finds a CP and restores a shared view', async ({ page }) => {
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
@@ -56,6 +69,65 @@ test('shares the view without the searched address or marker', async ({ page }) 
   await expect(page.locator('.leaflet-marker-icon')).toHaveCount(0);
   await page.getByRole('tab', { name: 'Dirección', exact: true }).click();
   await expect(page.getByRole('searchbox', { name: 'Dirección', exact: true })).toHaveValue('');
+});
+
+for (const code of ['28013', '08001']) {
+  test(`removes the address marker when searching for CP ${code}`, async ({ page }) => {
+    await locateMadridAddress(page);
+    await expect(page.locator('.leaflet-marker-icon')).toHaveCount(1);
+    await page.getByRole('tab', { name: 'Código postal', exact: true }).click();
+    await page.getByRole('searchbox', { name: 'Código postal', exact: true }).fill(code);
+    await page.getByRole('button', { name: 'Ver CP', exact: true }).click();
+    await expect(page.locator('.leaflet-marker-icon')).toHaveCount(0);
+    await expect(page.locator('#postal-code-status')).toHaveText(`CP ${code}: área estimada seleccionada.`);
+    await expect(page.locator('#address-status')).toBeEmpty();
+  });
+}
+
+test('removes the address marker when changing the prefix filter', async ({ page }) => {
+  await locateMadridAddress(page);
+  await expect(page.locator('.leaflet-marker-icon')).toHaveCount(1);
+  await page.locator('#postal-prefix').selectOption('08');
+  await expect(page.locator('.leaflet-marker-icon')).toHaveCount(0);
+  await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready');
+  await expect(page.locator('#address-status')).toBeEmpty();
+});
+
+test('removes the previous marker even when a new address search finds nothing', async ({ page }) => {
+  await locateMadridAddress(page);
+  await expect(page.locator('.leaflet-marker-icon')).toHaveCount(1);
+  await page.route('**/geocoder/candidates?*', route => route.fulfill({ json: [] }));
+  await page.getByRole('searchbox', { name: 'Dirección', exact: true }).fill('Nueva dirección');
+  await page.getByRole('button', { name: 'Buscar', exact: true }).click();
+  await expect(page.locator('.leaflet-marker-icon')).toHaveCount(0);
+  await expect(page.locator('#address-status')).toContainText('No se han encontrado direcciones.');
+});
+
+test('cancels a pending address prefix load when a CP search takes over', async ({ page }) => {
+  await page.route('**/geocoder/candidates?*', route => route.fulfill({
+    json: [{ address: 'CALLE MAYOR 1, Madrid', postalCode: '28013', lat: 40.415, lng: -3.707 }]
+  }));
+  await page.goto(mapPath);
+  await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready', { timeout: 45000 });
+  let holdPrefix;
+  const prefixRequested = new Promise(resolve => { holdPrefix = resolve; });
+  await page.route('**/cp-28.geojson', () => { holdPrefix(); });
+  await page.getByRole('tab', { name: 'Dirección', exact: true }).click();
+  await page.getByRole('searchbox', { name: 'Dirección', exact: true }).fill('Calle Mayor 1, Madrid');
+  await page.getByRole('button', { name: 'Buscar', exact: true }).click();
+  await page.getByRole('button', { name: 'CALLE MAYOR 1, Madrid · 28013', exact: true }).click();
+  await prefixRequested;
+  const cancelled = page.waitForEvent('requestfailed', {
+    predicate: request => request.url().endsWith('/cp-28.geojson')
+  });
+  await page.getByRole('tab', { name: 'Código postal', exact: true }).click();
+  await page.getByRole('searchbox', { name: 'Código postal', exact: true }).fill('08001');
+  await page.getByRole('button', { name: 'Ver CP', exact: true }).click();
+  await cancelled;
+  await expect(page.locator('#postal-code-status')).toHaveText('CP 08001: área estimada seleccionada.');
+  await expect(page.locator('#postal-prefix')).toHaveValue('08');
+  await expect(page.locator('.leaflet-marker-icon')).toHaveCount(0);
+  await expect(page.locator('#map-loading')).toBeHidden();
 });
 
 test('shows the map early on mobile and keeps controls within the viewport', async ({ page }) => {
