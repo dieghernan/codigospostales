@@ -46,7 +46,7 @@
         "@id": "https://dieghernan.github.io/codigospostales/",
         "isPartOf": {"@id": "https://dieghernan.github.io/codigospostales/#website"},
         "name": "Códigos postales de España",
-        "description": "Datos abiertos y GeoPackage - Áreas postales estimadas de España a partir de CartoCiudad y límites administrativos. Datos abiertos en GeoPackage para su uso con R y Python."
+        "description": "Mapa y descarga de áreas postales estimadas - Explora el mapa y descarga polígonos postales estimados de España en GeoPackage. Dos consolidados para análisis y visualización con R, Python o QGIS."
       }
     </script>
     <script type="application/ld+json">
@@ -72,7 +72,7 @@
         ]
       }
     </script>
-    <title>Códigos postales de España | Datos abiertos y GeoPackage</title>
+    <title>Códigos postales de España | Mapa y descarga de áreas postales estimadas</title>
     <link rel="canonical" href="https://dieghernan.github.io/codigospostales/">
     <!-- Atom feed -->
     <link href="https://dieghernan.github.io/codigospostales/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed Códigos postales de España" >
@@ -82,15 +82,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="dieghernan" >
     <meta name="copyright" content="dieghernan" >
-    <meta name="description" content="Datos abiertos y GeoPackage - Áreas postales estimadas de España a partir de CartoCiudad y límites administrativos. Datos abiertos en GeoPackage para su uso con R y Python.">
+    <meta name="description" content="Mapa y descarga de áreas postales estimadas - Explora el mapa y descarga polígonos postales estimados de España en GeoPackage. Dos consolidados para análisis y visualización con R, Python o QGIS.">
     <meta name="thumbnail" content="https://dieghernan.github.io/codigospostales/assets/img/social-preview.jpg" >
     <meta name="robots" content="index, follow">
     <!-- OpenGraph -->
-    <meta property="og:title" content="Códigos postales de España | Datos abiertos y GeoPackage" >
+    <meta property="og:title" content="Códigos postales de España | Mapa y descarga de áreas postales estimadas" >
     <meta property="og:site_name" content="Códigos postales de España" >
     <meta property="og:url" content="https://dieghernan.github.io/codigospostales/" >
     <meta property="og:type" content="website" >
-    <meta property="og:description" content="Datos abiertos y GeoPackage - Áreas postales estimadas de España a partir de CartoCiudad y límites administrativos. Datos abiertos en GeoPackage para su uso con R y Python." >
+    <meta property="og:description" content="Mapa y descarga de áreas postales estimadas - Explora el mapa y descarga polígonos postales estimados de España en GeoPackage. Dos consolidados para análisis y visualización con R, Python o QGIS." >
     <meta property="og:locale" content="es_ES">
     <meta property="og:image" content="https://dieghernan.github.io/codigospostales/assets/img/social-preview.jpg" >
     <meta property="og:image:alt" content="Códigos postales de España. Mapa de las áreas postales estimadas con prefijo 28 a partir de los datos del proyecto." >
@@ -99,7 +99,7 @@
     <meta property="og:image:type" content="image/jpeg" >
     <!-- Twitter/X Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="Datos abiertos y GeoPackage - Áreas postales estimadas de España a partir de CartoCiudad y límites administrativos. Datos abiertos en GeoPackage para su uso con R y Python.">
+    <meta name="twitter:description" content="Mapa y descarga de áreas postales estimadas - Explora el mapa y descarga polígonos postales estimados de España en GeoPackage. Dos consolidados para análisis y visualización con R, Python o QGIS.">
     <meta name="twitter:site" content="@dhernangomez" >
     <meta name="twitter:creator" content="@dhernangomez" >
     <!-- start custom head snippets -->
@@ -135,13 +135,34 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/codigospostales/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/codigospostales/manifest.webmanifest">
 <meta name="theme-color" content="#eb6864">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://dieghernan.github.io/codigospostales/#dataset",
+  "name": "Áreas postales estimadas de España",
+  "description": "Delimitaciones estimadas a partir de CartoCiudad y límites administrativos. Dos GeoPackage consolidados con capas codigos_postales y pendientes. No son límites postales oficiales ni garantizan incluir todos los códigos de las fuentes.",
+  "url": "https://dieghernan.github.io/codigospostales/",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {"@type": "Person", "name": "dieghernan", "url": "https://dieghernan.github.io/"},
+  "spatialCoverage": {"@type": "Place", "name": "España: cobertura estimada, con recintos pendientes de asignación"},
+  "dateModified": "2026-10-27",
+  "version": "sha256:c13c8637bddda996ae3f155dcb66bde2333c7626bb65f0cece5c04abec51812b",
+  "isAccessibleForFree": true,
+  "keywords": ["códigos postales", "España", "GeoPackage", "SIG", "CartoCiudad", "áreas estimadas"],
+  "distribution": [
+    {"@type": "DataDownload", "name": "Consolidado completo", "encodingFormat": "application/geopackage+sqlite3", "contentSize": "86499328 bytes", "contentUrl": "https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales.gpkg"},
+    {"@type": "DataDownload", "name": "Consolidado simplificado", "encodingFormat": "application/geopackage+sqlite3", "contentSize": "31076352 bytes", "dateModified": "2026-10-27", "version": "sha256:fd7fdc1c8575944508410251f3c90d362c61c09a9bf3425cfebff537d25567fc", "contentUrl": "https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales_simplificado.gpkg"}
+  ]
+}
+</script>
 <meta name="fediverse:creator" content="@dhernangomez@fosstodon.org">
 <link rel="author" href="https://dieghernan.github.io/">
 <link rel="describedby" type="text/plain" title="Información para asistentes de IA" href="https://dieghernan.github.io/codigospostales/llms.txt">
 <link rel="webmention" href="https://webmention.io/dieghernan.github.io/webmention">
 <link rel="pingback" href="https://webmention.io/dieghernan.github.io/xmlrpc">
 <!-- Completar Twitter Card con los metadatos resueltos por Chulapa. -->
-<meta name="twitter:title" content="Códigos postales de España | Datos abiertos y GeoPackage">
+<meta name="twitter:title" content="Códigos postales de España | Mapa y descarga de áreas postales estimadas">
 <meta name="twitter:image" content="https://dieghernan.github.io/codigospostales/assets/img/social-preview.jpg">
 <meta name="twitter:image:alt" content="Códigos postales de España. Mapa de las áreas postales estimadas con prefijo 28 a partir de los datos del proyecto.">
 </head>
@@ -149,11 +170,13 @@
 	<a class="sr-only sr-only-focusable chulapa-skip-link" href="#chulapa-content">Skip to content</a>
 	<nav class="navbar navbar-expand-md sticky-top navbar-chulapa" aria-label="primary-navigation">
 	<div class="container-fluid mx-md-2">
-			<a class="navbar-brand font-weight-bold" href="https://dieghernan.github.io/codigospostales/"><i class="fas fa-home" style="color: black"></i><span class="d-none">Home</span></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+			<a class="navbar-brand font-weight-bold" href="https://dieghernan.github.io/codigospostales/"><i class="fas fa-home" aria-hidden="true" style="color: black"></i><span class="sr-only">Inicio</span></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarToggler">
 				<ul class="navbar-nav ml-auto"><li class="nav-item">
+						<a class="nav-link " href="https://dieghernan.github.io/codigospostales/#archivos-disponibles">Descargas</a>
+					</li><li class="nav-item">
 						<a class="nav-link " href="https://dieghernan.github.io/codigospostales/visor/">Visor</a>
 					</li><li class="nav-item">
 						<a class="nav-link " href="https://dieghernan.github.io/codigospostales/ejemplos/">Ejemplos</a>
@@ -166,62 +189,79 @@
 			<div id="chulapa-content" tabindex="-1"></div><div class="h-entry d-flex flex-column flex-fill">
     <a class="u-url d-none" href="https://dieghernan.github.io/codigospostales/">Invisible link to canonical for Microformats</a>
 	<main class="d-flex flex-column flex-fill">
-	<header class="d-flex align-items-center hero-chulapa"><div class="container-lg py-4">
-   <h1 class="p-name">Códigos postales de España</h1><hr class="my-3">
-   <p class="chulapa-subtitle p-summary">Datos abiertos y GeoPackage</p>
- </div>
+	<header class="text-center header-chulapa"><div class="container-lg mt-2">
+       <div class="row">
+           <div class="col-lg-8 offset-lg-2">
+           <h1 class="p-name">Códigos postales de España</h1><p class="lead chulapa-subtitle p-summary">Mapa y descarga de áreas postales estimadas</p>
+           <hr class="mb-0">
+			</div>
+		</div>
+	</div>
 </header>
 	<div class="container-lg pb-3 flex-fill">
-<div class="row my-1">
-<div class="col-lg-5 offset-lg-2 col small">
- </div>
-         <div class="col-lg-3 col-sm-4 col-3 text-right lead chulapaDateSocial">
-            <a  href="https://twitter.com/intent/tweet?url=https://dieghernan.github.io/codigospostales/&text=C%C3%B3digos+postales+de+Espa%C3%B1a&via=dhernangomez" title="Share on X" aria-label="Share on X" ><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i></a>
-            <a href="https://bsky.app/intent/compose?text=C%C3%B3digos%20postales%20de%20Espa%C3%B1a%20https://dieghernan.github.io/codigospostales/" title="Share on Bluesky" aria-label="Share on Bluesky"><i class="fa-brands fa-square-bluesky fa-lg" aria-hidden="true"></i></a>
-            <a  class="d-none d-sm-inline" href="https://www.facebook.com/sharer.php?u=https://dieghernan.github.io/codigospostales/" title="Share on Facebook" aria-label="Share on Facebook" ><i class="fab fa-facebook-square fa-lg" aria-hidden="true"></i></a>
-             <a  class="d-none d-sm-inline" href="https://api.whatsapp.com/send?&text=C%C3%B3digos+postales+de+Espa%C3%B1a%20https://dieghernan.github.io/codigospostales/" title="Share on Whatsapp" aria-label="Share on Whatsapp" ><i class="fab fa-whatsapp-square fa-lg" aria-hidden="true"></i></a>
-         <a  class="d-none d-sm-inline" href="https://www.linkedin.com/shareArticle?url=https://dieghernan.github.io/codigospostales/&title=C%C3%B3digos+postales+de+Espa%C3%B1a" title="Share on LinkedIn" aria-label="Share on LinkedIn"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
-         </div></div>
 		<div class="row pt-2">
-			<aside class="col-lg-2 mt-lg-3 small"><div class="h-card p-author"><a class="u-url d-none" href="https://dieghernan.github.io/">dieghernan</a><div class="row d-flex align-items-center mb-2"><img src="https://dieghernan.github.io/assets/img/site/avatar.png" alt="dieghernan" class="ml-3 mr-0 mx-lg-auto mb-lg-1 chulapa-avatar-size u-photo"><div class="col-9 col-lg-12 text-lg-center p-name">
-						dieghernan
-					</div>
-				</div>
-				<div class="row mb-2 mb-lg-0">
-					<div class="col text-lg-center"><address class="d-inline d-lg-block mr-2 mx-lg-auto mb-lg-2 small chulapa-links-hover-only">
-						  <a class="pr-lg-0 p-region" href="https://www.google.com/maps/search/?api=1&query=Madrid%2C+Spain">
-						    <i class="fas fa-map-marker-alt fa-lg mr-1" aria-hidden="true"></i>Madrid, Spain</a>
-						</address><div class="d-inline my-1 mx-lg-0 chulapa-links-hover-only"><a class="mr-2 mx-lg-1 u-url" rel="me" href="https://dieghernan.github.io/" title="Web personal" aria-label="Web personal" ><i class="fas fa-blog fa-lg" aria-hidden="true"></i></a><a class="mr-2 mx-lg-1 u-url" rel="me" href="https://github.com/dieghernan" title="GitHub" aria-label="GitHub" ><i class="fab fa-github fa-lg" aria-hidden="true"></i></a><a class="mr-2 mx-lg-1 u-url" rel="me" href="https://orcid.org/0000-0001-8457-4658" title="ORCID" aria-label="ORCID" ><i class="fa-brands fa-orcid fa-lg" aria-hidden="true"></i></a><a class="mr-2 mx-lg-1 u-url" rel="me" href="https://fosstodon.org/@dhernangomez" title="Mastodon" aria-label="Mastodon" ><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i></a><a class="mr-2 mx-lg-1 u-url" rel="me" href="https://bsky.app/profile/dieghernan.bsky.social" title="Bluesky" aria-label="Bluesky" ><i class="fa-brands fa-square-bluesky fa-lg" aria-hidden="true"></i></a><a class="mr-2 mx-lg-1 u-url" rel="me" href="https://x.com/dhernangomez" title="Twitter/X" aria-label="Twitter/X" ><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i></a><a class="mr-2 mx-lg-1 u-url" rel="me" href="https://stackoverflow.com/users/7877917/dieghernan" title="Stack Overflow" aria-label="Stack Overflow" ><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a></div></div>
-				</div>
-				</div>
-</aside>
+			<div class="col-lg-2 mt-lg-3 small"></div>
 			<article id="maincontent" class="col-lg-8 mt-3">
-			<div class="e-content"><p>Este proyecto ofrece delimitaciones estimadas de los códigos postales de España
-en formato <strong>GeoPackage</strong>, con una versión completa y otra simplificada para
-visualización. Los datos se generan con R y se pueden utilizar con R, Python
-y aplicaciones de SIG como QGIS.</p>
-<p>Las geometrías se construyen a partir de direcciones de
-<a href="#ref-cartociudad">CartoCiudad (IGN/CNIG)</a> y de los límites administrativos de
-<a href="#ref-lau2">Goerlich y Pérez Vázquez (2025)</a>.
-<strong>No constituyen límites postales oficiales.</strong> La cobertura corresponde a las
-provincias procesadas e incluidas en el consolidado.</p>
-<div class="row align-items-center text-center my-4">
- <div class="col-12 col-lg-4 mb-3">
-    <a class="btn btn-primary" href="/codigospostales/visor/">
-      Explorar el visor interactivo
-    </a>
- </div>
- <div class="col-12 col-lg-4 mb-3">
-    <a class="btn btn-outline-primary" href="/codigospostales/ejemplos/">
-      Ver ejemplos en R y Python
-    </a>
- </div>
- <div class="col-12 col-lg-4 mb-3">
-    <a class="btn btn-outline-primary" href="https://github.com/dieghernan/codigospostales/tree/main/data">
-      Consultar los datos en GitHub
-    </a>
- </div>
+			<div class="e-content"><p>Explora y descarga <strong>áreas estimadas de los códigos postales de España</strong>.
+Los productos son dos archivos GeoPackage consolidados: uno completo para
+análisis y otro simplificado para visualización, compatibles con R, Python y QGIS.</p>
+<p class="product-note"><strong>No son límites postales oficiales.</strong>
+Se estiman a partir de CartoCiudad y límites administrativos. No se garantiza
+la inclusión de todos los códigos postales de las fuentes.</p>
+<h2 id="archivos-disponibles">Archivos disponibles</h2>
+<div class="product-downloads">
+ <section class="product-download" aria-labelledby="download-full">
+   <h3 id="download-full">Consolidado completo</h3>
+   <p>Geometría completa para análisis y mediciones sobre la estimación.</p>
+    <a class="btn btn-primary" href="https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales.gpkg">Descargar completo · 86,5 MB</a>
+   <p class="mt-2 mb-0">Generado: <time datetime="2026-10-27">2026-10-27</time><br />Versión (SHA-256): <code title="c13c8637bddda996ae3f155dcb66bde2333c7626bb65f0cece5c04abec51812b">c13c8637bddd</code></p>
+ </section>
+ <section class="product-download" aria-labelledby="download-simple">
+   <h3 id="download-simple">Consolidado simplificado</h3>
+   <p>Archivo más ligero para mapas y visualización. Evita mediciones precisas.</p>
+    <a class="btn btn-primary" href="https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales_simplificado.gpkg">Descargar simplificado · 31,1 MB</a>
+   <p class="mt-2 mb-0">Generado: <time datetime="2026-10-27">2026-10-27</time><br />Versión (SHA-256): <code title="fd7fdc1c8575944508410251f3c90d362c61c09a9bf3425cfebff537d25567fc">fd7fdc1c8575</code></p>
+ </section>
 </div>
+<p><a href="/codigospostales/visor/" class="btn btn-outline-primary">Explorar el mapa</a>
+<a href="/codigospostales/ejemplos/" class="btn btn-outline-primary">Inicio rápido con R, Python y QGIS</a></p>
+<h2 id="una-vista-de-los-datos">Una vista de los datos</h2>
+<p>El mapa muestra los códigos postales que empiezan por <code class="language-plaintext highlighter-rouge">28</code>, seleccionados de la
+versión simplificada. El filtro utiliza el prefijo postal y conserva la
+geometría completa de cada código, sin recortarla a una provincia.</p>
+<p><img src="/codigospostales/assets/img/codigos-postales-28.png" alt="Delimitaciones estimadas de los códigos postales con prefijo 28, en azul claro con contornos oscuros." /></p>
+<p>La página de <a href="/codigospostales/ejemplos/">ejemplos de uso</a> explica cómo
+leer solo ese dominio postal y generar el mapa con R o Python.</p>
+<h2 id="características-y-cobertura">Características y cobertura</h2>
+<div class="product-facts">
+ <ul>
+   <li><strong>10844 códigos postales</strong> en el consolidado completo, con prefijos del 01 al 52 (52 prefijos).</li>
+   <li><strong>4564 recintos pendientes</strong>, con 42,88 km² sin asignar en la versión completa.</li>
+   <li><strong>Dos capas:</strong> <code class="language-plaintext highlighter-rouge">codigos_postales</code> y <code class="language-plaintext highlighter-rouge">pendientes</code>, en GeoPackage y EPSG:25830.</li>
+   <li><strong>Licencia:</strong> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, con atribución.</li>
+ </ul>
+</div>
+<p>El ámbito es España, con cobertura estimada y recintos sin asignar. La presencia
+de los 52 prefijos no implica que estén todos los códigos postales ni que toda
+la superficie tenga un CP. Los archivos provinciales del repositorio son
+<strong>resultados intermedios</strong>, no productos de descarga independientes.</p>
+<p>Las fechas anteriores corresponden a la generación de cada consolidado, no a
+la actualización de las direcciones originales. Los límites administrativos
+proceden de Municipios2024, publicados por Goerlich y Pérez Vázquez (2025);
+la antigüedad de las direcciones de CartoCiudad depende de la descarga de origen.</p>
+<p>Ambos archivos incluyen las capas <code class="language-plaintext highlighter-rouge">codigos_postales</code> y <code class="language-plaintext highlighter-rouge">pendientes</code>, en
+ETRS89 / UTM zona 30N (EPSG:25830). Los códigos postales se almacenan como texto
+de cinco dígitos, conservando los ceros iniciales. La capa <code class="language-plaintext highlighter-rouge">pendientes</code> recoge
+los recintos que no han recibido un código postal. Ambas capas contienen
+geometrías <code class="language-plaintext highlighter-rouge">MULTIPOLYGON</code>; la capa postal no incluye el municipio.</p>
+<p>La versión simplificada conserva los códigos y los atributos, pero no está
+destinada a mediciones precisas. En <code class="language-plaintext highlighter-rouge">pendientes</code>, el campo <code class="language-plaintext highlighter-rouge">AREA_M2</code> conserva
+la superficie medida en la versión completa.</p>
+<p>Los GeoPackage se almacenan con <strong>Git LFS</strong>. Para obtenerlos al clonar el
+repositorio, instala Git LFS y ejecuta <code class="language-plaintext highlighter-rouge">git lfs install</code>. Después ejecuta
+<code class="language-plaintext highlighter-rouge">git lfs pull</code> para descargar los datos.
+También puedes acceder a los archivos desde la
+<a href="https://github.com/dieghernan/codigospostales/tree/main/data">carpeta de datos en GitHub</a>.</p>
 <h2 id="antecedentes">Antecedentes</h2>
 <p>Los polígonos de códigos postales permiten relacionar direcciones y
 estadísticas con áreas geográficas. Su disponibilidad ha cambiado: según
@@ -240,45 +280,6 @@ esas posiciones; al ajustarlas a los límites administrativos y unir las áreas
 con el mismo código, se obtienen polígonos postales estimados. La proximidad
 es una aproximación geométrica y no reproduce necesariamente las decisiones
 de reparto de Correos.</p>
-<h2 id="una-vista-de-los-datos">Una vista de los datos</h2>
-<p>El mapa muestra los códigos postales que empiezan por <code class="language-plaintext highlighter-rouge">28</code>, seleccionados de la
-versión simplificada. El filtro utiliza el prefijo postal y conserva la
-geometría completa de cada código, sin recortarla a una provincia.</p>
-<p><img src="/codigospostales/assets/img/codigos-postales-28.png" alt="Delimitaciones estimadas de los códigos postales con prefijo 28, en azul claro con contornos oscuros." /></p>
-<p>La página de <a href="/codigospostales/ejemplos/">ejemplos de uso</a> explica cómo
-leer solo ese dominio postal y generar el mapa con R o Python.</p>
-<h2 id="archivos-disponibles">Archivos disponibles</h2>
-<table>
-<thead>
-   <tr>
-     <th>Archivo</th>
-     <th>Uso</th>
-   </tr>
- </thead>
- <tbody>
-   <tr>
-     <td><a href="https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales.gpkg">codigos_postales.gpkg</a></td>
-     <td>Geometría completa para análisis.</td>
-   </tr>
-   <tr>
-     <td><a href="https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales_simplificado.gpkg">codigos_postales_simplificado.gpkg</a></td>
-     <td>Geometría simplificada para visualización.</td>
-   </tr>
- </tbody>
-</table>
-<p>Ambos archivos incluyen las capas <code class="language-plaintext highlighter-rouge">codigos_postales</code> y <code class="language-plaintext highlighter-rouge">pendientes</code>, en
-ETRS89 / UTM zona 30N (EPSG:25830). Los códigos postales se almacenan como texto
-de cinco dígitos, conservando los ceros iniciales. La capa <code class="language-plaintext highlighter-rouge">pendientes</code> recoge
-los recintos que no han recibido un código postal. Ambas capas contienen
-geometrías <code class="language-plaintext highlighter-rouge">MULTIPOLYGON</code>; la capa postal no incluye el municipio.</p>
-<p>La versión simplificada conserva los códigos y los atributos, pero no está
-destinada a mediciones precisas. En <code class="language-plaintext highlighter-rouge">pendientes</code>, el campo <code class="language-plaintext highlighter-rouge">AREA_M2</code> conserva
-la superficie medida en la versión completa.</p>
-<p>Los GeoPackage se almacenan con <strong>Git LFS</strong>. Para obtenerlos al clonar el
-repositorio, instala Git LFS y ejecuta <code class="language-plaintext highlighter-rouge">git lfs install</code>. Después ejecuta
-<code class="language-plaintext highlighter-rouge">git lfs pull</code> para descargar los datos.
-También puedes acceder a los archivos desde la
-<a href="https://github.com/dieghernan/codigospostales/tree/main/data">carpeta de datos en GitHub</a>.</p>
 <h2 id="metodología-y-fuentes">Metodología y fuentes</h2>
 <p>El procedimiento selecciona las direcciones de cada componente del recinto
 administrativo con un margen interior de 200 m y un segundo intento de 50 m
@@ -378,6 +379,34 @@ postales de España con SIG y datos abiertos</em>. NoSoloSIG.
                 <i class="fa-brands fa-orcid fa-stack-1x fa-inverse"></i>
               </span>
               <span class="sr-only">ORCID</span>
+            </a>
+            <a href="https://fosstodon.org/@dhernangomez" title="footerMastodon" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa-brands fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Mastodon</span>
+            </a>
+            <a href="https://bsky.app/profile/dieghernan.bsky.social" title="footerBluesky" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa-brands fa-square-bluesky fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Bluesky</span>
+            </a>
+            <a href="https://x.com/dhernangomez" title="footerTwitter/X" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-square-x-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Twitter/X</span>
+            </a>
+            <a href="https://stackoverflow.com/users/7877917/dieghernan" title="footerStack Overflow" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Stack Overflow</span>
             </a>
           </nav>
           <p class="mt-2 mb-3">&copy; 2026 dieghernan</p>

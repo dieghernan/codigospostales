@@ -17,7 +17,7 @@
       
         "@id": "https://dieghernan.github.io/codigospostales/visor/mapa/",
         "name": "Mapa interactivo de códigos postales",
-        "description": "Visor a pantalla completa con filtro por prefijo y búsqueda de direcciones",
+        "description": "Visor a pantalla completa con filtro por prefijo y búsqueda de direcciones - Mapa de áreas postales estimadas de España con búsqueda por CP y dirección, filtros por prefijo y comparación con CartoCiudad.",
       
         "headline": "Mapa interactivo de códigos postales",
       
@@ -63,7 +63,7 @@
             "@type": "ListItem",
             "@id": "https://dieghernan.github.io/codigospostales/visor/mapa/#breadcrumb-1",
             "position": 1,
-            "name": "Home",
+            "name": "Inicio",
             "item": "https://dieghernan.github.io/codigospostales/"
           },{
             "@type": "ListItem",
@@ -126,7 +126,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="dieghernan" >
     <meta name="copyright" content="dieghernan" >
-    <meta name="description" content="Visor a pantalla completa con filtro por prefijo y búsqueda de direcciones">
+    <meta name="description" content="Visor a pantalla completa con filtro por prefijo y búsqueda de direcciones - Mapa de áreas postales estimadas de España con búsqueda por CP y dirección, filtros por prefijo y comparación con CartoCiudad.">
     <meta name="thumbnail" content="https://dieghernan.github.io/codigospostales/assets/img/social-preview.jpg" >
     <meta name="robots" content="index, follow">
     
@@ -138,7 +138,7 @@
     
     <meta property="og:type" content="website" >
     
-    <meta property="og:description" content="Visor a pantalla completa con filtro por prefijo y búsqueda de direcciones" >
+    <meta property="og:description" content="Visor a pantalla completa con filtro por prefijo y búsqueda de direcciones - Mapa de áreas postales estimadas de España con búsqueda por CP y dirección, filtros por prefijo y comparación con CartoCiudad." >
     
     
     
@@ -187,7 +187,7 @@
     
     <!-- Twitter/X Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="Visor a pantalla completa con filtro por prefijo y búsqueda de direcciones">
+    <meta name="twitter:description" content="Visor a pantalla completa con filtro por prefijo y búsqueda de direcciones - Mapa de áreas postales estimadas de España con búsqueda por CP y dirección, filtros por prefijo y comparación con CartoCiudad.">
     
     <meta name="twitter:site" content="@dhernangomez" >
     
@@ -249,6 +249,7 @@
 <link rel="manifest" href="/codigospostales/manifest.webmanifest">
 
 <meta name="theme-color" content="#eb6864">
+
 <meta name="fediverse:creator" content="@dhernangomez@fosstodon.org">
 
 <link rel="author" href="https://dieghernan.github.io/">
@@ -278,12 +279,15 @@
 
 
 
+
 </head>
 
 <body class="postal-map-page">
 <main class="postal-map-app">
+  <h1 class="sr-only">Mapa interactivo de códigos postales</h1>
   <nav class="postal-map-toolbar" aria-label="Navegación del visor">
     <a href="/codigospostales/visor/" target="_top">Documentación</a>
+    <a href="/codigospostales/#archivos-disponibles" target="_top">Descargas</a>
     <span>Límites estimados · no oficiales</span>
   </nav>
   <section class="postal-map-controls" aria-label="Filtro de códigos postales">
@@ -302,6 +306,13 @@
 </section>
 
 <section class="postal-address-controls" aria-label="Búsqueda de direcciones">
+  <form id="postal-search" role="search" aria-label="Buscar código postal">
+    <label for="postal-code">Código postal</label>
+    <input id="postal-code" type="search" inputmode="numeric" pattern="[0-9]{5}"
+      maxlength="5" placeholder="08001" required aria-describedby="postal-code-status">
+    <button type="submit">Ver CP</button>
+  </form>
+  <p id="postal-code-status" role="status" aria-live="polite"></p>
   <form id="address-search" role="search">
     <label for="address-query">Dirección</label>
     <input id="address-query" name="address" type="search"
@@ -316,6 +327,21 @@
   <p id="address-status" role="status" aria-live="polite"></p>
   <ul id="address-results" aria-label="Direcciones encontradas" hidden></ul>
 </section>
+
+<div class="postal-map-actions">
+  <button id="share-view" type="button">Compartir vista</button>
+  <span id="share-status" role="status" aria-live="polite"></span>
+  <input id="share-url" type="text" readonly hidden aria-label="Enlace a esta vista">
+  <details class="postal-legend">
+    <summary>Leyenda</summary>
+    <div class="postal-legend-content">
+    <p><span class="legend-estimated" aria-hidden="true"></span> Áreas estimadas del proyecto</p>
+    <p><span class="legend-selected" aria-hidden="true"></span> CP seleccionado</p>
+    <p>CartoCiudad: capa de referencia de CP, visible desde el zoom 11 si está activada en Capas.</p>
+    <p>Los recintos pendientes no se muestran. Comparar capas no valida la estimación como límite oficial.</p>
+    </div>
+  </details>
+</div>
 
 <div id="postal-map" role="region"
   aria-label="Mapa de códigos postales" tabindex="0"

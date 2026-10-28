@@ -11,12 +11,34 @@
     return;
   }
 
+  const saved = new URLSearchParams(window.location.hash.slice(1));
+  const savedView = ['lat', 'lng', 'zoom'].every(key =>
+    saved.has(key) && saved.get(key).trim() !== '' && Number.isFinite(Number(saved.get(key)))
+  ) && Math.abs(Number(saved.get('lat'))) <= 85
+    && Math.abs(Number(saved.get('lng'))) <= 180
+    && Number(saved.get('zoom')) >= 0 && Number(saved.get('zoom')) <= 18;
+  let selectedCode;
+  let ready = false;
+
   const map = L.map(container, {
     preferCanvas: true,
     scrollWheelZoom: true,
     minZoom: 0,
-    maxZoom: 18
+    maxZoom: 18,
+    zoomControl: false
   }).setView([40.4, -3.7], 8);
+  L.control.zoom({ zoomInTitle: 'Acercar', zoomOutTitle: 'Alejar' }).addTo(map);
+  map.on('popupopen', event => {
+    const close = event.popup.getElement().querySelector('.leaflet-popup-close-button');
+    if (close) {
+      close.title = 'Cerrar ventana';
+      close.setAttribute('aria-label', 'Cerrar ventana');
+    }
+  });
+
+  const selectedStyle = {
+    color: '#b52f2b', weight: 3, fillColor: '#eb6864', fillOpacity: 0.5
+  };
 
   const gris = L.tileLayer.providerESP('IGNBase.Gris').addTo(map);
   const base = L.tileLayer.providerESP('IGNBase');
@@ -51,6 +73,9 @@
       layer.bindPopup(label);
 
       layer.on({
+        click() {
+          selectCode(feature.properties.COD_POSTAL, false);
+        },
         mouseover(event) {
           const polygon = event.target;
 
@@ -65,14 +90,20 @@
         },
 
         mouseout(event) {
-          postal.resetStyle(event.target);
+          if (feature.properties.COD_POSTAL === selectedCode) {
+            event.target.setStyle(selectedStyle);
+          } else {
+            postal.resetStyle(event.target);
+          }
         }
       });
     },
 
     attribution:
       'Elaboración: <a href="https://dieghernan.github.io/">dieghernan</a>' +
-      ' · CartoCiudad (IGN/CNIG) · Goerlich y Pérez Vázquez (2025)'
+      ' · CartoCiudad (IGN/CNIG)' +
+      ' · <a href="https://doi.org/10.5281/zenodo.15345101">Goerlich y Pérez Vázquez (2025)</a>' +
+      ' · Método: <a href="https://www.uv.es/goerlich/Ivie/CodPost.html">Goerlich (2022)</a>'
   }).addTo(map);
 
   // Mostrar el acceso a toda ventana cuando el visor esté incrustado.
@@ -117,6 +148,11 @@
     { collapsed: true }
   ).addTo(map);
 
+  // Leaflet's collapsed layer switch has an English accessible name by default.
+  const layersLink = container.querySelector('.leaflet-control-layers-toggle');
+  layersLink.title = 'Capas';
+  layersLink.setAttribute('aria-label', 'Capas');
+
   L.control.scale({ imperial: false }).addTo(map);
 
   let request;
@@ -151,6 +187,8 @@
 
       postal.clearLayers().addData(data);
       loadedPrefix = prefix;
+      selectedCode = undefined;
+      document.getElementById('postal-code-status').textContent = '';
 
       if (fit) {
         map.fitBounds(postal.getBounds(), {
@@ -161,6 +199,8 @@
 
       status.textContent =
         `${data.features.length} códigos postales con prefijo ${prefix}.`;
+
+      saveView();
 
       return true;
     } catch (error) {
@@ -182,7 +222,97 @@
     }
   }
 
-  select.addEventListener('change', () => loadPrefix());
+  select.addEventListener('change', () => {
+    document.getElementById('postal-code-status').textContent = '';
+    loadPrefix();
+  });
+
+  function saveView() {
+    if (!ready || !loadedPrefix) return;
+    const center = map.getCenter();
+    const state = new URLSearchParams({
+      prefix: loadedPrefix,
+      lat: center.lat.toFixed(5),
+      lng: center.lng.toFixed(5),
+      zoom: String(map.getZoom())
+    });
+    if (selectedCode) state.set('cp', selectedCode);
+    // Address queries and markers deliberately stay out of the shared URL.
+    window.history.replaceState(null, '', `#${state}`);
+  }
+
+  map.on('moveend', saveView);
+
+  function selectCode(code, fit = true) {
+    map.closePopup();
+    let match;
+    postal.eachLayer(layer => {
+      if (layer.feature.properties.COD_POSTAL === code) match = layer;
+      postal.resetStyle(layer);
+    });
+    if (!match) {
+      selectedCode = undefined;
+      saveView();
+      return false;
+    }
+    selectedCode = code;
+    match.setStyle(selectedStyle).bringToFront();
+    if (fit) map.fitBounds(match.getBounds(), { padding: [24, 24], maxZoom: 16 });
+    match.openPopup();
+    document.getElementById('postal-code').value = code;
+    document.getElementById('postal-code-status').textContent =
+      `CP ${code}: área estimada seleccionada.`;
+    saveView();
+    return true;
+  }
+
+  let codeSearch = 0;
+  document.getElementById('postal-search').addEventListener('submit', async event => {
+    event.preventDefault();
+    const search = ++codeSearch;
+    const code = document.getElementById('postal-code').value.trim();
+    const codeStatus = document.getElementById('postal-code-status');
+    if (!/^\d{5}$/.test(code)) {
+      codeStatus.textContent = 'Introduce un código postal de cinco dígitos.';
+      return;
+    }
+    if (select.disabled) {
+      codeStatus.textContent = 'Espera a que cargue el catálogo de prefijos.';
+      return;
+    }
+    const prefix = code.slice(0, 2);
+    if (![...select.options].some(option => option.value === prefix)) {
+      codeStatus.textContent = `El prefijo ${prefix} no está disponible en el visor.`;
+      return;
+    }
+    codeStatus.textContent = `Buscando CP ${code}…`;
+    if (loadedPrefix !== prefix) {
+      select.value = prefix;
+      if (!await loadPrefix() || search !== codeSearch) {
+        codeStatus.textContent = 'No se ha completado la búsqueda. Vuelve a intentarlo.';
+        return;
+      }
+    }
+    if (!selectCode(code)) {
+      codeStatus.textContent = `El CP ${code} no está en las áreas publicadas. Esto no implica que no exista.`;
+    }
+  });
+
+  document.getElementById('share-view').addEventListener('click', async () => {
+    saveView();
+    const shareStatus = document.getElementById('share-status');
+    const field = document.getElementById('share-url');
+    field.value = window.location.href;
+    field.hidden = false;
+    try {
+      await navigator.clipboard.writeText(field.value);
+      shareStatus.textContent = 'Enlace copiado. No incluye direcciones buscadas.';
+    } catch {
+      field.focus();
+      field.select();
+      shareStatus.textContent = 'Copia el enlace del campo para compartir esta vista.';
+    }
+  });
 
   const addressForm = document.getElementById('address-search');
   const addressQuery = document.getElementById('address-query');
@@ -290,7 +420,9 @@
         candidate.address +
         (code ? ` · CP ${code} (CartoCiudad)` : '');
 
-      addressMarker = L.marker([location.lat, location.lng])
+      addressMarker = L.marker([location.lat, location.lng], {
+        alt: 'Dirección localizada', title: 'Dirección localizada'
+      })
         .addTo(map)
         .bindPopup(label);
 
@@ -460,10 +592,23 @@
         );
       }));
 
-      select.value = prefixes.includes('08') ? '08' : prefixes[0];
+      select.value = prefixes.includes(saved.get('prefix'))
+        ? saved.get('prefix')
+        : (prefixes.includes('08') ? '08' : prefixes[0]);
       select.disabled = false;
 
-      await loadPrefix();
+      const loaded = await loadPrefix({ fit: !savedView });
+      if (savedView) {
+        map.setView([Number(saved.get('lat')), Number(saved.get('lng'))], Number(saved.get('zoom')));
+      }
+      if (loaded && /^\d{5}$/.test(saved.get('cp') || '')) {
+        if (!selectCode(saved.get('cp'), !savedView)) {
+          document.getElementById('postal-code-status').textContent =
+            'El CP del enlace no está en las áreas del prefijo seleccionado.';
+        }
+      }
+      ready = true;
+      saveView();
     } catch {
       status.textContent =
         'No se ha podido cargar el catálogo de prefijos. Recarga la página para reintentar.';
