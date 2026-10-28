@@ -149,3 +149,21 @@
 #address-results button:focus-visible {
   background: #f8e3e2;
 }
+
+.postal-full-window a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 28px;
+  color: #222;
+  background: #fff;
+  text-decoration: none;
+}
+
+.postal-full-window a:hover,
+.postal-full-window a:focus-visible {
+  color: #b52f2b;
+  background: #f8e3e2;
+}

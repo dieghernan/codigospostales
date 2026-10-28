@@ -21,7 +21,7 @@ provincias procesadas e incluidas en el consolidado.
 
 <div class="row align-items-center text-center my-4">
   <div class="col-12 col-lg-4 mb-3">
-    <a class="btn btn-primary btn-lg"
+    <a class="btn btn-primary"
        href="{{ '/visor/' | relative_url }}">
       Explorar el visor de códigos postales
     </a>
