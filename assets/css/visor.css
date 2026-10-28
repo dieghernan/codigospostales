@@ -243,3 +243,173 @@
   .postal-map-app { min-height: 100dvh; height: auto; }
   .postal-map-app #postal-map { flex: none; height: 60dvh; min-height: 320px; }
 }
+
+/* ===== Versión B: tabs + panel compacto + leyenda mejorada ===== */
+
+.prefix-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .35rem .5rem;
+  width: 100%;
+}
+
+.prefix-row #map-status {
+  margin: 0;
+  flex: 1;
+  min-width: 12rem;
+}
+
+.help-toggle {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid #999;
+  background: #fff;
+  font-size: .75rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  color: #444;
+}
+
+.help-toggle:hover,
+.help-toggle[aria-expanded="true"] {
+  background: #f0f0f0;
+  border-color: #666;
+}
+
+.help-text {
+  font-size: .75rem;
+  margin: .25rem 0 0;
+  color: #555;
+  flex-basis: 100%;
+}
+
+/* Tabs */
+.search-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: .4rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: .35rem .9rem;
+  font-size: .8rem;
+  cursor: pointer;
+  color: #555;
+  margin-bottom: -1px;
+}
+
+.tab:hover {
+  color: #222;
+  background: #f7f4ed;
+}
+
+.tab.active {
+  color: #203b50;
+  border-bottom-color: #203b50;
+  font-weight: 600;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+#panel-cp #postal-search,
+#panel-address #address-search {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .35rem;
+}
+
+#panel-cp #postal-code {
+  width: 7.5rem;
+}
+
+#panel-address #address-query {
+  flex: 1;
+  min-width: 12rem;
+  max-width: 28rem;
+}
+
+/* Leyenda mejorada */
+.postal-legend {
+  position: relative;
+  margin-left: auto;
+}
+
+.postal-legend summary {
+  cursor: pointer;
+  padding: .3rem .5rem;
+  list-style: none;
+  font-size: .8rem;
+}
+
+.postal-legend summary::-webkit-details-marker {
+  display: none;
+}
+
+.postal-legend summary::before {
+  content: "▶ ";
+  font-size: .65rem;
+}
+
+.postal-legend[open] summary::before {
+  content: "▼ ";
+}
+
+.postal-legend-content {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  z-index: 1200;
+  width: min(300px, 90vw);
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: .75rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,.15);
+  font-size: .78rem;
+  line-height: 1.4;
+}
+
+.postal-legend-content p {
+  margin: .3rem 0;
+}
+
+/* Compactación general del panel */
+.postal-map-controls,
+.postal-search-panel,
+.postal-map-actions {
+  padding: .35rem .7rem;
+}
+
+@media (max-width: 600px) {
+  .prefix-row #map-status {
+    flex-basis: 100%;
+    order: 3;
+  }
+
+  .search-tabs {
+    width: 100%;
+  }
+
+  .tab {
+    flex: 1;
+    text-align: center;
+  }
+
+}
