@@ -11,7 +11,6 @@
     return;
   }
 
-  // Evita que el zoom mínimo del WMS cambie la vista al sustituir el fondo.
   const map = L.map(container, {
     preferCanvas: true,
     scrollWheelZoom: true,
@@ -45,11 +44,13 @@
       fillColor: '#2e8b57',
       fillOpacity: 0.25
     },
+
     onEachFeature(feature, layer) {
       const label = document.createElement('strong');
       label.textContent = `Código postal ${feature.properties.COD_POSTAL}`;
       layer.bindPopup(label);
     },
+
     attribution:
       'Elaboración: <a href="https://dieghernan.github.io/">dieghernan</a>' +
       ' · CartoCiudad (IGN/CNIG) · Goerlich y Pérez Vázquez (2025)'
@@ -129,6 +130,8 @@
       if (loadedPrefix) {
         select.value = loadedPrefix;
       }
+
+      return false;
     }
   }
 
@@ -140,50 +143,124 @@
   const addressResults = document.getElementById('address-results');
 
   let addressRequest;
+  let locationRequest;
   let addressMarker;
   let addressSelection = 0;
 
+  function hasCoordinates(value) {
+    return value != null
+      && Number.isFinite(value.lat)
+      && Number.isFinite(value.lng)
+      && Math.abs(value.lat) <= 90
+      && Math.abs(value.lng) <= 180
+      && !(value.lat === 0 && value.lng === 0);
+  }
+
   async function showAddress(candidate) {
     const selection = ++addressSelection;
-    const code = String(candidate.postalCode || '');
-    const prefix = /^\d{5}$/.test(code) ? code.slice(0, 2) : null;
 
-    let loaded = true;
+    locationRequest?.abort();
 
-    if (prefix && loadedPrefix !== prefix) {
-      const available = [...select.options].some(
-        option => option.value === prefix
+    const current = new AbortController();
+    locationRequest = current;
+
+    const timeout = setTimeout(() => current.abort(), 15000);
+    addressStatus.textContent = 'Localizando dirección…';
+
+    try {
+      let location = candidate;
+
+      // Algunas calles llegan con coordenadas provisionales 0,0.
+      // En ese caso se consulta su ubicación real mediante /find.
+      if (!hasCoordinates(location)) {
+        if (candidate.id == null || !candidate.type) {
+          throw new Error('Falta el identificador de la dirección');
+        }
+
+        const url = new URL(
+          'https://www.cartociudad.es/geocoder/api/geocoder/find'
+        );
+
+        url.searchParams.set('id', candidate.id);
+        url.searchParams.set('type', candidate.type);
+
+        const response = await fetch(url, {
+          signal: current.signal
+        });
+
+        if (!response.ok) {
+          throw new Error('No se ha podido localizar');
+        }
+
+        location = await response.json();
+      }
+
+      if (selection !== addressSelection || current.signal.aborted) {
+        return;
+      }
+
+      if (!hasCoordinates(location)) {
+        throw new Error('Coordenadas no disponibles');
+      }
+
+      clearTimeout(timeout);
+
+      const code = String(
+        location.postalCode || candidate.postalCode || ''
       );
 
-      if (available && !select.disabled) {
-        select.value = prefix;
-        loaded = await loadPrefix({ fit: false });
-      } else {
-        loaded = false;
+      const prefix = /^\d{5}$/.test(code)
+        ? code.slice(0, 2)
+        : null;
+
+      let loaded = true;
+
+      if (prefix && loadedPrefix !== prefix) {
+        const available = [...select.options].some(
+          option => option.value === prefix
+        );
+
+        if (available && !select.disabled) {
+          select.value = prefix;
+          loaded = await loadPrefix({ fit: false });
+        } else {
+          loaded = false;
+        }
       }
+
+      if (selection !== addressSelection) return;
+
+      if (addressMarker) {
+        addressMarker.remove();
+      }
+
+      const label = document.createElement('div');
+      label.textContent =
+        candidate.address +
+        (code ? ` · CP ${code} (CartoCiudad)` : '');
+
+      addressMarker = L.marker([location.lat, location.lng])
+        .addTo(map)
+        .bindPopup(label);
+
+      map.setView([location.lat, location.lng], 16);
+      addressMarker.openPopup();
+
+      addressResults.hidden = true;
+
+      addressStatus.textContent =
+        'Dirección localizada.' +
+        (!prefix || !loaded
+          ? ' No se han cargado las áreas postales de esta dirección; comprueba el selector de prefijo.'
+          : '');
+    } catch {
+      if (selection === addressSelection) {
+        addressStatus.textContent =
+          'No se ha podido localizar esta dirección. Elige otro resultado o vuelve a intentarlo.';
+      }
+    } finally {
+      clearTimeout(timeout);
     }
-
-    if (selection !== addressSelection) return;
-
-    if (addressMarker) addressMarker.remove();
-
-    const label = document.createElement('div');
-    label.textContent =
-      candidate.address + (code ? ` · CP ${code} (CartoCiudad)` : '');
-
-    addressMarker = L.marker([candidate.lat, candidate.lng])
-      .addTo(map)
-      .bindPopup(label);
-
-    map.setView([candidate.lat, candidate.lng], 16);
-    addressMarker.openPopup();
-
-    addressResults.hidden = true;
-    addressStatus.textContent =
-      'Dirección localizada.' +
-      (!prefix || !loaded
-        ? ' No se han cargado las áreas postales de esta dirección; comprueba el selector de prefijo.'
-        : '');
   }
 
   addressForm.addEventListener('submit', async event => {
@@ -192,11 +269,13 @@
     const query = addressQuery.value.trim();
 
     if (query.length < 3) {
-      addressStatus.textContent = 'Introduce al menos tres caracteres.';
+      addressStatus.textContent =
+        'Introduce al menos tres caracteres.';
       return;
     }
 
     addressRequest?.abort();
+    locationRequest?.abort();
     ++addressSelection;
 
     const current = new AbortController();
@@ -217,22 +296,31 @@
       url.searchParams.set('q', query);
       url.searchParams.set('limit', '5');
 
-      const response = await fetch(url, { signal: current.signal });
+      const response = await fetch(url, {
+        signal: current.signal
+      });
 
-      if (!response.ok) throw new Error('Servicio no disponible');
+      if (!response.ok) {
+        throw new Error('Servicio no disponible');
+      }
 
       const data = await response.json();
 
-      if (addressRequest !== current) return;
-      if (!Array.isArray(data)) throw new Error('Respuesta no válida');
+      if (addressRequest !== current || current.signal.aborted) {
+        return;
+      }
+
+      if (!Array.isArray(data)) {
+        throw new Error('Respuesta no válida');
+      }
 
       const candidates = data.filter(item =>
         item &&
         typeof item.address === 'string' &&
-        Number.isFinite(item.lat) &&
-        Number.isFinite(item.lng) &&
-        Math.abs(item.lat) <= 90 &&
-        Math.abs(item.lng) <= 180
+        (
+          hasCoordinates(item) ||
+          (item.id != null && item.type)
+        )
       ).slice(0, 5);
 
       if (!candidates.length) {
@@ -250,7 +338,9 @@
           candidate.address +
           (candidate.postalCode ? ` · ${candidate.postalCode}` : '');
 
-        button.addEventListener('click', () => showAddress(candidate));
+        button.addEventListener('click', () => {
+          showAddress(candidate);
+        });
 
         item.append(button);
         addressResults.append(item);
@@ -288,7 +378,7 @@
       if (
         !Array.isArray(prefixes) ||
         !prefixes.length ||
-        !prefixes.every(p => /^\d{2}$/.test(p))
+        !prefixes.every(prefix => /^\d{2}$/.test(prefix))
       ) {
         throw new Error('Catálogo no válido');
       }
