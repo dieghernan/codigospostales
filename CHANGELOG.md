@@ -2,6 +2,7 @@
 
 ## En desarrollo
 
+- El visor incorpora controles plegables en móvil, una leyenda lateral y estados de carga, y mejora el cierre del panel de capas y la selección de áreas.
 - La web da acceso directo a los dos consolidados, muestra sus características y añade un inicio rápido con R, Python y QGIS.
 - El visor permite buscar un código postal y compartir la vista sin incluir direcciones buscadas, con controles y leyenda en español.
 

@@ -22,6 +22,8 @@ y no muestra los recintos pendientes de asignación.
 - El selector de prefijo carga códigos completos por sus dos primeros dígitos: **no recorta por provincia**.
 - Pulsa un área para consultar su CP. Los colores y líneas se explican en la leyenda.
 - Abre **Capas** para cambiar entre IGNBase Gris, IGNBase y PNOA, o activar los límites administrativos del IGN.
+- En móvil, abre **Buscar o cambiar prefijo** para desplegar los controles. La ayuda del botón **?** aparece dentro del panel, sin tapar el mapa con un tooltip flotante.
+- **Leyenda** abre un panel lateral. Puedes cerrar la leyenda y las capas con su botón de cierre, con Escape o al pulsar fuera.
 - El WMS de **CartoCiudad aparece desde el zoom 11**. Las áreas estimadas y CartoCiudad están activados inicialmente.
 - **Compartir vista** copia un enlace con prefijo, posición, zoom y CP seleccionado. No incluye la dirección buscada.
 

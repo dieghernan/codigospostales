@@ -4,8 +4,30 @@
 
   const status = document.getElementById('map-status');
   const select = document.getElementById('postal-prefix');
+  const loading = document.getElementById('map-loading');
+  const pendingLoads = new Map();
+
+  function beginLoading(message) {
+    const token = Symbol();
+    pendingLoads.set(token, message);
+    renderLoading();
+    return () => {
+      pendingLoads.delete(token);
+      renderLoading();
+    };
+  }
+
+  function renderLoading() {
+    loading.hidden = pendingLoads.size === 0;
+    container.setAttribute('aria-busy', String(pendingLoads.size > 0));
+    if (pendingLoads.size) {
+      document.getElementById('map-loading-text').textContent =
+        [...pendingLoads.values()].at(-1);
+    }
+  }
 
   if (!window.L || !L.tileLayer.providerESP) {
+    status.dataset.state = 'error';
     status.textContent =
       'No se ha podido cargar Leaflet. Recarga la página para reintentar.';
     return;
@@ -37,7 +59,7 @@
   });
 
   const selectedStyle = {
-    color: '#b52f2b', weight: 3, fillColor: '#eb6864', fillOpacity: 0.5
+    color: '#a52b27', weight: 4, fillColor: '#eb6864', fillOpacity: 0.5
   };
 
   const gris = L.tileLayer.providerESP('IGNBase.Gris').addTo(map);
@@ -81,7 +103,7 @@
 
           polygon.setStyle({
             color: '#b52f2b',
-            weight: 3,
+            weight: feature.properties.COD_POSTAL === selectedCode ? 4 : 3,
             fillColor: '#eb6864',
             fillOpacity: 0.5
           });
@@ -134,7 +156,7 @@
     fullWindowControl.addTo(map);
   }
 
-  L.control.layers(
+  const layersControl = L.control.layers(
     {
       'IGNBase Gris': gris,
       IGNBase: base,
@@ -152,6 +174,43 @@
   const layersLink = container.querySelector('.leaflet-control-layers-toggle');
   layersLink.title = 'Capas';
   layersLink.setAttribute('aria-label', 'Capas');
+  const layersPanel = layersControl.getContainer();
+  // Keep the panel stable until the user dismisses it explicitly or clicks outside.
+  L.DomEvent.off(layersPanel, 'mouseenter mouseleave');
+  layersPanel.querySelector('.leaflet-control-layers-list').id = 'postal-layer-options';
+  layersLink.setAttribute('aria-controls', 'postal-layer-options');
+  layersLink.setAttribute('aria-expanded', 'false');
+  new MutationObserver(() => {
+    layersLink.setAttribute('aria-expanded', String(layersPanel.classList.contains('leaflet-control-layers-expanded')));
+  }).observe(layersPanel, { attributes: true, attributeFilter: ['class'] });
+  layersLink.addEventListener('keydown', event => {
+    if (event.key === ' ') {
+      event.preventDefault();
+      layersControl.expand();
+    }
+  });
+  const layersClose = document.createElement('button');
+  layersClose.type = 'button';
+  layersClose.className = 'layers-close';
+  layersClose.setAttribute('aria-label', 'Cerrar capas');
+  layersClose.textContent = '×';
+  layersPanel.prepend(layersClose);
+  layersClose.addEventListener('click', () => {
+    layersControl.collapse();
+    layersLink.focus();
+  });
+  document.addEventListener('click', event => {
+    if (!layersPanel.contains(event.target)) layersControl.collapse();
+  }, true);
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && layersPanel.classList.contains('leaflet-control-layers-expanded')) {
+      layersControl.collapse();
+      layersLink.focus();
+    }
+  });
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(() => map.invalidateSize({ pan: false, debounceMoveend: true })).observe(container);
+  }
 
   L.control.scale({ imperial: false }).addTo(map);
 
@@ -165,7 +224,9 @@
     request = current;
 
     const prefix = select.value;
-    status.textContent = `Cargando códigos ${prefix}xxx…`;
+    status.dataset.state = 'loading';
+    status.textContent = 'Cargando…';
+    const finishLoading = beginLoading(`Cargando áreas ${prefix}xxx…`);
 
     try {
       const response = await fetch(
@@ -197,8 +258,8 @@
         });
       }
 
-      status.textContent =
-        `${data.features.length} códigos postales con prefijo ${prefix}.`;
+      status.dataset.state = 'ready';
+      status.textContent = `${data.features.length} CP`;
 
       saveView();
 
@@ -210,6 +271,7 @@
         ? ` Se mantiene el dominio ${loadedPrefix}xxx.`
         : '';
 
+      status.dataset.state = 'error';
       status.textContent =
         `No se ha podido cargar ${prefix}xxx.${previous}` +
         ' Elige otro prefijo o recarga la página para reintentar.';
@@ -219,6 +281,8 @@
       }
 
       return false;
+    } finally {
+      finishLoading();
     }
   }
 
@@ -343,6 +407,7 @@
 
     const timeout = setTimeout(() => current.abort(), 15000);
     addressStatus.textContent = 'Localizando dirección…';
+    const finishLoading = beginLoading('Localizando dirección…');
 
     try {
       let location = candidate;
@@ -447,6 +512,7 @@
       }
     } finally {
       clearTimeout(timeout);
+      finishLoading();
     }
   }
 
@@ -474,6 +540,7 @@
     addressResults.hidden = true;
     addressStatus.textContent = 'Buscando direcciones…';
     addressForm.setAttribute('aria-busy', 'true');
+    const finishLoading = beginLoading('Buscando direcciones…');
 
     try {
       const url = new URL(
@@ -543,6 +610,7 @@
       }
     } finally {
       clearTimeout(timeout);
+      finishLoading();
 
       if (addressRequest === current) {
         addressForm.removeAttribute('aria-busy');
@@ -587,7 +655,7 @@
         const name = names[Number(prefix) - 1];
 
         return new Option(
-          name ? `${prefix}xxx (${name})` : `${prefix}xxx`,
+          name ? `${prefix} · ${name}` : prefix,
           prefix
         );
       }));
@@ -610,6 +678,7 @@
       ready = true;
       saveView();
     } catch {
+      status.dataset.state = 'error';
       status.textContent =
         'No se ha podido cargar el catálogo de prefijos. Recarga la página para reintentar.';
     }
@@ -623,6 +692,23 @@
     const helpBtn = document.querySelector('.help-toggle');
     const helpText = document.getElementById('postal-prefix-help');
     const legend = document.querySelector('.postal-legend');
+    const controls = document.getElementById('viewer-controls');
+    const mobile = window.matchMedia('(max-width: 600px)');
+    const syncControls = () => { controls.open = !mobile.matches; };
+    syncControls();
+    mobile.addEventListener('change', syncControls);
+    controls.addEventListener('toggle', () => map.invalidateSize({ pan: false }));
+    const legendTrigger = legend.querySelector('summary');
+    document.getElementById('legend-close').addEventListener('click', () => {
+      legend.open = false;
+      legendTrigger.focus();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && legend.open) {
+        legend.open = false;
+        legendTrigger.focus();
+      }
+    });
 
     function switchTab(target) {
       const isCp = target === 'cp';
@@ -672,6 +758,6 @@
       if (legend?.open && !legend.contains(e.target)) {
         legend.open = false;
       }
-    });
+    }, true);
   })();
 })();
