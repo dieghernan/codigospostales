@@ -614,7 +614,7 @@
         'No se ha podido cargar el catálogo de prefijos. Recarga la página para reintentar.';
     }
   })();
-    // --- Tabs + ayuda del prefijo + cierre de leyenda ---
+  // Tabs, ayuda del prefijo y cierre de leyenda.
   (function initUI() {
     const tabCp = document.getElementById('tab-cp');
     const tabAddress = document.getElementById('tab-address');
@@ -630,6 +630,8 @@
       tabAddress.classList.toggle('active', !isCp);
       tabCp.setAttribute('aria-selected', isCp);
       tabAddress.setAttribute('aria-selected', !isCp);
+      tabCp.tabIndex = isCp ? 0 : -1;
+      tabAddress.tabIndex = isCp ? -1 : 0;
       panelCp.classList.toggle('active', isCp);
       panelAddress.classList.toggle('active', !isCp);
       panelCp.hidden = !isCp;
@@ -642,11 +644,19 @@
     // Teclado en tabs
     [tabCp, tabAddress].forEach(tab => {
       tab?.addEventListener('keydown', e => {
+        let target;
         if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-          e.preventDefault();
-          (tab === tabCp ? tabAddress : tabCp).focus();
-          switchTab(tab === tabCp ? 'address' : 'cp');
+          target = tab === tabCp ? tabAddress : tabCp;
+        } else if (e.key === 'Home') {
+          target = tabCp;
+        } else if (e.key === 'End') {
+          target = tabAddress;
+        } else {
+          return;
         }
+        e.preventDefault();
+        switchTab(target === tabCp ? 'cp' : 'address');
+        target.focus();
       });
     });
 
