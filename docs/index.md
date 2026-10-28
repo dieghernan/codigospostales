@@ -1,6 +1,11 @@
 ---
 layout: default
 title: Códigos postales de España
+seo_title: "Códigos postales de España: mapa y descarga GeoPackage"
+description: >-
+  Explora las áreas postales estimadas de España y descarga los consolidados
+  GeoPackage completo y simplificado para R, Python y QGIS.
+og_image_alt: Mapa de las áreas postales estimadas de España con prefijo 28.
 subtitle: Mapa y descarga de áreas postales estimadas
 header_type: base
 dataset: true
