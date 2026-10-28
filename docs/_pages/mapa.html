@@ -7,13 +7,39 @@ show_author: false
 ---
 <section class="postal-map-controls" aria-label="Filtro de códigos postales">
   <label for="postal-prefix">Prefijo postal</label>
-  <select id="postal-prefix" class="form-control" disabled aria-describedby="postal-prefix-help map-status">
+  <select id="postal-prefix" class="form-control" disabled
+    aria-describedby="postal-prefix-help map-status">
     <option value="08">08xxx (Barcelona)</option>
   </select>
-  <p id="postal-prefix-help">Los nombres son orientativos: se filtra por los dos
-    primeros dígitos del CP, sin recortar por límites provinciales.</p>
-  <p id="map-status" role="status" aria-live="polite">Cargando el visor…</p>
+  <p id="postal-prefix-help">
+    Los nombres son orientativos: se filtra por los dos primeros dígitos
+    del CP, sin recortar por límites provinciales.
+  </p>
+  <p id="map-status" role="status" aria-live="polite">
+    Cargando el visor…
+  </p>
 </section>
-<div id="postal-map" role="region" aria-label="Mapa de códigos postales" tabindex="0"
+
+<section class="postal-address-controls" aria-label="Búsqueda de direcciones">
+  <form id="address-search" role="search">
+    <label for="address-query">Dirección</label>
+    <input id="address-query" name="address" type="search"
+      minlength="3" maxlength="200"
+      placeholder="Calle Mayor 1, Madrid"
+      required aria-describedby="address-help">
+    <button type="submit" class="btn btn-primary">Buscar</button>
+  </form>
+  <p id="address-help">
+    Busca una dirección en España con CartoCiudad (IGN/CNIG).
+  </p>
+  <p id="address-status" role="status" aria-live="polite"></p>
+  <ul id="address-results" aria-label="Direcciones encontradas" hidden></ul>
+</section>
+
+<div id="postal-map" role="region"
+  aria-label="Mapa de códigos postales" tabindex="0"
   data-source="{{ '/assets/data/' | relative_url }}"></div>
-<noscript><p>Activa JavaScript para utilizar el visor.</p></noscript>
+
+<noscript>
+  <p>Activa JavaScript para utilizar el visor.</p>
+</noscript>

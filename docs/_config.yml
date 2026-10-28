@@ -13,10 +13,10 @@ description: >-
   Áreas postales estimadas a partir de CartoCiudad y límites administrativos.
   Disponible en GeoPackage para R, Python y SIG.
 
-og_image: /assets/img/github-preview.jpg
-og_image_alt: Códigos postales de España, con un mosaico de áreas postales.
-og_image_width: 1280
-og_image_height: 640
+og_image: /assets/img/social-preview.jpg
+og_image_alt: Códigos postales de España. Mapa de las áreas postales estimadas con prefijo 28 a partir de los datos del proyecto.
+og_image_width: 1200
+og_image_height: 630
 og_image_type: image/jpeg
 twitter_site: dhernangomez
 gtag_id: G-YJD3C3D1M1

@@ -1,15 +1,151 @@
-#postal-map { height: 65vh; min-height: 360px; max-height: 700px; width: 100%; margin-bottom: 2rem; border: 1px solid #a8c4cb; background: #f7f4ed; }
-#postal-prefix { max-width: 20rem; }
-#postal-map .leaflet-control-layers { max-width: min(260px, 65vw); }
-#postal-map .leaflet-control-layers label { margin-bottom: .35rem; }
-#postal-map .leaflet-control-attribution { max-width: 100%; }
-.postal-map-frame { display: block; width: 100%; height: 75vh; min-height: 540px; border: 1px solid #a8c4cb; margin-bottom: 2rem; }
-.postal-map-page { margin: 0; }
-.postal-map-app { display: flex; flex-direction: column; height: 100vh; height: 100dvh; }
-.postal-map-toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .15rem .75rem; padding: .2rem .6rem; background: #f7f4ed; font-size: .75rem; line-height: 1.3; }
-.postal-map-controls { display: flex; align-items: center; flex-wrap: wrap; gap: .2rem .5rem; padding: .3rem .6rem; font-size: .8rem; line-height: 1.3; }
-.postal-map-controls label { margin: 0; }
-.postal-map-controls #postal-prefix { display: inline-block; width: 16rem; max-width: 100%; height: 1.8rem; padding: .1rem .3rem; font-size: .8rem; line-height: 1.3; }
-.postal-map-controls p { margin: 0; font-family: inherit; font-size: .75rem; }
-.postal-map-controls #postal-prefix-help { flex-basis: 100%; order: 1; }
-.postal-map-app #postal-map { flex: 1; min-height: 240px; max-height: none; height: auto; margin: 0; }
+#postal-map {
+  height: 65vh;
+  min-height: 360px;
+  max-height: 700px;
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 1px solid #a8c4cb;
+  background: #f7f4ed;
+}
+
+#postal-prefix {
+  max-width: 20rem;
+}
+
+#postal-map .leaflet-control-layers {
+  max-width: min(260px, 65vw);
+}
+
+#postal-map .leaflet-control-layers label {
+  margin-bottom: .35rem;
+}
+
+#postal-map .leaflet-control-attribution {
+  max-width: 100%;
+}
+
+.postal-map-frame {
+  display: block;
+  width: 100%;
+  height: 75vh;
+  min-height: 540px;
+  border: 1px solid #a8c4cb;
+  margin-bottom: 2rem;
+}
+
+.postal-map-page {
+  margin: 0;
+}
+
+.postal-map-app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.postal-map-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: .15rem .75rem;
+  padding: .2rem .6rem;
+  background: #f7f4ed;
+  font-size: .75rem;
+  line-height: 1.3;
+}
+
+.postal-map-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .2rem .5rem;
+  padding: .3rem .6rem;
+  font-size: .8rem;
+  line-height: 1.3;
+}
+
+.postal-map-controls label {
+  margin: 0;
+}
+
+.postal-map-controls #postal-prefix {
+  display: inline-block;
+  width: 16rem;
+  max-width: 100%;
+  height: 1.8rem;
+  padding: .1rem .3rem;
+  font-size: .8rem;
+  line-height: 1.3;
+}
+
+.postal-map-controls p {
+  margin: 0;
+  font-family: inherit;
+  font-size: .75rem;
+}
+
+.postal-map-controls #postal-prefix-help {
+  flex-basis: 100%;
+  order: 1;
+}
+
+.postal-map-app #postal-map {
+  flex: 1;
+  min-height: 240px;
+  max-height: none;
+  height: auto;
+  margin: 0;
+}
+
+.postal-address-controls {
+  padding: .3rem .6rem;
+  font-size: .8rem;
+}
+
+#address-search {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .35rem;
+}
+
+#address-search label,
+.postal-address-controls p {
+  margin: 0;
+}
+
+#address-query {
+  flex: 1;
+  min-width: 10rem;
+  max-width: 32rem;
+  padding: .25rem .4rem;
+}
+
+#address-search button {
+  padding: .25rem .6rem;
+  font-size: .8rem;
+}
+
+#address-results {
+  list-style: none;
+  padding: 0;
+  margin: .3rem 0 0;
+  max-height: 9rem;
+  overflow-y: auto;
+}
+
+#address-results button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: white;
+  color: #222;
+  border: 1px solid #ddd;
+  padding: .4rem;
+}
+
+#address-results button:hover,
+#address-results button:focus-visible {
+  background: #f8e3e2;
+}

@@ -1,19 +1,41 @@
 <script defer src="https://cloud.umami.is/script.js" data-website-id="c23b83bb-5f33-4256-a5b5-fbc59c1c7ae8" data-domains="dieghernan.github.io"></script>
+
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
 <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="{{ '/assets/img/favicon.ico' | relative_url }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32.png' | relative_url }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
 <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
+
 <meta name="theme-color" content="#eb6864">
 <meta name="fediverse:creator" content="@dhernangomez@fosstodon.org">
+
 <link rel="author" href="{{ site.author.url | escape }}">
 <link rel="describedby" type="text/plain" title="Información para asistentes de IA" href="{{ '/llms.txt' | absolute_url }}">
+
 {% if page.leaflet %}
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="{{ '/assets/css/visor.css' | relative_url }}">
 {% endif %}
+
 {% if page.map_embed %}
 <link rel="stylesheet" href="{{ '/assets/css/visor.css' | relative_url }}">
 {% endif %}
+
 <link rel="webmention" href="https://webmention.io/dieghernan.github.io/webmention">
 <link rel="pingback" href="https://webmention.io/dieghernan.github.io/xmlrpc">
+
+<!-- Completar Twitter Card con los metadatos resueltos por Chulapa. -->
+<meta name="twitter:title" content="{{ social_title | escape_once }}">
+
+{% if ogimage %}
+<meta name="twitter:image" content="{{ ogimage | escape_once }}">
+
+{% assign twitter_image_alt = page.og_image_alt | strip %}
+{% if twitter_image_alt == empty and page_image_source == empty and ogimage_source == site.og_image %}
+{% assign twitter_image_alt = site.og_image_alt | strip %}
+{% endif %}
+
+{% if twitter_image_alt != empty %}
+<meta name="twitter:image:alt" content="{{ twitter_image_alt | escape_once }}">
+{% endif %}
+{% endif %}
