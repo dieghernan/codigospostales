@@ -3,8 +3,10 @@
 {% include head.html theme_script=true %}
 <body class="postal-map-page">
 <main class="postal-map-app">
+  <h1 class="sr-only">{{ page.title | escape }}</h1>
   <nav class="postal-map-toolbar" aria-label="Navegación del visor">
     <a href="{{ '/visor/' | relative_url }}" target="_top">Documentación</a>
+    <a href="{{ '/' | relative_url }}#archivos-disponibles" target="_top">Descargas</a>
     <span>Límites estimados · no oficiales</span>
   </nav>
   {{ content }}

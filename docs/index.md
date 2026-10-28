@@ -1,46 +1,91 @@
 ---
 layout: default
 title: Códigos postales de España
-subtitle: Datos abiertos y GeoPackage
-header_type: hero
+subtitle: Mapa y descarga de áreas postales estimadas
+header_type: base
+dataset: true
 excerpt: >-
-  Áreas postales estimadas de España a partir de CartoCiudad y límites
-  administrativos. Datos abiertos en GeoPackage para su uso con R y Python.
+  Explora el mapa y descarga polígonos postales estimados de España en GeoPackage.
+  Dos consolidados para análisis y visualización con R, Python o QGIS.
 ---
 
-Este proyecto ofrece delimitaciones estimadas de los códigos postales de España
-en formato **GeoPackage**, con una versión completa y otra simplificada para
-visualización. Los datos se generan con R y se pueden utilizar con R, Python
-y aplicaciones de SIG como QGIS.
+Explora y descarga **áreas estimadas de los códigos postales de España**.
+Los productos son dos archivos GeoPackage consolidados: uno completo para
+análisis y otro simplificado para visualización, compatibles con R, Python y QGIS.
 
-Las geometrías se construyen a partir de direcciones de
-[CartoCiudad (IGN/CNIG)](#ref-cartociudad) y de los límites administrativos de
-[Goerlich y Pérez Vázquez (2025)](#ref-lau2).
-**No constituyen límites postales oficiales.** La cobertura corresponde a las
-provincias procesadas e incluidas en el consolidado.
+<p class="product-note"><strong>No son límites postales oficiales.</strong>
+Se estiman a partir de CartoCiudad y límites administrativos. No se garantiza
+la inclusión de todos los códigos postales de las fuentes.</p>
 
-<div class="row align-items-center text-center my-4">
-  <div class="col-12 col-lg-4 mb-3">
-    <a class="btn btn-primary"
-       href="{{ '/visor/' | relative_url }}">
-      Explorar el visor interactivo
-    </a>
-  </div>
+## Archivos disponibles
 
-  <div class="col-12 col-lg-4 mb-3">
-    <a class="btn btn-outline-primary"
-       href="{{ '/ejemplos/' | relative_url }}">
-      Ver ejemplos en R y Python
-    </a>
-  </div>
-
-  <div class="col-12 col-lg-4 mb-3">
-    <a class="btn btn-outline-primary"
-       href="https://github.com/dieghernan/codigospostales/tree/main/data">
-      Consultar los datos en GitHub
-    </a>
-  </div>
+{% assign full = site.data.products.full %}
+{% assign simple = site.data.products.simplified %}
+<div class="product-downloads">
+  <section class="product-download" aria-labelledby="download-full">
+    <h3 id="download-full">Consolidado completo</h3>
+    <p>Geometría completa para análisis y mediciones sobre la estimación.</p>
+    <a class="btn btn-primary" href="{{ full.url }}">Descargar completo · {{ full.size_mb | replace: '.', ',' }} MB</a>
+    <p class="mt-2 mb-0">Generado: <time datetime="{{ full.generated }}">{{ full.generated }}</time><br>Versión (SHA-256): <code title="{{ full.revision }}">{{ full.revision | slice: 0, 12 }}</code></p>
+  </section>
+  <section class="product-download" aria-labelledby="download-simple">
+    <h3 id="download-simple">Consolidado simplificado</h3>
+    <p>Archivo más ligero para mapas y visualización. Evita mediciones precisas.</p>
+    <a class="btn btn-primary" href="{{ simple.url }}">Descargar simplificado · {{ simple.size_mb | replace: '.', ',' }} MB</a>
+    <p class="mt-2 mb-0">Generado: <time datetime="{{ simple.generated }}">{{ simple.generated }}</time><br>Versión (SHA-256): <code title="{{ simple.revision }}">{{ simple.revision | slice: 0, 12 }}</code></p>
+  </section>
 </div>
+
+[Explorar el mapa]({{ '/visor/' | relative_url }}){: .btn .btn-outline-primary}
+[Inicio rápido con R, Python y QGIS]({{ '/ejemplos/' | relative_url }}){: .btn .btn-outline-primary}
+
+## Una vista de los datos
+
+El mapa muestra los códigos postales que empiezan por `28`, seleccionados de la
+versión simplificada. El filtro utiliza el prefijo postal y conserva la
+geometría completa de cada código, sin recortarla a una provincia.
+
+![Delimitaciones estimadas de los códigos postales con prefijo 28, en azul claro con contornos oscuros.]({{ '/assets/img/codigos-postales-28.png' | relative_url }})
+
+La página de [ejemplos de uso]({{ '/ejemplos/' | relative_url }}) explica cómo
+leer solo ese dominio postal y generar el mapa con R o Python.
+
+## Características y cobertura
+
+<div class="product-facts" markdown="1">
+
+- **{{ full.postal_codes }} códigos postales** en el consolidado completo, con prefijos del {{ full.prefixes | first }} al {{ full.prefixes | last }} ({{ full.prefixes | size }} prefijos).
+- **{{ full.pending }} recintos pendientes**, con {{ full.pending_km2 | replace: '.', ',' }} km² sin asignar en la versión completa.
+- **Dos capas:** `codigos_postales` y `pendientes`, en GeoPackage y EPSG:25830.
+- **Licencia:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), con atribución.
+
+</div>
+
+El ámbito es España, con cobertura estimada y recintos sin asignar. La presencia
+de los 52 prefijos no implica que estén todos los códigos postales ni que toda
+la superficie tenga un CP. Los archivos provinciales del repositorio son
+**resultados intermedios**, no productos de descarga independientes.
+
+Las fechas anteriores corresponden a la generación de cada consolidado, no a
+la actualización de las direcciones originales. Los límites administrativos
+proceden de Municipios2024, publicados por Goerlich y Pérez Vázquez (2025);
+la antigüedad de las direcciones de CartoCiudad depende de la descarga de origen.
+
+Ambos archivos incluyen las capas `codigos_postales` y `pendientes`, en
+ETRS89 / UTM zona 30N (EPSG:25830). Los códigos postales se almacenan como texto
+de cinco dígitos, conservando los ceros iniciales. La capa `pendientes` recoge
+los recintos que no han recibido un código postal. Ambas capas contienen
+geometrías `MULTIPOLYGON`; la capa postal no incluye el municipio.
+
+La versión simplificada conserva los códigos y los atributos, pero no está
+destinada a mediciones precisas. En `pendientes`, el campo `AREA_M2` conserva
+la superficie medida en la versión completa.
+
+Los GeoPackage se almacenan con **Git LFS**. Para obtenerlos al clonar el
+repositorio, instala Git LFS y ejecuta `git lfs install`. Después ejecuta
+`git lfs pull` para descargar los datos.
+También puedes acceder a los archivos desde la
+[carpeta de datos en GitHub](https://github.com/dieghernan/codigospostales/tree/main/data).
 
 ## Antecedentes
 
@@ -63,40 +108,6 @@ esas posiciones; al ajustarlas a los límites administrativos y unir las áreas
 con el mismo código, se obtienen polígonos postales estimados. La proximidad
 es una aproximación geométrica y no reproduce necesariamente las decisiones
 de reparto de Correos.
-
-## Una vista de los datos
-
-El mapa muestra los códigos postales que empiezan por `28`, seleccionados de la
-versión simplificada. El filtro utiliza el prefijo postal y conserva la
-geometría completa de cada código, sin recortarla a una provincia.
-
-![Delimitaciones estimadas de los códigos postales con prefijo 28, en azul claro con contornos oscuros.]({{ '/assets/img/codigos-postales-28.png' | relative_url }})
-
-La página de [ejemplos de uso]({{ '/ejemplos/' | relative_url }}) explica cómo
-leer solo ese dominio postal y generar el mapa con R o Python.
-
-## Archivos disponibles
-
-| Archivo | Uso |
-| --- | --- |
-| [codigos_postales.gpkg](https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales.gpkg) | Geometría completa para análisis. |
-| [codigos_postales_simplificado.gpkg](https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales_simplificado.gpkg) | Geometría simplificada para visualización. |
-
-Ambos archivos incluyen las capas `codigos_postales` y `pendientes`, en
-ETRS89 / UTM zona 30N (EPSG:25830). Los códigos postales se almacenan como texto
-de cinco dígitos, conservando los ceros iniciales. La capa `pendientes` recoge
-los recintos que no han recibido un código postal. Ambas capas contienen
-geometrías `MULTIPOLYGON`; la capa postal no incluye el municipio.
-
-La versión simplificada conserva los códigos y los atributos, pero no está
-destinada a mediciones precisas. En `pendientes`, el campo `AREA_M2` conserva
-la superficie medida en la versión completa.
-
-Los GeoPackage se almacenan con **Git LFS**. Para obtenerlos al clonar el
-repositorio, instala Git LFS y ejecuta `git lfs install`. Después ejecuta
-`git lfs pull` para descargar los datos.
-También puedes acceder a los archivos desde la
-[carpeta de datos en GitHub](https://github.com/dieghernan/codigospostales/tree/main/data).
 
 ## Metodología y fuentes
 

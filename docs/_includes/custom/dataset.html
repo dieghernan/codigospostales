@@ -1,0 +1,23 @@
+{% assign product = site.data.products.full %}
+{% assign simplified = site.data.products.simplified %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "{{ '/' | absolute_url }}#dataset",
+  "name": "Áreas postales estimadas de España",
+  "description": "Delimitaciones estimadas a partir de CartoCiudad y límites administrativos. Dos GeoPackage consolidados con capas codigos_postales y pendientes. No son límites postales oficiales ni garantizan incluir todos los códigos de las fuentes.",
+  "url": "{{ '/' | absolute_url }}",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {"@type": "Person", "name": "dieghernan", "url": "https://dieghernan.github.io/"},
+  "spatialCoverage": {"@type": "Place", "name": "España: cobertura estimada, con recintos pendientes de asignación"},
+  "dateModified": {{ product.generated | jsonify }},
+  "version": {{ product.revision | prepend: 'sha256:' | jsonify }},
+  "isAccessibleForFree": true,
+  "keywords": ["códigos postales", "España", "GeoPackage", "SIG", "CartoCiudad", "áreas estimadas"],
+  "distribution": [
+    {"@type": "DataDownload", "name": "Consolidado completo", "encodingFormat": "application/geopackage+sqlite3", "contentSize": "{{ product.bytes }} bytes", "contentUrl": {{ product.url | jsonify }}},
+    {"@type": "DataDownload", "name": "Consolidado simplificado", "encodingFormat": "application/geopackage+sqlite3", "contentSize": "{{ simplified.bytes }} bytes", "dateModified": {{ simplified.generated | jsonify }}, "version": {{ simplified.revision | prepend: 'sha256:' | jsonify }}, "contentUrl": {{ simplified.url | jsonify }}}
+  ]
+}
+</script>

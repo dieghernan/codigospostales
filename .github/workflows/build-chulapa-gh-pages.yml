@@ -33,6 +33,20 @@ jobs:
         env:
           JEKYLL_ENV: production
           JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check local links and page metadata
+        run: |
+          python3 -m unittest discover -s tests -p test_site_checks.py
+          python3 scripts/check_site.py --baseurl "${{ steps.pages.outputs.base_path }}"
+      - name: Install viewer smoke-check dependencies
+        run: |
+          npm ci --prefix tests/site
+          cd tests/site
+          npx playwright install --with-deps chromium
+      - name: Check viewer loading and interactions
+        working-directory: tests/site
+        run: npm test
+        env:
+          SITE_BASEURL: ${{ steps.pages.outputs.base_path }}
       - name: Upload built site
         uses: actions/upload-pages-artifact@v5
         with:

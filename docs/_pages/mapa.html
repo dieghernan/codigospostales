@@ -2,6 +2,7 @@
 layout: map
 title: Mapa interactivo de códigos postales
 subtitle: Visor a pantalla completa con filtro por prefijo y búsqueda de direcciones
+excerpt: Mapa de áreas postales estimadas de España con búsqueda por CP y dirección, filtros por prefijo y comparación con CartoCiudad.
 permalink: /visor/mapa/
 leaflet: true
 show_author: false
@@ -22,6 +23,13 @@ show_author: false
 </section>
 
 <section class="postal-address-controls" aria-label="Búsqueda de direcciones">
+  <form id="postal-search" role="search" aria-label="Buscar código postal">
+    <label for="postal-code">Código postal</label>
+    <input id="postal-code" type="search" inputmode="numeric" pattern="[0-9]{5}"
+      maxlength="5" placeholder="08001" required aria-describedby="postal-code-status">
+    <button type="submit">Ver CP</button>
+  </form>
+  <p id="postal-code-status" role="status" aria-live="polite"></p>
   <form id="address-search" role="search">
     <label for="address-query">Dirección</label>
     <input id="address-query" name="address" type="search"
@@ -36,6 +44,21 @@ show_author: false
   <p id="address-status" role="status" aria-live="polite"></p>
   <ul id="address-results" aria-label="Direcciones encontradas" hidden></ul>
 </section>
+
+<div class="postal-map-actions">
+  <button id="share-view" type="button">Compartir vista</button>
+  <span id="share-status" role="status" aria-live="polite"></span>
+  <input id="share-url" type="text" readonly hidden aria-label="Enlace a esta vista">
+  <details class="postal-legend">
+    <summary>Leyenda</summary>
+    <div class="postal-legend-content">
+    <p><span class="legend-estimated" aria-hidden="true"></span> Áreas estimadas del proyecto</p>
+    <p><span class="legend-selected" aria-hidden="true"></span> CP seleccionado</p>
+    <p>CartoCiudad: capa de referencia de CP, visible desde el zoom 11 si está activada en Capas.</p>
+    <p>Los recintos pendientes no se muestran. Comparar capas no valida la estimación como límite oficial.</p>
+    </div>
+  </details>
+</div>
 
 <div id="postal-map" role="region"
   aria-label="Mapa de códigos postales" tabindex="0"

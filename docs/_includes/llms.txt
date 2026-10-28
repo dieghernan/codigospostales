@@ -11,8 +11,8 @@ direcciones puede excluir códigos presentes en las fuentes originales.
 ## Documentación
 
 - [Página del proyecto](https://dieghernan.github.io/codigospostales/): antecedentes, metodología, limitaciones, licencia y referencias.
-- [Ejemplos reproducibles en R y Python](https://dieghernan.github.io/codigospostales/ejemplos/): lectura SQL por prefijo y generación de mapas.
-- [Visor Leaflet](https://dieghernan.github.io/codigospostales/visor/): datos simplificados por prefijo, con IGNBase Gris (predeterminado), IGNBase, PNOA y el WMS de CartoCiudad. Vista inicial: prefijo 08.
+- [Inicio rápido con R, Python y QGIS](https://dieghernan.github.io/codigospostales/ejemplos/): descarga de consolidados, lectura SQL por prefijo y generación de mapas.
+- [Visor Leaflet](https://dieghernan.github.io/codigospostales/visor/): datos simplificados por prefijo, con IGNBase Gris (predeterminado), IGNBase, PNOA y el WMS de CartoCiudad. Búsqueda por CP y dirección, y enlaces de vista sin direcciones. Vista inicial: prefijo 08.
 - [README y código fuente](https://github.com/dieghernan/codigospostales): generación provincial, consolidación, simplificación y revisión opcional de pendientes con WMS.
 
 ## Datos
@@ -20,6 +20,7 @@ direcciones puede excluir códigos presentes en las fuentes originales.
 - [GeoPackage completo](https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales.gpkg): geometría completa.
 - [GeoPackage simplificado](https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales_simplificado.gpkg): copia para visualización, no para mediciones precisas.
 
+Los dos productos son consolidados; los archivos provinciales son intermedios.
 Ambos archivos tienen las capas `codigos_postales` y `pendientes`, con
 geometrías MULTIPOLYGON en EPSG:25830. La capa postal contiene `COD_POSTAL`
 como texto de cinco dígitos, conservando ceros iniciales. Un mismo código

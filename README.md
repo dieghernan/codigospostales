@@ -245,6 +245,41 @@ y utiliza el mismo artefacto para desplegar en GitHub Pages y actualizar la
 rama `gh-pages`. Antes del primer despliegue hay que seleccionar **GitHub
 Actions** como origen en la configuración de Pages del repositorio.
 
+### Metadatos y comprobación de la web
+
+Después de actualizar los consolidados, ejecuta `py scripts/product_metadata.py`
+(o `python3 scripts/product_metadata.py` en Linux) para actualizar tamaños,
+fechas y cifras de la ficha de producto y las huellas SHA-256 de los archivos.
+La fecha se lee del GeoPackage y no
+representa la antigüedad de las fuentes. El script no modifica los datos.
+
+La web utiliza `assets/css/custom.scss`, el mecanismo de estilos propios de
+Chulapa, y `header_type: base` para una cabecera compacta. El visor conserva
+su estilo y permite buscar un CP completo y compartir prefijo, posición, zoom
+y CP seleccionado sin incluir direcciones buscadas.
+
+Tras compilar desde `docs/`, ejecuta desde la raíz:
+
+```sh
+py scripts/check_site.py
+py -m unittest discover -s tests -p test_site_checks.py
+npm ci --prefix tests/site
+cd tests/site
+npx playwright install chromium
+npm test
+```
+
+En Linux, usa `python3` en lugar de `py`. Las comprobaciones revisan enlaces
+internos y sus anclas, metadatos y recursos del visor. Las pruebas de navegador
+comprueban la carga de áreas, la búsqueda de CP, la recuperación de una vista,
+los errores de descarga y el diseño móvil. Requieren acceso a las CDN de
+Leaflet y Leaflet-providersESP. El workflow las ejecuta antes de publicar.
+
+Para previsualizar el artefacto compilado, ejecuta `node tests/site/serve.cjs`
+y abre `http://127.0.0.1:4173/codigospostales/`. Detén este servidor antes de
+`npm test`, que inicia su propia instancia. El servidor de previsualización
+adapta las URL absolutas del proyecto para usar los recursos locales.
+
 ## Uso de inteligencia artificial
 
 Se ha utilizado **OpenAI Codex** como apoyo en el desarrollo del código,

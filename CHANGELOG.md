@@ -1,5 +1,10 @@
 # Changelog
 
+## En desarrollo
+
+- La web da acceso directo a los dos consolidados, muestra sus características y añade un inicio rápido con R, Python y QGIS.
+- El visor permite buscar un código postal y compartir la vista sin incluir direcciones buscadas, con controles y leyenda en español.
+
 ## 1.0.0
 
 Primera versión pública del conjunto de datos de códigos postales de España.

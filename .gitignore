@@ -45,3 +45,9 @@ docs/.jekyll-metadata
 docs/.sass-cache/
 docs/.bundle/
 docs/vendor/
+
+# Website smoke-check dependencies and reports
+tests/site/node_modules/
+tests/site/test-results/
+tests/site/playwright-report/
+__pycache__/

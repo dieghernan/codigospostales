@@ -209,3 +209,37 @@
   outline-offset: 2px;
   box-shadow: none;
 }
+
+/* New controls follow the existing compact Leaflet-style toolbar. */
+#postal-search { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; margin-bottom: .35rem; }
+#postal-search label { margin: 0; }
+#postal-code { width: 7rem; padding: .25rem .4rem; }
+#postal-search button, .postal-map-actions button {
+  appearance: none; padding: 5px 12px; border: 2px solid rgba(0,0,0,.2);
+  border-radius: 4px; background: #fff; color: #333;
+  font: 14px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif; cursor: pointer;
+}
+#postal-search button:hover, .postal-map-actions button:hover { background: #f4f4f4; }
+.postal-map-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; padding: .3rem .6rem; font-size: .8rem; }
+#share-url { width: 100%; }
+.postal-legend { position: relative; margin-left: auto; max-width: 32rem; }
+.postal-legend summary { cursor: pointer; padding: .3rem; }
+.postal-legend-content { position: absolute; right: 0; top: 100%; z-index: 1100; width: min(300px, 85vw); background: white; border: 1px solid #bbb; border-radius: 4px; padding: .6rem; box-shadow: 0 1px 5px rgba(0,0,0,.2); }
+.postal-legend p { margin: .25rem 0; }
+.legend-estimated, .legend-selected { display: inline-block; width: 1.5rem; height: .9rem; border: 2px solid #203b50; background: rgba(46,139,87,.25); }
+.legend-selected { border: 3px solid #b52f2b; background: rgba(235,104,100,.5); }
+.postal-map-app :focus-visible { outline: 2px solid #333; outline-offset: 2px; }
+@media (min-width: 850px) {
+  .postal-address-controls { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 1rem; }
+  #postal-search { grid-column: 1; grid-row: 1; margin-bottom: 0; }
+  #postal-code-status { grid-column: 1; grid-row: 2; }
+  #address-search { grid-column: 2; grid-row: 1; }
+  #address-help { grid-column: 2; grid-row: 2; }
+  #address-status, #address-results { grid-column: 2; }
+}
+@media (max-width: 600px) {
+  #address-query { min-width: 0; }
+  .postal-map-controls #postal-prefix { min-width: 0; max-width: 100%; }
+  .postal-map-app { min-height: 100dvh; height: auto; }
+  .postal-map-app #postal-map { flex: none; height: 60dvh; min-height: 320px; }
+}

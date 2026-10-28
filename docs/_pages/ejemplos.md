@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Ejemplos de uso
-subtitle: Lectura y mapas de códigos postales con R y Python
+title: Ejemplos con R, Python y QGIS
+subtitle: Inicio rápido y ejemplos con los GeoPackage consolidados
+excerpt: Descarga un consolidado GeoPackage de áreas postales estimadas y empieza a trabajar con R, Python o QGIS. Incluye consultas por prefijo y mapas.
 permalink: /ejemplos/
 ---
 
-Los datos se distribuyen como archivos GeoPackage y se pueden utilizar desde R
-o Python. No es necesario instalar un paquete propio del proyecto.
+Los datos se distribuyen como archivos GeoPackage y se pueden utilizar desde R,
+Python o QGIS. No es necesario instalar un paquete propio del proyecto.
 
 Estos ejemplos utilizan la versión simplificada y seleccionan los códigos
 postales que empiezan por `28` (`28xxx`). El filtro se ejecuta al leer el
@@ -20,18 +21,26 @@ Los códigos postales tienen cinco dígitos y se conservan como texto para
 mantener los ceros iniciales. Para otro dominio, cambia `'28%'` por el prefijo
 deseado seguido de `%`, por ejemplo `'080%'` para `080xx`.
 
-## Preparación
+## Inicio rápido
 
-Ejecuta los ejemplos desde la raíz de una copia del repositorio con los datos
-descargados mediante Git LFS (consulta el
-[README](https://github.com/dieghernan/codigospostales#descarga-del-repositorio)).
-También puedes descargar el GeoPackage desde la
-[portada]({{ '/' | relative_url }}#archivos-disponibles) y ajustar la ruta del
-archivo en el ejemplo.
+1. [Descarga el consolidado simplificado]({{ '/' | relative_url }}#archivos-disponibles) para visualizar o el completo para análisis. No necesitas clonar el repositorio ni instalar Git LFS si usas esas descargas directas.
+2. Guarda el archivo en una carpeta `data/` de tu directorio de trabajo e instala las dependencias del ejemplo elegido.
+3. Ejecuta el ejemplo de [R](#r) o [Python](#python), o abre el archivo con [QGIS](#qgis). Si lo guardas en otra carpeta, adapta la ruta.
 
-La copia simplificada está destinada a visualización. Para un análisis con la
-geometría completa, usa `data/codigos_postales.gpkg` con la misma consulta.
-Las delimitaciones son estimadas y no constituyen límites postales oficiales.
+Ambos productos contienen las capas `codigos_postales` y `pendientes`.
+Los archivos provinciales son intermedios de generación; los ejemplos utilizan
+los consolidados. Para analizar la geometría completa, cambia la ruta a
+`data/codigos_postales.gpkg`. Las áreas son estimadas, no oficiales.
+
+## QGIS
+
+1. Arrastra el GeoPackage descargado a QGIS y selecciona la capa `codigos_postales`.
+2. Abre el filtro de la capa e introduce `"COD_POSTAL" LIKE '28%'` para ver los códigos con prefijo 28. Para un CP concreto, usa `"COD_POSTAL" = '08001'`.
+3. Añade `pendientes` si quieres identificar los recintos sin código asignado. Conserva EPSG:25830 para trabajar con las coordenadas originales.
+
+El filtro por prefijo selecciona códigos completos, sin recortar por provincia.
+La versión simplificada sirve para visualizar; el campo `AREA_M2` de sus
+pendientes conserva la superficie del consolidado completo.
 
 ## R
 

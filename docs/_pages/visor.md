@@ -1,54 +1,51 @@
 ---
 layout: default
-title: Visor de códigos postales
-subtitle: Explora las delimitaciones estimadas por prefijo sobre mapas del IGN
+title: Mapa de códigos postales de España
+subtitle: Busca un código postal o una dirección y explora las áreas estimadas
+excerpt: Busca por código postal o dirección en el mapa de España. Consulta áreas estimadas del consolidado simplificado y compáralas con CartoCiudad.
 permalink: /visor/
 show_author: false
 map_embed: true
 ---
 
-El visor utiliza la versión simplificada, transformada a WGS84 (EPSG:4326),
-con seis decimales en las coordenadas. No incluye los recintos pendientes y
-no está destinado a mediciones precisas. Las delimitaciones son estimadas,
-no límites postales oficiales. Consulta las
-[fuentes y la metodología]({{ '/' | relative_url }}#metodología-y-fuentes)
-y los [ejemplos de uso]({{ '/ejemplos/' | relative_url }}).
-{: .alert .alert-light .p-3 .mx-2 .mb-3}
+**Áreas estimadas, no oficiales.** El mapa utiliza el consolidado simplificado
+y no muestra los recintos pendientes de asignación.
 
-Explora las delimitaciones estimadas por prefijo postal. Abre el control de
-capas para elegir entre IGNBase Gris, IGNBase y la ortofotografía PNOA, y activar o desactivar
-los polígonos del proyecto y el WMS de códigos postales de CartoCiudad.
-El fondo inicial es IGNBase Gris y ambas capas están activadas.
-El overlay **Límites administrativos · IGN** está disponible sin activar;
-permite comparar los códigos postales con los límites administrativos.
-La vista inicial muestra los códigos con prefijo `08`.
-**CartoCiudad se muestra a partir del zoom 11**; acerca el mapa con los botones
-o la rueda del ratón para compararlo con las estimaciones.
-
-**Prefijo postal y provincia son criterios
-distintos.** El selector filtra por los dos primeros dígitos del código
-postal, sin recortar las geometrías a límites provinciales. Un mismo código
-postal puede abarcar varias provincias.
-
-<p><a class="btn btn-primary" href="{{ '/visor/mapa/' | relative_url }}" target="_blank" rel="noopener">Abrir el visor a toda ventana ↗</a></p>
+<p><a class="btn btn-primary" href="{{ '/visor/mapa/' | relative_url }}">Abrir el mapa a toda ventana</a></p>
 <iframe class="postal-map-frame" src="{{ '/visor/mapa/' | relative_url }}"
-  title="Visor interactivo de códigos postales por prefijo" loading="lazy" allowfullscreen></iframe>
+  title="Mapa interactivo de códigos postales de España" allowfullscreen></iframe>
 
-Puedes abrir el visor a toda ventana o incrustarlo en otra página con un
-`iframe`:
+<details class="viewer-help" markdown="1">
+<summary>Cómo utilizar el mapa y sus capas</summary>
+
+- Introduce un **CP de cinco dígitos** para destacar su área o busca una dirección.
+- El selector de prefijo carga códigos completos por sus dos primeros dígitos: **no recorta por provincia**.
+- Pulsa un área para consultar su CP. Los colores y líneas se explican en la leyenda.
+- Abre **Capas** para cambiar entre IGNBase Gris, IGNBase y PNOA, o activar los límites administrativos del IGN.
+- El WMS de **CartoCiudad aparece desde el zoom 11**. Las áreas estimadas y CartoCiudad están activados inicialmente.
+- **Compartir vista** copia un enlace con prefijo, posición, zoom y CP seleccionado. No incluye la dirección buscada.
+
+La vista inicial muestra el prefijo `08`. Prefijo postal y provincia son
+criterios distintos: un código puede abarcar más de una provincia.
+Los GeoJSON se derivan del consolidado simplificado en WGS84 (EPSG:4326),
+con seis decimales. No están destinados a mediciones precisas.
+
+</details>
+
+[Descargar los consolidados]({{ '/' | relative_url }}#archivos-disponibles) ·
+[Inicio rápido y ejemplos]({{ '/ejemplos/' | relative_url }}) ·
+[Fuentes y metodología]({{ '/' | relative_url }}#metodología-y-fuentes)
+
+<details class="viewer-help" markdown="1">
+<summary>Incrustar el visor en otra página</summary>
 
 ```html
 <iframe src="https://dieghernan.github.io/codigospostales/visor/mapa/"
-  title="Códigos postales de España por prefijo"
+  title="Áreas postales estimadas de España"
   width="100%" height="650" allowfullscreen></iframe>
 ```
 
-Haz clic en un polígono para consultar su código postal. Puedes cambiar el
-prefijo sin descargar el conjunto nacional completo. Los dominios disponibles
-corresponden a los códigos presentes en los datos publicados. El filtro
-selecciona códigos completos, sin recortarlos a una provincia.
-
-
-
 Cartografía de fondo y WMS mediante
 [Leaflet-providersESP](https://dieghernan.github.io/leaflet-providersESP/).
+
+</details>

@@ -8,7 +8,7 @@ locale: es-ES
 og_locale: es_ES
 timezone: Europe/Madrid
 title: Códigos postales de España
-subtitle: Datos abiertos y GeoPackage
+subtitle: Mapa y descarga de áreas postales estimadas
 description: >-
   Áreas postales estimadas a partir de CartoCiudad y límites administrativos.
   Disponible en GeoPackage para R, Python y SIG.
@@ -67,9 +67,11 @@ webmentions:
 
 navbar:
   brand:
-    title: '<i class="fas fa-home" style="color: black"></i><span class="d-none">Home</span>'
+    title: '<i class="fas fa-home" aria-hidden="true" style="color: black"></i><span class="sr-only">Inicio</span>'
 
   nav:
+    - title: Descargas
+      url: /#archivos-disponibles
     - title: Visor
       url: /visor/
     - title: Ejemplos
@@ -88,6 +90,18 @@ footer:
     - label: ORCID
       icon: fa-brands fa-orcid
       url: https://orcid.org/0000-0001-8457-4658
+    - label: Mastodon
+      icon: fa-brands fa-mastodon
+      url: https://fosstodon.org/@dhernangomez
+    - label: Bluesky
+      icon: fa-brands fa-square-bluesky
+      url: https://bsky.app/profile/dieghernan.bsky.social
+    - label: Twitter/X
+      icon: fab fa-square-x-twitter
+      url: https://x.com/dhernangomez
+    - label: Stack Overflow
+      icon: fab fa-stack-overflow
+      url: https://stackoverflow.com/users/7877917/dieghernan
 
 defaults:
   - scope:
@@ -95,9 +109,9 @@ defaults:
     values:
       layout: default
       header_type: base
-      show_author: true
+      show_author: false
       show_date: false
-      show_sociallinks: true
+      show_sociallinks: false
       show_webmentions: true
       include_on_search: false
       include_on_feed: false
