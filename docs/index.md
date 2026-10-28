@@ -43,14 +43,14 @@ la inclusión de todos los códigos postales de las fuentes.</p>
 
 
 <div class="row align-items-center text-center my-4">
-  <div class="col-12 col-lg-6 mb-3">
+  <div class="col-12 col-sm-6 mb-3">
     <a class="btn btn-outline-primary"
        href="{{ '/visor/' | relative_url }}">
       Explorar el mapa
     </a>
   </div>
 
-  <div class="col-12 col-lg-6 mb-3">
+  <div class="col-12 col-sm-6 mb-3">
     <a class="btn btn-outline-primary"
        href="{{ '/ejemplos/' | relative_url }}">
       Inicio rápido con R, Python y QGIS
