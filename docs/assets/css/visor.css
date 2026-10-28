@@ -181,3 +181,31 @@
   color: #b52f2b;
   background: #f8e3e2;
 }
+
+#address-search button[type="submit"] {
+  appearance: none;
+  padding: 5px 12px;
+  border: 2px solid rgba(0, 0, 0, .2);
+  border-radius: 4px;
+  background: #fff;
+  background-clip: padding-box;
+  color: #333;
+  font: 14px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+  text-transform: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+#address-search button[type="submit"]:hover,
+#address-search button[type="submit"]:active {
+  background-color: #f4f4f4;
+  border-color: rgba(0, 0, 0, .3);
+  color: #333;
+  box-shadow: none;
+}
+
+#address-search button[type="submit"]:focus-visible {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+  box-shadow: none;
+}
