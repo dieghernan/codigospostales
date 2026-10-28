@@ -82,18 +82,9 @@
   const base = L.tileLayer.providerESP('IGNBase');
   const pnoa = L.tileLayer.providerESP('PNOA');
 
-  // Ajuste temporal del minZoom del proveedor.
-  const cartociudad = L.tileLayer.wms(
-    'https://www.cartociudad.es/wms-inspire/direcciones-ccpp',
-    {
-      layers: 'codigo-postal',
-      styles: 'codigopostal',
-      format: 'image/png',
-      transparent: true,
-      version: '1.3.0',
-      minZoom: 11
-    }
-  ).addTo(map);
+  const cartociudad = L.tileLayer
+    .providerESP('Cartociudad.CodigosPostales')
+    .addTo(map);
 
   const limites = L.tileLayer.providerESP('UnidadesAdm.Limites');
 
