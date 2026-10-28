@@ -290,14 +290,18 @@
     <a href="/codigospostales/#archivos-disponibles" target="_top">Descargas</a>
     <span>Límites estimados · no oficiales</span>
   </nav>
-  <section class="postal-map-controls" aria-label="Filtro de códigos postales">
+  <details id="viewer-controls" class="viewer-controls" open>
+<summary>Buscar o cambiar prefijo</summary>
+<div class="viewer-controls-content">
+<p class="viewer-onboarding">Selecciona un prefijo o busca un código postal concreto.</p>
+<section class="postal-map-controls" aria-label="Filtro de códigos postales">
   <div class="prefix-row">
-    <label for="postal-prefix">Prefijo postal</label>
-    <select id="postal-prefix" class="form-control" disabled
+    <label for="postal-prefix">Prefijo</label>
+    <select id="postal-prefix" class="form-control" disabled aria-label="Prefijo postal"
       aria-describedby="postal-prefix-help map-status">
-      <option value="08">08xxx (Barcelona)</option>
+      <option value="08">08 · Barcelona</option>
     </select>
-    <p id="map-status" role="status" aria-live="polite">Cargando el visor…</p>
+    <p id="map-status" role="status" aria-live="polite">Cargando…</p>
     <button type="button" class="help-toggle" aria-expanded="false" aria-controls="postal-prefix-help" title="Más información">
       <span aria-hidden="true">?</span>
       <span class="sr-only">Información sobre el prefijo</span>
@@ -345,6 +349,9 @@
   </div>
 </section>
 
+</div>
+</details>
+
 <div class="postal-map-actions">
   <button id="share-view" type="button">Compartir vista</button>
   <span id="share-status" role="status" aria-live="polite"></span>
@@ -352,7 +359,11 @@
 
   <details class="postal-legend">
     <summary>Leyenda</summary>
-    <div class="postal-legend-content">
+    <div class="postal-legend-content" role="region" aria-labelledby="legend-heading">
+      <div class="legend-heading-row">
+        <h2 id="legend-heading">Leyenda del mapa</h2>
+        <button id="legend-close" type="button" aria-label="Cerrar leyenda">×</button>
+      </div>
       <p><span class="legend-estimated" aria-hidden="true"></span> Áreas estimadas del proyecto</p>
       <p><span class="legend-selected" aria-hidden="true"></span> CP seleccionado</p>
       <p>CartoCiudad: capa de referencia de CP, visible desde el zoom 11 si está activada en Capas.</p>
@@ -360,9 +371,15 @@
     </div>
   </details>
 </div>
+<section class="postal-map-stage" aria-label="Vista del mapa">
 <div id="postal-map" role="region"
   aria-label="Mapa de códigos postales" tabindex="0"
   data-source="/codigospostales/assets/data/"></div>
+<div id="map-loading" class="map-loading" role="status" aria-live="polite" hidden>
+  <span class="map-spinner" aria-hidden="true"></span>
+  <span id="map-loading-text">Cargando áreas postales…</span>
+</div>
+</section>
 
 <noscript>
   <p>Activa JavaScript para utilizar el visor.</p>
