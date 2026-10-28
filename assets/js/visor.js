@@ -217,11 +217,14 @@
   let request;
   let loadedPrefix;
 
-  async function loadPrefix({ fit = true } = {}) {
+  async function loadPrefix({ fit = true, signal } = {}) {
     request?.abort();
 
     const current = new AbortController();
     request = current;
+    const cancel = () => current.abort();
+    signal?.addEventListener('abort', cancel, { once: true });
+    if (signal?.aborted) cancel();
 
     const prefix = select.value;
     status.dataset.state = 'loading';
@@ -265,7 +268,9 @@
 
       return true;
     } catch (error) {
-      if (error.name === 'AbortError') return false;
+      if (error.name === 'AbortError') {
+        return false;
+      }
 
       const previous = loadedPrefix
         ? ` Se mantiene el dominio ${loadedPrefix}xxx.`
@@ -282,11 +287,19 @@
 
       return false;
     } finally {
+      signal?.removeEventListener('abort', cancel);
+      if (current.signal.aborted && request === current && loadedPrefix) {
+        select.value = loadedPrefix;
+        status.dataset.state = 'ready';
+        status.textContent = `${postal.getLayers().length} CP`;
+      }
       finishLoading();
     }
   }
 
   select.addEventListener('change', () => {
+    resetAddressSearch();
+    ++codeSearch;
     document.getElementById('postal-code-status').textContent = '';
     loadPrefix();
   });
@@ -333,6 +346,7 @@
   let codeSearch = 0;
   document.getElementById('postal-search').addEventListener('submit', async event => {
     event.preventDefault();
+    resetAddressSearch();
     const search = ++codeSearch;
     const code = document.getElementById('postal-code').value.trim();
     const codeStatus = document.getElementById('postal-code-status');
@@ -352,7 +366,9 @@
     codeStatus.textContent = `Buscando CP ${code}…`;
     if (loadedPrefix !== prefix) {
       select.value = prefix;
-      if (!await loadPrefix() || search !== codeSearch) {
+      const loaded = await loadPrefix();
+      if (search !== codeSearch) return;
+      if (!loaded) {
         codeStatus.textContent = 'No se ha completado la búsqueda. Vuelve a intentarlo.';
         return;
       }
@@ -388,6 +404,24 @@
   let addressMarker;
   let addressSelection = 0;
 
+  function removeAddressMarker() {
+    addressMarker?.remove();
+    addressMarker = undefined;
+  }
+
+  function resetAddressSearch() {
+    ++addressSelection;
+    addressRequest?.abort();
+    locationRequest?.abort();
+    addressRequest = undefined;
+    locationRequest = undefined;
+    removeAddressMarker();
+    addressResults.replaceChildren();
+    addressResults.hidden = true;
+    addressStatus.textContent = '';
+    addressForm.removeAttribute('aria-busy');
+  }
+
   function hasCoordinates(value) {
     return value != null
       && Number.isFinite(value.lat)
@@ -399,6 +433,7 @@
 
   async function showAddress(candidate) {
     const selection = ++addressSelection;
+    removeAddressMarker();
 
     locationRequest?.abort();
 
@@ -468,17 +503,13 @@
 
         if (available && !select.disabled) {
           select.value = prefix;
-          loaded = await loadPrefix({ fit: false });
+          loaded = await loadPrefix({ fit: false, signal: current.signal });
         } else {
           loaded = false;
         }
       }
 
       if (selection !== addressSelection) return;
-
-      if (addressMarker) {
-        addressMarker.remove();
-      }
 
       const label = document.createElement('div');
       label.textContent =
@@ -527,9 +558,7 @@
       return;
     }
 
-    addressRequest?.abort();
-    locationRequest?.abort();
-    ++addressSelection;
+    resetAddressSearch();
 
     const current = new AbortController();
     addressRequest = current;
