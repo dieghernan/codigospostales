@@ -50,7 +50,7 @@
   grid-column: 1 / -1;
   margin: 0 0 0.4rem;
   font-size: 0.8rem;
-  color: #555;
+  color: #444;
 }
 .postal-map-controls,
 .postal-search-panel {
@@ -78,6 +78,7 @@
   margin: 0;
   font-size: 0.75rem;
   white-space: nowrap;
+  color: #444;
 }
 #map-status[data-state="error"] {
   grid-column: 1 / -1;
@@ -108,7 +109,7 @@
 .help-text {
   font-size: 0.75rem;
   margin: 0.3rem 0 0;
-  color: #555;
+  color: #444;
   overflow-wrap: anywhere;
 }
 .search-tabs {
@@ -124,7 +125,7 @@
   padding: 0.25rem 0.65rem;
   font-size: 0.8rem;
   cursor: pointer;
-  color: #555;
+  color: #444;
   margin-bottom: -1px;
 }
 .tab:hover {
@@ -252,11 +253,11 @@
 }
 .postal-legend-content {
   position: fixed;
-  right: 0.7rem;
-  top: 8rem;
-  bottom: 0.7rem;
+  right: var(--legend-right, 4rem);
+  top: var(--legend-top, 12rem);
+  bottom: var(--legend-bottom, 4rem);
   z-index: 1300;
-  width: min(320px, calc(100vw - 1.4rem));
+  width: min(var(--legend-width, 320px), calc(100vw - 5rem));
   background: #fff;
   border: 1px solid #bbb;
   border-radius: 6px;
@@ -320,6 +321,14 @@
 }
 #postal-map .leaflet-control-attribution {
   max-width: 100%;
+  color: #333;
+  background: rgba(255, 255, 255, 0.96);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+#postal-map .leaflet-control-attribution a {
+  color: #71302d;
+  text-decoration: underline;
 }
 .layers-close {
   display: none;
@@ -452,7 +461,8 @@
     min-height: 44px;
   }
   .postal-legend-content {
-    top: 6.5rem;
+    top: var(--legend-top, 12rem);
+    width: min(var(--legend-width, 320px), calc(100vw - 1.4rem));
   }
   #postal-code,
   #address-query {

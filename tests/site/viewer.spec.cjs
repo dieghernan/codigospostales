@@ -261,3 +261,71 @@ test('closes the legend drawer with Escape and returns focus to its trigger', as
   await expect(page.locator('.postal-legend-content')).toBeHidden();
   await expect(trigger).toBeFocused();
 });
+
+test('clears CP search loading feedback when the download fails', async ({ page }) => {
+  await page.goto(mapPath);
+  await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready', { timeout: 45000 });
+  let releaseDownload;
+  const held = new Promise(resolve => { releaseDownload = resolve; });
+  await page.route('**/cp-28.geojson', async route => {
+    await held;
+    await route.fulfill({ status: 503, body: '' });
+  });
+  await page.getByRole('searchbox', { name: 'Código postal', exact: true }).fill('28013');
+  await page.getByRole('button', { name: 'Ver CP', exact: true }).click();
+  await expect(page.locator('#map-loading')).toBeVisible();
+  await expect(page.locator('#postal-map')).toHaveAttribute('aria-busy', 'true');
+  releaseDownload();
+  await expect(page.locator('#postal-code-status')).toContainText('No se ha completado la búsqueda.');
+  await expect(page.locator('#map-loading')).toBeHidden();
+  await expect(page.locator('#postal-map')).toHaveAttribute('aria-busy', 'false');
+});
+
+for (const width of [390, 1280]) {
+  test(`keeps the legend clear of map controls and attribution at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 844 });
+    await page.goto(mapPath);
+    await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready', { timeout: 45000 });
+    await page.locator('.postal-legend summary').click();
+    const overlaps = await page.locator('.postal-legend-content').evaluate(panel => {
+      const legend = panel.getBoundingClientRect();
+      return ['.leaflet-control-zoom', '.leaflet-control-layers', '.leaflet-control-attribution'].filter(selector => {
+        const rect = document.querySelector(selector).getBoundingClientRect();
+        return legend.left < rect.right && legend.right > rect.left && legend.top < rect.bottom && legend.bottom > rect.top;
+      });
+    });
+    expect(overlaps).toEqual([]);
+    await page.getByRole('button', { name: 'Capas', exact: true }).click();
+    await expect(page.locator('.postal-legend-content')).toBeHidden();
+    await expect(page.getByRole('button', { name: 'Cerrar capas', exact: true })).toBeVisible();
+  });
+}
+
+test('distinguishes polygon hover from selection and restores each on mouseout', async ({ page }) => {
+  await page.route('**/cp-08.geojson', route => route.fulfill({ json: {
+    type: 'FeatureCollection', features: [{ type: 'Feature', properties: { COD_POSTAL: '08001' },
+      geometry: { type: 'Polygon', coordinates: [[[2, 41], [2.02, 41], [2.02, 41.02], [2, 41.02], [2, 41]]] } }]
+  } }));
+  await page.goto(mapPath);
+  await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready', { timeout: 45000 });
+  const canvas = page.locator('#postal-map canvas');
+  const centerPixel = () => canvas.evaluate(element => Array.from(element.getContext('2d').getImageData(
+    Math.floor(element.width / 2), Math.floor(element.height / 2), 1, 1
+  ).data));
+  await expect.poll(async () => (await centerPixel())[3]).toBeGreaterThan(0);
+  const normal = await centerPixel();
+  const map = page.locator('#postal-map');
+  const box = await map.boundingBox();
+  const position = { x: box.width / 2, y: box.height / 2 };
+  await map.hover({ position });
+  await expect.poll(centerPixel).not.toEqual(normal);
+  const hover = await centerPixel();
+  await page.getByRole('tab', { name: 'Código postal', exact: true }).hover();
+  await expect.poll(centerPixel).toEqual(normal);
+  await map.click({ position });
+  await expect(page.locator('#postal-code-status')).toHaveText('CP 08001: área estimada seleccionada.');
+  await expect.poll(centerPixel).not.toEqual(hover);
+  const selected = await centerPixel();
+  await page.getByRole('tab', { name: 'Código postal', exact: true }).hover();
+  await expect.poll(centerPixel).toEqual(selected);
+});
