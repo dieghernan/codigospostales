@@ -6,6 +6,19 @@
   const select = document.getElementById('postal-prefix');
   const loading = document.getElementById('map-loading');
   const pendingLoads = new Map();
+  const legend = document.querySelector('.postal-legend');
+  const legendPanel = legend.querySelector('.postal-legend-content');
+
+  function positionLegend() {
+    const bounds = container.getBoundingClientRect();
+    const mobile = window.matchMedia('(max-width: 600px)').matches;
+    const attribution = container.querySelector('.leaflet-control-attribution');
+    const footerHeight = attribution?.getBoundingClientRect().height || 0;
+    legendPanel.style.setProperty('--legend-top', `${Math.max(10, bounds.top + (mobile ? 82 : 10))}px`);
+    legendPanel.style.setProperty('--legend-bottom', `${Math.max(10, window.innerHeight - bounds.bottom + footerHeight + 10)}px`);
+    legendPanel.style.setProperty('--legend-right', `${Math.max(10, window.innerWidth - bounds.right + (mobile ? 10 : 64))}px`);
+    legendPanel.style.setProperty('--legend-width', `${Math.min(320, Math.max(0, bounds.width - (mobile ? 20 : 74)))}px`);
+  }
 
   function beginLoading(message) {
     const token = Symbol();
@@ -61,6 +74,9 @@
   const selectedStyle = {
     color: '#a52b27', weight: 4, fillColor: '#eb6864', fillOpacity: 0.5
   };
+  const hoverStyle = {
+    color: '#203b50', weight: 2.5, fillColor: '#2e8b57', fillOpacity: 0.4
+  };
 
   const gris = L.tileLayer.providerESP('IGNBase.Gris').addTo(map);
   const base = L.tileLayer.providerESP('IGNBase');
@@ -101,12 +117,8 @@
         mouseover(event) {
           const polygon = event.target;
 
-          polygon.setStyle({
-            color: '#b52f2b',
-            weight: feature.properties.COD_POSTAL === selectedCode ? 4 : 3,
-            fillColor: '#eb6864',
-            fillOpacity: 0.5
-          });
+          polygon.setStyle(feature.properties.COD_POSTAL === selectedCode
+            ? selectedStyle : hoverStyle);
 
           polygon.bringToFront();
         },
@@ -181,7 +193,9 @@
   layersLink.setAttribute('aria-controls', 'postal-layer-options');
   layersLink.setAttribute('aria-expanded', 'false');
   new MutationObserver(() => {
-    layersLink.setAttribute('aria-expanded', String(layersPanel.classList.contains('leaflet-control-layers-expanded')));
+    const expanded = layersPanel.classList.contains('leaflet-control-layers-expanded');
+    layersLink.setAttribute('aria-expanded', String(expanded));
+    if (expanded) legend.open = false;
   }).observe(layersPanel, { attributes: true, attributeFilter: ['class'] });
   layersLink.addEventListener('keydown', event => {
     if (event.key === ' ') {
@@ -209,8 +223,12 @@
     }
   });
   if (typeof ResizeObserver !== 'undefined') {
-    new ResizeObserver(() => map.invalidateSize({ pan: false, debounceMoveend: true })).observe(container);
+    new ResizeObserver(() => {
+      map.invalidateSize({ pan: false, debounceMoveend: true });
+      positionLegend();
+    }).observe(container);
   }
+  window.addEventListener('resize', positionLegend);
 
   L.control.scale({ imperial: false }).addTo(map);
 
@@ -364,17 +382,22 @@
       return;
     }
     codeStatus.textContent = `Buscando CP ${code}…`;
-    if (loadedPrefix !== prefix) {
-      select.value = prefix;
-      const loaded = await loadPrefix();
-      if (search !== codeSearch) return;
-      if (!loaded) {
-        codeStatus.textContent = 'No se ha completado la búsqueda. Vuelve a intentarlo.';
-        return;
+    const finishLoading = beginLoading(`Buscando CP ${code}…`);
+    try {
+      if (loadedPrefix !== prefix) {
+        select.value = prefix;
+        const loaded = await loadPrefix();
+        if (search !== codeSearch) return;
+        if (!loaded) {
+          codeStatus.textContent = 'No se ha completado la búsqueda. Vuelve a intentarlo.';
+          return;
+        }
       }
-    }
-    if (!selectCode(code)) {
-      codeStatus.textContent = `El CP ${code} no está en las áreas publicadas. Esto no implica que no exista.`;
+      if (!selectCode(code)) {
+        codeStatus.textContent = `El CP ${code} no está en las áreas publicadas. Esto no implica que no exista.`;
+      }
+    } finally {
+      finishLoading();
     }
   });
 
@@ -720,7 +743,6 @@
     const panelAddress = document.getElementById('panel-address');
     const helpBtn = document.querySelector('.help-toggle');
     const helpText = document.getElementById('postal-prefix-help');
-    const legend = document.querySelector('.postal-legend');
     const controls = document.getElementById('viewer-controls');
     const mobile = window.matchMedia('(max-width: 600px)');
     const syncControls = () => { controls.open = !mobile.matches; };
@@ -728,6 +750,13 @@
     mobile.addEventListener('change', syncControls);
     controls.addEventListener('toggle', () => map.invalidateSize({ pan: false }));
     const legendTrigger = legend.querySelector('summary');
+    legend.addEventListener('toggle', () => {
+      if (legend.open) {
+        if (mobile.matches) controls.open = false;
+        layersControl.collapse();
+        positionLegend();
+      }
+    });
     document.getElementById('legend-close').addEventListener('click', () => {
       legend.open = false;
       legendTrigger.focus();
