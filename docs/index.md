@@ -19,9 +19,28 @@ Las geometrías se construyen a partir de direcciones de
 **No constituyen límites postales oficiales.** La cobertura corresponde a las
 provincias procesadas e incluidas en el consolidado.
 
-[Ver ejemplos en R y Python]({{ '/ejemplos/' | relative_url }}){: .btn .btn-primary .mr-2 .mb-2}
-[Explorar el visor]({{ '/visor/' | relative_url }}){: .btn .btn-outline-primary .mr-2 .mb-2}
-[Consultar los datos en GitHub](https://github.com/dieghernan/codigospostales/tree/main/data){: .btn .btn-outline-primary .mb-2}
+<div class="row align-items-center text-center my-4">
+  <div class="col-12 col-lg-4 mb-3">
+    <a class="btn btn-primary btn-lg"
+       href="{{ '/visor/' | relative_url }}">
+      Explorar el visor de códigos postales
+    </a>
+  </div>
+
+  <div class="col-12 col-lg-4 mb-3">
+    <a class="btn btn-outline-primary"
+       href="{{ '/ejemplos/' | relative_url }}">
+      Ver ejemplos en R y Python
+    </a>
+  </div>
+
+  <div class="col-12 col-lg-4 mb-3">
+    <a class="btn btn-outline-primary"
+       href="https://github.com/dieghernan/codigospostales/tree/main/data">
+      Consultar los datos en GitHub
+    </a>
+  </div>
+</div>
 
 ## Antecedentes
 
