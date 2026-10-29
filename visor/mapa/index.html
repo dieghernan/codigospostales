@@ -361,7 +361,7 @@
   <span id="share-status" role="status" aria-live="polite"></span>
   <input id="share-url" type="text" readonly hidden aria-label="Enlace a esta vista">
   <details class="postal-code-browser">
-    <summary>Explorar CP</summary>
+    <summary>Lista de <span class="code-list-label">códigos postales</span><span class="code-list-label-short" aria-hidden="true">CP</span></summary>
     <form id="browse-codes" class="postal-code-browser-content" aria-label="Explorar códigos del prefijo">
       <label for="code-filter">Filtrar códigos del prefijo</label>
       <input id="code-filter" type="search" inputmode="numeric" maxlength="5" placeholder="Ej.: 080">
@@ -373,7 +373,7 @@
   </details>
 
   <details class="postal-legend">
-    <summary>Leyenda</summary>
+    <summary><span class="legend-key" aria-hidden="true"></span>Leyenda</summary>
     <div class="postal-legend-content" role="region" aria-labelledby="legend-heading">
       <div class="legend-heading-row">
         <h2 id="legend-heading">Leyenda del mapa</h2>
@@ -389,11 +389,15 @@
 </div>
 <section class="postal-map-stage" aria-label="Vista del mapa">
 <div id="postal-map" role="region"
-  aria-label="Mapa de códigos postales" tabindex="0"
+  aria-label="Mapa de códigos postales" tabindex="0" aria-busy="true"
   data-source="/codigospostales/assets/data/"></div>
-<div id="map-loading" class="map-loading" role="status" aria-live="polite" hidden>
+<div id="map-loading" class="map-loading" role="status" aria-live="polite">
   <span class="map-spinner" aria-hidden="true"></span>
-  <span id="map-loading-text">Cargando áreas postales…</span>
+  <span id="map-loading-text">Preparando mapa…</span>
+</div>
+<div id="map-background-status" class="map-background-status" role="status" aria-live="polite" hidden>
+  <span class="map-spinner" aria-hidden="true"></span>
+  <span id="map-background-text"></span>
 </div>
 </section>
 

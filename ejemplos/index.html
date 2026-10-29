@@ -192,8 +192,8 @@
 		<div class="row pt-2">
 			<div class="col-lg-2 mt-lg-3 small"></div>
 			<article id="maincontent" class="col-lg-8 mt-3">
-			<div class="e-content"><p>Los datos se distribuyen como archivos GeoPackage y se pueden utilizar desde R,
-Python o QGIS. No es necesario instalar un paquete propio del proyecto.</p>
+			<div class="e-content"><p>Los datos se distribuyen como archivos GeoPackage y se pueden utilizar desde <strong>R</strong>,
+<strong>Python</strong> o <strong>QGIS</strong>. No es necesario instalar un paquete propio del proyecto.</p>
 <p>Estos ejemplos utilizan la versión simplificada y seleccionan los códigos
 postales que empiezan por <code class="language-plaintext highlighter-rouge">28</code> (<code class="language-plaintext highlighter-rouge">28xxx</code>). El filtro se ejecuta al leer el
 archivo, sin cargar toda la capa en memoria. Selecciona códigos completos por
@@ -206,24 +206,24 @@ mantener los ceros iniciales. Para otro dominio, cambia <code class="language-pl
 deseado seguido de <code class="language-plaintext highlighter-rouge">%</code>, por ejemplo <code class="language-plaintext highlighter-rouge">'080%'</code> para <code class="language-plaintext highlighter-rouge">080xx</code>.</p>
 <h2 id="inicio-rápido">Inicio rápido</h2>
 <ol>
- <li><a href="/codigospostales/#archivos-disponibles">Descarga el consolidado simplificado</a> para visualizar o el completo para análisis. No necesitas clonar el repositorio ni instalar Git LFS si usas esas descargas directas.</li>
+ <li><a href="/codigospostales/#archivos-disponibles">Descarga el consolidado simplificado</a> para visualizar o el completo para análisis. No necesitas clonar el repositorio ni instalar <strong>Git LFS</strong> si usas esas descargas directas.</li>
  <li>Guarda el archivo en una carpeta <code class="language-plaintext highlighter-rouge">data/</code> de tu directorio de trabajo e instala las dependencias del ejemplo elegido.</li>
- <li>Ejecuta el ejemplo de <a href="#r">R</a> o <a href="#python">Python</a>, o abre el archivo con <a href="#qgis">QGIS</a>. Si lo guardas en otra carpeta, adapta la ruta.</li>
+ <li>Ejecuta el ejemplo de <a href="#r"><strong>R</strong></a> o <a href="#python"><strong>Python</strong></a>, o abre el archivo con <a href="#qgis"><strong>QGIS</strong></a>. Si lo guardas en otra carpeta, adapta la ruta.</li>
 </ol>
 <p>Ambos productos contienen las capas <code class="language-plaintext highlighter-rouge">codigos_postales</code> y <code class="language-plaintext highlighter-rouge">pendientes</code>.
 Los archivos provinciales son intermedios de generación; los ejemplos utilizan
 los consolidados. Para analizar la geometría completa, cambia la ruta a
 <code class="language-plaintext highlighter-rouge">data/codigos_postales.gpkg</code>. Las áreas son estimadas, no oficiales.</p>
-<h2 id="qgis">QGIS</h2>
+<h2 id="qgis"><strong>QGIS</strong></h2>
 <ol>
- <li>Arrastra el GeoPackage descargado a QGIS y selecciona la capa <code class="language-plaintext highlighter-rouge">codigos_postales</code>.</li>
+ <li>Arrastra el GeoPackage descargado a <strong>QGIS</strong> y selecciona la capa <code class="language-plaintext highlighter-rouge">codigos_postales</code>.</li>
  <li>Abre el filtro de la capa e introduce <code class="language-plaintext highlighter-rouge">"COD_POSTAL" LIKE '28%'</code> para ver los códigos con prefijo 28. Para un CP concreto, usa <code class="language-plaintext highlighter-rouge">"COD_POSTAL" = '08001'</code>.</li>
  <li>Añade <code class="language-plaintext highlighter-rouge">pendientes</code> si quieres identificar los recintos sin código asignado. Conserva EPSG:25830 para trabajar con las coordenadas originales.</li>
 </ol>
 <p>El filtro por prefijo selecciona códigos completos, sin recortar por provincia.
 La versión simplificada sirve para visualizar; el campo <code class="language-plaintext highlighter-rouge">AREA_M2</code> de sus
 pendientes conserva la superficie del consolidado completo.</p>
-<h2 id="r">R</h2>
+<h2 id="r"><strong>R</strong></h2>
 <p>Instala <strong>sf</strong> y <strong>ggplot2</strong> con <code class="language-plaintext highlighter-rouge">install.packages(c("sf", "ggplot2"))</code>.</p>
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
@@ -263,7 +263,7 @@ pendientes conserva la superficie del consolidado completo.</p>
   </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">160</span><span class="w">
 </span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
-<h2 id="python">Python</h2>
+<h2 id="python"><strong>Python</strong></h2>
 <p>Instala <strong>GeoPandas</strong>, <strong>Pyogrio</strong>, <strong>Matplotlib</strong> y sus dependencias con
 <code class="language-plaintext highlighter-rouge">pip install -r scripts/requirements-ejemplos.txt</code>. Este archivo fija las
 versiones del entorno utilizado para comprobar el ejemplo.</p>
@@ -304,18 +304,18 @@ versiones del entorno utilizado para comprobar el ejemplo.</p>
 <p><img src="/codigospostales/assets/img/codigos-postales-28.png" alt="Mapa de las delimitaciones estimadas de los códigos postales con prefijo 28, con relleno azul claro y contornos oscuros." /></p>
 <p>La imagen mostrada se genera con <code class="language-plaintext highlighter-rouge">source("scripts/ejemplo_prefijo.R")</code> desde
 la raíz del repositorio y se guarda en
-<code class="language-plaintext highlighter-rouge">docs/assets/img/codigos-postales-28.png</code>. El ejemplo de Python guarda su
+<code class="language-plaintext highlighter-rouge">docs/assets/img/codigos-postales-28.png</code>. El ejemplo de <strong>Python</strong> guarda su
 resultado en <code class="language-plaintext highlighter-rouge">docs/assets/img/codigos-postales-28-python.png</code>.</p>
 <p>Los bloques anteriores reproducen los scripts <code class="language-plaintext highlighter-rouge">scripts/ejemplo_prefijo.R</code> y
 <code class="language-plaintext highlighter-rouge">scripts/ejemplo_prefijo.py</code>, incluidos los pies de fuentes y autoría.
 Para ejecutar el segundo, utiliza <code class="language-plaintext highlighter-rouge">python scripts/ejemplo_prefijo.py</code> o
-<code class="language-plaintext highlighter-rouge">py scripts/ejemplo_prefijo.py</code> en Windows. Ambos generan archivos de imagen
+<code class="language-plaintext highlighter-rouge">py scripts/ejemplo_prefijo.py</code> en <strong>Windows</strong>. Ambos generan archivos de imagen
 sin necesitar una ventana gráfica ni retoques manuales.</p>
-<p>Se han comprobado con R 4.6.1, <strong>sf</strong> 1.1.3 y <strong>ggplot2</strong> 4.0.3, y con Python
+<p>Se han comprobado con <strong>R</strong> 4.6.1, <strong>sf</strong> 1.1.3 y <strong>ggplot2</strong> 4.0.3, y con <strong>Python</strong>
 3.15.0 y las dependencias fijadas en <code class="language-plaintext highlighter-rouge">scripts/requirements-ejemplos.txt</code>.
 Para reproducir el mismo resultado, conserva el GeoPackage y los scripts de
 la misma revisión del repositorio. Los ejemplos muestran los mismos códigos;
-el aspecto puede variar entre R y Python o con otras fuentes y versiones.</p>
+el aspecto puede variar entre <strong>R</strong> y <strong>Python</strong> o con otras fuentes y versiones.</p>
 </div>
 			</article>
 		</div>
