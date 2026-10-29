@@ -1,0 +1,21 @@
+{
+  "posts": {
+    "https://dieghernan.github.io/codigospostales/": {
+      "https://creativecommons.org/licenses/by/4.0/": "54b9c56d65276948d7973110fa59bcf10b18f4333f02bf203e113f4a102d3a3f",
+      "https://dieghernan.github.io/": "54b9c56d65276948d7973110fa59bcf10b18f4333f02bf203e113f4a102d3a3f",
+      "https://github.com/dieghernan/codigospostales": "54b9c56d65276948d7973110fa59bcf10b18f4333f02bf203e113f4a102d3a3f",
+      "https://github.com/dieghernan/codigospostales/blob/main/LICENSE": "54b9c56d65276948d7973110fa59bcf10b18f4333f02bf203e113f4a102d3a3f",
+      "https://github.com/dieghernan/codigospostales/tree/main/data": "54b9c56d65276948d7973110fa59bcf10b18f4333f02bf203e113f4a102d3a3f",
+      "https://www.cartociudad.es/web/portal/": "54b9c56d65276948d7973110fa59bcf10b18f4333f02bf203e113f4a102d3a3f",
+      "https://www.cartociudad.es/web/portal/directorio-de-servicios/visualizacion": "54b9c56d65276948d7973110fa59bcf10b18f4333f02bf203e113f4a102d3a3f",
+      "https://www.correos.es/es/es/empresas/marketing/identifica-a-tus-clientes-potenciales/base-de-datos-de-codigos-postales": "54b9c56d65276948d7973110fa59bcf10b18f4333f02bf203e113f4a102d3a3f",
+      "https://www.nosolosig.com/articulos/asi-hice-el-mapa-de-los-codigos-postales-de-espana-con-sig-y-datos-abiertos": "54b9c56d65276948d7973110fa59bcf10b18f4333f02bf203e113f4a102d3a3f"
+    },
+    "https://dieghernan.github.io/codigospostales/404.html": {},
+    "https://dieghernan.github.io/codigospostales/ejemplos/": {},
+    "https://dieghernan.github.io/codigospostales/visor/": {
+      "https://dieghernan.github.io/leaflet-providersESP/": "9a45877d839bb37de1d68d68b30be6fe3f4d21c2ea3fb5c1d504b1612b3a5a92"
+    }
+  },
+  "version": 2
+}
