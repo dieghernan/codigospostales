@@ -169,7 +169,8 @@ El repositorio se distribuye bajo la licencia
 
 Se ha utilizado **OpenAI Codex** como apoyo en el desarrollo del código,
 la redacción y revisión de la documentación y la preparación de este sitio web.
-El banner del proyecto se ha generado con IA a través de Codex. Estas
+Los banners del proyecto se generan con geometrías reales mediante
+`scripts/focal_banners.py`, con Fira Sans y la paleta de Focal. Estas
 herramientas no son la fuente de los datos geográficos: las fuentes y los
 trabajos metodológicos utilizados se citan a continuación.
 

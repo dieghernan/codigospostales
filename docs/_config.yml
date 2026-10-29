@@ -58,7 +58,7 @@ publisher:
 fa_version: "6"
 
 chulapa-skin:
-  skin: journal
+  skin: focal
   highlight: github
 
 webmentions:
@@ -67,7 +67,7 @@ webmentions:
 
 navbar:
   brand:
-    title: '<i class="fas fa-home" aria-hidden="true" style="color: black"></i><span class="sr-only">Inicio</span>'
+    title: '<i class="fas fa-home" aria-hidden="true" style="color: inherit"></i><span class="sr-only">Inicio</span>'
 
   nav:
     - title: Descargas
@@ -131,7 +131,6 @@ exclude:
   - vendor
   - README.md
   - .bundle
-  - assets/img/github-preview-source.png
 
 markdown: kramdown
 highlighter: rouge

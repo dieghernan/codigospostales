@@ -193,7 +193,7 @@ existan otros CP entre los puntos consultados o en componentes no muestreados.
 ## Sitio web y visor
 
 La web del proyecto se encuentra en `docs/` y utiliza Jekyll con Chulapa y la
-skin Journal. Para previsualizarla con Ruby y Bundler instalados:
+skin Focal. Para previsualizarla con Ruby y Bundler instalados:
 
 ```sh
 cd docs
@@ -284,7 +284,8 @@ adapta las URL absolutas del proyecto para usar los recursos locales.
 
 Se ha utilizado **OpenAI Codex** como apoyo en el desarrollo del código,
 la redacción y revisión de la documentación y la preparación del sitio web.
-El banner del proyecto se ha generado con IA a través de Codex. Estas
+Los banners del proyecto se generan con geometrías reales mediante
+`scripts/focal_banners.py`, con Fira Sans y la paleta de Focal. Estas
 herramientas no son la fuente de los datos geográficos: se utilizan las
 direcciones de CartoCiudad y los límites administrativos de Goerlich y
 Pérez Vázquez, referenciados en este documento.
