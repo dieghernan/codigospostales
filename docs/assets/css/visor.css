@@ -424,7 +424,62 @@
     animation: none;
   }
 }
-@media (min-width: 601px) and (max-width: 900px) {
+@media (min-width: 850px) {
+  .viewer-controls-content {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.35fr);
+    align-items: start;
+    column-gap: 0.75rem;
+  }
+  .viewer-onboarding {
+    display: none;
+  }
+  .prefix-row {
+    grid-template-columns: auto minmax(0, 1fr) auto 1.5rem;
+    min-height: 32px;
+  }
+  .postal-search-panel {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 0.5rem;
+  }
+  .search-tabs {
+    width: max-content;
+    margin-bottom: 0;
+  }
+  .search-tabs .tab {
+    height: 32px;
+    white-space: nowrap;
+    padding-inline: 0.4rem;
+  }
+  .tab-panel {
+    min-width: 0;
+  }
+  #postal-search,
+  #address-search {
+    flex-wrap: nowrap;
+  }
+  #postal-prefix,
+  #postal-code,
+  #address-query,
+  #postal-search button,
+  #address-search button {
+    box-sizing: border-box;
+    height: 32px;
+  }
+  #postal-code,
+  #address-query {
+    width: 100%;
+    min-width: 0;
+    flex: 1;
+  }
+  #postal-search button,
+  #address-search button {
+    flex: none;
+    padding-block: 0;
+  }
+}
+@media (min-width: 601px) and (max-width: 849px) {
   .viewer-controls-content {
     grid-template-columns: 1fr;
     row-gap: 0.4rem;

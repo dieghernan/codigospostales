@@ -329,3 +329,30 @@ test('distinguishes polygon hover from selection and restores each on mouseout',
   await page.getByRole('tab', { name: 'Código postal', exact: true }).hover();
   await expect.poll(centerPixel).toEqual(selected);
 });
+
+for (const width of [850, 1280]) {
+  for (const mode of ['Código postal', 'Dirección']) {
+    test(`aligns desktop search controls in one row at ${width}px in ${mode} mode`, async ({ page }) => {
+      await page.setViewportSize({ width, height: 900 });
+      await page.goto(mapPath);
+      await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready', { timeout: 45000 });
+      await page.getByRole('tab', { name: mode, exact: true }).click();
+      const boxes = await page.locator('#postal-prefix, .search-tabs, .tab-panel.active input, .tab-panel.active form button').evaluateAll(elements => elements.map(element => {
+        const { x, y, width, height } = element.getBoundingClientRect();
+        return { x, y, width, height };
+      }));
+      expect(boxes).toHaveLength(4);
+      for (const box of boxes) {
+        expect(box.height).toBeCloseTo(32, 0);
+        expect(Math.abs(box.y - boxes[0].y)).toBeLessThanOrEqual(1);
+        expect(box.width).toBeGreaterThan(40);
+        expect(box.x + box.width).toBeLessThanOrEqual(width);
+      }
+      const share = await page.locator('#share-view').boundingBox();
+      const legend = await page.locator('.postal-legend > summary').boundingBox();
+      expect(share.y).toBeGreaterThanOrEqual(boxes[0].y + 32);
+      expect(Math.abs((share.y + share.height / 2) - (legend.y + legend.height / 2))).toBeLessThanOrEqual(1);
+      expect(legend.x).toBeGreaterThan(share.x + share.width);
+    });
+  }
+}
