@@ -340,8 +340,12 @@
         placeholder="Calle Mayor 1, Madrid"
         required aria-describedby="address-help">
       <button type="submit">Buscar</button>
+      <button type="button" class="help-toggle" aria-expanded="false" aria-controls="address-help" title="Ayuda de búsqueda por dirección">
+        <span aria-hidden="true">?</span>
+        <span class="sr-only">Información sobre la búsqueda por dirección</span>
+      </button>
     </form>
-    <p id="address-help" class="help-text">
+    <p id="address-help" class="help-text" hidden>
       Busca una dirección en España con <a href="https://www.cartociudad.es/web/portal/directorio-de-servicios/geoprocesamiento">CartoCiudad (IGN/CNIG)</a>.
     </p>
     <p id="address-status" role="status" aria-live="polite"></p>

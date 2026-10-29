@@ -732,8 +732,6 @@
     const tabAddress = document.getElementById('tab-address');
     const panelCp = document.getElementById('panel-cp');
     const panelAddress = document.getElementById('panel-address');
-    const helpBtn = document.querySelector('.help-toggle');
-    const helpText = document.getElementById('postal-prefix-help');
     const controls = document.getElementById('viewer-controls');
     const mobile = window.matchMedia('(max-width: 600px)');
     const syncControls = () => { controls.open = !mobile.matches; };
@@ -795,11 +793,14 @@
       });
     });
 
-    // Botón de ayuda del prefijo
-    helpBtn?.addEventListener('click', () => {
-      const open = helpText.hidden;
-      helpText.hidden = !open;
-      helpBtn.setAttribute('aria-expanded', open);
+    // Botones de ayuda del prefijo y de la búsqueda por dirección.
+    document.querySelectorAll('.help-toggle').forEach(button => {
+      const text = document.getElementById(button.getAttribute('aria-controls'));
+      button.addEventListener('click', () => {
+        const open = text.hidden;
+        text.hidden = !open;
+        button.setAttribute('aria-expanded', open);
+      });
     });
 
     // Cerrar leyenda al hacer clic fuera
