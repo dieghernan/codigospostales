@@ -72,7 +72,7 @@
   });
 
   const selectedStyle = {
-    color: '#a52b27', weight: 4, fillColor: '#eb6864', fillOpacity: 0.5
+    color: '#262626', weight: 4, fillColor: '#ff9285', fillOpacity: 0.5
   };
   const hoverStyle = {
     color: '#203b50', weight: 2.5, fillColor: '#2e8b57', fillOpacity: 0.4

@@ -42,7 +42,7 @@ body:has(.postal-map-frame) .viewer-help {
   justify-content: space-between;
   gap: 0.15rem 0.75rem;
   padding: 0.25rem 0.7rem;
-  background: #f7f4ed;
+  background: #f2f1f1;
   font-size: 0.75rem;
   line-height: 1.3;
   flex: none;
@@ -102,7 +102,7 @@ body:has(.postal-map-frame) .viewer-help {
 #map-status[data-state="error"] {
   grid-column: 1 / -1;
   white-space: normal;
-  color: #9c3633;
+  color: #965047;
 }
 .help-toggle {
   flex: none;
@@ -154,11 +154,11 @@ body:has(.postal-map-frame) .viewer-help {
 }
 .tab:hover {
   color: #222;
-  background: #f7f4ed;
+  background: #f2f1f1;
 }
 .tab.active {
-  color: #9c3633;
-  border-bottom-color: #9c3633;
+  color: #965047;
+  border-bottom-color: #965047;
   font-weight: 600;
 }
 .tab-panel {
@@ -232,7 +232,7 @@ body:has(.postal-map-frame) .viewer-help {
 }
 #address-results button:hover,
 #address-results button:focus-visible {
-  background: #f8e3e2;
+  background: #fff0ed;
 }
 .postal-map-actions {
   position: relative;
@@ -246,13 +246,13 @@ body:has(.postal-map-frame) .viewer-help {
 }
 .postal-map-actions #share-view {
   background: #fff;
-  color: #9c3633;
+  color: #965047;
   border-color: #bbb;
   font-weight: 600;
 }
 .postal-map-actions #share-view:hover {
-  background: #f7f4ed;
-  border-color: #9c3633;
+  background: #f2f1f1;
+  border-color: #965047;
 }
 #share-url {
   width: 100%;
@@ -292,12 +292,12 @@ body:has(.postal-map-frame) .viewer-help {
 #postal-search button,
 #address-search button[type="submit"] {
   color: #fff;
-  background: #9c3633;
-  border-color: #9c3633;
+  background: #965047;
+  border-color: #965047;
 }
 #postal-search button:hover,
 #address-search button[type="submit"]:hover {
-  background: #7d2927;
+  background: #784039;
 }
 .postal-legend summary {
   cursor: pointer;
@@ -363,8 +363,8 @@ body:has(.postal-map-frame) .viewer-help {
   background: rgba(46, 139, 87, 0.25);
 }
 .legend-selected {
-  border: 3px solid #a52b27;
-  background: rgba(235, 104, 100, 0.5);
+  border: 3px solid #262626;
+  background: rgba(255, 146, 133, 0.5);
 }
 .postal-map-stage {
   position: relative;
@@ -374,7 +374,7 @@ body:has(.postal-map-frame) .viewer-help {
 #postal-map {
   width: 100%;
   height: 100%;
-  background: #f7f4ed;
+  background: #f2f1f1;
   border: 1px solid #a8c4cb;
 }
 #postal-map .leaflet-control-layers {
@@ -413,7 +413,7 @@ body:has(.postal-map-frame) .viewer-help {
   line-height: 1.5;
 }
 #postal-map .leaflet-popup-content strong {
-  color: #9c3633;
+  color: #965047;
   font-size: 1rem;
 }
 #postal-map .postal-full-window {
@@ -442,7 +442,7 @@ body:has(.postal-map-frame) .viewer-help {
 #postal-map .postal-full-window a:hover,
 #postal-map .postal-full-window a:focus-visible {
   color: #b52f2b;
-  background: #f8e3e2;
+  background: #fff0ed;
 }
 .postal-map-app :focus-visible {
   outline: 2px solid #333;
@@ -474,7 +474,7 @@ body:has(.postal-map-frame) .viewer-help {
   height: 1rem;
   flex: none;
   border: 2px solid #ddd;
-  border-top-color: #9c3633;
+  border-top-color: #965047;
   border-radius: 50%;
   animation: postal-spin 0.8s linear infinite;
 }
