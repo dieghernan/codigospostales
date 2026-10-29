@@ -24,6 +24,8 @@ jobs:
           ruby-version: '3.4'
           bundler-cache: true
           working-directory: docs
+      - name: Check citation sections match CITATION.cff
+        run: ruby scripts/citation.rb --check
       - name: Set up Pages
         id: pages
         uses: actions/configure-pages@v6
