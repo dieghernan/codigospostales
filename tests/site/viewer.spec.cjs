@@ -337,7 +337,7 @@ for (const width of [850, 1280]) {
       await page.goto(mapPath);
       await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready', { timeout: 45000 });
       await page.getByRole('tab', { name: mode, exact: true }).click();
-      const boxes = await page.locator('#postal-prefix, .search-tabs, .tab-panel.active input, .tab-panel.active form button').evaluateAll(elements => elements.map(element => {
+      const boxes = await page.locator('#postal-prefix, .search-tabs, .tab-panel.active input, .tab-panel.active form button[type="submit"]').evaluateAll(elements => elements.map(element => {
         const { x, y, width, height } = element.getBoundingClientRect();
         return { x, y, width, height };
       }));
@@ -355,4 +355,22 @@ for (const width of [850, 1280]) {
       expect(legend.x).toBeGreaterThan(share.x + share.width);
     });
   }
+}
+
+for (const width of [320, 1280]) {
+  test(`toggles accessible address help without horizontal overflow at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto(mapPath);
+    if (width < 601) await page.locator('#viewer-controls > summary').click();
+    await page.getByRole('tab', { name: 'Dirección', exact: true }).click();
+    const help = page.getByRole('button', { name: 'Información sobre la búsqueda por dirección', exact: true });
+    await expect(page.locator('#address-help')).toBeHidden();
+    await help.click();
+    await expect(help).toHaveAttribute('aria-expanded', 'true');
+    await expect(page.locator('#address-help')).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+    await help.click();
+    await expect(help).toHaveAttribute('aria-expanded', 'false');
+    await expect(page.locator('#address-help')).toBeHidden();
+  });
 }
