@@ -6,8 +6,8 @@ excerpt: Descarga un consolidado GeoPackage de áreas postales estimadas y empie
 permalink: /ejemplos/
 ---
 
-Los datos se distribuyen como archivos GeoPackage y se pueden utilizar desde R,
-Python o QGIS. No es necesario instalar un paquete propio del proyecto.
+Los datos se distribuyen como archivos GeoPackage y se pueden utilizar desde **R**,
+**Python** o **QGIS**. No es necesario instalar un paquete propio del proyecto.
 
 Estos ejemplos utilizan la versión simplificada y seleccionan los códigos
 postales que empiezan por `28` (`28xxx`). El filtro se ejecuta al leer el
@@ -23,18 +23,18 @@ deseado seguido de `%`, por ejemplo `'080%'` para `080xx`.
 
 ## Inicio rápido
 
-1. [Descarga el consolidado simplificado]({{ '/' | relative_url }}#archivos-disponibles) para visualizar o el completo para análisis. No necesitas clonar el repositorio ni instalar Git LFS si usas esas descargas directas.
+1. [Descarga el consolidado simplificado]({{ '/' | relative_url }}#archivos-disponibles) para visualizar o el completo para análisis. No necesitas clonar el repositorio ni instalar **Git LFS** si usas esas descargas directas.
 2. Guarda el archivo en una carpeta `data/` de tu directorio de trabajo e instala las dependencias del ejemplo elegido.
-3. Ejecuta el ejemplo de [R](#r) o [Python](#python), o abre el archivo con [QGIS](#qgis). Si lo guardas en otra carpeta, adapta la ruta.
+3. Ejecuta el ejemplo de [**R**](#r) o [**Python**](#python), o abre el archivo con [**QGIS**](#qgis). Si lo guardas en otra carpeta, adapta la ruta.
 
 Ambos productos contienen las capas `codigos_postales` y `pendientes`.
 Los archivos provinciales son intermedios de generación; los ejemplos utilizan
 los consolidados. Para analizar la geometría completa, cambia la ruta a
 `data/codigos_postales.gpkg`. Las áreas son estimadas, no oficiales.
 
-## QGIS
+## **QGIS**
 
-1. Arrastra el GeoPackage descargado a QGIS y selecciona la capa `codigos_postales`.
+1. Arrastra el GeoPackage descargado a **QGIS** y selecciona la capa `codigos_postales`.
 2. Abre el filtro de la capa e introduce `"COD_POSTAL" LIKE '28%'` para ver los códigos con prefijo 28. Para un CP concreto, usa `"COD_POSTAL" = '08001'`.
 3. Añade `pendientes` si quieres identificar los recintos sin código asignado. Conserva EPSG:25830 para trabajar con las coordenadas originales.
 
@@ -42,7 +42,7 @@ El filtro por prefijo selecciona códigos completos, sin recortar por provincia.
 La versión simplificada sirve para visualizar; el campo `AREA_M2` de sus
 pendientes conserva la superficie del consolidado completo.
 
-## R
+## **R**
 
 Instala **sf** y **ggplot2** con `install.packages(c("sf", "ggplot2"))`.
 
@@ -86,7 +86,7 @@ ggsave(
 )
 ```
 
-## Python
+## **Python**
 
 Instala **GeoPandas**, **Pyogrio**, **Matplotlib** y sus dependencias con
 `pip install -r scripts/requirements-ejemplos.txt`. Este archivo fija las
@@ -133,17 +133,17 @@ plt.close(ax.figure)
 
 La imagen mostrada se genera con `source("scripts/ejemplo_prefijo.R")` desde
 la raíz del repositorio y se guarda en
-`docs/assets/img/codigos-postales-28.png`. El ejemplo de Python guarda su
+`docs/assets/img/codigos-postales-28.png`. El ejemplo de **Python** guarda su
 resultado en `docs/assets/img/codigos-postales-28-python.png`.
 
 Los bloques anteriores reproducen los scripts `scripts/ejemplo_prefijo.R` y
 `scripts/ejemplo_prefijo.py`, incluidos los pies de fuentes y autoría.
 Para ejecutar el segundo, utiliza `python scripts/ejemplo_prefijo.py` o
-`py scripts/ejemplo_prefijo.py` en Windows. Ambos generan archivos de imagen
+`py scripts/ejemplo_prefijo.py` en **Windows**. Ambos generan archivos de imagen
 sin necesitar una ventana gráfica ni retoques manuales.
 
-Se han comprobado con R 4.6.1, **sf** 1.1.3 y **ggplot2** 4.0.3, y con Python
+Se han comprobado con **R** 4.6.1, **sf** 1.1.3 y **ggplot2** 4.0.3, y con **Python**
 3.15.0 y las dependencias fijadas en `scripts/requirements-ejemplos.txt`.
 Para reproducir el mismo resultado, conserva el GeoPackage y los scripts de
 la misma revisión del repositorio. Los ejemplos muestran los mismos códigos;
-el aspecto puede variar entre R y Python o con otras fuentes y versiones.
+el aspecto puede variar entre **R** y **Python** o con otras fuentes y versiones.

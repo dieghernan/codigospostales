@@ -419,12 +419,101 @@ test('keeps the CP browser and its submit button reachable in a narrow embedded 
   await page.setViewportSize({ width: 320, height: 900 });
   await page.goto(`${base}/visor/`);
   const frame = page.frameLocator('iframe.postal-map-frame');
+  await expect(frame.locator('.postal-code-browser > summary')).toHaveAccessibleName('Lista de códigos postales');
   await frame.locator('#viewer-controls > summary').click();
   await frame.getByRole('tab', { name: 'Dirección', exact: true }).click();
+  const share = await frame.locator('#share-view').boundingBox();
+  const legend = await frame.locator('.postal-legend > summary').boundingBox();
+  expect(Math.abs((share.y + share.height / 2) - (legend.y + legend.height / 2))).toBeLessThanOrEqual(1);
   await frame.locator('.postal-code-browser > summary').click();
   const panel = frame.locator('.postal-code-browser-content');
   await expect.poll(() => panel.evaluate(element => element.getBoundingClientRect().bottom <= innerHeight)).toBe(true);
   await expect.poll(() => panel.evaluate(element => element.getBoundingClientRect().bottom <= document.querySelector('.leaflet-control-attribution').getBoundingClientRect().top)).toBe(true);
   await frame.getByRole('button', { name: 'Ver área', exact: true }).scrollIntoViewIfNeeded();
   await expect(frame.getByRole('button', { name: 'Ver área', exact: true })).toBeInViewport();
+});
+
+test('shows startup feedback while the prefix catalogue is pending and clears it on failure', async ({ page }) => {
+  let release;
+  const held = new Promise(resolve => { release = resolve; });
+  await page.route('**/prefijos.json', async route => {
+    await held;
+    await route.fulfill({ status: 503, body: '' });
+  });
+  await page.goto(mapPath);
+  await expect(page.locator('#map-loading')).toBeVisible();
+  await expect(page.locator('#map-loading-text')).toHaveText('Cargando catálogo de prefijos…');
+  const bounds = await page.locator('#postal-map').boundingBox();
+  expect(bounds.height).toBeGreaterThan(400);
+  release();
+  await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'error');
+  await expect(page.locator('#map-loading')).toBeHidden();
+  await expect(page.locator('#postal-map')).toHaveAttribute('aria-busy', 'false');
+});
+
+const transparentTile = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=', 'base64');
+
+for (const failed of [false, true]) {
+  test(`finishes background loading feedback when tiles ${failed ? 'fail' : 'load'}`, async ({ page }) => {
+    let release;
+    const held = new Promise(resolve => { release = resolve; });
+    await page.route('**/direcciones-ccpp?**', route => route.fulfill({ contentType: 'image/png', body: transparentTile }));
+    await page.route('**/wmts/ign-base?**', async route => {
+      await held;
+      await route.fulfill(failed
+        ? { status: 503, body: '' }
+        : { contentType: 'image/png', body: transparentTile });
+    });
+    await page.goto(mapPath, { waitUntil: 'domcontentloaded' });
+    await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready', { timeout: 45000 });
+    await expect(page.locator('#map-loading')).toBeHidden();
+    await expect(page.locator('#map-background-status')).toHaveAttribute('data-state', 'loading');
+    await expect(page.locator('#map-background-text')).toHaveText('Cargando el fondo cartográfico…');
+    release();
+    if (failed) {
+      await expect(page.locator('#map-background-status')).toHaveAttribute('data-state', 'error');
+      await expect(page.locator('#map-background-text')).toContainText('No se ha podido cargar parte del fondo cartográfico.');
+      await expect(page.locator('#map-background-status .map-spinner')).toBeHidden();
+    } else {
+      await expect(page.locator('#map-background-status')).toBeHidden();
+    }
+  });
+}
+
+test('reserves the map area and shows preparation feedback before Leaflet arrives', async ({ page }) => {
+  let release;
+  const held = new Promise(resolve => { release = resolve; });
+  await page.route('**/leaflet@1.9.4/dist/leaflet.js', async route => {
+    await held;
+    await route.continue();
+  });
+  await page.goto(mapPath, { waitUntil: 'commit' });
+  await expect(page.locator('#map-loading-text')).toHaveText('Preparando mapa…');
+  await expect(page.locator('#map-loading')).toBeVisible();
+  await expect(page.locator('#postal-map')).toHaveCSS('position', 'absolute');
+  const initial = await page.locator('#postal-map').boundingBox();
+  release();
+  await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready', { timeout: 45000 });
+  const ready = await page.locator('#postal-map').boundingBox();
+  expect(Math.abs(ready.height - initial.height)).toBeLessThan(2);
+  expect(Math.abs(ready.y - initial.y)).toBeLessThan(2);
+});
+
+test('replaces a stalled background spinner with a useful message and recovers after loading', async ({ page }) => {
+  await page.clock.install();
+  let release;
+  const held = new Promise(resolve => { release = resolve; });
+  await page.route('**/direcciones-ccpp?**', route => route.fulfill({ contentType: 'image/png', body: transparentTile }));
+  await page.route('**/wmts/ign-base?**', async route => {
+    await held;
+    await route.fulfill({ contentType: 'image/png', body: transparentTile });
+  });
+  await page.goto(mapPath, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready', { timeout: 45000 });
+  await expect(page.locator('#map-background-status')).toHaveAttribute('data-state', 'loading');
+  await page.clock.runFor(15001);
+  await expect(page.locator('#map-background-text')).toContainText('El fondo cartográfico está tardando en responder.');
+  await expect(page.locator('#map-background-status .map-spinner')).toBeHidden();
+  release();
+  await expect(page.locator('#map-background-status')).toBeHidden();
 });

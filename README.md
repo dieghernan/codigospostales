@@ -60,8 +60,8 @@ puede excluirlos.
 
 ## Descarga del repositorio
 
-Los GeoPackage publicados se almacenan con Git LFS. Instala
-[Git LFS](https://git-lfs.com/) antes de clonar el repositorio y ejecuta
+Los GeoPackage publicados se almacenan con **Git LFS**. Instala
+[**Git LFS**](https://git-lfs.com/) antes de clonar el repositorio y ejecuta
 `git lfs install`. Si ya tienes una copia, ejecuta `git lfs pull` para descargar
 los datos. Sin LFS puedes obtener archivos de referencia en lugar de los
 GeoPackage completos. Las descargas de `data/cartociudad/` siguen ignoradas.
@@ -69,7 +69,7 @@ GeoPackage completos. Las descargas de `data/cartociudad/` siguen ignoradas.
 También puedes descargar directamente el
 [GeoPackage completo](https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales.gpkg)
 o la [versión simplificada](https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales_simplificado.gpkg),
-sin clonar el repositorio. Los [ejemplos en R y Python](docs/_pages/ejemplos.md)
+sin clonar el repositorio. Los [ejemplos en **R** y **Python**](docs/_pages/ejemplos.md)
 explican cómo leer solo los códigos que empiezan por un prefijo concreto.
 
 ## Generación
@@ -126,7 +126,7 @@ para resultados antiguos se recupera la geometría sin CP disponible.
 Ambas capas del producto final contienen únicamente geometrías
 `MULTIPOLYGON`. Los CP se conservan como texto de cinco dígitos, incluidos los
 ceros iniciales. La ejecución provincial fija una configuración UTF-8 en
-Windows. Estas mejoras se aplican al regenerar cada provincia; consolidar
+**Windows**. Estas mejoras se aplican al regenerar cada provincia; consolidar
 resultados antiguos no repite su asignación postal ni resuelve sus solapes
 administrativos de origen.
 
@@ -192,8 +192,8 @@ existan otros CP entre los puntos consultados o en componentes no muestreados.
 
 ## Sitio web y visor
 
-La web del proyecto se encuentra en `docs/` y utiliza Jekyll con Chulapa y la
-skin Focal. Para previsualizarla con Ruby y Bundler instalados:
+La web del proyecto se encuentra en `docs/` y utiliza **Jekyll** con **Chulapa** y la
+skin **Focal**. Para previsualizarla con **Ruby** y **Bundler** instalados:
 
 ```sh
 cd docs
@@ -204,7 +204,7 @@ bundle exec jekyll serve
 Abre `http://localhost:4000/codigospostales/`. Para compilar sin iniciar un
 servidor, ejecuta `bundle exec jekyll build` desde `docs/`.
 
-El visor utiliza Leaflet y Leaflet-providersESP, con IGNBase Gris, IGNBase y PNOA como fondos
+El visor utiliza **Leaflet** y **Leaflet-providersESP**, con IGNBase Gris, IGNBase y PNOA como fondos
 alternativos y capas activables de CartoCiudad y de las delimitaciones
 estimadas. Inicialmente muestra IGNBase Gris con ambas capas activadas; el control
 de capas está plegado y el zoom con la rueda está habilitado. La vista inicial
@@ -234,7 +234,7 @@ Este script exporta los códigos a `docs/assets/data/`, en GeoJSON WGS84
 (EPSG:4326) por prefijo, con seis decimales, sin modificar el GeoPackage.
 El visor no incluye los recintos pendientes. La imagen estática se regenera con
 `source("scripts/ejemplo_prefijo.R")`.
-El ejemplo equivalente de Python se ejecuta con
+El ejemplo equivalente de **Python** se ejecuta con
 `python scripts/ejemplo_prefijo.py`, tras instalar las dependencias de
 `scripts/requirements-ejemplos.txt`. Los scripts guardan sus mapas en
 `docs/assets/img/`, con las fuentes y la autoría incluidas. El código y las
@@ -248,13 +248,13 @@ Actions** como origen en la configuración de Pages del repositorio.
 ### Metadatos y comprobación de la web
 
 Después de actualizar los consolidados, ejecuta `py scripts/product_metadata.py`
-(o `python3 scripts/product_metadata.py` en Linux) para actualizar tamaños,
+(o `python3 scripts/product_metadata.py` en **Linux**) para actualizar tamaños,
 fechas y cifras de la ficha de producto y las huellas SHA-256 de los archivos.
 La fecha se lee del GeoPackage y no
 representa la antigüedad de las fuentes. El script no modifica los datos.
 
 La web utiliza `assets/css/custom.scss`, el mecanismo de estilos propios de
-Chulapa, y `header_type: base` para una cabecera compacta. El visor conserva
+**Chulapa**, y `header_type: base` para una cabecera compacta. El visor conserva
 su estilo y permite buscar un CP completo y compartir prefijo, posición, zoom
 y CP seleccionado sin incluir direcciones buscadas.
 
@@ -269,11 +269,11 @@ npx playwright install chromium
 npm test
 ```
 
-En Linux, usa `python3` en lugar de `py`. Las comprobaciones revisan enlaces
+En **Linux**, usa `python3` en lugar de `py`. Las comprobaciones revisan enlaces
 internos y sus anclas, metadatos y recursos del visor. Las pruebas de navegador
 comprueban la carga de áreas, la búsqueda de CP, la recuperación de una vista,
 los errores de descarga y el diseño móvil. Requieren acceso a las CDN de
-Leaflet y Leaflet-providersESP. El workflow las ejecuta antes de publicar.
+**Leaflet** y **Leaflet-providersESP**. El workflow las ejecuta antes de publicar.
 
 Para previsualizar el artefacto compilado, ejecuta `node tests/site/serve.cjs`
 y abre `http://127.0.0.1:4173/codigospostales/`. Detén este servidor antes de
@@ -285,7 +285,7 @@ adapta las URL absolutas del proyecto para usar los recursos locales.
 Se ha utilizado **OpenAI Codex** como apoyo en el desarrollo del código,
 la redacción y revisión de la documentación y la preparación del sitio web.
 Los banners del proyecto se generan con geometrías reales mediante
-`scripts/focal_banners.py`, con Fira Sans y la paleta de Focal. Estas
+`scripts/focal_banners.py`, con Fira Sans y la paleta de **Focal**. Estas
 herramientas no son la fuente de los datos geográficos: se utilizan las
 direcciones de CartoCiudad y los límites administrativos de Goerlich y
 Pérez Vázquez, referenciados en este documento.

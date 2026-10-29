@@ -16,7 +16,7 @@ excerpt: >-
 
 Explora y descarga **áreas estimadas de los códigos postales de España**.
 Los productos son dos archivos GeoPackage consolidados: uno completo para
-análisis y otro simplificado para visualización, compatibles con R, Python y QGIS.
+análisis y otro simplificado para visualización, compatibles con **R**, **Python** y **QGIS**.
 
 <p class="product-note"><strong>No son límites postales oficiales.</strong>
 Se estiman a partir de CartoCiudad y límites administrativos. No se garantiza
@@ -53,7 +53,7 @@ la inclusión de todos los códigos postales de las fuentes.</p>
   <div class="col-12 col-sm-6 mb-3">
     <a class="btn btn-outline-primary"
        href="{{ '/ejemplos/' | relative_url }}">
-      Inicio rápido con R, Python y QGIS
+      Inicio rápido con <strong>R</strong>, <strong>Python</strong> y <strong>QGIS</strong>
     </a>
   </div>
 </div>
@@ -67,7 +67,7 @@ geometría completa de cada código, sin recortarla a una provincia.
 ![Delimitaciones estimadas de los códigos postales con prefijo 28, en azul claro con contornos oscuros.]({{ '/assets/img/codigos-postales-28.png' | relative_url }})
 
 La página de [ejemplos de uso]({{ '/ejemplos/' | relative_url }}) explica cómo
-leer solo ese dominio postal y generar el mapa con R o Python.
+leer solo ese dominio postal y generar el mapa con **R** o **Python**.
 
 ## Características y cobertura
 
@@ -101,7 +101,7 @@ destinada a mediciones precisas. En `pendientes`, el campo `AREA_M2` conserva
 la superficie medida en la versión completa.
 
 Los GeoPackage se almacenan con **Git LFS**. Para obtenerlos al clonar el
-repositorio, instala Git LFS y ejecuta `git lfs install`. Después ejecuta
+repositorio, instala **Git LFS** y ejecuta `git lfs install`. Después ejecuta
 `git lfs pull` para descargar los datos.
 También puedes acceder a los archivos desde la
 [carpeta de datos en GitHub](https://github.com/dieghernan/codigospostales/tree/main/data).
@@ -170,7 +170,7 @@ El repositorio se distribuye bajo la licencia
 Se ha utilizado **OpenAI Codex** como apoyo en el desarrollo del código,
 la redacción y revisión de la documentación y la preparación de este sitio web.
 Los banners del proyecto se generan con geometrías reales mediante
-`scripts/focal_banners.py`, con Fira Sans y la paleta de Focal. Estas
+`scripts/focal_banners.py`, con Fira Sans y la paleta de **Focal**. Estas
 herramientas no son la fuente de los datos geográficos: las fuentes y los
 trabajos metodológicos utilizados se citan a continuación.
 

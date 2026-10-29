@@ -39,7 +39,9 @@
     }
   }
 
+  const finishStartup = beginLoading('Cargando catálogo de prefijos…');
   if (!window.L || !L.tileLayer.providerESP) {
+    finishStartup();
     status.dataset.state = 'error';
     status.textContent =
       'No se ha podido cargar Leaflet. Recarga la página para reintentar.';
@@ -75,25 +77,75 @@
     color: '#262626', weight: 4, fillColor: '#ff9285', fillOpacity: 0.5
   };
   const hoverStyle = {
-    color: '#203b50', weight: 2.5, fillColor: '#2e8b57', fillOpacity: 0.4
+    color: '#142c3d', weight: 3, fillColor: '#2e8b57', fillOpacity: 0.5
   };
 
-  const gris = L.tileLayer.providerESP('IGNBase.Gris').addTo(map);
-  const base = L.tileLayer.providerESP('IGNBase');
-  const pnoa = L.tileLayer.providerESP('PNOA');
+  const backgroundStatus = document.getElementById('map-background-status');
+  const backgroundText = document.getElementById('map-background-text');
+  const rasterStates = new Map();
+  function renderBackgroundStatus() {
+    const active = [...rasterStates].filter(([layer]) => map.hasLayer(layer));
+    const state = active.find(([, value]) => value.pending)?.[1]
+      || active.find(([, value]) => value.failed || value.slow)?.[1];
+    backgroundStatus.hidden = !state;
+    if (!state) return;
+    const label = state.name.charAt(0).toUpperCase() + state.name.slice(1);
+    const source = state.name.replace(/^el /, 'del ').replace(/^la /, 'de la ');
+    backgroundStatus.dataset.state = state.pending ? 'loading' : 'error';
+    backgroundText.textContent = state.pending
+      ? `Cargando ${state.name}…`
+      : state.slow
+        ? `${label} está tardando en responder. Prueba otra capa en Capas.`
+        : `No se ha podido cargar parte ${source}. Prueba otra capa en Capas.`;
+  }
+  function watchRaster(layer, name) {
+    const state = { name, pending: false, failed: false, slow: false, timer: undefined };
+    rasterStates.set(layer, state);
+    layer.on('loading', () => {
+      clearTimeout(state.timer);
+      state.pending = true;
+      state.failed = false;
+      state.slow = false;
+      state.timer = setTimeout(() => {
+        state.pending = false;
+        state.slow = true;
+        renderBackgroundStatus();
+      }, 15000);
+      renderBackgroundStatus();
+    });
+    layer.on('tileerror', () => {
+      state.failed = true;
+      renderBackgroundStatus();
+    });
+    layer.on('load', () => {
+      clearTimeout(state.timer);
+      state.pending = false;
+      state.slow = false;
+      renderBackgroundStatus();
+    });
+    layer.on('remove', () => {
+      clearTimeout(state.timer);
+      state.pending = false;
+      state.failed = false;
+      state.slow = false;
+      renderBackgroundStatus();
+    });
+    return layer;
+  }
+  const gris = watchRaster(L.tileLayer.providerESP('IGNBase.Gris'), 'el fondo cartográfico').addTo(map);
+  const base = watchRaster(L.tileLayer.providerESP('IGNBase'), 'el fondo cartográfico');
+  const pnoa = watchRaster(L.tileLayer.providerESP('PNOA'), 'el fondo cartográfico');
 
-  const cartociudad = L.tileLayer
-    .providerESP('Cartociudad.CodigosPostales')
-    .addTo(map);
+  const cartociudad = watchRaster(L.tileLayer.providerESP('Cartociudad.CodigosPostales'), 'la capa CartoCiudad').addTo(map);
 
-  const limites = L.tileLayer.providerESP('UnidadesAdm.Limites');
+  const limites = watchRaster(L.tileLayer.providerESP('UnidadesAdm.Limites'), 'la capa de límites administrativos');
 
   const postal = L.geoJSON(null, {
     style: {
-      color: '#203b50',
-      weight: 1.5,
+      color: '#1a3446',
+      weight: 1.8,
       fillColor: '#2e8b57',
-      fillOpacity: 0.25
+      fillOpacity: 0.3
     },
 
     onEachFeature(feature, layer) {
@@ -772,6 +824,8 @@
       status.dataset.state = 'error';
       status.textContent =
         'No se ha podido cargar el catálogo de prefijos. Recarga la página para reintentar.';
+    } finally {
+      finishStartup();
     }
   })();
   // Tabs, ayuda del prefijo y cierre de leyenda.
