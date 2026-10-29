@@ -297,7 +297,7 @@
 <section class="postal-map-controls" aria-label="Filtro de códigos postales">
   <div class="prefix-row">
     <label for="postal-prefix">Prefijo</label>
-    <select id="postal-prefix" class="form-control" disabled aria-label="Prefijo postal"
+    <select id="postal-prefix" class="form-control form-control-sm" disabled aria-label="Prefijo postal"
       aria-describedby="postal-prefix-help map-status">
       <option value="08">08 · Barcelona</option>
     </select>
@@ -325,9 +325,9 @@
   <div id="panel-cp" role="tabpanel" aria-labelledby="tab-cp" class="tab-panel active">
     <form id="postal-search" role="search" aria-label="Buscar código postal">
       <label for="postal-code" class="sr-only">Código postal</label>
-      <input id="postal-code" type="search" inputmode="numeric" pattern="[0-9]{5}"
+      <input id="postal-code" class="form-control form-control-sm" type="search" inputmode="numeric" pattern="[0-9]{5}"
         maxlength="5" placeholder="08001" required aria-describedby="postal-code-status">
-      <button type="submit">Ver CP</button>
+      <button type="submit" class="btn btn-primary btn-sm">Ver código postal</button>
     </form>
     <p id="postal-code-status" role="status" aria-live="polite"></p>
   </div>
@@ -335,11 +335,11 @@
   <div id="panel-address" role="tabpanel" aria-labelledby="tab-address" class="tab-panel" hidden>
     <form id="address-search" role="search">
       <label for="address-query" class="sr-only">Dirección</label>
-      <input id="address-query" name="address" type="search"
+      <input id="address-query" class="form-control form-control-sm" name="address" type="search"
         minlength="3" maxlength="200"
         placeholder="Calle Mayor 1, Madrid"
         required aria-describedby="address-help">
-      <button type="submit">Buscar</button>
+      <button type="submit" class="btn btn-primary btn-sm">Buscar</button>
       <button type="button" class="help-toggle" aria-expanded="false" aria-controls="address-help" title="Ayuda de búsqueda por dirección">
         <span aria-hidden="true">?</span>
         <span class="sr-only">Información sobre la búsqueda por dirección</span>
@@ -357,18 +357,21 @@
 </details>
 
 <div class="postal-map-actions">
-  <button id="share-view" type="button" aria-label="Compartir vista">Compartir<span class="share-label-detail"> vista</span></button>
+  <button class="btn btn-outline-secondary btn-sm" id="share-view" type="button" aria-label="Compartir vista">Compartir<span class="share-label-detail"> vista</span></button>
   <span id="share-status" role="status" aria-live="polite"></span>
-  <input id="share-url" type="text" readonly hidden aria-label="Enlace a esta vista">
+  <div id="share-panel" hidden>
+    <input id="share-url" class="form-control form-control-sm" type="text" readonly hidden aria-label="Enlace a esta vista">
+    <button id="share-close" class="btn btn-outline-secondary btn-sm" type="button" aria-label="Cerrar enlace compartido"><span aria-hidden="true">×</span></button>
+  </div>
   <details class="postal-code-browser">
     <summary>Lista de <span class="code-list-label">códigos postales</span><span class="code-list-label-short" aria-hidden="true">CP</span></summary>
     <form id="browse-codes" class="postal-code-browser-content" aria-label="Explorar códigos del prefijo">
       <label for="code-filter">Filtrar códigos del prefijo</label>
-      <input id="code-filter" type="search" inputmode="numeric" maxlength="5" placeholder="Ej.: 080">
+      <input id="code-filter" class="form-control form-control-sm" type="search" inputmode="numeric" maxlength="5" placeholder="Ej.: 080">
       <label for="code-list">Códigos disponibles</label>
-      <select id="code-list" size="6" aria-describedby="code-list-status"></select>
+      <select id="code-list" class="form-control form-control-sm" size="6" aria-describedby="code-list-status"></select>
       <p id="code-list-status" role="status" aria-live="polite"></p>
-      <button type="submit">Ver área</button>
+      <button type="submit" class="btn btn-primary btn-sm">Ver área</button>
     </form>
   </details>
 

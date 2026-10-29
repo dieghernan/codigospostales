@@ -70,6 +70,13 @@
     if (close) {
       close.title = 'Cerrar ventana';
       close.setAttribute('aria-label', 'Cerrar ventana');
+      close.addEventListener('keydown', keyEvent => {
+        if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
+          keyEvent.preventDefault();
+          map.closePopup(event.popup);
+          map.getContainer().focus();
+        }
+      });
     }
   });
 
@@ -489,16 +496,33 @@
     }
   });
 
+  const sharePanel = document.getElementById('share-panel');
+  function closeShare() {
+    sharePanel.hidden = true;
+    document.getElementById('share-url').hidden = true;
+    document.getElementById('share-status').textContent = '';
+    document.getElementById('share-view').focus();
+  }
+  document.getElementById('share-close').addEventListener('click', closeShare);
+  sharePanel.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeShare();
+    }
+  });
   document.getElementById('share-view').addEventListener('click', async () => {
     saveView();
     const shareStatus = document.getElementById('share-status');
     const field = document.getElementById('share-url');
     field.value = window.location.href;
+    sharePanel.hidden = false;
     field.hidden = false;
     try {
       await navigator.clipboard.writeText(field.value);
+      if (sharePanel.hidden) return;
       shareStatus.textContent = 'Enlace copiado. No incluye direcciones buscadas.';
     } catch {
+      if (sharePanel.hidden) return;
       field.focus();
       field.select();
       shareStatus.textContent = 'Copia el enlace del campo para compartir esta vista.';
