@@ -1,0 +1,25 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": {{ page.url | absolute_url | append: '#app' | jsonify }},
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.excerpt | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "applicationCategory": "ReferenceApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requiere JavaScript y un navegador web compatible con Leaflet.",
+  "inLanguage": "es",
+  "isAccessibleForFree": true,
+  "author": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ site.author.url | jsonify }}
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": 0,
+    "priceCurrency": "EUR"
+  }
+}
+</script>
