@@ -57,7 +57,7 @@
 
   const map = L.map(container, {
     preferCanvas: true,
-    scrollWheelZoom: true,
+    scrollWheelZoom: window.self === window.top,
     minZoom: 0,
     maxZoom: 18,
     zoomControl: false
@@ -127,8 +127,7 @@
     attribution:
       'Elaboración: <a href="https://dieghernan.github.io/">dieghernan</a>' +
       ' · CartoCiudad (IGN/CNIG)' +
-      ' · <a href="https://doi.org/10.5281/zenodo.15345101">Goerlich y Pérez Vázquez (2025)</a>' +
-      ' · Método: <a href="https://www.uv.es/goerlich/Ivie/CodPost.html">Goerlich (2022)</a>'
+      ' · <a href="https://doi.org/10.5281/zenodo.15345101">Goerlich y Pérez Vázquez (2025)</a>'
   }).addTo(map);
 
   // Mostrar el acceso a toda ventana cuando el visor esté incrustado.
@@ -260,6 +259,8 @@
 
       postal.clearLayers().addData(data);
       loadedPrefix = prefix;
+      codeFilter.value = '';
+      renderCodeList();
       selectedCode = undefined;
       document.getElementById('postal-code-status').textContent = '';
 
@@ -353,6 +354,50 @@
   }
 
   let codeSearch = 0;
+  const codeBrowser = document.querySelector('.postal-code-browser');
+  const codeFilter = document.getElementById('code-filter');
+  const codeList = document.getElementById('code-list');
+  function positionCodeBrowser() {
+    const top = document.querySelector('.postal-map-actions').getBoundingClientRect().bottom;
+    const bottom = container.querySelector('.leaflet-control-attribution').getBoundingClientRect().top;
+    codeBrowser.style.setProperty('--code-list-height', `${Math.max(80, bottom - top - 10)}px`);
+  }
+  window.addEventListener('resize', positionCodeBrowser);
+  codeBrowser.addEventListener('toggle', () => {
+    if (codeBrowser.open) {
+      legend.open = false;
+      layersControl.collapse();
+      positionCodeBrowser();
+    }
+  });
+  function renderCodeList() {
+    const codes = [...new Set(postal.getLayers().map(layer => layer.feature.properties.COD_POSTAL))]
+      .sort().filter(code => code.startsWith(codeFilter.value.trim()));
+    codeList.replaceChildren(...codes.map(code => new Option(code, code)));
+    codeList.selectedIndex = codes.length ? 0 : -1;
+    document.getElementById('code-list-status').textContent = `${codes.length} CP disponibles.`;
+    document.querySelector('#browse-codes button').disabled = !codes.length;
+  }
+  codeFilter.addEventListener('input', renderCodeList);
+  document.getElementById('browse-codes').addEventListener('submit', event => {
+    event.preventDefault();
+    if (!codeList.value) return;
+    resetAddressSearch();
+    ++codeSearch;
+    document.getElementById('tab-cp').click();
+    selectCode(codeList.value);
+    codeBrowser.open = false;
+    codeBrowser.querySelector('summary').focus();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && codeBrowser.open) {
+      codeBrowser.open = false;
+      codeBrowser.querySelector('summary').focus();
+    }
+  });
+  document.addEventListener('click', event => {
+    if (!codeBrowser.contains(event.target)) codeBrowser.open = false;
+  }, true);
   document.getElementById('postal-search').addEventListener('submit', async event => {
     event.preventDefault();
     resetAddressSearch();
@@ -539,9 +584,12 @@
       map.setView([location.lat, location.lng], 16);
       addressMarker.openPopup();
 
+      const returnFocus = addressResults.contains(document.activeElement);
       addressResults.hidden = true;
+      if (returnFocus) document.getElementById('address-query').focus();
 
       addressStatus.textContent = 'Dirección localizada.';
+      addressStatus.textContent += ` ${candidate.address}${code ? ` · CP ${code} (CartoCiudad)` : ''}.`;
 
       if (!prefix || !loaded) {
         addressStatus.textContent +=
@@ -741,6 +789,7 @@
     const legendTrigger = legend.querySelector('summary');
     legend.addEventListener('toggle', () => {
       if (legend.open) {
+        codeBrowser.open = false;
         if (mobile.matches) controls.open = false;
         layersControl.collapse();
         positionLegend();
