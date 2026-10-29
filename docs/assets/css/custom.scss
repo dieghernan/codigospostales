@@ -10,20 +10,6 @@
 details.viewer-help { margin: 1rem 0; padding: 1rem; border: 1px solid #ddd; }
 details.viewer-help summary { cursor: pointer; font-weight: 600; }
 
-/* Flat viewer fields: avoid native inset borders and theme focus shadows. */
-#postal-code, #address-query, #share-url {
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  background: #fff;
-  color: #333;
-}
-#postal-prefix, #postal-code, #address-query, #share-url,
-#postal-search button, #address-search button, #share-view {
-  &, &:hover, &:active, &:focus {
-    box-shadow: none;
-  }
-}
-
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid #203b50; outline-offset: 3px; }
 @media (max-width: 600px) {
   .product-downloads { grid-template-columns: 1fr; }

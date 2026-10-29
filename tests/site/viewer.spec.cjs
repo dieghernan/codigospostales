@@ -2,6 +2,28 @@ const { test, expect } = require('@playwright/test');
 const base = process.env.SITE_BASEURL ?? '/codigospostales';
 const mapPath = `${base}/visor/mapa/`;
 
+for (const width of [390, 1280]) {
+  test(`closes and reopens the shared link at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto(mapPath);
+    await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready');
+    const share = page.getByRole('button', { name: 'Compartir vista', exact: true });
+    const close = page.getByRole('button', { name: 'Cerrar enlace compartido', exact: true });
+    await share.click();
+    await expect(close).toBeVisible();
+    await expect(close).toBeInViewport();
+    await close.click();
+    await expect(page.locator('#share-url')).toBeHidden();
+    await expect(page.locator('#share-status')).toBeEmpty();
+    await expect(share).toBeFocused();
+    await share.click();
+    await expect(page.locator('#share-url')).toBeVisible();
+    await close.press('Escape');
+    await expect(page.locator('#share-panel')).toBeHidden();
+    await expect(share).toBeFocused();
+  });
+}
+
 async function locateMadridAddress(page) {
   await page.route('**/geocoder/candidates?*', route => route.fulfill({
     json: [{ address: 'CALLE MAYOR 1, Madrid', postalCode: '28013', lat: 40.415, lng: -3.707 }]
@@ -22,10 +44,13 @@ test('loads areas, finds a CP and restores a shared view', async ({ page }) => {
   await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready', { timeout: 45000 });
   await expect(page.locator('#postal-map canvas')).toBeVisible();
   await page.getByRole('searchbox', { name: 'Código postal', exact: true }).fill('28013');
-  await page.getByRole('button', { name: 'Ver CP', exact: true }).click();
+  await page.getByRole('button', { name: 'Ver código postal', exact: true }).click();
   await expect(page.locator('#postal-code-status')).toHaveText('CP 28013: área estimada seleccionada.');
   await expect(page.locator('#postal-prefix')).toHaveValue('28');
   await expect(page).toHaveURL(/cp=28013/);
+  await expect(page.locator('.leaflet-popup-content')).toContainText('Código postal 28013');
+  await page.getByRole('button', { name: 'Cerrar ventana', exact: true }).click();
+  await expect(page.locator('.leaflet-popup')).toHaveCount(0);
   await page.reload();
   await expect(page.locator('#postal-code-status')).toHaveText('CP 28013: área estimada seleccionada.');
   await expect(page.locator('#postal-prefix')).toHaveValue('28');
@@ -36,7 +61,7 @@ test('explains that a missing area does not mean a CP does not exist', async ({ 
   await page.goto(mapPath);
   await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready', { timeout: 45000 });
   await page.locator('#postal-code').fill('08000');
-  await page.getByRole('button', { name: 'Ver CP', exact: true }).click();
+  await page.getByRole('button', { name: 'Ver código postal', exact: true }).click();
   await expect(page.locator('#postal-code-status')).toContainText('no está en las áreas publicadas');
 });
 
@@ -77,7 +102,7 @@ for (const code of ['28013', '08001']) {
     await expect(page.locator('.leaflet-marker-icon')).toHaveCount(1);
     await page.getByRole('tab', { name: 'Código postal', exact: true }).click();
     await page.getByRole('searchbox', { name: 'Código postal', exact: true }).fill(code);
-    await page.getByRole('button', { name: 'Ver CP', exact: true }).click();
+    await page.getByRole('button', { name: 'Ver código postal', exact: true }).click();
     await expect(page.locator('.leaflet-marker-icon')).toHaveCount(0);
     await expect(page.locator('#postal-code-status')).toHaveText(`CP ${code}: área estimada seleccionada.`);
     await expect(page.locator('#address-status')).toBeEmpty();
@@ -122,7 +147,7 @@ test('cancels a pending address prefix load when a CP search takes over', async 
   });
   await page.getByRole('tab', { name: 'Código postal', exact: true }).click();
   await page.getByRole('searchbox', { name: 'Código postal', exact: true }).fill('08001');
-  await page.getByRole('button', { name: 'Ver CP', exact: true }).click();
+  await page.getByRole('button', { name: 'Ver código postal', exact: true }).click();
   await cancelled;
   await expect(page.locator('#postal-code-status')).toHaveText('CP 08001: área estimada seleccionada.');
   await expect(page.locator('#postal-prefix')).toHaveValue('08');
@@ -272,7 +297,7 @@ test('clears CP search loading feedback when the download fails', async ({ page 
     await route.fulfill({ status: 503, body: '' });
   });
   await page.getByRole('searchbox', { name: 'Código postal', exact: true }).fill('28013');
-  await page.getByRole('button', { name: 'Ver CP', exact: true }).click();
+  await page.getByRole('button', { name: 'Ver código postal', exact: true }).click();
   await expect(page.locator('#map-loading')).toBeVisible();
   await expect(page.locator('#postal-map')).toHaveAttribute('aria-busy', 'true');
   releaseDownload();
@@ -408,11 +433,16 @@ test('explores and selects a CP using the filterable keyboard list', async ({ pa
   await expect(page.locator('#code-list')).toBeHidden();
 });
 
-test('gives the embedded desktop map enough width for inline controls', async ({ page }) => {
+test('keeps the embedded desktop map within the standard page layout', async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(`${base}/ejemplos/`);
+  const standard = await page.locator('#maincontent').boundingBox();
   await page.goto(`${base}/visor/`);
-  const frame = page.locator('iframe.postal-map-frame');
-  expect((await frame.boundingBox()).width).toBeGreaterThanOrEqual(850);
+  const content = await page.locator('#maincontent').boundingBox();
+  const frame = await page.locator('iframe.postal-map-frame').boundingBox();
+  expect(Math.abs(content.width - standard.width)).toBeLessThan(2);
+  expect(Math.abs(content.x - standard.x)).toBeLessThan(2);
+  expect(frame.width).toBeLessThanOrEqual(content.width);
 });
 
 test('keeps the CP browser and its submit button reachable in a narrow embedded map', async ({ page }) => {
