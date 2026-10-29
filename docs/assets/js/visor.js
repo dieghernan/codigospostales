@@ -84,8 +84,45 @@
     color: '#262626', weight: 4, fillColor: '#ff9285', fillOpacity: 0.5
   };
   const hoverStyle = {
-    color: '#142c3d', weight: 3, fillColor: '#2e8b57', fillOpacity: 0.5
+    color: '#142c3d', weight: 3, fillColor: '#58a879', fillOpacity: 0.5
   };
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const styleAnimations = new WeakMap();
+
+  function stopStyleAnimation(layer) {
+    cancelAnimationFrame(styleAnimations.get(layer));
+    styleAnimations.delete(layer);
+  }
+
+  function transitionStyle(layer, target) {
+    stopStyleAnimation(layer);
+    if (reducedMotion.matches) {
+      layer.setStyle(target);
+      return;
+    }
+    const start = { ...layer.options };
+    const started = performance.now();
+    const channels = color => color.slice(1).match(/../g).map(value => parseInt(value, 16));
+    const from = channels(start.fillColor);
+    const to = channels(target.fillColor);
+    function frame(now) {
+      const progress = Math.min(1, (now - started) / 180);
+      const eased = progress * (2 - progress);
+      layer.setStyle({
+        ...target,
+        fillColor: '#' + from.map((value, index) =>
+          Math.round(value + (to[index] - value) * eased).toString(16).padStart(2, '0')
+        ).join(''),
+        fillOpacity: start.fillOpacity + (target.fillOpacity - start.fillOpacity) * eased
+      });
+      if (progress < 1) {
+        styleAnimations.set(layer, requestAnimationFrame(frame));
+      } else {
+        styleAnimations.delete(layer);
+      }
+    }
+    styleAnimations.set(layer, requestAnimationFrame(frame));
+  }
 
   const backgroundStatus = document.getElementById('map-background-status');
   const backgroundText = document.getElementById('map-background-text');
@@ -156,6 +193,7 @@
     },
 
     onEachFeature(feature, layer) {
+      layer.on('remove', () => stopStyleAnimation(layer));
       const label = document.createElement('strong');
       label.textContent = `Código postal ${feature.properties.COD_POSTAL}`;
       layer.bindPopup(label);
@@ -167,7 +205,7 @@
         mouseover(event) {
           const polygon = event.target;
 
-          polygon.setStyle(feature.properties.COD_POSTAL === selectedCode
+          transitionStyle(polygon, feature.properties.COD_POSTAL === selectedCode
             ? selectedStyle : hoverStyle);
 
           polygon.bringToFront();
@@ -175,9 +213,9 @@
 
         mouseout(event) {
           if (feature.properties.COD_POSTAL === selectedCode) {
-            event.target.setStyle(selectedStyle);
+            transitionStyle(event.target, selectedStyle);
           } else {
-            postal.resetStyle(event.target);
+            transitionStyle(event.target, postal.options.style);
           }
         }
       });
@@ -393,6 +431,7 @@
     map.closePopup();
     let match;
     postal.eachLayer(layer => {
+      stopStyleAnimation(layer);
       if (layer.feature.properties.COD_POSTAL === code) match = layer;
       postal.resetStyle(layer);
     });

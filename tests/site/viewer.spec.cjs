@@ -2,6 +2,36 @@ const { test, expect } = require('@playwright/test');
 const base = process.env.SITE_BASEURL ?? '/codigospostales';
 const mapPath = `${base}/visor/mapa/`;
 
+test('transitions hover fill and restores it without losing selection', async ({ page }) => {
+  await page.route('**/assets/js/visor.js*', async route => {
+    const response = await route.fetch();
+    await route.fulfill({ response, body: `
+      const originalGeoJSON = L.geoJSON;
+      L.geoJSON = (...args) => {
+        const layer = originalGeoJSON(...args);
+        window.testPostal = layer;
+        return layer;
+      };
+    ` + await response.text() });
+  });
+  await page.goto(mapPath);
+  await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready', { timeout: 45000 });
+  await page.evaluate(() => {
+    window.testArea = window.testPostal.getLayers()[0];
+    window.testArea.fire('mouseover');
+  });
+  await expect.poll(() => page.evaluate(() => window.testArea.options.fillColor)).toBe('#58a879');
+  await page.evaluate(() => { window.testArea.fire('mouseout'); });
+  await expect.poll(() => page.evaluate(() => window.testArea.options.fillColor)).toBe('#2e8b57');
+  await page.evaluate(() => {
+    window.testArea.fire('mouseover');
+    window.testArea.fire('click');
+    window.testArea.fire('mouseout');
+  });
+  await expect.poll(() => page.evaluate(() => window.testArea.options.fillColor)).toBe('#ff9285');
+  await expect(page.locator('.leaflet-popup-content')).toContainText('Código postal');
+});
+
 for (const width of [390, 1280]) {
   test(`closes and reopens the shared link at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
