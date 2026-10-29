@@ -280,6 +280,15 @@ y abre `http://127.0.0.1:4173/codigospostales/`. Detén este servidor antes de
 `npm test`, que inicia su propia instancia. El servidor de previsualización
 adapta las URL absolutas del proyecto para usar los recursos locales.
 
+## Webmentions
+
+Tras cada despliegue correcto, la acción `Send outgoing Webmentions` revisa los
+enlaces externos del contenido de las páginas publicadas y envía menciones a los
+destinos que anuncian un endpoint compatible. Usa el HTML generado desde `docs/`
+y guarda el estado en la rama `webmention-state` para evitar envíos repetidos
+mientras el contenido no cambie. Los errores se reintentan en ejecuciones
+posteriores. También puede ejecutarse manualmente desde GitHub Actions.
+
 ## Uso de inteligencia artificial
 
 Se ha utilizado **OpenAI Codex** como apoyo en el desarrollo del código,
