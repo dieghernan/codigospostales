@@ -74,9 +74,20 @@ show_author: false
 </details>
 
 <div class="postal-map-actions">
-  <button id="share-view" type="button">Compartir vista</button>
+  <button id="share-view" type="button" aria-label="Compartir vista">Compartir<span class="share-label-detail"> vista</span></button>
   <span id="share-status" role="status" aria-live="polite"></span>
   <input id="share-url" type="text" readonly hidden aria-label="Enlace a esta vista">
+  <details class="postal-code-browser">
+    <summary>Explorar CP</summary>
+    <form id="browse-codes" class="postal-code-browser-content" aria-label="Explorar códigos del prefijo">
+      <label for="code-filter">Filtrar códigos del prefijo</label>
+      <input id="code-filter" type="search" inputmode="numeric" maxlength="5" placeholder="Ej.: 080">
+      <label for="code-list">Códigos disponibles</label>
+      <select id="code-list" size="6" aria-describedby="code-list-status"></select>
+      <p id="code-list-status" role="status" aria-live="polite"></p>
+      <button type="submit">Ver área</button>
+    </form>
+  </details>
 
   <details class="postal-legend">
     <summary>Leyenda</summary>
@@ -89,6 +100,7 @@ show_author: false
       <p><span class="legend-selected" aria-hidden="true"></span> CP seleccionado</p>
       <p>CartoCiudad: capa de referencia de CP, visible desde el zoom 11 si está activada en Capas.</p>
       <p>Los recintos pendientes no se muestran. Comparar capas no valida la estimación como límite oficial.</p>
+      <p>Método: <a href="https://www.uv.es/goerlich/Ivie/CodPost.html">Goerlich (2022)</a>.</p>
     </div>
   </details>
 </div>

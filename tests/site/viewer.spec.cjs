@@ -374,3 +374,57 @@ for (const width of [320, 1280]) {
     await expect(page.locator('#address-help')).toBeHidden();
   });
 }
+
+test('returns keyboard focus to the address field after choosing a result', async ({ page }) => {
+  await page.route('**/geocoder/candidates?*', route => route.fulfill({
+    json: [{ address: 'CALLE MAYOR 1, Madrid', postalCode: '28013', lat: 40.415, lng: -3.707 }]
+  }));
+  await page.goto(mapPath);
+  await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready', { timeout: 45000 });
+  await page.getByRole('tab', { name: 'Dirección', exact: true }).click();
+  await page.getByRole('searchbox', { name: 'Dirección', exact: true }).fill('Calle Mayor 1, Madrid');
+  await page.getByRole('button', { name: 'Buscar', exact: true }).click();
+  await page.getByRole('button', { name: 'CALLE MAYOR 1, Madrid · 28013', exact: true }).focus();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#address-status')).toContainText('CP 28013 (CartoCiudad)');
+  await expect(page.locator('#address-query')).toBeFocused();
+});
+
+test('explores and selects a CP using the filterable keyboard list', async ({ page }) => {
+  await page.goto(mapPath);
+  await expect(page.locator('#map-status')).toHaveAttribute('data-state', 'ready', { timeout: 45000 });
+  await page.locator('.postal-code-browser > summary').focus();
+  await page.keyboard.press('Enter');
+  await page.getByRole('searchbox', { name: 'Filtrar códigos del prefijo' }).fill('08001');
+  await expect(page.locator('#code-list option')).toHaveCount(1);
+  await page.getByRole('button', { name: 'Ver área', exact: true }).click();
+  await expect(page.locator('#postal-code-status')).toHaveText('CP 08001: área estimada seleccionada.');
+  await expect(page.locator('.postal-code-browser > summary')).toBeFocused();
+  await page.keyboard.press('Enter');
+  await page.getByRole('searchbox', { name: 'Filtrar códigos del prefijo' }).fill('99999');
+  await expect(page.getByRole('button', { name: 'Ver área', exact: true })).toBeDisabled();
+  await page.keyboard.press('Escape');
+  await expect(page.locator('.postal-code-browser > summary')).toBeFocused();
+  await expect(page.locator('#code-list')).toBeHidden();
+});
+
+test('gives the embedded desktop map enough width for inline controls', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(`${base}/visor/`);
+  const frame = page.locator('iframe.postal-map-frame');
+  expect((await frame.boundingBox()).width).toBeGreaterThanOrEqual(850);
+});
+
+test('keeps the CP browser and its submit button reachable in a narrow embedded map', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 900 });
+  await page.goto(`${base}/visor/`);
+  const frame = page.frameLocator('iframe.postal-map-frame');
+  await frame.locator('#viewer-controls > summary').click();
+  await frame.getByRole('tab', { name: 'Dirección', exact: true }).click();
+  await frame.locator('.postal-code-browser > summary').click();
+  const panel = frame.locator('.postal-code-browser-content');
+  await expect.poll(() => panel.evaluate(element => element.getBoundingClientRect().bottom <= innerHeight)).toBe(true);
+  await expect.poll(() => panel.evaluate(element => element.getBoundingClientRect().bottom <= document.querySelector('.leaflet-control-attribution').getBoundingClientRect().top)).toBe(true);
+  await frame.getByRole('button', { name: 'Ver área', exact: true }).scrollIntoViewIfNeeded();
+  await expect(frame.getByRole('button', { name: 'Ver área', exact: true })).toBeInViewport();
+});
