@@ -10,7 +10,10 @@
   "url": "{{ '/' | absolute_url }}",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "creator": {"@type": "Person", "name": "dieghernan", "url": "https://dieghernan.github.io/"},
-  "spatialCoverage": {"@type": "Place", "name": "España: cobertura estimada, con recintos pendientes de asignación"},
+  "citation": "Goerlich, F. J. (2022). Elaboración de un mapa de códigos postales de España con recursos libres. https://doi.org/10.12842/WPIVIE_0322",
+  "identifier": "https://doi.org/10.5281/zenodo.23698418",
+  "spatialCoverage": {"@type": "Place", "name": "España: cobertura estimada, con recintos pendientes de asignación", "geo": {"@type": "GeoShape","box": "-18.16 27.63 4.32 43.8"
+  }},
   "dateModified": {{ product.generated | jsonify }},
   "version": {{ product.revision | prepend: 'sha256:' | jsonify }},
   "isAccessibleForFree": true,
