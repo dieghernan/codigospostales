@@ -20,8 +20,8 @@
   "isAccessibleForFree": true,
   "keywords": ["códigos postales", "España", "GeoPackage", "SIG", "CartoCiudad", "áreas estimadas"],
   "distribution": [
-    {"@type": "DataDownload", "name": "Consolidado completo", "encodingFormat": "application/geopackage+sqlite3", "contentSize": "{{ product.bytes }} bytes", "contentUrl": {{ product.url | jsonify }}},
-    {"@type": "DataDownload", "name": "Consolidado simplificado", "encodingFormat": "application/geopackage+sqlite3", "contentSize": "{{ simplified.bytes }} bytes", "dateModified": {{ simplified.generated | jsonify }}, "version": {{ simplified.revision | prepend: 'sha256:' | jsonify }}, "contentUrl": {{ simplified.url | jsonify }}}
+    {"@type": "DataDownload", "name": "Consolidado completo", "encodingFormat": "application/geopackage+sqlite3", "contentSize": "{{ product.bytes }} bytes", "dateModified": {{ product.generated | jsonify }}, "version": {{ product.version | jsonify }}, "contentUrl": {{ product.url | jsonify }}},
+    {"@type": "DataDownload", "name": "Consolidado simplificado", "encodingFormat": "application/geopackage+sqlite3", "contentSize": "{{ simplified.bytes }} bytes", "dateModified": {{ simplified.generated | jsonify }}, "version": {{ simplified.version | jsonify }}, "contentUrl": {{ simplified.url | jsonify }}}
   ]
 }
 </script>
