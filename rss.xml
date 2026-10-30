@@ -7,8 +7,8 @@
 		<description>Áreas postales estimadas a partir de CartoCiudad y límites administrativos. Disponible en GeoPackage para R, Python y SIG.</description>
 		<language>es-ES</language>
 		<copyright>(c) 2026, dieghernan</copyright>	
-		<pubDate>Thu, 29 Oct 2026 20:26:52 +0100</pubDate>
-		<lastBuildDate>Thu, 29 Oct 2026 20:26:52 +0100</lastBuildDate>
+		<pubDate>Fri, 30 Oct 2026 15:53:23 +0100</pubDate>
+		<lastBuildDate>Fri, 30 Oct 2026 15:53:23 +0100</lastBuildDate>
 		<category>blog</category>
 		<ttl>60</ttl>
 		<atom:link href="https://dieghernan.github.io/codigospostales/rss.xml" rel="self" type="application/rss+xml" />
