@@ -4,7 +4,11 @@
   "@type": "WebApplication",
   "@id": {{ page.url | absolute_url | append: '#app' | jsonify }},
   "name": {{ page.title | jsonify }},
-  "description": {{ page.excerpt | jsonify }},
+  "description": {{ page.description | default: page.excerpt | strip_html | strip | jsonify }},
+  "image": {{ site.og_image | absolute_url | jsonify }},
+  "about": {"@type": "Dataset", "@id": {{ '/' | absolute_url | append: '#dataset' | jsonify }}, "name": "Áreas postales estimadas de España", "url": {{ '/' | absolute_url | jsonify }}},
+  "isBasedOn": {"@type": "SoftwareSourceCode", "codeRepository": "https://github.com/dieghernan/codigospostales", "programmingLanguage": "JavaScript"},
+  "softwareHelp": {{ '/visor/' | absolute_url | jsonify }},
   "url": {{ page.url | absolute_url | jsonify }},
   "applicationCategory": "ReferenceApplication",
   "operatingSystem": "Any",
@@ -13,7 +17,8 @@
   "isAccessibleForFree": true,
   "author": {
     "@type": "Person",
-    "name": {{ site.author.name | jsonify }},
+    "name": "Diego Hernangómez",
+    "sameAs": "https://orcid.org/0000-0001-8457-4658",
     "url": {{ site.author.url | jsonify }}
   },
   "offers": {

@@ -32,6 +32,18 @@ def built_site(root):
 
 
 class PublicationChecks(unittest.TestCase):
+    def test_viewers_identify_the_application_and_its_dataset(self):
+        root = Path(__file__).resolve().parents[1] / "docs/_site"
+        for name in ("visor/index.html", "visor/mapa/index.html"):
+            with self.subTest(page=name):
+                page = Page(root / name)
+                app, = [item for item in page.schemas if item.get("@type") == "WebApplication"]
+                self.assertTrue(app["@id"].endswith("#app"))
+                self.assertEqual(app["about"]["@id"], "https://dieghernan.github.io/codigospostales/#dataset")
+                self.assertIn("estimadas", app["description"])
+                self.assertEqual(app["author"]["sameAs"], "https://orcid.org/0000-0001-8457-4658")
+                self.assertEqual(app["isBasedOn"]["codeRepository"], "https://github.com/dieghernan/codigospostales")
+
     def test_published_dataset_metadata_matches_the_product(self):
         root = Path(__file__).resolve().parents[1]
         home = Page(root / "docs/_site/index.html")
