@@ -66,6 +66,8 @@ class PublicationChecks(unittest.TestCase):
             self.assertEqual(distribution["contentUrl"], products[key]["url"])
             self.assertEqual(distribution["contentSize"], f'{products[key]["bytes"]} bytes')
             self.assertEqual(distribution["encodingFormat"], "application/geopackage+sqlite3")
+            self.assertEqual(distribution["dateModified"], products[key]["generated"])
+            self.assertEqual(distribution["version"], products[key]["version"])
 
     def test_valid_site_passes(self):
         with tempfile.TemporaryDirectory() as folder, contextlib.redirect_stdout(io.StringIO()):

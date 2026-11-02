@@ -1,0 +1,3 @@
+{% if include.published %}"datePublished": {{ site.data.structured_data.publication.datePublished | jsonify }},{% endif %}
+"dateModified": {{ include.product.generated | jsonify }},
+"version": {{ include.product.version | jsonify }},

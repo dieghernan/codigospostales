@@ -1,0 +1,83 @@
+{
+  "publication": {
+    "datePublished": "2026-10-27"
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Diego Hernangómez",
+    "url": "https://dieghernan.github.io/",
+    "sameAs": "https://orcid.org/0000-0001-8457-4658"
+  },
+  "dataset": {
+    "name": "Áreas postales estimadas de España",
+    "description": "Áreas estimadas de códigos postales de España, obtenidas de direcciones abiertas de CartoCiudad y recintos administrativos mediante teselación de Voronoi, recorte y disolución por código postal. Se distribuyen dos GeoPackage en EPSG:25830: uno completo para análisis y otro simplificado para visualización, con las capas codigos_postales y pendientes. No son límites postales oficiales ni garantizan incluir todos los códigos de las fuentes; conservan recintos sin asignación. Las fechas de generación corresponden a los archivos, no a la actualización de las direcciones originales.",
+    "sameAs": "https://doi.org/10.5281/zenodo.23698418",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": "10.5281/zenodo.23698418"
+    },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "isBasedOn": [
+      "https://www.cartociudad.es/web/portal/",
+      "https://doi.org/10.5281/zenodo.15345101"
+    ],
+    "measurementTechnique": "Teselación de Voronoi de direcciones de CartoCiudad, recorte a recintos administrativos y disolución por código postal.",
+    "citation": {
+      "@type": "CreativeWork",
+      "name": "Elaboración de un mapa de códigos postales de España con recursos libres",
+      "author": {
+        "@type": "Person",
+        "name": "F. J. Goerlich"
+      },
+      "datePublished": "2022",
+      "identifier": "https://doi.org/10.12842/WPIVIE_0322"
+    },
+    "spatialCoverage": {
+      "@type": "Place",
+      "name": "España: cobertura estimada, con recintos pendientes de asignación",
+      "geo": {
+        "@type": "GeoShape",
+        "box": "27.63 -18.16 43.8 4.32"
+      }
+    },
+    "isAccessibleForFree": true,
+    "keywords": [
+      "códigos postales",
+      "España",
+      "GeoPackage",
+      "SIG",
+      "CartoCiudad",
+      "áreas estimadas"
+    ]
+  },
+  "application": {
+    "isBasedOn": {
+      "@type": "SoftwareSourceCode",
+      "codeRepository": "https://github.com/dieghernan/codigospostales",
+      "programmingLanguage": "JavaScript"
+    },
+    "applicationCategory": "ReferenceApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requiere JavaScript y un navegador web compatible con Leaflet.",
+    "inLanguage": "es",
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": 0,
+      "priceCurrency": "EUR"
+    }
+  },
+  "distributions": [
+    {
+      "product": "full",
+      "name": "Consolidado completo",
+      "encodingFormat": "application/geopackage+sqlite3"
+    },
+    {
+      "product": "simplified",
+      "name": "Consolidado simplificado",
+      "encodingFormat": "application/geopackage+sqlite3"
+    }
+  ]
+}

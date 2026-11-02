@@ -1,0 +1,9 @@
+{%- assign distribution_product = site.data.products[include.file.product] -%}
+{
+  "@type": "DataDownload",
+  "name": {{ include.file.name | jsonify }},
+  "encodingFormat": {{ include.file.encodingFormat | jsonify }},
+  "contentSize": "{{ distribution_product.bytes }} bytes",
+  {% include custom/structured_data/release.html product=distribution_product %}
+  "contentUrl": {{ distribution_product.url | jsonify }}
+}
