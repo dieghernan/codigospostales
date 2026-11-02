@@ -230,7 +230,7 @@
       "@type": "cr:RecordSet",
       "@id": "full-codigos_postales",
       "name": "full-codigos_postales",
-      "description": "Consolidado completo: áreas con código postal estimado.",
+      "description": "Consolidado completo: áreas con código postal estimado. Las fechas del descriptor corresponden a la publicación o generación del producto, no a la vigencia de las direcciones. Se mantienen todos los valores del GeoPackage; no se completan valores ausentes.",
       "key": {
         "@id": "full-codigos_postales/fid"
       },
@@ -239,7 +239,7 @@
           "@type": "cr:Field",
           "@id": "full-codigos_postales/fid",
           "name": "fid",
-          "description": "Identificador de la entidad en su capa del GeoPackage de origen.",
+          "description": "Identificador entero de la entidad en esta capa y producto del GeoPackage. Es único dentro del conjunto de registros, no un identificador postal ni una clave persistente entre versiones.",
           "dataType": "sc:Integer",
           "source": {
             "fileObject": {
@@ -254,7 +254,7 @@
           "@type": "cr:Field",
           "@id": "full-codigos_postales/COD_POSTAL",
           "name": "COD_POSTAL",
-          "description": "Código postal estimado; texto de cinco caracteres, incluidos ceros iniciales.",
+          "description": "Código postal asignado al área estimada: texto de cinco caracteres, incluidos ceros iniciales. No identifica una delimitación postal oficial; las áreas sin asignación se publican en pendientes.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -269,7 +269,7 @@
           "@type": "cr:Field",
           "@id": "full-codigos_postales/geometry_wkt",
           "name": "geometry_wkt",
-          "description": "Geometría MultiPolygon en WKT, sin reproyección ni redondeo de coordenadas; EPSG:25830.",
+          "description": "Geometría MultiPolygon en WKT; coordenadas este/norte en metros, EPSG:25830, sin reproyección ni redondeo. El WKT no incorpora el CRS. La versión simplificada conserva la geometría de su propio GeoPackage, sin simplificación adicional.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -295,7 +295,7 @@
           "@type": "cr:Field",
           "@id": "full-pendientes/fid",
           "name": "fid",
-          "description": "Identificador de la entidad en su capa del GeoPackage de origen.",
+          "description": "Identificador entero de la entidad en esta capa y producto del GeoPackage. Es único dentro del conjunto de registros, no un identificador postal ni una clave persistente entre versiones.",
           "dataType": "sc:Integer",
           "source": {
             "fileObject": {
@@ -310,7 +310,7 @@
           "@type": "cr:Field",
           "@id": "full-pendientes/CodProv",
           "name": "CodProv",
-          "description": "Código provincial del recinto administrativo, conservado como texto.",
+          "description": "Código provincial del recinto administrativo, conservado como texto con sus ceros iniciales; no es el prefijo del código postal.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -325,7 +325,7 @@
           "@type": "cr:Field",
           "@id": "full-pendientes/CodMuni",
           "name": "CodMuni",
-          "description": "Código municipal del recinto administrativo, conservado como texto.",
+          "description": "Código municipal del recinto administrativo, conservado como texto con sus ceros iniciales; no es un identificador del fragmento pendiente.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -355,7 +355,7 @@
           "@type": "cr:Field",
           "@id": "full-pendientes/AREA_M2",
           "name": "AREA_M2",
-          "description": "Superficie del recinto pendiente en metros cuadrados, tal como figura en el GeoPackage.",
+          "description": "Superficie del recinto pendiente en metros cuadrados (m²), tal como figura en AREA_M2 del GeoPackage. No se recalcula a partir de la geometría simplificada.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -385,7 +385,7 @@
           "@type": "cr:Field",
           "@id": "full-pendientes/geometry_wkt",
           "name": "geometry_wkt",
-          "description": "Geometría MultiPolygon en WKT, sin reproyección ni redondeo de coordenadas; EPSG:25830.",
+          "description": "Geometría MultiPolygon en WKT; coordenadas este/norte en metros, EPSG:25830, sin reproyección ni redondeo. El WKT no incorpora el CRS. La versión simplificada conserva la geometría de su propio GeoPackage, sin simplificación adicional.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -402,7 +402,7 @@
       "@type": "cr:RecordSet",
       "@id": "simplified-codigos_postales",
       "name": "simplified-codigos_postales",
-      "description": "Consolidado simplificado: áreas con código postal estimado.",
+      "description": "Consolidado simplificado: áreas con código postal estimado. Las fechas del descriptor corresponden a la publicación o generación del producto, no a la vigencia de las direcciones. Se mantienen todos los valores del GeoPackage; no se completan valores ausentes.",
       "key": {
         "@id": "simplified-codigos_postales/fid"
       },
@@ -411,7 +411,7 @@
           "@type": "cr:Field",
           "@id": "simplified-codigos_postales/fid",
           "name": "fid",
-          "description": "Identificador de la entidad en su capa del GeoPackage de origen.",
+          "description": "Identificador entero de la entidad en esta capa y producto del GeoPackage. Es único dentro del conjunto de registros, no un identificador postal ni una clave persistente entre versiones.",
           "dataType": "sc:Integer",
           "source": {
             "fileObject": {
@@ -426,7 +426,7 @@
           "@type": "cr:Field",
           "@id": "simplified-codigos_postales/COD_POSTAL",
           "name": "COD_POSTAL",
-          "description": "Código postal estimado; texto de cinco caracteres, incluidos ceros iniciales.",
+          "description": "Código postal asignado al área estimada: texto de cinco caracteres, incluidos ceros iniciales. No identifica una delimitación postal oficial; las áreas sin asignación se publican en pendientes.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -441,7 +441,7 @@
           "@type": "cr:Field",
           "@id": "simplified-codigos_postales/geometry_wkt",
           "name": "geometry_wkt",
-          "description": "Geometría MultiPolygon en WKT, sin reproyección ni redondeo de coordenadas; EPSG:25830.",
+          "description": "Geometría MultiPolygon en WKT; coordenadas este/norte en metros, EPSG:25830, sin reproyección ni redondeo. El WKT no incorpora el CRS. La versión simplificada conserva la geometría de su propio GeoPackage, sin simplificación adicional.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -467,7 +467,7 @@
           "@type": "cr:Field",
           "@id": "simplified-pendientes/fid",
           "name": "fid",
-          "description": "Identificador de la entidad en su capa del GeoPackage de origen.",
+          "description": "Identificador entero de la entidad en esta capa y producto del GeoPackage. Es único dentro del conjunto de registros, no un identificador postal ni una clave persistente entre versiones.",
           "dataType": "sc:Integer",
           "source": {
             "fileObject": {
@@ -482,7 +482,7 @@
           "@type": "cr:Field",
           "@id": "simplified-pendientes/CodProv",
           "name": "CodProv",
-          "description": "Código provincial del recinto administrativo, conservado como texto.",
+          "description": "Código provincial del recinto administrativo, conservado como texto con sus ceros iniciales; no es el prefijo del código postal.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -497,7 +497,7 @@
           "@type": "cr:Field",
           "@id": "simplified-pendientes/CodMuni",
           "name": "CodMuni",
-          "description": "Código municipal del recinto administrativo, conservado como texto.",
+          "description": "Código municipal del recinto administrativo, conservado como texto con sus ceros iniciales; no es un identificador del fragmento pendiente.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -527,7 +527,7 @@
           "@type": "cr:Field",
           "@id": "simplified-pendientes/AREA_M2",
           "name": "AREA_M2",
-          "description": "Superficie del recinto pendiente en metros cuadrados, tal como figura en el GeoPackage.",
+          "description": "Superficie del recinto pendiente en metros cuadrados (m²), tal como figura en AREA_M2 del GeoPackage. No se recalcula a partir de la geometría simplificada.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -557,7 +557,7 @@
           "@type": "cr:Field",
           "@id": "simplified-pendientes/geometry_wkt",
           "name": "geometry_wkt",
-          "description": "Geometría MultiPolygon en WKT, sin reproyección ni redondeo de coordenadas; EPSG:25830.",
+          "description": "Geometría MultiPolygon en WKT; coordenadas este/norte en metros, EPSG:25830, sin reproyección ni redondeo. El WKT no incorpora el CRS. La versión simplificada conserva la geometría de su propio GeoPackage, sin simplificación adicional.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {

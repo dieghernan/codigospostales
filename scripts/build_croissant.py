@@ -18,14 +18,14 @@ LAYERS = {
     "pendientes": ["fid", "CodProv", "CodMuni", "Municipio", "AREA_M2", "PROVINCIA", "geometry_wkt"],
 }
 DESCRIPTIONS = {
-    "fid": "Identificador de la entidad en su capa del GeoPackage de origen.",
-    "COD_POSTAL": "Código postal estimado; texto de cinco caracteres, incluidos ceros iniciales.",
-    "CodProv": "Código provincial del recinto administrativo, conservado como texto.",
-    "CodMuni": "Código municipal del recinto administrativo, conservado como texto.",
+    "fid": "Identificador entero de la entidad en esta capa y producto del GeoPackage. Es único dentro del conjunto de registros, no un identificador postal ni una clave persistente entre versiones.",
+    "COD_POSTAL": "Código postal asignado al área estimada: texto de cinco caracteres, incluidos ceros iniciales. No identifica una delimitación postal oficial; las áreas sin asignación se publican en pendientes.",
+    "CodProv": "Código provincial del recinto administrativo, conservado como texto con sus ceros iniciales; no es el prefijo del código postal.",
+    "CodMuni": "Código municipal del recinto administrativo, conservado como texto con sus ceros iniciales; no es un identificador del fragmento pendiente.",
     "Municipio": "Nombre del municipio del recinto pendiente de asignación.",
-    "AREA_M2": "Superficie del recinto pendiente en metros cuadrados, tal como figura en el GeoPackage.",
+    "AREA_M2": "Superficie del recinto pendiente en metros cuadrados (m²), tal como figura en AREA_M2 del GeoPackage. No se recalcula a partir de la geometría simplificada.",
     "PROVINCIA": "Código provincial presente en el campo PROVINCIA del GeoPackage.",
-    "geometry_wkt": "Geometría MultiPolygon en WKT, sin reproyección ni redondeo de coordenadas; EPSG:25830.",
+    "geometry_wkt": "Geometría MultiPolygon en WKT; coordenadas este/norte en metros, EPSG:25830, sin reproyección ni redondeo. El WKT no incorpora el CRS. La versión simplificada conserva la geometría de su propio GeoPackage, sin simplificación adicional.",
 }
 
 
@@ -112,7 +112,7 @@ def build(check=False):
                     "description": DESCRIPTIONS[column], "dataType": "sc:Integer" if column == "fid" else "sc:Float" if column == "AREA_M2" else "sc:Text",
                     "source": {"fileObject": {"@id": file_id}, "extract": {"jsonPath": "$[*]." + column}}})
             dataset["recordSet"].append({"@type": "cr:RecordSet", "@id": record_id, "name": record_id,
-                "description": definition_name(key) + ": " + ("áreas con código postal estimado." if layer == "codigos_postales" else "recintos sin código postal asignado; se omite COD_POSTAL, que es nulo en toda esta capa."),
+                "description": definition_name(key) + ": " + ("áreas con código postal estimado. Las fechas del descriptor corresponden a la publicación o generación del producto, no a la vigencia de las direcciones. Se mantienen todos los valores del GeoPackage; no se completan valores ausentes." if layer == "codigos_postales" else "recintos sin código postal asignado; se omite COD_POSTAL, que es nulo en toda esta capa."),
                 "key": {"@id": record_id + "/fid"}, "field": fields})
     # Remove only obsolete generated downloads from this dedicated output folder.
     for path in (ROOT / "docs/assets/croissant").glob("*/records.*"):
