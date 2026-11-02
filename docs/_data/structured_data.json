@@ -23,16 +23,39 @@
       "https://doi.org/10.5281/zenodo.15345101"
     ],
     "measurementTechnique": "Teselación de Voronoi de direcciones de CartoCiudad, recorte a recintos administrativos y disolución por código postal.",
-    "citation": {
-      "@type": "CreativeWork",
-      "name": "Elaboración de un mapa de códigos postales de España con recursos libres",
-      "author": {
-        "@type": "Person",
-        "name": "F. J. Goerlich"
+    "citation": [
+      {
+        "@type": "CreativeWork",
+        "name": "Elaboración de un mapa de códigos postales de España con recursos libres",
+        "author": {
+          "@type": "Person",
+          "name": "F. J. Goerlich"
+        },
+        "datePublished": "2022",
+        "identifier": "https://doi.org/10.12842/WPIVIE_0322"
       },
-      "datePublished": "2022",
-      "identifier": "https://doi.org/10.12842/WPIVIE_0322"
-    },
+      {
+        "@type": "CreativeWork",
+        "name": "Base de datos histórica de contornos municipales de España –LAU2boundaries4Spain–",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Francisco José Goerlich",
+            "sameAs": "https://orcid.org/0000-0003-1626-525X"
+          },
+          {
+            "@type": "Person",
+            "name": "Pedro Pérez Vázquez",
+            "sameAs": "https://orcid.org/0000-0001-9375-6330"
+          }
+        ],
+        "datePublished": "2025-05-05",
+        "identifier": "https://doi.org/10.5281/zenodo.15345101",
+        "url": "https://doi.org/10.5281/zenodo.15345101",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "description": "Fuente de los recintos administrativos: capas Municipios2024, Condominios y Provincias de LAU2boundaries4Spain.gpkg, utilizadas para recortar las áreas postales estimadas."
+      }
+    ],
     "spatialCoverage": {
       "@type": "Place",
       "name": "España: cobertura estimada, con recintos pendientes de asignación",
@@ -79,5 +102,8 @@
       "name": "Consolidado simplificado",
       "encodingFormat": "application/geopackage+sqlite3"
     }
-  ]
+  ],
+  "croissant": {
+    "citeAs": "Hernangómez, D. (2026). Códigos postales de España (1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23698418"
+  }
 }

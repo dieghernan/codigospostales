@@ -10,6 +10,9 @@
 {% if page.map_embed %}
 {% include custom/software_app.html %}
 {% endif %}
+{% if page.dataset or page.map_embed %}
+<link rel="alternate" type="application/ld+json" title="Croissant metadata" href="{{ '/croissant.json' | absolute_url }}">
+{% endif %}
 {% if page.dataset %}
 {% include custom/dataset.html %}
 {% endif %}

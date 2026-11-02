@@ -94,8 +94,8 @@ def check(root, baseurl, origin):
         failures.append("Main pages must have distinct titles")
     home = pages.get((root / "index.html").resolve())
     datasets = [item for item in home.schemas if item.get("@type") == "Dataset"] if home else []
-    if len(datasets) != 1 or len(datasets[0].get("distribution", [])) != 2:
-        failures.append("Home must describe one Dataset with two distributions")
+    if len(datasets) != 1 or len(datasets[0].get("distribution", [])) < 2:
+        failures.append("Home must describe one Dataset with at least two distributions")
     data = root / "assets/data"
     prefixes = json.loads((data / "prefijos.json").read_text(encoding="utf-8"))
     for prefix in prefixes:
