@@ -28,8 +28,9 @@
         "@type": "CreativeWork",
         "name": "Elaboración de un mapa de códigos postales de España con recursos libres",
         "author": {
-          "@type": "Person",
-          "name": "Francisco José Goerlich"
+            "@type": "Person",
+            "name": "Francisco José Goerlich",
+            "sameAs": "https://orcid.org/0000-0003-1626-525X"
         },
         "datePublished": "2022",
         "identifier": "https://doi.org/10.12842/WPIVIE_0322"
