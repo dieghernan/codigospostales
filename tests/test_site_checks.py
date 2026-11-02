@@ -10,7 +10,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from scripts.check_site import check
+from scripts.check_site import Page, check
 from scripts import product_metadata
 
 
@@ -32,6 +32,24 @@ def built_site(root):
 
 
 class PublicationChecks(unittest.TestCase):
+    def test_published_dataset_metadata_matches_the_product(self):
+        root = Path(__file__).resolve().parents[1]
+        home = Page(root / "docs/_site/index.html")
+        dataset, = [item for item in home.schemas if item.get("@type") == "Dataset"]
+        products = json.loads((root / "docs/_data/products.json").read_text(encoding="utf-8"))
+        self.assertGreaterEqual(len(dataset["description"]), 50)
+        self.assertLessEqual(len(dataset["description"]), 5000)
+        self.assertEqual(dataset["creator"]["sameAs"], "https://orcid.org/0000-0001-8457-4658")
+        self.assertIn("https://doi.org/10.5281/zenodo.15345101", dataset["isBasedOn"])
+        self.assertIn("CartoCiudad", dataset["measurementTechnique"])
+        self.assertEqual(dataset["spatialCoverage"]["geo"]["box"], "-18.16 27.63 4.32 43.8")
+        self.assertEqual(dataset["identifier"]["value"], "10.5281/zenodo.23698418")
+        self.assertEqual(len(dataset["distribution"]), 2)
+        for distribution, key in zip(dataset["distribution"], ("full", "simplified")):
+            self.assertEqual(distribution["contentUrl"], products[key]["url"])
+            self.assertEqual(distribution["contentSize"], f'{products[key]["bytes"]} bytes')
+            self.assertEqual(distribution["encodingFormat"], "application/geopackage+sqlite3")
+
     def test_valid_site_passes(self):
         with tempfile.TemporaryDirectory() as folder, contextlib.redirect_stdout(io.StringIO()):
             root = Path(folder)
