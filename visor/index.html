@@ -8,7 +8,7 @@
     <!-- Repo: https://github.com/dieghernan/chulapa -->
     <!-- Page build 2026-11-02 -->
     <!-- Jekyll Version 4.4.1 -->
-    <!-- Google structured data -->
+        <!-- Google structured data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -21,20 +21,7 @@
         "inLanguage": "es-ES",
         "headline": "Mapa de códigos postales de España",
         "image": "https://dieghernan.github.io/codigospostales/assets/img/social-preview.jpg",
-        "author": {
-          "@type": "Person",
-          "@id": "https://dieghernan.github.io/codigospostales/#author",
-          "name": "dieghernan",
-          "url": "https://dieghernan.github.io/",
-          "sameAs": [
-            "https://github.com/dieghernan",
-            "https://orcid.org/0000-0001-8457-4658",
-            "https://fosstodon.org/@dhernangomez",
-            "https://bsky.app/profile/dieghernan.bsky.social",
-            "https://x.com/dhernangomez",
-            "https://stackoverflow.com/users/7877917/dieghernan"
-          ]
-        },
+        "author": {"@id": "https://dieghernan.github.io/codigospostales/#author"},
         "publisher": {
           "@type": "Person",
           "@id": "https://dieghernan.github.io/codigospostales/#publisher",
@@ -70,14 +57,13 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": "https://dieghernan.github.io/codigospostales/#author",
+  "name": "dieghernan",
+  "url": "https://dieghernan.github.io/",
   "image": "https://dieghernan.github.io/assets/img/site/avatar.png",
   "homeLocation": {
     "@type": "Place",
     "name": "Madrid, Spain"
   },
-  "description": "Site author",
-  "name": "dieghernan",
-  "url": "https://dieghernan.github.io/",
   "sameAs": [
     "https://dieghernan.github.io/",
     "https://github.com/dieghernan",
@@ -170,56 +156,29 @@
   "name": "Mapa de códigos postales de España",
   "description": "Busca por código postal o dirección en el mapa de España. Consulta áreas estimadas del consolidado simplificado y compáralas con CartoCiudad.",
   "image": "https://dieghernan.github.io/codigospostales/assets/img/social-preview.jpg",
-  "about": {"@type": "Dataset", "@id": "https://dieghernan.github.io/codigospostales/#dataset", "name": "Áreas postales estimadas de España", "url": "https://dieghernan.github.io/codigospostales/"},
-  "isBasedOn": {"@type": "SoftwareSourceCode", "codeRepository": "https://github.com/dieghernan/codigospostales", "programmingLanguage": "JavaScript"},
-  "softwareHelp": "https://dieghernan.github.io/codigospostales/visor/",
   "url": "https://dieghernan.github.io/codigospostales/visor/",
+  "about": {"@type": "Dataset", "@id": "https://dieghernan.github.io/codigospostales/#dataset", "name": "Áreas postales estimadas de España", "url": "https://dieghernan.github.io/codigospostales/"},
+  "softwareHelp": "https://dieghernan.github.io/codigospostales/visor/",
+  "isBasedOn": {"@type":"SoftwareSourceCode","codeRepository":"https://github.com/dieghernan/codigospostales","programmingLanguage":"JavaScript"},
   "applicationCategory": "ReferenceApplication",
   "operatingSystem": "Any",
   "browserRequirements": "Requiere JavaScript y un navegador web compatible con Leaflet.",
   "inLanguage": "es",
   "isAccessibleForFree": true,
+  "offers": {"@type":"Offer","price":0,"priceCurrency":"EUR"},
   "author": {
-    "@type": "Person",
     "@id": "https://dieghernan.github.io/codigospostales/#author",
+    "@type": "Person",
     "name": "Diego Hernangómez",
-    "sameAs": "https://orcid.org/0000-0001-8457-4658",
-    "url": "https://dieghernan.github.io/"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": 0,
-    "priceCurrency": "EUR"
+    "url": "https://dieghernan.github.io/",
+    "sameAs": "https://orcid.org/0000-0001-8457-4658"
   }
 }
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Dataset",
-  "@id": "https://dieghernan.github.io/codigospostales/#dataset",
-  "name": "Áreas postales estimadas de España",
-  "description": "Áreas estimadas de códigos postales de España, obtenidas de direcciones abiertas de CartoCiudad y recintos administrativos mediante teselación de Voronoi, recorte y disolución por código postal. Se distribuyen dos GeoPackage en EPSG:25830: uno completo para análisis y otro simplificado para visualización, con las capas codigos_postales y pendientes. No son límites postales oficiales ni garantizan incluir todos los códigos de las fuentes; conservan recintos sin asignación. Las fechas de generación corresponden a los archivos, no a la actualización de las direcciones originales.",
-  "url": "https://dieghernan.github.io/codigospostales/",
-  "sameAs": "https://doi.org/10.5281/zenodo.23698418", 
-  "identifier": {"@type": "PropertyValue","propertyID": "DOI","value": "10.5281/zenodo.23698418"},
-  "license": "https://creativecommons.org/licenses/by/4.0/",
-  "creator": {"@type": "Person", "name": "Diego Hernangómez", "url": "https://dieghernan.github.io/", "sameAs": "https://orcid.org/0000-0001-8457-4658"},
-  "isBasedOn": ["https://www.cartociudad.es/web/portal/", "https://doi.org/10.5281/zenodo.15345101"],
-  "measurementTechnique": "Teselación de Voronoi de direcciones de CartoCiudad, recorte a recintos administrativos y disolución por código postal.",
-  "citation": {"@type": "CreativeWork", "name": "Elaboración de un mapa de códigos postales de España con recursos libres", "author": {"@type": "Person", "name": "F. J. Goerlich"},"datePublished": "2022","identifier": "https://doi.org/10.12842/WPIVIE_0322"},
-  "spatialCoverage": {"@type": "Place", "name": "España: cobertura estimada, con recintos pendientes de asignación", "geo": {"@type": "GeoShape","box": "27.63 -18.16 43.8 4.32"}},
-  "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
-  "version": "1.0.0",
-  "isAccessibleForFree": true,
-  "keywords": ["códigos postales", "España", "GeoPackage", "SIG", "CartoCiudad", "áreas estimadas"],
-  "distribution": [
-    {"@type": "DataDownload", "name": "Consolidado completo", "encodingFormat": "application/geopackage+sqlite3", "contentSize": "86499328 bytes", "dateModified": "2026-10-27", "version": "1.0.0", "contentUrl": "https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales.gpkg"},
-    {"@type": "DataDownload", "name": "Consolidado simplificado", "encodingFormat": "application/geopackage+sqlite3", "contentSize": "31076352 bytes", "dateModified": "2026-10-27", "version": "1.0.0", "contentUrl": "https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales_simplificado.gpkg"}
-  ]
-}
+{"name":"Áreas postales estimadas de España","description":"Áreas estimadas de códigos postales de España, obtenidas de direcciones abiertas de CartoCiudad y recintos administrativos mediante teselación de Voronoi, recorte y disolución por código postal. Se distribuyen dos GeoPackage en EPSG:25830: uno completo para análisis y otro simplificado para visualización, con las capas codigos_postales y pendientes. No son límites postales oficiales ni garantizan incluir todos los códigos de las fuentes; conservan recintos sin asignación. Las fechas de generación corresponden a los archivos, no a la actualización de las direcciones originales.","sameAs":"https://doi.org/10.5281/zenodo.23698418","identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.5281/zenodo.23698418"},"license":"https://creativecommons.org/licenses/by/4.0/","isBasedOn":["https://www.cartociudad.es/web/portal/","https://doi.org/10.5281/zenodo.15345101"],"measurementTechnique":"Teselación de Voronoi de direcciones de CartoCiudad, recorte a recintos administrativos y disolución por código postal.","citation":[{"@type":"CreativeWork","name":"Elaboración de un mapa de códigos postales de España con recursos libres","author":{"@type":"Person","name":"F. J. Goerlich"},"datePublished":"2022","identifier":"https://doi.org/10.12842/WPIVIE_0322"},{"@type":"CreativeWork","name":"Base de datos histórica de contornos municipales de España –LAU2boundaries4Spain–","author":[{"@type":"Person","name":"Francisco José Goerlich","sameAs":"https://orcid.org/0000-0003-1626-525X"},{"@type":"Person","name":"Pedro Pérez Vázquez","sameAs":"https://orcid.org/0000-0001-9375-6330"}],"datePublished":"2025-05-05","identifier":"https://doi.org/10.5281/zenodo.15345101","url":"https://doi.org/10.5281/zenodo.15345101","license":"https://creativecommons.org/licenses/by/4.0/","description":"Fuente de los recintos administrativos: capas Municipios2024, Condominios y Provincias de LAU2boundaries4Spain.gpkg, utilizadas para recortar las áreas postales estimadas."}],"spatialCoverage":{"@type":"Place","name":"España: cobertura estimada, con recintos pendientes de asignación","geo":{"@type":"GeoShape","box":"27.63 -18.16 43.8 4.32"}},"isAccessibleForFree":true,"keywords":["códigos postales","España","GeoPackage","SIG","CartoCiudad","áreas estimadas"],"@context":{"@language":"es","@vocab":"https://schema.org/","arrayShape":"cr:arrayShape","citeAs":"cr:citeAs","column":"cr:column","conformsTo":"dct:conformsTo","containedIn":"cr:containedIn","cr":"http://mlcommons.org/croissant/","rai":"http://mlcommons.org/croissant/RAI/","data":{"@id":"cr:data","@type":"@json"},"dataType":{"@id":"cr:dataType","@type":"@vocab"},"dct":"http://purl.org/dc/terms/","description":"sc:description","equivalentProperty":"cr:equivalentProperty","examples":{"@id":"cr:examples","@type":"@json"},"extract":"cr:extract","field":"cr:field","fileProperty":"cr:fileProperty","fileObject":"cr:fileObject","fileSet":"cr:fileSet","format":"cr:format","includes":"cr:includes","isArray":"cr:isArray","isLiveDataset":"cr:isLiveDataset","jsonPath":"cr:jsonPath","key":"cr:key","md5":"cr:md5","name":"sc:name","parentField":"cr:parentField","path":"cr:path","recordSet":"cr:recordSet","references":"cr:references","regex":"cr:regex","repeated":"cr:repeated","replace":"cr:replace","samplingRate":"cr:samplingRate","sc":"https://schema.org/","separator":"cr:separator","source":"cr:source","subField":"cr:subField","transform":"cr:transform","geocr":"http://mlcommons.org/croissant/geo/"},"@type":"Dataset","@id":"https://dieghernan.github.io/codigospostales/#dataset","url":"https://dieghernan.github.io/codigospostales/","creator":{"@type":"Person","name":"Diego Hernangómez","url":"https://dieghernan.github.io/","sameAs":"https://orcid.org/0000-0001-8457-4658"},"datePublished":"2026-10-27","dateModified":"2026-10-27","version":"1.0.0","citeAs":"Hernangómez, D. (2026). Códigos postales de España (1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23698418","conformsTo":["http://mlcommons.org/croissant/1.1","http://mlcommons.org/croissant/geo/1.0"],"geocr:coordinateReferenceSystem":"EPSG:25830","distribution":[{"@type":["cr:FileObject","sc:DataDownload"],"@id":"full-gpkg","name":"Consolidado completo","encodingFormat":"application/geopackage+sqlite3","contentUrl":"https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales.gpkg","contentSize":"86499328 bytes","sha256":"c13c8637bddda996ae3f155dcb66bde2333c7626bb65f0cece5c04abec51812b","dateModified":"2026-10-27","version":"1.0.0"},{"@type":["cr:FileObject","sc:DataDownload"],"@id":"simplified-gpkg","name":"Consolidado simplificado","encodingFormat":"application/geopackage+sqlite3","contentUrl":"https://media.githubusercontent.com/media/dieghernan/codigospostales/main/data/codigos_postales_simplificado.gpkg","contentSize":"31076352 bytes","sha256":"fd7fdc1c8575944508410251f3c90d362c61c09a9bf3425cfebff537d25567fc","dateModified":"2026-10-27","version":"1.0.0"},{"@type":["cr:FileObject","sc:DataDownload"],"@id":"full-json-zip","name":"Consolidado completo (JSON/WKT)","description":"Dos capas en JSON; los recintos pendientes carecen de código postal. Coordenadas originales en EPSG:25830.","contentUrl":"https://dieghernan.github.io/codigospostales/assets/croissant/805b6a5bcb076d546a2591e8c0dbc2a1c23bbaf6744d3a78aa9caa0048c419c0/records.zip","encodingFormat":"application/zip","contentSize":"71147737 bytes","sha256":"805b6a5bcb076d546a2591e8c0dbc2a1c23bbaf6744d3a78aa9caa0048c419c0","dateModified":"2026-10-27","version":"1.0.0"},{"@type":"cr:FileObject","@id":"full-codigos_postales-json","name":"codigos_postales.json","containedIn":{"@id":"full-json-zip"},"contentUrl":"codigos_postales.json","encodingFormat":"application/json","sha256":"2afcc52c89b306cc45b366b2ade38268f44d039c208ef01b7e619759e287ac49"},{"@type":"cr:FileObject","@id":"full-pendientes-json","name":"pendientes.json","containedIn":{"@id":"full-json-zip"},"contentUrl":"pendientes.json","encodingFormat":"application/json","sha256":"80216d86836525a806fbb55fb5ba17e5d4926adc8e0440608c1a1303fa82c390"},{"@type":["cr:FileObject","sc:DataDownload"],"@id":"simplified-json-zip","name":"Consolidado simplificado (JSON/WKT)","description":"Dos capas en JSON; los recintos pendientes carecen de código postal. Coordenadas originales en EPSG:25830.","contentUrl":"https://dieghernan.github.io/codigospostales/assets/croissant/9efd190eae8861f5b896f7c095c5843c50ff7a1cdec8bd81239ead6373b984ce/records.zip","encodingFormat":"application/zip","contentSize":"19224043 bytes","sha256":"9efd190eae8861f5b896f7c095c5843c50ff7a1cdec8bd81239ead6373b984ce","dateModified":"2026-10-27","version":"1.0.0"},{"@type":"cr:FileObject","@id":"simplified-codigos_postales-json","name":"codigos_postales.json","containedIn":{"@id":"simplified-json-zip"},"contentUrl":"codigos_postales.json","encodingFormat":"application/json","sha256":"b07a9fe6276215059b55c007f6d8ce728d43e1fa07de65124acfe97c62bd3ed1"},{"@type":"cr:FileObject","@id":"simplified-pendientes-json","name":"pendientes.json","containedIn":{"@id":"simplified-json-zip"},"contentUrl":"pendientes.json","encodingFormat":"application/json","sha256":"d8c0b501fedf26f12b802c905a15fb0c8c4e2274e63f4fc42076b4c134c80f95"}],"recordSet":[{"@type":"cr:RecordSet","@id":"full-codigos_postales","name":"full-codigos_postales","description":"Consolidado completo: áreas con código postal estimado.","key":{"@id":"full-codigos_postales/fid"},"field":[{"@type":"cr:Field","@id":"full-codigos_postales/fid","name":"fid","description":"Identificador de la entidad en su capa del GeoPackage de origen.","dataType":"sc:Integer","source":{"fileObject":{"@id":"full-codigos_postales-json"},"extract":{"jsonPath":"$[*].fid"}}},{"@type":"cr:Field","@id":"full-codigos_postales/COD_POSTAL","name":"COD_POSTAL","description":"Código postal estimado; texto de cinco caracteres, incluidos ceros iniciales.","dataType":"sc:Text","source":{"fileObject":{"@id":"full-codigos_postales-json"},"extract":{"jsonPath":"$[*].COD_POSTAL"}}},{"@type":"cr:Field","@id":"full-codigos_postales/geometry_wkt","name":"geometry_wkt","description":"Geometría MultiPolygon en WKT, sin reproyección ni redondeo de coordenadas; EPSG:25830.","dataType":"sc:Text","source":{"fileObject":{"@id":"full-codigos_postales-json"},"extract":{"jsonPath":"$[*].geometry_wkt"}}}]},{"@type":"cr:RecordSet","@id":"full-pendientes","name":"full-pendientes","description":"Consolidado completo: recintos sin código postal asignado; se omite COD_POSTAL, que es nulo en toda esta capa.","key":{"@id":"full-pendientes/fid"},"field":[{"@type":"cr:Field","@id":"full-pendientes/fid","name":"fid","description":"Identificador de la entidad en su capa del GeoPackage de origen.","dataType":"sc:Integer","source":{"fileObject":{"@id":"full-pendientes-json"},"extract":{"jsonPath":"$[*].fid"}}},{"@type":"cr:Field","@id":"full-pendientes/CodProv","name":"CodProv","description":"Código provincial del recinto administrativo, conservado como texto.","dataType":"sc:Text","source":{"fileObject":{"@id":"full-pendientes-json"},"extract":{"jsonPath":"$[*].CodProv"}}},{"@type":"cr:Field","@id":"full-pendientes/CodMuni","name":"CodMuni","description":"Código municipal del recinto administrativo, conservado como texto.","dataType":"sc:Text","source":{"fileObject":{"@id":"full-pendientes-json"},"extract":{"jsonPath":"$[*].CodMuni"}}},{"@type":"cr:Field","@id":"full-pendientes/Municipio","name":"Municipio","description":"Nombre del municipio del recinto pendiente de asignación.","dataType":"sc:Text","source":{"fileObject":{"@id":"full-pendientes-json"},"extract":{"jsonPath":"$[*].Municipio"}}},{"@type":"cr:Field","@id":"full-pendientes/AREA_M2","name":"AREA_M2","description":"Superficie del recinto pendiente en metros cuadrados, tal como figura en el GeoPackage.","dataType":"sc:Float","source":{"fileObject":{"@id":"full-pendientes-json"},"extract":{"jsonPath":"$[*].AREA_M2"}}},{"@type":"cr:Field","@id":"full-pendientes/PROVINCIA","name":"PROVINCIA","description":"Código provincial presente en el campo PROVINCIA del GeoPackage.","dataType":"sc:Text","source":{"fileObject":{"@id":"full-pendientes-json"},"extract":{"jsonPath":"$[*].PROVINCIA"}}},{"@type":"cr:Field","@id":"full-pendientes/geometry_wkt","name":"geometry_wkt","description":"Geometría MultiPolygon en WKT, sin reproyección ni redondeo de coordenadas; EPSG:25830.","dataType":"sc:Text","source":{"fileObject":{"@id":"full-pendientes-json"},"extract":{"jsonPath":"$[*].geometry_wkt"}}}]},{"@type":"cr:RecordSet","@id":"simplified-codigos_postales","name":"simplified-codigos_postales","description":"Consolidado simplificado: áreas con código postal estimado.","key":{"@id":"simplified-codigos_postales/fid"},"field":[{"@type":"cr:Field","@id":"simplified-codigos_postales/fid","name":"fid","description":"Identificador de la entidad en su capa del GeoPackage de origen.","dataType":"sc:Integer","source":{"fileObject":{"@id":"simplified-codigos_postales-json"},"extract":{"jsonPath":"$[*].fid"}}},{"@type":"cr:Field","@id":"simplified-codigos_postales/COD_POSTAL","name":"COD_POSTAL","description":"Código postal estimado; texto de cinco caracteres, incluidos ceros iniciales.","dataType":"sc:Text","source":{"fileObject":{"@id":"simplified-codigos_postales-json"},"extract":{"jsonPath":"$[*].COD_POSTAL"}}},{"@type":"cr:Field","@id":"simplified-codigos_postales/geometry_wkt","name":"geometry_wkt","description":"Geometría MultiPolygon en WKT, sin reproyección ni redondeo de coordenadas; EPSG:25830.","dataType":"sc:Text","source":{"fileObject":{"@id":"simplified-codigos_postales-json"},"extract":{"jsonPath":"$[*].geometry_wkt"}}}]},{"@type":"cr:RecordSet","@id":"simplified-pendientes","name":"simplified-pendientes","description":"Consolidado simplificado: recintos sin código postal asignado; se omite COD_POSTAL, que es nulo en toda esta capa.","key":{"@id":"simplified-pendientes/fid"},"field":[{"@type":"cr:Field","@id":"simplified-pendientes/fid","name":"fid","description":"Identificador de la entidad en su capa del GeoPackage de origen.","dataType":"sc:Integer","source":{"fileObject":{"@id":"simplified-pendientes-json"},"extract":{"jsonPath":"$[*].fid"}}},{"@type":"cr:Field","@id":"simplified-pendientes/CodProv","name":"CodProv","description":"Código provincial del recinto administrativo, conservado como texto.","dataType":"sc:Text","source":{"fileObject":{"@id":"simplified-pendientes-json"},"extract":{"jsonPath":"$[*].CodProv"}}},{"@type":"cr:Field","@id":"simplified-pendientes/CodMuni","name":"CodMuni","description":"Código municipal del recinto administrativo, conservado como texto.","dataType":"sc:Text","source":{"fileObject":{"@id":"simplified-pendientes-json"},"extract":{"jsonPath":"$[*].CodMuni"}}},{"@type":"cr:Field","@id":"simplified-pendientes/Municipio","name":"Municipio","description":"Nombre del municipio del recinto pendiente de asignación.","dataType":"sc:Text","source":{"fileObject":{"@id":"simplified-pendientes-json"},"extract":{"jsonPath":"$[*].Municipio"}}},{"@type":"cr:Field","@id":"simplified-pendientes/AREA_M2","name":"AREA_M2","description":"Superficie del recinto pendiente en metros cuadrados, tal como figura en el GeoPackage.","dataType":"sc:Float","source":{"fileObject":{"@id":"simplified-pendientes-json"},"extract":{"jsonPath":"$[*].AREA_M2"}}},{"@type":"cr:Field","@id":"simplified-pendientes/PROVINCIA","name":"PROVINCIA","description":"Código provincial presente en el campo PROVINCIA del GeoPackage.","dataType":"sc:Text","source":{"fileObject":{"@id":"simplified-pendientes-json"},"extract":{"jsonPath":"$[*].PROVINCIA"}}},{"@type":"cr:Field","@id":"simplified-pendientes/geometry_wkt","name":"geometry_wkt","description":"Geometría MultiPolygon en WKT, sin reproyección ni redondeo de coordenadas; EPSG:25830.","dataType":"sc:Text","source":{"fileObject":{"@id":"simplified-pendientes-json"},"extract":{"jsonPath":"$[*].geometry_wkt"}}}]}]}
 </script>
+<link rel="alternate" type="application/ld+json" title="Croissant metadata" href="https://dieghernan.github.io/codigospostales/croissant.json">
 <meta name="fediverse:creator" content="@dhernangomez@fosstodon.org">
 <link rel="author" href="https://dieghernan.github.io/">
 <link rel="describedby" type="text/plain" title="Información para asistentes de IA" href="https://dieghernan.github.io/codigospostales/llms.txt">
