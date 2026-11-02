@@ -29,7 +29,7 @@ jobs:
           cache-dependency-path: scripts/requirements-croissant.txt
       - name: Install Croissant dependencies
         run: pip install -r scripts/requirements-croissant.txt
-      - name: Generate JSON/WKT archives and check Croissant metadata
+      - name: Generate JSON/WKT downloads and check Croissant metadata
         run: python scripts/build_croissant.py --check
       - name: Validate Croissant descriptor
         run: mlcroissant validate --jsonld docs/croissant.json

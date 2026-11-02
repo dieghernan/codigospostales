@@ -19,7 +19,8 @@
       "name": "Elaboración de un mapa de códigos postales de España con recursos libres",
       "author": {
         "@type": "Person",
-        "name": "F. J. Goerlich"
+        "name": "Francisco José Goerlich",
+        "sameAs": "https://orcid.org/0000-0003-1626-525X"
       },
       "datePublished": "2022",
       "identifier": "https://doi.org/10.12842/WPIVIE_0322"
@@ -168,74 +169,60 @@
         "cr:FileObject",
         "sc:DataDownload"
       ],
-      "@id": "full-json-zip",
-      "name": "Consolidado completo (JSON/WKT)",
-      "description": "Dos capas en JSON; los recintos pendientes carecen de código postal. Coordenadas originales en EPSG:25830.",
-      "contentUrl": "https://dieghernan.github.io/codigospostales/assets/croissant/805b6a5bcb076d546a2591e8c0dbc2a1c23bbaf6744d3a78aa9caa0048c419c0/records.zip",
-      "encodingFormat": "application/zip",
-      "contentSize": "71147737 bytes",
-      "sha256": "805b6a5bcb076d546a2591e8c0dbc2a1c23bbaf6744d3a78aa9caa0048c419c0",
+      "@id": "full-codigos_postales-json",
+      "name": "Consolidado completo: codigos_postales (JSON/WKT, gzip)",
+      "description": "JSON comprimido con gzip; geometrías WKT en EPSG:25830 sin modificar coordenadas.",
+      "contentUrl": "https://dieghernan.github.io/codigospostales/assets/croissant/17639b4900aeae8f38d6461dca7c97f9b89a67661ef8d3560485073e952a4c3d/records.json.gz",
+      "encodingFormat": "application/json",
+      "contentSize": "69707347 bytes",
+      "sha256": "17639b4900aeae8f38d6461dca7c97f9b89a67661ef8d3560485073e952a4c3d",
       "dateModified": "2026-10-27",
       "version": "1.0.0"
-    },
-    {
-      "@type": "cr:FileObject",
-      "@id": "full-codigos_postales-json",
-      "name": "codigos_postales.json",
-      "containedIn": {
-        "@id": "full-json-zip"
-      },
-      "contentUrl": "codigos_postales.json",
-      "encodingFormat": "application/json",
-      "sha256": "2afcc52c89b306cc45b366b2ade38268f44d039c208ef01b7e619759e287ac49"
-    },
-    {
-      "@type": "cr:FileObject",
-      "@id": "full-pendientes-json",
-      "name": "pendientes.json",
-      "containedIn": {
-        "@id": "full-json-zip"
-      },
-      "contentUrl": "pendientes.json",
-      "encodingFormat": "application/json",
-      "sha256": "80216d86836525a806fbb55fb5ba17e5d4926adc8e0440608c1a1303fa82c390"
     },
     {
       "@type": [
         "cr:FileObject",
         "sc:DataDownload"
       ],
-      "@id": "simplified-json-zip",
-      "name": "Consolidado simplificado (JSON/WKT)",
-      "description": "Dos capas en JSON; los recintos pendientes carecen de código postal. Coordenadas originales en EPSG:25830.",
-      "contentUrl": "https://dieghernan.github.io/codigospostales/assets/croissant/9efd190eae8861f5b896f7c095c5843c50ff7a1cdec8bd81239ead6373b984ce/records.zip",
-      "encodingFormat": "application/zip",
-      "contentSize": "19224043 bytes",
-      "sha256": "9efd190eae8861f5b896f7c095c5843c50ff7a1cdec8bd81239ead6373b984ce",
+      "@id": "full-pendientes-json",
+      "name": "Consolidado completo: pendientes (JSON/WKT, gzip)",
+      "description": "JSON comprimido con gzip; geometrías WKT en EPSG:25830 sin modificar coordenadas.",
+      "contentUrl": "https://dieghernan.github.io/codigospostales/assets/croissant/24d7ca0f98e1365904e9dc49f8d03fecd161efc1a285dc827a7662c5e8b3688e/records.json.gz",
+      "encodingFormat": "application/json",
+      "contentSize": "1440218 bytes",
+      "sha256": "24d7ca0f98e1365904e9dc49f8d03fecd161efc1a285dc827a7662c5e8b3688e",
       "dateModified": "2026-10-27",
       "version": "1.0.0"
     },
     {
-      "@type": "cr:FileObject",
+      "@type": [
+        "cr:FileObject",
+        "sc:DataDownload"
+      ],
       "@id": "simplified-codigos_postales-json",
-      "name": "codigos_postales.json",
-      "containedIn": {
-        "@id": "simplified-json-zip"
-      },
-      "contentUrl": "codigos_postales.json",
+      "name": "Consolidado simplificado: codigos_postales (JSON/WKT, gzip)",
+      "description": "JSON comprimido con gzip; geometrías WKT en EPSG:25830 sin modificar coordenadas.",
+      "contentUrl": "https://dieghernan.github.io/codigospostales/assets/croissant/bf31b38c64d50c7d10147e327975568f8722767e2d5ccd461f7fe8085c9f2bfd/records.json.gz",
       "encodingFormat": "application/json",
-      "sha256": "b07a9fe6276215059b55c007f6d8ce728d43e1fa07de65124acfe97c62bd3ed1"
+      "contentSize": "18814712 bytes",
+      "sha256": "bf31b38c64d50c7d10147e327975568f8722767e2d5ccd461f7fe8085c9f2bfd",
+      "dateModified": "2026-10-27",
+      "version": "1.0.0"
     },
     {
-      "@type": "cr:FileObject",
+      "@type": [
+        "cr:FileObject",
+        "sc:DataDownload"
+      ],
       "@id": "simplified-pendientes-json",
-      "name": "pendientes.json",
-      "containedIn": {
-        "@id": "simplified-json-zip"
-      },
-      "contentUrl": "pendientes.json",
+      "name": "Consolidado simplificado: pendientes (JSON/WKT, gzip)",
+      "description": "JSON comprimido con gzip; geometrías WKT en EPSG:25830 sin modificar coordenadas.",
+      "contentUrl": "https://dieghernan.github.io/codigospostales/assets/croissant/038ccc98e3360f332ed70a29e21df074843c0145713e154f28b5bae294da291a/records.json.gz",
       "encodingFormat": "application/json",
-      "sha256": "d8c0b501fedf26f12b802c905a15fb0c8c4e2274e63f4fc42076b4c134c80f95"
+      "contentSize": "409134 bytes",
+      "sha256": "038ccc98e3360f332ed70a29e21df074843c0145713e154f28b5bae294da291a",
+      "dateModified": "2026-10-27",
+      "version": "1.0.0"
     }
   ],
   "recordSet": [

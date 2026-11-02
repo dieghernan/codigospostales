@@ -14,8 +14,10 @@ and the Municipios2024, Condominios and Provincias layers used for clipping.
 
 The two original GeoPackage distributions retain their URLs, versions and dates.
 The official mlcroissant reader does not read GeoPackage directly. Additional
-ZIP archives therefore expose each product's two layers as UTF-8 JSON arrays,
-with geometry stored as WKT. This avoids the CSV reader's numeric inference,
+gzip-compressed downloads therefore expose each product's two layers as UTF-8 JSON arrays,
+with geometry stored as WKT. Non-ASCII characters use JSON Unicode escapes so
+the official gzip reader also preserves names on Windows with a legacy default
+encoding; decoding yields the original names unchanged. This avoids the CSV reader's numeric inference,
 which drops leading zeros from postal and administrative codes even when the
 Croissant fields are declared as text.
 
@@ -66,18 +68,22 @@ python scripts/check_site.py
 
 The script reads the GeoPackages in read-only mode and verifies their SHA-256
 checksums against `docs/_data/products.json`. It writes identical descriptors to
-`docs/croissant.json` and `docs/_data/croissant.json`. ZIPs are generated under
-`docs/assets/croissant/<archive-sha256>/records.zip`, ignored by Git and included
-in the published Pages artifact. Fixed ZIP timestamps, metadata and compression
-make generation reproducible across runs. Checksums cover the archive and each
-contained JSON file. Original data files are never rewritten.
+`docs/croissant.json` and `docs/_data/croissant.json`. Compressed JSON files are
+generated under
+`docs/assets/croissant/<file-sha256>/records.json.gz`, ignored by Git and included
+in the published Pages artifact. Fixed gzip timestamps, metadata and compression
+make generation reproducible across runs. Checksums cover each compressed file.
+Original data files are never rewritten.
 
-The workflow runs `build_croissant.py --check` to regenerate archives and fail
+The workflow runs `build_croissant.py --check` to regenerate downloads and fail
 if committed descriptors differ, then validates and tests before deployment.
-Tests map downloads to generated local archives to exercise the official reader
+Tests map resource URLs to generated local files to exercise the official reader
 before publication; after deployment the same URLs work without mapping.
-An upstream dependency change that alters generated archive bytes requires a
-reviewed descriptor regeneration. Only archives referenced by the current
+Every distribution is directly downloadable and has both FileObject and
+DataDownload types. Internal archive members are avoided because Google reports
+their FileObject-only distribution entries as invalid types.
+An upstream dependency change that alters generated compressed bytes requires a
+reviewed descriptor regeneration. Only downloads referenced by the current
 release are published; consumers should retain the descriptor and files for
 long-term snapshots. The DOI remains the dataset's persistent citation.
 

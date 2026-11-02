@@ -3,11 +3,11 @@
 import argparse
 import contextlib
 import hashlib
+import gzip
 import io
 import json
 from pathlib import Path
 import sqlite3
-import zipfile
 
 import shapely
 
@@ -50,10 +50,10 @@ def export_layer(db, layer):
         if not shapely.equals_exact(geom, shapely.from_wkt(wkt), tolerance=0):
             raise ValueError(f"WKT changed coordinates in {layer}: {values[0]}")
         records.append(dict(zip(columns, [*values, wkt])))
-    return json.dumps(records, ensure_ascii=False, separators=(",", ":"), allow_nan=False).encode("utf-8")
+    return json.dumps(records, ensure_ascii=True, separators=(",", ":"), allow_nan=False).encode("utf-8")
 
 
-def archive(path, product):
+def read_product(path, product):
     content = path.read_bytes()
     if hashlib.sha256(content).hexdigest() != product["revision"]:
         raise ValueError(f"Product metadata does not match {path}; regenerate product metadata first.")
@@ -66,15 +66,7 @@ def archive(path, product):
             if layer == "pendientes" and db.execute("SELECT COUNT(*) FROM pendientes WHERE COD_POSTAL IS NOT NULL").fetchone()[0]:
                 raise ValueError("Pending layer now has postal assignments; review its schema.")
             tables[layer] = export_layer(db, layer)
-    output = io.BytesIO()
-    with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as zipped:
-        for layer, content in tables.items():
-            info = zipfile.ZipInfo(layer + ".json", date_time=(1980, 1, 1, 0, 0, 0))
-            info.compress_type = zipfile.ZIP_DEFLATED
-            info.create_system = 3
-            info.external_attr = 0o100644 << 16
-            zipped.writestr(info, content, compresslevel=6)
-    return output.getvalue(), tables
+    return tables
 
 
 def build(check=False):
@@ -94,24 +86,26 @@ def build(check=False):
             "name": definition["name"], "encodingFormat": definition["encodingFormat"], "contentUrl": product["url"],
             "contentSize": f'{product["bytes"]} bytes', "sha256": product["revision"],
             "dateModified": product["generated"], "version": product["version"]})
-    archives = set()
+    downloads = set()
     for key, product in products.items():
-        content, tables = archive(ROOT / "data" / product["filename"], product)
-        digest = hashlib.sha256(content).hexdigest()
-        relative = f"assets/croissant/{digest}/records.zip"
-        path = ROOT / "docs" / relative
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_bytes(content)
-        archives.add(path.resolve())
-        dataset["distribution"].append({"@type": ["cr:FileObject", "sc:DataDownload"], "@id": key + "-json-zip",
-            "name": definition_name(key) + " (JSON/WKT)", "description": "Dos capas en JSON; los recintos pendientes carecen de código postal. Coordenadas originales en EPSG:25830.",
-            "contentUrl": HOME + relative, "encodingFormat": "application/zip", "contentSize": f"{len(content)} bytes",
-            "sha256": digest, "dateModified": product["generated"], "version": product["version"]})
+        tables = read_product(ROOT / "data" / product["filename"], product)
         for layer, table in tables.items():
+            output = io.BytesIO()
+            with gzip.GzipFile(filename="", fileobj=output, mode="wb", compresslevel=6, mtime=0) as compressed:
+                compressed.write(table)
+            content = output.getvalue()
+            digest = hashlib.sha256(content).hexdigest()
+            relative = f"assets/croissant/{digest}/records.json.gz"
+            path = ROOT / "docs" / relative
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(content)
+            downloads.add(path.resolve())
             file_id, record_id = key + "-" + layer + "-json", key + "-" + layer
-            dataset["distribution"].append({"@type": "cr:FileObject", "@id": file_id, "name": layer + ".json",
-                "containedIn": {"@id": key + "-json-zip"}, "contentUrl": layer + ".json", "encodingFormat": "application/json",
-                "sha256": hashlib.sha256(table).hexdigest()})
+            dataset["distribution"].append({"@type": ["cr:FileObject", "sc:DataDownload"], "@id": file_id,
+                "name": definition_name(key) + ": " + layer + " (JSON/WKT, gzip)",
+                "description": "JSON comprimido con gzip; geometrías WKT en EPSG:25830 sin modificar coordenadas.",
+                "contentUrl": HOME + relative, "encodingFormat": "application/json", "contentSize": f"{len(content)} bytes",
+                "sha256": digest, "dateModified": product["generated"], "version": product["version"]})
             fields = []
             for column in LAYERS[layer]:
                 fields.append({"@type": "cr:Field", "@id": record_id + "/" + column, "name": column,
@@ -120,9 +114,11 @@ def build(check=False):
             dataset["recordSet"].append({"@type": "cr:RecordSet", "@id": record_id, "name": record_id,
                 "description": definition_name(key) + ": " + ("áreas con código postal estimado." if layer == "codigos_postales" else "recintos sin código postal asignado; se omite COD_POSTAL, que es nulo en toda esta capa."),
                 "key": {"@id": record_id + "/fid"}, "field": fields})
-    # Remove only obsolete generated archives from this dedicated output folder.
-    for path in (ROOT / "docs/assets/croissant").glob("*/records.zip"):
-        if path.resolve() not in archives:
+    # Remove only obsolete generated downloads from this dedicated output folder.
+    for path in (ROOT / "docs/assets/croissant").glob("*/records.*"):
+        if path.name not in ("records.json.gz", "records.zip"):
+            continue
+        if path.resolve() not in downloads:
             path.unlink()
             if not any(path.parent.iterdir()):
                 path.parent.rmdir()
