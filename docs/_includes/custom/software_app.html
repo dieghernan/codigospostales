@@ -17,6 +17,7 @@
   "isAccessibleForFree": true,
   "author": {
     "@type": "Person",
+    "@id": {{ '/' | absolute_url | append: '#author' | jsonify }},
     "name": "Diego Hernangómez",
     "sameAs": "https://orcid.org/0000-0001-8457-4658",
     "url": {{ site.author.url | jsonify }}
