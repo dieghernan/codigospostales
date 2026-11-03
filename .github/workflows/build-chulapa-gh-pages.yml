@@ -22,7 +22,7 @@ jobs:
           GIT_LFS_SKIP_SMUDGE: "1"
       - name: Download only the two published GeoPackages
         run: git lfs pull --include="data/codigos_postales.gpkg,data/codigos_postales_simplificado.gpkg" --exclude=""
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           cache: pip
