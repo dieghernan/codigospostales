@@ -67,7 +67,7 @@ webmentions:
 
 navbar:
   brand:
-    title: '<i class="fas fa-home" aria-hidden="true" style="color: inherit"></i><span class="sr-only">Inicio</span>'
+    title: '<i class="fas fa-home mr-1" aria-hidden="true"></i> Códigos postales'
 
   nav:
     - title: Descargas
@@ -76,7 +76,7 @@ navbar:
       url: /visor/
     - title: Ejemplos
       url: /ejemplos/
-    - title: GitHub
+    - title: '<i class="fab fa-github mr-1" aria-hidden="true"></i> GitHub'
       url: https://github.com/dieghernan/codigospostales
 
 footer:
