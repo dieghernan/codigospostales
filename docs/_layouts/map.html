@@ -3,8 +3,10 @@
 {% include head.html theme_script=true %}
 <body class="postal-map-page">
 {% include custom/software_app.html %}
-<main class="postal-map-app">
-  <h1 class="sr-only">{{ page.title | escape }}</h1>
+<main class="postal-map-app h-entry">
+  {% include snippets/microformats-url.html %}
+  {% include snippets/author-microformats.html author=page.author %}
+  <h1 class="sr-only p-name">{{ page.title | escape }}</h1>
   <nav class="postal-map-toolbar" aria-label="Navegación del visor">
     <a href="{{ '/visor/' | relative_url }}" target="_top">Documentación</a>
     <a href="{{ '/' | relative_url }}#archivos-disponibles" target="_top">Descargas</a>
