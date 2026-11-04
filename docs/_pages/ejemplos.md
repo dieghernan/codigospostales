@@ -12,7 +12,7 @@ Los datos se distribuyen como archivos GeoPackage y se pueden utilizar desde **R
 Estos ejemplos utilizan la versión simplificada y seleccionan los códigos
 postales que empiezan por `28` (`28xxx`). El filtro se ejecuta al leer el
 archivo, sin cargar toda la capa en memoria. Selecciona códigos completos por
-su prefijo; no recorta sus geometrías al límite de una provincia. Prefijo
+su prefijo y conserva las geometrías completas. Prefijo
 postal y provincia son criterios distintos: un mismo código postal puede
 abarcar varias provincias. Una selección por provincia requiere un criterio
 espacial sobre sus límites administrativos.
@@ -28,7 +28,7 @@ deseado seguido de `%`, por ejemplo `'080%'` para `080xx`.
 3. Ejecuta el ejemplo de [**R**](#r) o [**Python**](#python), o abre el archivo con [**QGIS**](#qgis). Si lo guardas en otra carpeta, adapta la ruta.
 
 Ambos productos contienen las capas `codigos_postales` y `pendientes`.
-Los archivos provinciales son intermedios de generación; los ejemplos utilizan
+Los archivos provinciales son intermedios de generación. Los ejemplos utilizan
 los consolidados. Para analizar la geometría completa, cambia la ruta a
 `data/codigos_postales.gpkg`. Las áreas son estimadas, no oficiales.
 
@@ -39,7 +39,7 @@ los consolidados. Para analizar la geometría completa, cambia la ruta a
 3. Añade `pendientes` si quieres identificar los recintos sin código asignado. Conserva EPSG:25830 para trabajar con las coordenadas originales.
 
 El filtro por prefijo selecciona códigos completos, sin recortar por provincia.
-La versión simplificada sirve para visualizar; el campo `AREA_M2` de sus
+La versión simplificada sirve para visualizar. El campo `AREA_M2` de sus
 pendientes conserva la superficie del consolidado completo.
 
 ## **R**

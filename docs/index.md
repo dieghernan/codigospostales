@@ -94,7 +94,7 @@ Ambos archivos incluyen las capas `codigos_postales` y `pendientes`, en
 ETRS89 / UTM zona 30N (EPSG:25830). Los códigos postales se almacenan como texto
 de cinco dígitos, conservando los ceros iniciales. La capa `pendientes` recoge
 los recintos que no han recibido un código postal. Ambas capas contienen
-geometrías `MULTIPOLYGON`; la capa postal no incluye el municipio.
+geometrías `MULTIPOLYGON`. La capa postal no incluye el municipio.
 
 La versión simplificada conserva los códigos y los atributos, pero no está
 destinada a mediciones precisas. En `pendientes`, el campo `AREA_M2` conserva
@@ -123,7 +123,7 @@ descarga desde ese servicio.
 El objetivo del proyecto es ofrecer una estimación reproducible con datos
 abiertos. Las direcciones de CartoCiudad aportan posiciones y códigos
 postales. Una teselación de Voronoi permite construir áreas de proximidad a
-esas posiciones; al ajustarlas a los límites administrativos y unir las áreas
+esas posiciones. Al ajustarlas a los límites administrativos y unir las áreas
 con el mismo código, se obtienen polígonos postales estimados. La proximidad
 es una aproximación geométrica y no reproduce necesariamente las decisiones
 de reparto de Correos.
@@ -133,7 +133,7 @@ de reparto de Correos.
 El procedimiento selecciona las direcciones de cada componente del recinto
 administrativo con un margen interior de 200 m y un segundo intento de 50 m
 si no encuentra ninguna. Con un único código postal (CP) asigna el recinto
-completo; con varios, genera áreas de Voronoi y las recorta al recinto.
+completo. Con varios, genera áreas de Voronoi y las recorta al recinto.
 Los componentes sin direcciones seleccionadas quedan pendientes, salvo que
 el municipio tenga un único código recuperado en sus otros componentes.
 

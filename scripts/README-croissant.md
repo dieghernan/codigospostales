@@ -1,7 +1,7 @@
 # Croissant and GeoCroissant publication
 
 The landing page and both viewers embed the same Dataset descriptor as
-`https://dieghernan.github.io/codigospostales/croissant.json`. Chulapa's JSON-LD,
+`https://dieghernan.github.io/codigospostales/croissant.json`. The **Chulapa** JSON-LD,
 visible content and microformats remain unchanged.
 
 The descriptor declares Croissant 1.1 and GeoCroissant 1.0. The CRS is
@@ -52,7 +52,7 @@ geometry = shapely.from_wkt(record["full-codigos_postales/geometry_wkt"])
 
 ## Generate and validate
 
-Use Python 3.12 and the pinned dependencies:
+Use **Python** 3.12 and the pinned dependencies.
 
 ```sh
 pip install -r scripts/requirements-croissant.txt

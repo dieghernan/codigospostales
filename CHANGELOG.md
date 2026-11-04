@@ -5,7 +5,7 @@
 - La web adopta la skin Focal, con nuevos banners, iconos y colores de selección en el visor.
 - El visor unifica sus formularios con Focal, permite cerrar el enlace compartido y conserva los márgenes del tema en la página de presentación.
 - El visor incorpora controles plegables en móvil, una leyenda lateral y estados de carga, y mejora el cierre del panel de capas y la selección de áreas.
-- La web da acceso directo a los dos consolidados, muestra sus características y añade un inicio rápido con R, Python y QGIS.
+- La web da acceso directo a los dos consolidados, muestra sus características y añade un inicio rápido con **R**, **Python** y **QGIS**.
 - El visor permite buscar un código postal y compartir la vista sin incluir direcciones buscadas, con controles y leyenda en español.
 
 ## 1.0.0
@@ -24,7 +24,7 @@ Primera versión pública del conjunto de datos de códigos postales de España.
   podido asignarse a un código postal.
 - Documenta la metodología, las fuentes de datos y las principales
   limitaciones.
-- Añade ejemplos de uso en R y Python.
+- Añade ejemplos de uso en **R** y **Python**.
 - Añade metadatos de citación mediante `CITATION.cff`.
 
 ### Notas
