@@ -199,7 +199,7 @@
 <p>Estos ejemplos utilizan la versión simplificada y seleccionan los códigos
 postales que empiezan por <code class="language-plaintext highlighter-rouge">28</code> (<code class="language-plaintext highlighter-rouge">28xxx</code>). El filtro se ejecuta al leer el
 archivo, sin cargar toda la capa en memoria. Selecciona códigos completos por
-su prefijo; no recorta sus geometrías al límite de una provincia. Prefijo
+su prefijo y conserva las geometrías completas. Prefijo
 postal y provincia son criterios distintos: un mismo código postal puede
 abarcar varias provincias. Una selección por provincia requiere un criterio
 espacial sobre sus límites administrativos.</p>
@@ -213,7 +213,7 @@ deseado seguido de <code class="language-plaintext highlighter-rouge">%</code>, 
  <li>Ejecuta el ejemplo de <a href="#r"><strong>R</strong></a> o <a href="#python"><strong>Python</strong></a>, o abre el archivo con <a href="#qgis"><strong>QGIS</strong></a>. Si lo guardas en otra carpeta, adapta la ruta.</li>
 </ol>
 <p>Ambos productos contienen las capas <code class="language-plaintext highlighter-rouge">codigos_postales</code> y <code class="language-plaintext highlighter-rouge">pendientes</code>.
-Los archivos provinciales son intermedios de generación; los ejemplos utilizan
+Los archivos provinciales son intermedios de generación. Los ejemplos utilizan
 los consolidados. Para analizar la geometría completa, cambia la ruta a
 <code class="language-plaintext highlighter-rouge">data/codigos_postales.gpkg</code>. Las áreas son estimadas, no oficiales.</p>
 <h2 id="qgis"><strong>QGIS</strong></h2>
@@ -223,7 +223,7 @@ los consolidados. Para analizar la geometría completa, cambia la ruta a
  <li>Añade <code class="language-plaintext highlighter-rouge">pendientes</code> si quieres identificar los recintos sin código asignado. Conserva EPSG:25830 para trabajar con las coordenadas originales.</li>
 </ol>
 <p>El filtro por prefijo selecciona códigos completos, sin recortar por provincia.
-La versión simplificada sirve para visualizar; el campo <code class="language-plaintext highlighter-rouge">AREA_M2</code> de sus
+La versión simplificada sirve para visualizar. El campo <code class="language-plaintext highlighter-rouge">AREA_M2</code> de sus
 pendientes conserva la superficie del consolidado completo.</p>
 <h2 id="r"><strong>R</strong></h2>
 <p>Instala <strong>sf</strong> y <strong>ggplot2</strong> con <code class="language-plaintext highlighter-rouge">install.packages(c("sf", "ggplot2"))</code>.</p>
