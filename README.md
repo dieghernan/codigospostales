@@ -3,8 +3,7 @@
 El producto final es `data/codigos_postales.gpkg`, con la capa
 `codigos_postales`: una fila por código postal (CP) y sus superficies disueltas,
 incluidas las que pertenecen a distintas provincias. Un código puede tener
-varias superficies separadas. La capa postal no incluye el municipio;
-los recintos sin asignar se conservan en la capa `pendientes`.
+varias superficies separadas. La capa postal no incluye el municipio. Los recintos sin asignar se conservan en la capa `pendientes`.
 
 Son delimitaciones estimadas a partir de direcciones de CartoCiudad y recintos
 administrativos, no límites postales oficiales. El consolidado cubre únicamente
@@ -118,8 +117,7 @@ Del GeoPackage administrativo se utilizan las capas `Municipios2024`,
 
 El script procesa cada componente del recinto administrativo. Selecciona
 direcciones dentro de un margen interior de 200 m, con un segundo intento de
-50 m si no encuentra ninguna. Con un solo CP asigna el recinto completo; con
-varios utiliza polígonos de Voronoi recortados al recinto. Si no encuentra
+50 m si no encuentra ninguna. Con un solo CP asigna el recinto completo. Con varios utiliza polígonos de Voronoi recortados al recinto. Si no encuentra
 direcciones, deja el recinto sin CP.
 
 Al terminar todos los componentes del municipio, si solo se ha recuperado un
@@ -147,19 +145,17 @@ consolidado postal y se conservan con geometría en la capa `pendientes` del
 mismo GeoPackage, con provincia de origen y área en metros cuadrados, medida
 en la proyección del resultado provincial. Sus atributos se exportan a
 `data/full_analisis/missing.csv`. Las nuevas ejecuciones provinciales también
-guardan una capa `pendientes` antes de disolver por CP;
-para resultados antiguos se recupera la geometría sin CP disponible.
+guardan una capa `pendientes` antes de disolver por CP. Para resultados antiguos se recupera la geometría sin CP disponible.
 
 Ambas capas del producto final contienen únicamente geometrías
 `MULTIPOLYGON`. Los CP se conservan como texto de cinco dígitos, incluidos los
 ceros iniciales. La ejecución provincial fija una configuración UTF-8 en
-**Windows**. Estas mejoras se aplican al regenerar cada provincia; consolidar
-resultados antiguos no repite su asignación postal ni resuelve sus solapes
-administrativos de origen.
+**Windows**. Estas mejoras se aplican al regenerar cada provincia. Al consolidar
+resultados antiguos se mantienen su asignación postal y sus solapes de origen.
 
 La consolidación elimina anillos interiores de hasta 1 mm² que no contienen
 superficie de otro CP ni de un pendiente. Conserva los enclaves, los agujeros
-mayores y todos los contornos exteriores; no simplifica ni desplaza vértices.
+mayores, todos los contornos exteriores y la posición de los vértices.
 La detección usa el área del anillo con coordenadas trasladadas al origen para
 evitar cancelaciones numéricas. Esta limpieza no asigna los recintos pendientes.
 
@@ -184,7 +180,7 @@ a agrupar por registro. Comprueba que se conservan todos los CP y pendientes,
 sin geometrías vacías y con salida válida `MULTIPOLYGON`. Las reparaciones
 pueden unir o separar componentes. No modifica el consolidado completo ni se
 ejecuta automáticamente al generar provincias. El campo `AREA_M2` de los
-pendientes conserva el área de la versión completa; la copia simplificada no
+pendientes conserva el área de la versión completa. La copia simplificada no
 debe usarse para mediciones precisas. Los vértices protegidos por la topología
 y la conservación de piezas pueden hacer que la proporción final supere el 20 %.
 
@@ -233,16 +229,16 @@ servidor, ejecuta `bundle exec jekyll build` desde `docs/`.
 
 El visor utiliza **Leaflet** y **Leaflet-providersESP**, con IGNBase Gris, IGNBase y PNOA como fondos
 alternativos y capas activables de CartoCiudad y de las delimitaciones
-estimadas. Inicialmente muestra IGNBase Gris con ambas capas activadas; el control
+estimadas. Inicialmente muestra IGNBase Gris con ambas capas activadas. El control
 de capas está plegado y el zoom con la rueda está habilitado. La vista inicial
-muestra el prefijo postal `08`. Carga los
-códigos por sus dos primeros dígitos, conservando los ceros iniciales. Este
+muestra el prefijo postal `08`. El visor carga los códigos por sus dos primeros
+dígitos y conserva los ceros iniciales. Este
 filtro selecciona códigos completos y no recorta las geometrías a una
 provincia. Prefijo postal y provincia son criterios distintos: un mismo código
 postal puede abarcar varias provincias. Para seleccionar datos por provincia
 se necesita un criterio espacial sobre sus límites administrativos.
 El WMS de CartoCiudad se muestra a partir del zoom 11.
-El overlay de límites administrativos del IGN está desactivado inicialmente
+La capa de límites administrativos del IGN está desactivado inicialmente
 y se puede activar desde el control de capas para comparar ambos criterios.
 
 El mapa se integra mediante un `iframe`. La
