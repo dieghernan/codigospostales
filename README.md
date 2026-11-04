@@ -230,7 +230,8 @@ servidor, ejecuta `bundle exec jekyll build` desde `docs/`.
 El visor utiliza **Leaflet** y **Leaflet-providersESP**, con IGNBase Gris, IGNBase y PNOA como fondos
 alternativos y capas activables de CartoCiudad y de las delimitaciones
 estimadas. Inicialmente muestra IGNBase Gris con ambas capas activadas. El control
-de capas está plegado y el zoom con la rueda está habilitado. La vista inicial
+de capas está plegado. El zoom con la rueda funciona en la vista a toda
+ventana. En el mapa incrustado, la rueda desplaza la página. La vista inicial
 muestra el prefijo postal `08`. El visor carga los códigos por sus dos primeros
 dígitos y conserva los ceros iniciales. Este
 filtro selecciona códigos completos y no recorta las geometrías a una
