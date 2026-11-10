@@ -54,3 +54,4 @@ __pycache__/
 
 # Generated Croissant JSON/WKT archives (built during publication)
 docs/assets/croissant/
+Gemfile.lock
