@@ -59,7 +59,7 @@ class PublicationChecks(unittest.TestCase):
         self.assertEqual(dataset["creator"]["sameAs"], "https://orcid.org/0000-0001-8457-4658")
         self.assertIn("https://doi.org/10.5281/zenodo.15345101", dataset["isBasedOn"])
         self.assertIn("CartoCiudad", dataset["measurementTechnique"])
-        self.assertEqual(dataset["spatialCoverage"]["geo"]["box"], "27.63 -18.16 43.8 4.32")
+        self.assertEqual(dataset["spatialCoverage"]["geo"]["box"], "-18.16 27.63 4.32 43.8")
         self.assertEqual(dataset["identifier"]["value"], "10.5281/zenodo.23698418")
         self.assertEqual(len([file for file in dataset["distribution"] if file.get("encodingFormat") == "application/geopackage+sqlite3"]), 2)
         for distribution, key in zip(dataset["distribution"], ("full", "simplified")):

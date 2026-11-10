@@ -62,7 +62,7 @@
       "name": "España: cobertura estimada, con recintos pendientes de asignación",
       "geo": {
         "@type": "GeoShape",
-        "box": "27.63 -18.16 43.8 4.32"
+        "box": "-18.16 27.63 4.32 43.8"
       }
     },
     "isAccessibleForFree": true,
