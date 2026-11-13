@@ -13,12 +13,13 @@ y no muestra los recintos pendientes de asignación.
 
 <p><a class="btn btn-primary" href="{{ '/visor/mapa/' | relative_url }}">Abrir el mapa a toda ventana</a></p>
 <iframe class="postal-map-frame" src="{{ '/visor/mapa/' | relative_url }}"
-  title="Mapa interactivo de códigos postales de España" allowfullscreen></iframe>
+  title="Mapa interactivo de códigos postales de España" allow="geolocation" allowfullscreen></iframe>
 
 <details class="viewer-help" markdown="1">
 <summary>Cómo utilizar el mapa y sus capas</summary>
 
 - Introduce un **CP de cinco dígitos** para destacar su área o busca una dirección.
+- Pulsa **Localizarme**, debajo del zoom, y permite el acceso a tu ubicación. El mapa marca tu posición y consulta tus coordenadas en CartoCiudad para cargar las áreas del prefijo postal correspondiente. Por ejemplo, para el CP 19044 muestra las áreas 19xxx. Si no se encuentra un prefijo disponible, puedes seguir viendo tu posición.
 - El marcador de una dirección se retira al iniciar otra búsqueda de dirección, buscar un CP o cambiar el prefijo.
 - El selector de prefijo carga códigos completos por sus dos primeros dígitos: **no recorta por provincia**.
 - Pulsa un área para consultar su CP. Los colores y líneas se explican en la leyenda.
@@ -27,7 +28,7 @@ y no muestra los recintos pendientes de asignación.
 - En móvil, abre **Buscar o cambiar prefijo** para desplegar los controles. La ayuda del botón **?** aparece dentro del panel, sin tapar el mapa con un tooltip flotante.
 - **Leyenda** abre un panel lateral. Puedes cerrar la leyenda y las capas con su botón de cierre, con Escape o al pulsar fuera.
 - El WMS de **CartoCiudad aparece desde el zoom 11**. Las áreas estimadas y CartoCiudad están activados inicialmente.
-- **Compartir vista** copia un enlace con prefijo, posición, zoom y CP seleccionado. No incluye la dirección buscada.
+- **Compartir vista** copia un enlace con prefijo, centro del mapa, zoom y CP seleccionado. Si el mapa está centrado en tu ubicación, el enlace incluye sus coordenadas.
 - En el mapa incrustado, la rueda desplaza la página. Usa los botones de zoom o abre el mapa a toda ventana para acercar con la rueda.
 
 La vista inicial muestra el prefijo `08`. Prefijo postal y provincia son
@@ -47,7 +48,7 @@ con seis decimales. No están destinados a mediciones precisas.
 ```html
 <iframe src="https://dieghernan.github.io/codigospostales/visor/mapa/"
   title="Áreas postales estimadas de España"
-  width="100%" height="650" allowfullscreen></iframe>
+  width="100%" height="650" allow="geolocation" allowfullscreen></iframe>
 ```
 
 Cartografía de fondo y WMS mediante

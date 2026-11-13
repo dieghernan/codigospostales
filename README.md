@@ -239,6 +239,9 @@ provincia. Prefijo postal y provincia son criterios distintos: un mismo código
 postal puede abarcar varias provincias. Para seleccionar datos por provincia
 se necesita un criterio espacial sobre sus límites administrativos.
 El WMS de CartoCiudad se muestra a partir del zoom 11.
+El botón **Localizarme**, debajo del zoom, marca tu posición y consulta
+CartoCiudad para cargar el prefijo postal correspondiente. Por ejemplo, si
+CartoCiudad devuelve el CP 19044, el mapa muestra las áreas 19xxx.
 La capa de límites administrativos del IGN está desactivado inicialmente
 y se puede activar desde el control de capas para comparar ambos criterios.
 
