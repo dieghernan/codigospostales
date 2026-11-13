@@ -321,6 +321,118 @@
 
   let request;
   let loadedPrefix;
+  let geolocationRequest;
+  let userMarker;
+  let userCenter;
+
+  const locateControl = L.control({ position: 'topleft' });
+  locateControl.onAdd = () => {
+    const control = L.DomUtil.create('div', 'leaflet-bar postal-locate');
+    const button = L.DomUtil.create('button', '', control);
+    button.type = 'button';
+    button.title = 'Localizarme';
+    button.setAttribute('aria-label', 'Localizarme');
+    button.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 1v4m0 14v4M1 12h4m14 0h4"/></svg>';
+    const feedback = L.DomUtil.create('div', 'postal-locate-status', control);
+    feedback.setAttribute('role', 'status');
+    L.DomEvent.disableClickPropagation(control);
+    L.DomEvent.disableScrollPropagation(control);
+
+    button.addEventListener('click', async () => {
+      if (!navigator.geolocation) {
+        feedback.textContent = 'Tu navegador no permite obtener la ubicación.';
+        return;
+      }
+      if (!ready) {
+        feedback.textContent = 'Espera a que cargue el mapa.';
+        return;
+      }
+
+      resetAddressSearch();
+      ++codeSearch;
+      const current = new AbortController();
+      geolocationRequest = current;
+      feedback.textContent = '';
+      button.disabled = true;
+      button.setAttribute('aria-busy', 'true');
+      const finishLoading = beginLoading('Buscando tu ubicación…');
+
+      try {
+        const { coords } = await new Promise((resolve, reject) => {
+          navigator.geolocation.getCurrentPosition(resolve, reject, {
+            timeout: 10000,
+            maximumAge: 60000
+          });
+        });
+        if (current.signal.aborted) return;
+
+        userCenter = L.latLng(coords.latitude, coords.longitude);
+        userMarker?.remove();
+        userMarker = L.circleMarker(userCenter, {
+          pane: 'user-location',
+          radius: 7,
+          color: '#fff',
+          weight: 2,
+          fillColor: '#0969da',
+          fillOpacity: 1
+        }).addTo(map).bindTooltip('Tu ubicación');
+        map.setView(userCenter, 14, { animate: false });
+
+        const code = await lookupPostalCode(coords, current.signal);
+        if (current.signal.aborted) return;
+
+        const prefix = /^\d{5}$/.test(code) ? code.slice(0, 2) : null;
+        if (!prefix || ![...select.options].some(option => option.value === prefix)) {
+          feedback.textContent = 'Ubicación encontrada. No se ha encontrado un prefijo postal disponible.';
+          return;
+        }
+
+        select.value = prefix;
+        if (loadedPrefix !== prefix || status.dataset.state === 'loading') {
+          const loaded = await loadPrefix({ fit: false, signal: current.signal });
+          if (current.signal.aborted) return;
+          if (!loaded) {
+            feedback.textContent = `Ubicación encontrada. No se han podido cargar las áreas ${prefix}xxx.`;
+            return;
+          }
+        }
+        if (!map.hasLayer(postal)) postal.addTo(map);
+        feedback.textContent = `Ubicación encontrada. Se muestran las áreas ${prefix}xxx.`;
+      } catch (error) {
+        if (!current.signal.aborted) {
+          feedback.textContent = error.code === 1
+            ? 'No has dado permiso para acceder a tu ubicación.'
+            : 'No se ha podido obtener tu ubicación. Inténtalo de nuevo.';
+        }
+      } finally {
+        finishLoading();
+        button.disabled = false;
+        button.removeAttribute('aria-busy');
+      }
+    });
+    return control;
+  };
+  map.createPane('user-location').style.zIndex = '450';
+  locateControl.addTo(map);
+
+  async function lookupPostalCode(coords, signal) {
+    const url = new URL('https://www.cartociudad.es/geocoder/api/geocoder/reverseGeocode');
+    url.searchParams.set('lat', coords.latitude);
+    url.searchParams.set('lon', coords.longitude);
+
+    try {
+      const response = await fetch(url, {
+        signal: AbortSignal.any([signal, AbortSignal.timeout(10000)])
+      });
+      if (response.ok) {
+        const result = await response.json();
+        return String(result?.postalCode ?? '');
+      }
+    } catch {
+      // La posición sigue visible aunque falle la consulta del código postal.
+    }
+    return '';
+  }
 
   async function loadPrefix({ fit = true, signal } = {}) {
     request?.abort();
@@ -414,6 +526,12 @@
   function saveView() {
     if (!ready || !loadedPrefix) return;
     const center = map.getCenter();
+    if (userCenter?.equals(center)) return;
+    window.history.replaceState(null, '', viewUrl());
+  }
+
+  function viewUrl() {
+    const center = map.getCenter();
     const state = new URLSearchParams({
       prefix: loadedPrefix,
       lat: center.lat.toFixed(5),
@@ -422,7 +540,9 @@
     });
     if (selectedCode) state.set('cp', selectedCode);
     // Address queries and markers deliberately stay out of the shared URL.
-    window.history.replaceState(null, '', `#${state}`);
+    const url = new URL(window.location.href);
+    url.hash = state;
+    return url.href;
   }
 
   map.on('moveend', saveView);
@@ -550,10 +670,9 @@
     }
   });
   document.getElementById('share-view').addEventListener('click', async () => {
-    saveView();
     const shareStatus = document.getElementById('share-status');
     const field = document.getElementById('share-url');
-    field.value = window.location.href;
+    field.value = loadedPrefix ? viewUrl() : window.location.href;
     sharePanel.hidden = false;
     field.hidden = false;
     try {
@@ -584,6 +703,7 @@
   }
 
   function resetAddressSearch() {
+    geolocationRequest?.abort();
     ++addressSelection;
     addressRequest?.abort();
     locationRequest?.abort();

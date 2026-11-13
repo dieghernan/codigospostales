@@ -1,0 +1,17 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Códigos postales de España",
+  "home_page_url": "https://dieghernan.github.io/codigospostales/",
+  "feed_url": "https://dieghernan.github.io/codigospostales/feed.json",
+  "language": "es-ES",
+  "description": "Áreas postales estimadas a partir de CartoCiudad y límites administrativos. Disponible en GeoPackage para R, Python y SIG.",
+  "icon": "https://dieghernan.github.io/codigospostales/assets/img/social-preview.jpg",
+  
+  "authors": [{
+    "name": "Diego HH",
+    "url": "https://dieghernan.github.io/"
+  }],
+  "items": [
+    
+  ]
+}
