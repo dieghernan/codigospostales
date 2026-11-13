@@ -594,8 +594,6 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  width: 36px;
-  height: 36px;
   padding: 0;
   border: 0;
   border-radius: inherit;
@@ -606,9 +604,21 @@
   text-decoration: none;
   cursor: pointer;
 }
-#postal-map.leaflet-touch :is(.postal-full-window a, .postal-locate button) {
+#postal-map .postal-full-window a {
+  width: 36px;
+  height: 36px;
+}
+#postal-map.leaflet-touch .postal-full-window a {
   width: 44px;
   height: 44px;
+}
+#postal-map .postal-locate button {
+  width: 26px;
+  height: 26px;
+}
+#postal-map.leaflet-touch .postal-locate button {
+  width: 30px;
+  height: 30px;
 }
 #postal-map :is(.postal-full-window a, .postal-locate button):is(:hover, :focus-visible) {
   color: #b52f2b;
