@@ -12,7 +12,7 @@
     <description>Áreas postales estimadas a partir de CartoCiudad y límites administrativos. Disponible en GeoPackage para R, Python y SIG.</description>
     <language>es-ES</language>
     <copyright>(c) 2026, Diego HH</copyright>
-    <lastBuildDate>Mon, 16 Nov 2026 23:16:12 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 06:45:55 +0100</lastBuildDate>
     <category>blog</category>
     <ttl>60</ttl>
     <atom:link href="https://dieghernan.github.io/codigospostales/rss.xml" rel="self" type="application/rss+xml" />
