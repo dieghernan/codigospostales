@@ -39,7 +39,6 @@ class PublicationChecks(unittest.TestCase):
                 page = Page(root / name)
                 app, = [item for item in page.schemas if item.get("@type") == "WebApplication"]
                 self.assertTrue(app["@id"].endswith("#app"))
-                self.assertEqual(app["about"]["@id"], "https://dieghernan.github.io/codigospostales/#dataset")
                 self.assertIn("estimadas", app["description"])
                 self.assertEqual(app["author"]["sameAs"], "https://orcid.org/0000-0001-8457-4658")
                 self.assertEqual(app["isBasedOn"]["codeRepository"], "https://github.com/dieghernan/codigospostales")
@@ -47,7 +46,8 @@ class PublicationChecks(unittest.TestCase):
                 home = Page(root / "index.html")
                 original, = [item for item in home.schemas if item.get("@type") == "Dataset"]
                 self.assertEqual(dataset, original)
-                self.assertEqual(app["about"]["@id"], dataset["@id"])
+                self.assertEqual(dataset["@id"], "https://dieghernan.github.io/codigospostales/#dataset")
+                self.assertEqual(app["about"], {"@id": dataset["@id"]})
 
     def test_published_dataset_metadata_matches_the_product(self):
         root = Path(__file__).resolve().parents[1]
